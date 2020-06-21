@@ -1,27 +1,13 @@
 package com.hzhang;
 
-import com.github.pagehelper.PageInfo;
-import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.dao.profile.BlogManageDao;
-import com.hzhang.pojo.Blog;
-import com.hzhang.pojo.queryvo.BlogManageQueryVo;
 import com.hzhang.service.profile.BlogManageService;
-import com.hzhang.service.profile.TypeService;
+import com.hzhang.service.TypeService;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.*;
-import org.junit.platform.commons.util.AnnotationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
-
-import java.io.Serializable;
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 @SpringBootTest
 class MyBlogApplicationTests {

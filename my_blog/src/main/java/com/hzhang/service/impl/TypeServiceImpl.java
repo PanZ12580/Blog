@@ -1,10 +1,10 @@
-package com.hzhang.service.profile.impl;
+package com.hzhang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hzhang.dao.profile.TypeDao;
+import com.hzhang.dao.TypeDao;
 import com.hzhang.pojo.Type;
-import com.hzhang.service.profile.TypeService;
+import com.hzhang.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

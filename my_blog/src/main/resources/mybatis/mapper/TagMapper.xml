@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hzhang.dao.profile.TagDao">
+<mapper namespace="com.hzhang.dao.TagDao">
     <insert id="saveTag" useGeneratedKeys="true" keyProperty="id" parameterType="tag">
         insert into tag(name) values(#{name})
     </insert>

@@ -37,9 +37,9 @@
 2020-06-10 15:53:18.245 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-10 15:53:18.281 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-10 15:53:18.313 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-10 15:53:18.322 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
-2020-06-10 15:53:18.323 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
-2020-06-10 15:53:18.324 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:53:18.322 DEBUG 1468 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:53:18.323 DEBUG 1468 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:53:18.324 DEBUG 1468 --- [main] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-10 15:53:18.455  INFO 1468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 15:53:18.464  INFO 1468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 15:53:18.534  INFO 1468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -61,9 +61,9 @@
 2020-06-10 15:54:45.216 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-10 15:54:45.255 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-10 15:54:45.434 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-10 15:54:45.444 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
-2020-06-10 15:54:45.447 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
-2020-06-10 15:54:45.450 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:54:45.444 DEBUG 10864 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:54:45.447 DEBUG 10864 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:54:45.450 DEBUG 10864 --- [main] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-10 15:54:45.561  INFO 10864 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 15:54:45.566  INFO 10864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 15:54:45.619  INFO 10864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -85,9 +85,9 @@
 2020-06-10 15:56:52.860 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-10 15:56:52.898 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-10 15:56:53.060 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-10 15:56:53.070 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
-2020-06-10 15:56:53.071 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
-2020-06-10 15:56:53.081 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:56:53.070 DEBUG 7172 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:56:53.071 DEBUG 7172 --- [main] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:56:53.081 DEBUG 7172 --- [main] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-10 15:56:53.211  INFO 7172 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 15:56:53.234  INFO 7172 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 15:56:53.279  INFO 7172 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -106,9 +106,9 @@
 2020-06-10 16:14:22.413  INFO 16492 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.275 seconds (JVM running for 8.679)
 2020-06-10 16:14:22.868  INFO 16492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-10 16:14:32.686  INFO 16492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-10 16:14:32.696 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
-2020-06-10 16:14:32.751 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
-2020-06-10 16:14:33.047 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-10 16:14:32.696 DEBUG 16492 --- [main] com.hzhang.dao.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-10 16:14:32.751 DEBUG 16492 --- [main] com.hzhang.dao.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
+2020-06-10 16:14:33.047 DEBUG 16492 --- [main] com.hzhang.dao.TypeDao.updateType        : <==    Updates: 1
 2020-06-10 16:14:33.177  INFO 16492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 16:14:33.219  INFO 16492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 16:14:33.268  INFO 16492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -127,9 +127,9 @@
 2020-06-10 16:15:42.754  INFO 13128 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.224 seconds (JVM running for 8.744)
 2020-06-10 16:15:43.265  INFO 13128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-10 16:15:52.721  INFO 13128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-10 16:15:52.732 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
-2020-06-10 16:15:52.772 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
-2020-06-10 16:15:52.775 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-10 16:15:52.732 DEBUG 13128 --- [main] com.hzhang.dao.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-10 16:15:52.772 DEBUG 13128 --- [main] com.hzhang.dao.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
+2020-06-10 16:15:52.775 DEBUG 13128 --- [main] com.hzhang.dao.TypeDao.updateType        : <==    Updates: 1
 2020-06-10 16:15:52.810  INFO 13128 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 16:15:52.815  INFO 13128 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 16:15:52.820  INFO 13128 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -204,9 +204,9 @@
 2020-06-10 16:46:25.604  INFO 21036 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.395 seconds (JVM running for 8.77)
 2020-06-10 16:46:37.009  INFO 21036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-10 16:46:37.519  INFO 21036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-10 16:46:37.529 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
-2020-06-10 16:46:37.567 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 1(Long)
-2020-06-10 16:46:37.597 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 1
+2020-06-10 16:46:37.529 DEBUG 21036 --- [main] com.hzhang.dao.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:46:37.567 DEBUG 21036 --- [main] com.hzhang.dao.TypeDao.findType          : ==> Parameters: 1(Long)
+2020-06-10 16:46:37.597 DEBUG 21036 --- [main] com.hzhang.dao.TypeDao.findType          : <==      Total: 1
 2020-06-10 16:46:37.687  INFO 21036 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 16:46:37.925  INFO 21036 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 16:46:37.946  INFO 21036 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -225,9 +225,9 @@
 2020-06-10 16:48:09.229  INFO 14716 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 13.938 seconds (JVM running for 15.685)
 2020-06-10 16:48:22.361  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-10 16:48:23.014  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-10 16:48:23.025 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
-2020-06-10 16:48:23.073 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 1(Long)
-2020-06-10 16:48:23.106 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 1
+2020-06-10 16:48:23.025 DEBUG 14716 --- [main] com.hzhang.dao.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:48:23.073 DEBUG 14716 --- [main] com.hzhang.dao.TypeDao.findType          : ==> Parameters: 1(Long)
+2020-06-10 16:48:23.106 DEBUG 14716 --- [main] com.hzhang.dao.TypeDao.findType          : <==      Total: 1
 2020-06-10 16:48:23.362  INFO 14716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 16:48:23.387  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 16:48:23.449  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -246,9 +246,9 @@
 2020-06-10 16:49:38.858  INFO 1236 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 11.759 seconds (JVM running for 14.313)
 2020-06-10 16:49:51.632  INFO 1236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-10 16:49:52.431  INFO 1236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-10 16:49:52.443 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
-2020-06-10 16:49:52.497 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 2(Long)
-2020-06-10 16:49:52.530 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 0
+2020-06-10 16:49:52.443 DEBUG 1236 --- [main] com.hzhang.dao.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:49:52.497 DEBUG 1236 --- [main] com.hzhang.dao.TypeDao.findType          : ==> Parameters: 2(Long)
+2020-06-10 16:49:52.530 DEBUG 1236 --- [main] com.hzhang.dao.TypeDao.findType          : <==      Total: 0
 2020-06-10 16:49:52.831  INFO 1236 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-10 16:49:52.833  INFO 1236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-10 16:49:52.883  INFO 1236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -425,6 +425,6 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2020-06-10 17:21:49.854 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-10 17:21:49.872 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-10 17:21:49.889 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
-2020-06-10 17:21:49.896 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 17:21:49.896 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1

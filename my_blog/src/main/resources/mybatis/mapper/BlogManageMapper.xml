@@ -28,7 +28,7 @@
         <collection property="commentList" column="id"
                     select="com.hzhang.dao.CommentDao.findCommentListByBlogId"></collection>
         <collection property="tagList" column="id"
-                    select="com.hzhang.dao.profile.TagDao.findTagListByBlogId"></collection>
+                    select="com.hzhang.dao.TagDao.findTagListByBlogId"></collection>
     </resultMap>
 
     <select id="findBlogById" parameterType="Long" resultMap="blogMap">

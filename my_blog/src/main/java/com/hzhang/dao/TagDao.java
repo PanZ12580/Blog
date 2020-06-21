@@ -1,9 +1,11 @@
-package com.hzhang.service.profile;
+package com.hzhang.dao;
 
-import com.github.pagehelper.PageInfo;
-import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.pojo.Tag;
-import org.springframework.cache.annotation.Cacheable;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @author ：Hzhang
@@ -12,13 +14,14 @@ import org.springframework.cache.annotation.Cacheable;
  * @modified By：
  * @version: $
  */
-public interface TagService {
+@Repository
+@Mapper
+public interface TagDao {
     /**
      * 新增分类
      * @param tag
      * @return 主键id
      */
-    @ClearRedisCache
     Long saveTag(Tag tag);
 
     /**
@@ -26,7 +29,6 @@ public interface TagService {
      * @param id
      * @return Tag
      */
-    @Cacheable(cacheNames = "cache")
     Tag findTagById(Long id);
 
     /**
@@ -34,30 +36,31 @@ public interface TagService {
      * @param name
      * @return
      */
-    @Cacheable(cacheNames = "cache")
     Tag findTagByName(String name);
 
     /**
-     *查询标签列表
-     * @param currentPage
-     * @param pageSize
+     * 查询分类列表
      * @return
      */
-    @Cacheable(cacheNames = "cache")
-    PageInfo<Tag> findTagList(Integer currentPage, Integer pageSize);
+    List<Tag> findTagList();
 
     /**
-     * 修改分类
+     * 根据id修改分类
      * @param tag
      * @return
      */
-    @ClearRedisCache
     int updateTag(Tag tag);
 
     /**
      * 根据id删除分类
      * @param id
      */
-    @ClearRedisCache
     void deleteTag(Long id);
+
+    /**
+     * 根据博客id查询标签列表
+     * @param id
+     * @return
+     */
+    List<Tag> findTagListByBlogId(@Param("id") Long id);
 }

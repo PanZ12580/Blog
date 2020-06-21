@@ -4,7 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.AuthToken;
 import com.hzhang.pojo.Result;
 import com.hzhang.pojo.Tag;
-import com.hzhang.service.profile.TagService;
+import com.hzhang.service.TagService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

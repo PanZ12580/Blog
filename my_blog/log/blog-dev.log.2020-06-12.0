@@ -27,14 +27,14 @@
 2020-06-12 00:49:50.844  INFO 21072 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-12 00:49:50.888  INFO 21072 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 00:49:51.231  INFO 21072 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 00:49:51.256 DEBUG 21072 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
-2020-06-12 00:49:51.279 DEBUG 21072 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.saveType          : ==> Parameters: Java(String)
+2020-06-12 00:49:51.256 DEBUG 21072 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
+2020-06-12 00:49:51.279 DEBUG 21072 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.saveType          : ==> Parameters: Java(String)
 2020-06-12 00:49:51.547 ERROR 21072 --- [http-nio-8001-exec-4] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8001/profile/save, Response Status_Code: 200, Exception: {}
 
 org.springframework.dao.DuplicateKeyException: 
 ### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Java' for key 'type.name'
 ### The error may exist in file [E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes\mybatis\mapper\TypeMapper.xml]
-### The error may involve com.hzhang.dao.profile.TypeDao.saveType-Inline
+### The error may involve com.hzhang.dao.TypeDao.saveType-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into type(name) values(?)
 ### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Java' for key 'type.name'
@@ -60,8 +60,8 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy101.saveType(Unknown Source)
-	at com.hzhang.service.profile.impl.TypeServiceImpl.saveType(TypeServiceImpl.java:26)
-	at com.hzhang.service.profile.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$2446fbc3.invoke(<generated>)
+	at com.hzhang.service.impl.TypeServiceImpl.saveType(TypeServiceImpl.java:26)
+	at com.hzhang.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$2446fbc3.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -73,7 +73,7 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$80953c3f.saveType(<generated>)
+	at com.hzhang.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$80953c3f.saveType(<generated>)
 	at com.hzhang.controller.profile.TypeController.save(TypeController.java:51)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -167,21 +167,21 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:52:02.648 DEBUG 21072 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:52:02.648 DEBUG 21072 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:52:02.668 DEBUG 21072 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:52:02.673 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 00:52:02.674 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 00:52:02.676 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:52:02.673 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 00:52:02.674 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 00:52:02.676 DEBUG 21072 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:52:11.803  INFO 21072 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:52:11.805  INFO 21072 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:52:11.806  INFO 21072 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894322608
 2020-06-12 00:52:11.806  INFO 21072 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 9198 seconds
-2020-06-12 00:52:11.810 DEBUG 21072 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
-2020-06-12 00:52:11.810 DEBUG 21072 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.saveType          : ==> Parameters: Java(String)
+2020-06-12 00:52:11.810 DEBUG 21072 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
+2020-06-12 00:52:11.810 DEBUG 21072 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.saveType          : ==> Parameters: Java(String)
 2020-06-12 00:52:11.969 ERROR 21072 --- [http-nio-8001-exec-10] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8001/profile/save, Response Status_Code: 200, Exception: {}
 
 org.springframework.dao.DuplicateKeyException: 
 ### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Java' for key 'type.name'
 ### The error may exist in file [E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes\mybatis\mapper\TypeMapper.xml]
-### The error may involve com.hzhang.dao.profile.TypeDao.saveType-Inline
+### The error may involve com.hzhang.dao.TypeDao.saveType-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into type(name) values(?)
 ### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Java' for key 'type.name'
@@ -207,8 +207,8 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy101.saveType(Unknown Source)
-	at com.hzhang.service.profile.impl.TypeServiceImpl.saveType(TypeServiceImpl.java:26)
-	at com.hzhang.service.profile.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$2446fbc3.invoke(<generated>)
+	at com.hzhang.service.impl.TypeServiceImpl.saveType(TypeServiceImpl.java:26)
+	at com.hzhang.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$2446fbc3.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -220,7 +220,7 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$80953c3f.saveType(<generated>)
+	at com.hzhang.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$80953c3f.saveType(<generated>)
 	at com.hzhang.controller.profile.TypeController.save(TypeController.java:51)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -335,33 +335,33 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:09.426  INFO 22064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-12 00:53:09.473  INFO 22064 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 00:53:09.764  INFO 22064 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 00:53:09.832 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 00:53:09.852 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: Java(String)
-2020-06-12 00:53:09.870 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 1
+2020-06-12 00:53:09.832 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 00:53:09.852 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: Java(String)
+2020-06-12 00:53:09.870 DEBUG 22064 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 1
 2020-06-12 00:53:20.913  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:20.914  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:20.916  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
 2020-06-12 00:53:20.916  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 11489 seconds
-2020-06-12 00:53:20.920 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 00:53:20.920 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: Java(String)
-2020-06-12 00:53:20.921 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 1
+2020-06-12 00:53:20.920 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 00:53:20.920 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: Java(String)
+2020-06-12 00:53:20.921 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 1
 2020-06-12 00:53:24.265  INFO 22064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:24.267  INFO 22064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:24.268  INFO 22064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
 2020-06-12 00:53:24.268  INFO 22064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 14841 seconds
-2020-06-12 00:53:24.271 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 00:53:24.271 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: Java(String)
-2020-06-12 00:53:24.272 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 1
+2020-06-12 00:53:24.271 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 00:53:24.271 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: Java(String)
+2020-06-12 00:53:24.272 DEBUG 22064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 1
 2020-06-12 00:53:39.691  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:39.692  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:39.694  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
 2020-06-12 00:53:39.694  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 30267 seconds
-2020-06-12 00:53:39.697 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 00:53:39.697 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: SSM(String)
-2020-06-12 00:53:39.698 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 0
-2020-06-12 00:53:39.699 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
-2020-06-12 00:53:39.700 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.saveType          : ==> Parameters: SSM(String)
-2020-06-12 00:53:39.735 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.saveType          : <==    Updates: 1
+2020-06-12 00:53:39.697 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 00:53:39.697 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: SSM(String)
+2020-06-12 00:53:39.698 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 0
+2020-06-12 00:53:39.699 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
+2020-06-12 00:53:39.700 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.saveType          : ==> Parameters: SSM(String)
+2020-06-12 00:53:39.735 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.saveType          : <==    Updates: 1
 2020-06-12 00:53:41.885  INFO 22064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:41.887  INFO 22064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:41.888  INFO 22064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -369,9 +369,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:41.919 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:53:41.919 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:53:41.921 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:53:41.923 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 00:53:41.924 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 00:53:41.925 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:53:41.923 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 00:53:41.924 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 00:53:41.925 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:53:44.869  INFO 22064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:44.870  INFO 22064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:44.872  INFO 22064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -379,9 +379,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:44.874 DEBUG 22064 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:53:44.874 DEBUG 22064 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:53:44.881 DEBUG 22064 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:53:44.882 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 00:53:44.882 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 00:53:44.884 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:53:44.882 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 00:53:44.882 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 00:53:44.884 DEBUG 22064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:53:45.648  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:45.650  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:45.651  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -389,9 +389,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:45.653 DEBUG 22064 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:53:45.653 DEBUG 22064 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:53:45.655 DEBUG 22064 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:53:45.656 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 00:53:45.656 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 00:53:45.658 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:53:45.656 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 00:53:45.656 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 00:53:45.658 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:53:46.587  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:46.589  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:46.590  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -399,9 +399,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:46.595 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:53:46.595 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:53:46.598 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:53:46.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 00:53:46.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
-2020-06-12 00:53:46.600 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:53:46.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 00:53:46.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
+2020-06-12 00:53:46.600 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:53:48.008  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:48.009  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:48.010  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -409,9 +409,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:48.012 DEBUG 22064 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:53:48.012 DEBUG 22064 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:53:48.015 DEBUG 22064 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:53:48.016 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 00:53:48.016 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 20(Integer), 5(Integer)
-2020-06-12 00:53:48.018 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-12 00:53:48.016 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 00:53:48.016 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 20(Integer), 5(Integer)
+2020-06-12 00:53:48.018 DEBUG 22064 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-12 00:53:49.913  INFO 22064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:53:49.915  INFO 22064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:53:49.916  INFO 22064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
@@ -433,9 +433,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:53:59.924  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894389427
 2020-06-12 00:53:59.924  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 50497 seconds
 2020-06-12 00:53:59.925  INFO 22064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-12 00:53:59.931 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 00:53:59.932 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: SpringBoot(String)
-2020-06-12 00:53:59.933 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 1
+2020-06-12 00:53:59.931 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 00:53:59.932 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: SpringBoot(String)
+2020-06-12 00:53:59.933 DEBUG 22064 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 1
 2020-06-12 00:54:01.580  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:54:01.581  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:54:01.582  INFO 22064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894439925
@@ -443,9 +443,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 00:54:01.585 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 00:54:01.586 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 00:54:01.595 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 00:54:01.596 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 00:54:01.597 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 00:54:01.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 00:54:01.596 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 00:54:01.597 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 00:54:01.598 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 00:57:45.199  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 00:57:45.202  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 00:57:45.205  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591894439925
@@ -623,9 +623,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 01:53:28.082 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 01:53:28.083 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 01:53:28.089 DEBUG 22064 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 01:53:28.090 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 01:53:28.091 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 01:53:28.092 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 01:53:28.090 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 01:53:28.091 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 01:53:28.092 DEBUG 22064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 01:53:31.038  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 01:53:31.039  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 01:53:31.040  INFO 22064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591898006897
@@ -638,9 +638,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 01:57:15.224 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 01:57:15.224 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 01:57:15.227 DEBUG 22064 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 01:57:15.228 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 01:57:15.228 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 01:57:15.230 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 01:57:15.228 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 01:57:15.228 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 01:57:15.230 DEBUG 22064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 01:57:21.937  INFO 22064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 01:57:21.938  INFO 22064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 01:57:21.939  INFO 22064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591898235220
@@ -707,9 +707,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:08:36.823  INFO 18808 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-12 02:08:36.863  INFO 18808 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 02:08:37.169  INFO 18808 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 02:08:37.175 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:08:37.194 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 18(Long)
-2020-06-12 02:08:37.210 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:08:37.175 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:08:37.194 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 18(Long)
+2020-06-12 02:08:37.210 DEBUG 18808 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:09:17.444  INFO 18808 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:09:17.446  INFO 18808 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:09:17.447  INFO 18808 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591898916823
@@ -760,9 +760,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:11:43.124  INFO 11576 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 35302 seconds
 2020-06-12 02:11:43.153  INFO 11576 --- [http-nio-8001-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 02:11:43.429  INFO 11576 --- [http-nio-8001-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 02:11:43.435 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:11:43.455 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 23(Long)
-2020-06-12 02:11:43.471 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:11:43.435 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:11:43.455 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 23(Long)
+2020-06-12 02:11:43.471 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:11:45.037  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:11:45.038  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:45.040  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899067822
@@ -771,9 +771,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:11:46.476  INFO 11576 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:46.479  INFO 11576 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899067822
 2020-06-12 02:11:46.479  INFO 11576 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 38657 seconds
-2020-06-12 02:11:46.483 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:11:46.483 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 19(Long)
-2020-06-12 02:11:46.484 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:11:46.483 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:11:46.483 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 19(Long)
+2020-06-12 02:11:46.484 DEBUG 11576 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:11:47.789  INFO 11576 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:11:47.790  INFO 11576 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:47.791  INFO 11576 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899067822
@@ -782,9 +782,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:11:49.912  INFO 11576 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:49.913  INFO 11576 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899067822
 2020-06-12 02:11:49.914  INFO 11576 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 42092 seconds
-2020-06-12 02:11:49.918 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:11:49.918 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 17(Long)
-2020-06-12 02:11:49.919 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:11:49.918 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:11:49.918 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 17(Long)
+2020-06-12 02:11:49.919 DEBUG 11576 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:11:51.304  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:11:51.306  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:51.306  INFO 11576 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899067822
@@ -802,9 +802,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:11:54.878  INFO 11576 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:54.879  INFO 11576 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
 2020-06-12 02:11:54.879  INFO 11576 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 3571 seconds
-2020-06-12 02:11:54.882 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:11:54.882 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 20(Long)
-2020-06-12 02:11:54.883 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:11:54.882 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:11:54.882 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 20(Long)
+2020-06-12 02:11:54.883 DEBUG 11576 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:11:56.447  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:11:56.449  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:11:56.450  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
@@ -817,9 +817,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:12:14.634  INFO 11576 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:12:14.634  INFO 11576 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
 2020-06-12 02:12:14.634  INFO 11576 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 23326 seconds
-2020-06-12 02:12:14.636 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:12:14.636 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 15(Long)
-2020-06-12 02:12:14.638 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:12:14.636 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:12:14.636 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 15(Long)
+2020-06-12 02:12:14.638 DEBUG 11576 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:12:18.661  INFO 11576 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:12:18.662  INFO 11576 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:12:18.663  INFO 11576 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
@@ -828,9 +828,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'J
 2020-06-12 02:12:20.545  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:12:20.546  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
 2020-06-12 02:12:20.546  INFO 11576 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 29238 seconds
-2020-06-12 02:12:20.548 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 02:12:20.548 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 12(Long)
-2020-06-12 02:12:20.550 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 02:12:20.548 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 02:12:20.548 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 12(Long)
+2020-06-12 02:12:20.550 DEBUG 11576 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 02:12:23.234  INFO 11576 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-12 02:12:23.236  INFO 11576 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 02:12:23.237  INFO 11576 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591899111308
@@ -965,9 +965,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:43.391 DEBUG 5284 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:05:43.392 DEBUG 5284 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:05:43.410 DEBUG 5284 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:05:43.411 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:05:43.412 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:05:43.413 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:05:43.411 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:05:43.412 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:05:43.413 DEBUG 5284 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:05:45.033  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:45.035  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:45.036  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -975,9 +975,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:45.040 DEBUG 5284 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:05:45.040 DEBUG 5284 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:05:45.043 DEBUG 5284 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:05:45.044 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:05:45.044 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:05:45.046 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:05:45.044 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:05:45.044 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:05:45.046 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:05:45.811  INFO 5284 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:45.813  INFO 5284 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:45.814  INFO 5284 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -985,9 +985,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:45.816 DEBUG 5284 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:05:45.817 DEBUG 5284 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:05:45.819 DEBUG 5284 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:05:45.820 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:05:45.820 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:05:45.821 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:05:45.820 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:05:45.820 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:05:45.821 DEBUG 5284 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:05:46.518  INFO 5284 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:46.520  INFO 5284 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:46.521  INFO 5284 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -995,9 +995,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:46.525 DEBUG 5284 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:05:46.525 DEBUG 5284 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:05:46.527 DEBUG 5284 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:05:46.528 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:05:46.528 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
-2020-06-12 09:05:46.530 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:05:46.528 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:05:46.528 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
+2020-06-12 09:05:46.530 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:05:47.156  INFO 5284 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:47.157  INFO 5284 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:47.160  INFO 5284 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -1005,9 +1005,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:47.163 DEBUG 5284 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:05:47.163 DEBUG 5284 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:05:47.165 DEBUG 5284 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:05:47.166 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:05:47.167 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 20(Integer), 5(Integer)
-2020-06-12 09:05:47.168 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-12 09:05:47.166 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:05:47.167 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 20(Integer), 5(Integer)
+2020-06-12 09:05:47.168 DEBUG 5284 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-12 09:05:48.558  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:48.559  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:48.560  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -1028,19 +1028,19 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:05:56.008  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:56.009  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
 2020-06-12 09:05:56.009  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 15079 seconds
-2020-06-12 09:05:56.012 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:05:56.013 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 23(Long)
-2020-06-12 09:05:56.014 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:05:56.012 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:05:56.013 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 23(Long)
+2020-06-12 09:05:56.014 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:06:07.288  INFO 5284 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:06:07.290  INFO 5284 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:06:07.291  INFO 5284 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
 2020-06-12 09:06:07.291  INFO 5284 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 26361 seconds
-2020-06-12 09:06:07.333 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:06:07.334 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 23(Long)
-2020-06-12 09:06:07.334 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
-2020-06-12 09:06:07.335 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
-2020-06-12 09:06:07.336 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: 修改SSM(String), 23(Long)
-2020-06-12 09:06:07.418 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-12 09:06:07.333 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:06:07.334 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 23(Long)
+2020-06-12 09:06:07.334 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:06:07.335 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-12 09:06:07.336 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : ==> Parameters: 修改SSM(String), 23(Long)
+2020-06-12 09:06:07.418 DEBUG 5284 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : <==    Updates: 1
 2020-06-12 09:06:09.620  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:06:09.626  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:06:09.627  INFO 5284 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -1048,26 +1048,26 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:06:09.631 DEBUG 5284 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:06:09.631 DEBUG 5284 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:06:09.634 DEBUG 5284 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:06:09.635 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:06:09.636 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:06:09.638 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:06:09.635 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:06:09.636 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:06:09.638 DEBUG 5284 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:06:14.707  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:06:14.710  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:06:14.714  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
 2020-06-12 09:06:14.714  INFO 5284 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 33784 seconds
-2020-06-12 09:06:14.719 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:06:14.719 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 20(Long)
-2020-06-12 09:06:14.721 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:06:14.719 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:06:14.719 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 20(Long)
+2020-06-12 09:06:14.721 DEBUG 5284 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:06:19.633  INFO 5284 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:06:19.634  INFO 5284 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:06:19.635  INFO 5284 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
 2020-06-12 09:06:19.635  INFO 5284 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 38705 seconds
-2020-06-12 09:06:19.637 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:06:19.638 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 20(Long)
-2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
-2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
-2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: 动漫(String), 20(Long)
-2020-06-12 09:06:19.680 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-12 09:06:19.637 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:06:19.638 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 20(Long)
+2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-12 09:06:19.639 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.updateType        : ==> Parameters: 动漫(String), 20(Long)
+2020-06-12 09:06:19.680 DEBUG 5284 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.updateType        : <==    Updates: 1
 2020-06-12 09:06:21.815  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:06:21.816  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:06:21.816  INFO 5284 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930
@@ -1075,9 +1075,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:06:21.819 DEBUG 5284 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:06:21.819 DEBUG 5284 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:06:21.830 DEBUG 5284 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:06:21.831 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:06:21.832 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:06:21.833 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:06:21.831 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:06:21.832 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:06:21.833 DEBUG 5284 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:13:25.066  INFO 12696 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 12696 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-12 09:13:25.069 DEBUG 12696 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-12 09:13:25.070  INFO 12696 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -1111,16 +1111,16 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:14:52.092  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-12 09:14:52.125  INFO 12696 --- [http-nio-8001-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 09:14:52.486  INFO 12696 --- [http-nio-8001-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 09:14:52.493 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:14:52.516 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 0(Long)
-2020-06-12 09:14:52.554 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 0
+2020-06-12 09:14:52.493 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:14:52.516 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 0(Long)
+2020-06-12 09:14:52.554 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 0
 2020-06-12 09:15:16.229  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:15:16.230  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:15:16.232  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591924492092
 2020-06-12 09:15:16.232  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 24140 seconds
-2020-06-12 09:15:16.235 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:15:16.236 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 1(Long)
-2020-06-12 09:15:16.432 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:15:16.235 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:15:16.236 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 1(Long)
+2020-06-12 09:15:16.432 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:15:33.885  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:15:33.888  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:15:33.889  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591924492092
@@ -1128,9 +1128,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:15:33.926 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:15:33.927 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:15:33.982 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:15:33.989 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:15:33.989 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
-2020-06-12 09:15:33.991 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 10
+2020-06-12 09:15:33.989 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:15:33.989 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-12 09:15:33.991 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 10
 2020-06-12 09:15:50.056  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:15:50.057  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:15:50.059  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591924492092
@@ -1139,9 +1139,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:15:50.064 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:15:50.064 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:15:50.066 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:15:50.067 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:15:50.067 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 50(Integer)
-2020-06-12 09:15:50.071 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 20
+2020-06-12 09:15:50.067 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:15:50.067 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 50(Integer)
+2020-06-12 09:15:50.071 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 20
 2020-06-12 09:20:29.838  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:20:29.839  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:20:29.841  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591924550061
@@ -1150,9 +1150,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2020-06-12 09:20:29.846 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:20:29.847 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:20:29.853 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:20:29.854 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:20:29.854 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:20:29.856 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:20:29.854 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:20:29.854 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:20:29.856 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:21:40.200  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:21:40.202  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:21:40.203  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591924829843
@@ -1241,9 +1241,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:26:56.605  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:26:56.606  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925215230
 2020-06-12 09:26:56.606  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1376 seconds
-2020-06-12 09:26:56.609 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:26:56.609 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 23(Long)
-2020-06-12 09:26:56.804 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:26:56.609 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:26:56.609 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 23(Long)
+2020-06-12 09:26:56.804 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:27:12.923  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:27:12.924  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:27:12.925  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925215230
@@ -1251,9 +1251,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:27:12.930 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:27:12.930 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:27:12.963 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:27:12.964 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:27:12.964 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:27:12.965 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:27:12.964 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:27:12.964 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:27:12.965 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:28:20.699  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:28:20.700  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:28:20.701  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925215230
@@ -1263,9 +1263,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:28:48.222  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:28:48.223  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925300703
 2020-06-12 09:28:48.223  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 27520 seconds
-2020-06-12 09:28:48.225 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:28:48.225 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 16(Long)
-2020-06-12 09:28:48.321 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:28:48.225 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:28:48.225 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 16(Long)
+2020-06-12 09:28:48.321 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:29:18.038  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:29:18.040  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:29:18.042  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925300703
@@ -1274,16 +1274,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:29:18.047 DEBUG 12696 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:29:18.048 DEBUG 12696 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:29:18.055 DEBUG 12696 --- [http-nio-8001-exec-10] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:29:18.056 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:29:18.056 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:29:18.058 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:29:18.056 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:29:18.056 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:29:18.058 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:29:20.036  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:29:20.037  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:29:20.038  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925358044
 2020-06-12 09:29:20.038  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 1994 seconds
-2020-06-12 09:29:20.041 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:29:20.041 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 19(Long)
-2020-06-12 09:29:20.179 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:29:20.041 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:29:20.041 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 19(Long)
+2020-06-12 09:29:20.179 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:29:20.189  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:29:20.190  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:29:20.191  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925358044
@@ -1291,9 +1291,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:29:20.193 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:29:20.193 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:29:20.196 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:29:20.197 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:29:20.198 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:29:20.199 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:29:20.197 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:29:20.198 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:29:20.199 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:30:24.740  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:30:24.742  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:30:24.744  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925358044
@@ -1310,9 +1310,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:30:54.172 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:30:54.173 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:30:54.175 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:30:54.175 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:30:54.176 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:30:54.177 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:30:54.175 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:30:54.176 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:30:54.177 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:30:55.580  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:30:55.581  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:30:55.582  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
@@ -1320,16 +1320,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:30:55.584 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:30:55.584 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:30:55.586 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:30:55.587 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:30:55.588 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:30:55.590 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:30:55.587 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:30:55.588 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:30:55.590 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:30:57.989  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:30:57.990  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:30:57.991  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
 2020-06-12 09:30:57.991  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 33246 seconds
-2020-06-12 09:30:57.994 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:30:57.994 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 6(Long)
-2020-06-12 09:30:58.116 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:30:57.994 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:30:57.994 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 6(Long)
+2020-06-12 09:30:58.116 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:30:58.125  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:30:58.126  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:30:58.127  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
@@ -1337,9 +1337,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:30:58.128 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:30:58.129 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:30:58.130 DEBUG 12696 --- [http-nio-8001-exec-1] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:30:58.131 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:30:58.131 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:30:58.132 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:30:58.131 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:30:58.131 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:30:58.132 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:31:01.499  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:31:01.501  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:31:01.502  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
@@ -1347,16 +1347,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:31:01.505 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:31:01.505 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:31:01.508 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:31:01.509 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:31:01.509 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
-2020-06-12 09:31:01.510 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-12 09:31:01.509 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:31:01.509 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 15(Integer), 5(Integer)
+2020-06-12 09:31:01.510 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 1
 2020-06-12 09:31:03.258  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:31:03.259  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:31:03.260  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
 2020-06-12 09:31:03.260  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 38515 seconds
-2020-06-12 09:31:03.263 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:31:03.263 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 2(Long)
-2020-06-12 09:31:03.383 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:31:03.263 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:31:03.263 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 2(Long)
+2020-06-12 09:31:03.383 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:31:03.395  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:31:03.396  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:31:03.396  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
@@ -1364,17 +1364,17 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:31:03.398 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:31:03.399 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:31:03.403 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:31:03.404 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:31:03.404 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:31:03.405 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:31:03.404 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:31:03.404 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:31:03.405 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:31:19.592  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:31:19.593  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:31:19.593  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925424745
 2020-06-12 09:31:19.594  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 54849 seconds
 2020-06-12 09:31:19.595  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-12 09:31:19.598 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:31:19.598 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 4(Long)
-2020-06-12 09:31:19.737 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:31:19.598 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:31:19.598 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 4(Long)
+2020-06-12 09:31:19.737 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:31:19.747  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:31:19.748  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:31:19.749  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925479595
@@ -1382,9 +1382,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:31:19.751 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:31:19.751 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:31:19.754 DEBUG 12696 --- [http-nio-8001-exec-6] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:31:19.755 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:31:19.755 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:31:19.757 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 4
+2020-06-12 09:31:19.755 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:31:19.755 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:31:19.757 DEBUG 12696 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 4
 2020-06-12 09:32:09.396  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:09.400  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:09.400  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925479595
@@ -1393,16 +1393,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:09.403 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:09.403 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:09.405 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:09.406 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:32:09.406 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:32:09.407 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:09.406 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:32:09.406 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:32:09.407 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:11.439  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:11.440  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:11.441  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
 2020-06-12 09:32:11.441  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 2040 seconds
-2020-06-12 09:32:11.442 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:32:11.442 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 20(Long)
-2020-06-12 09:32:11.547 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:32:11.442 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:32:11.442 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 20(Long)
+2020-06-12 09:32:11.547 DEBUG 12696 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:32:11.555  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:11.556  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:11.556  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1410,9 +1410,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:11.557 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:11.558 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:11.560 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:11.560 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:32:11.561 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:32:11.562 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:11.560 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:32:11.561 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:32:11.562 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:16.416  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:16.416  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:16.417  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1420,16 +1420,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:16.419 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:16.420 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:16.421 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:16.422 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:32:16.423 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:32:16.424 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:16.422 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:32:16.423 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:32:16.424 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:18.351  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:18.352  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:18.353  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
 2020-06-12 09:32:18.353  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 8952 seconds
-2020-06-12 09:32:18.355 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:32:18.355 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 10(Long)
-2020-06-12 09:32:18.476 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:32:18.355 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:32:18.355 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 10(Long)
+2020-06-12 09:32:18.476 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:32:18.487  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:18.488  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:18.489  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1437,9 +1437,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:18.490 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:18.491 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:18.493 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:18.494 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:32:18.494 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:32:18.495 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:18.494 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:32:18.494 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:32:18.495 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:23.903  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:23.904  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:23.905  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1447,9 +1447,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:23.907 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:23.907 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:23.909 DEBUG 12696 --- [http-nio-8001-exec-8] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:23.910 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:32:23.910 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:32:23.911 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:23.910 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:32:23.910 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:32:23.911 DEBUG 12696 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:25.270  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:25.271  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:25.271  INFO 12696 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1461,9 +1461,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:25.636 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:25.637 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:25.639 DEBUG 12696 --- [http-nio-8001-exec-9] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:25.639 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:32:25.640 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:32:25.641 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 2
+2020-06-12 09:32:25.639 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:32:25.640 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:32:25.641 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 2
 2020-06-12 09:32:27.341  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:27.342  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:27.342  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1472,12 +1472,12 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:37.196  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:37.197  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
 2020-06-12 09:32:37.197  INFO 12696 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 27796 seconds
-2020-06-12 09:32:37.216 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 09:32:37.216 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: 周杰伦(String)
-2020-06-12 09:32:37.217 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 0
-2020-06-12 09:32:37.218 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
-2020-06-12 09:32:37.218 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.saveType          : ==> Parameters: 周杰伦(String)
-2020-06-12 09:32:37.238 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.saveType          : <==    Updates: 1
+2020-06-12 09:32:37.216 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 09:32:37.216 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: 周杰伦(String)
+2020-06-12 09:32:37.217 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 0
+2020-06-12 09:32:37.218 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
+2020-06-12 09:32:37.218 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.saveType          : ==> Parameters: 周杰伦(String)
+2020-06-12 09:32:37.238 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.saveType          : <==    Updates: 1
 2020-06-12 09:32:39.455  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:39.456  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:39.458  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1485,9 +1485,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:39.461 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:39.461 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:39.465 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:39.466 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:32:39.466 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:32:39.467 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:39.466 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:32:39.466 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:32:39.467 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:41.687  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:41.688  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:41.688  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1495,9 +1495,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:32:41.690 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:32:41.690 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:32:41.692 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:32:41.693 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:32:41.693 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:32:41.694 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:32:41.693 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:32:41.693 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:32:41.694 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:32:42.394  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:32:42.395  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:32:42.396  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
@@ -1511,12 +1511,12 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:02.894  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925529401
 2020-06-12 09:33:02.894  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 53493 seconds
 2020-06-12 09:33:02.895  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-12 09:33:02.898 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
-2020-06-12 09:33:02.899 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeByName    : ==> Parameters: 鼠标(String)
-2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeByName    : <==      Total: 0
-2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
-2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.saveType          : ==> Parameters: 鼠标(String)
-2020-06-12 09:33:02.922 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.saveType          : <==    Updates: 1
+2020-06-12 09:33:02.898 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeByName    : ==>  Preparing: select * from type where name = ?
+2020-06-12 09:33:02.899 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeByName    : ==> Parameters: 鼠标(String)
+2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeByName    : <==      Total: 0
+2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.saveType          : ==>  Preparing: insert into type(name) values(?)
+2020-06-12 09:33:02.900 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.saveType          : ==> Parameters: 鼠标(String)
+2020-06-12 09:33:02.922 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.saveType          : <==    Updates: 1
 2020-06-12 09:33:05.054  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:05.055  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:05.055  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1524,16 +1524,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:05.057 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:33:05.057 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:33:05.060 DEBUG 12696 --- [http-nio-8001-exec-3] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:33:05.061 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:33:05.061 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:33:05.062 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:33:05.061 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:33:05.061 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:33:05.062 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:33:07.352  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:07.353  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:07.353  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
 2020-06-12 09:33:07.353  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 4458 seconds
-2020-06-12 09:33:07.355 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
-2020-06-12 09:33:07.355 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : ==> Parameters: 25(Long)
-2020-06-12 09:33:07.484 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.deleteType        : <==    Updates: 1
+2020-06-12 09:33:07.355 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : ==>  Preparing: delete from type where id = ?
+2020-06-12 09:33:07.355 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : ==> Parameters: 25(Long)
+2020-06-12 09:33:07.484 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.deleteType        : <==    Updates: 1
 2020-06-12 09:33:07.491  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:07.492  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:07.492  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1541,9 +1541,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:07.494 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:33:07.494 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:33:07.496 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:33:07.497 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:33:07.497 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:33:07.499 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:33:07.497 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:33:07.497 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:33:07.499 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:33:15.930  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:15.930  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:15.931  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1551,9 +1551,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:15.933 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:33:15.933 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:33:15.935 DEBUG 12696 --- [http-nio-8001-exec-7] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:33:15.935 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:33:15.935 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:33:15.936 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:33:15.935 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:33:15.935 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:33:15.936 DEBUG 12696 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:33:16.957  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:16.957  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:16.959  INFO 12696 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1562,16 +1562,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:19.774  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:19.775  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
 2020-06-12 09:33:19.775  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 16880 seconds
-2020-06-12 09:33:19.777 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:33:19.777 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 24(Long)
-2020-06-12 09:33:19.778 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:33:19.777 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:33:19.777 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 24(Long)
+2020-06-12 09:33:19.778 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:33:27.015  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:27.016  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:27.017  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
 2020-06-12 09:33:27.017  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 24122 seconds
-2020-06-12 09:33:27.020 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
-2020-06-12 09:33:27.021 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: 周杰伦Mojito(String), 24(Long)
-2020-06-12 09:33:27.201 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-12 09:33:27.020 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-12 09:33:27.021 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : ==> Parameters: 周杰伦Mojito(String), 24(Long)
+2020-06-12 09:33:27.201 DEBUG 12696 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.updateType        : <==    Updates: 1
 2020-06-12 09:33:29.240  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:29.241  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:29.242  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1579,9 +1579,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:29.244 DEBUG 12696 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:33:29.245 DEBUG 12696 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:33:29.246 DEBUG 12696 --- [http-nio-8001-exec-4] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:33:29.248 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
-2020-06-12 09:33:29.248 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
-2020-06-12 09:33:29.249 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:33:29.248 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-12 09:33:29.248 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer)
+2020-06-12 09:33:29.249 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:33:31.833  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:31.834  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:31.835  INFO 12696 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1589,9 +1589,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:33:31.837 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:33:31.837 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:33:31.839 DEBUG 12696 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:33:31.840 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:33:31.841 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
-2020-06-12 09:33:31.842 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 5
+2020-06-12 09:33:31.840 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:33:31.841 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 5(Integer), 5(Integer)
+2020-06-12 09:33:31.842 DEBUG 12696 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 5
 2020-06-12 09:33:32.578  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:33:32.579  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:33:32.579  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
@@ -1601,9 +1601,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:34:40.114  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925582895
 2020-06-12 09:34:40.114  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 97219 seconds
 2020-06-12 09:34:40.115  INFO 12696 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-12 09:34:40.117 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:34:40.118 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 18(Long)
-2020-06-12 09:34:40.119 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:34:40.117 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:34:40.118 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 18(Long)
+2020-06-12 09:34:40.119 DEBUG 12696 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:34:42.146  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:34:42.147  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:42.147  INFO 12696 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
@@ -1612,9 +1612,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:34:43.806  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:43.807  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
 2020-06-12 09:34:43.807  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 3692 seconds
-2020-06-12 09:34:43.810 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:34:43.810 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 24(Long)
-2020-06-12 09:34:43.811 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:34:43.810 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:34:43.810 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 24(Long)
+2020-06-12 09:34:43.811 DEBUG 12696 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:34:45.138  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:34:45.140  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:45.141  INFO 12696 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
@@ -1623,9 +1623,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:34:46.245  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:46.246  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
 2020-06-12 09:34:46.246  INFO 12696 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 6131 seconds
-2020-06-12 09:34:46.249 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
-2020-06-12 09:34:46.250 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : ==> Parameters: 17(Long)
-2020-06-12 09:34:46.251 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao.findTypeById      : <==      Total: 1
+2020-06-12 09:34:46.249 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==>  Preparing: select * from type where id = ?
+2020-06-12 09:34:46.250 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : ==> Parameters: 17(Long)
+2020-06-12 09:34:46.251 DEBUG 12696 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao.findTypeById      : <==      Total: 1
 2020-06-12 09:34:53.136  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:34:53.137  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:53.139  INFO 12696 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
@@ -1641,9 +1641,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:34:58.169 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-12 09:34:58.169 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
 2020-06-12 09:34:58.170 DEBUG 12696 --- [http-nio-8001-exec-2] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
-2020-06-12 09:34:58.171 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
-2020-06-12 09:34:58.171 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
-2020-06-12 09:34:58.172 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 3
+2020-06-12 09:34:58.171 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ?
+2020-06-12 09:34:58.171 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : ==> Parameters: 10(Integer), 5(Integer)
+2020-06-12 09:34:58.172 DEBUG 12696 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao.findTypeList      : <==      Total: 3
 2020-06-12 09:34:59.234  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:34:59.235  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:34:59.235  INFO 12696 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591925680115
@@ -1725,7 +1725,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-12 09:58:42.819  INFO 10024 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-12 09:58:42.873 ERROR 10024 --- [http-nio-8001-exec-3] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8001/profile/tags, Response Status_Code: 200, Exception: {}
 
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hzhang.dao.profile.TagDao.findTagList
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hzhang.dao.TagDao.findTagList
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:107)
@@ -1744,8 +1744,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy102.findTagList(Unknown Source)
-	at com.hzhang.service.profile.impl.TagServiceImpl.findTagList(TagServiceImpl.java:47)
-	at com.hzhang.service.profile.impl.TagServiceImpl$$FastClassBySpringCGLIB$$167ef093.invoke(<generated>)
+	at com.hzhang.service.impl.TagServiceImpl.findTagList(TagServiceImpl.java:47)
+	at com.hzhang.service.impl.TagServiceImpl$$FastClassBySpringCGLIB$$167ef093.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -1764,7 +1764,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.TagServiceImpl$$EnhancerBySpringCGLIB$$13c715de.findTagList(<generated>)
+	at com.hzhang.service.impl.TagServiceImpl$$EnhancerBySpringCGLIB$$13c715de.findTagList(<generated>)
 	at com.hzhang.controller.profile.TagController.tags(TagController.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

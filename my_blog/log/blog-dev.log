@@ -228,7 +228,7 @@ Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter 
 2020-06-20 01:03:52.979  INFO 14624 --- [http-nio-8001-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 2020-06-20 01:03:52.995 DEBUG 14624 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
 2020-06-20 01:03:53.015 DEBUG 14624 --- [http-nio-8001-exec-6] c.h.d.profile.TagDao.findTagList_COUNT   : ==>  Preparing: SELECT count(0) FROM tag 
-2020-06-20 01:03:53.017 DEBUG 14624 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 01:03:53.017 DEBUG 14624 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 01:03:53.017 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 01:03:53.021 DEBUG 14624 --- [http-nio-8001-exec-6] c.h.d.profile.TagDao.findTagList_COUNT   : ==> Parameters: 
 2020-06-20 01:03:53.021 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
@@ -242,7 +242,7 @@ Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter 
 2020-06-20 01:03:53.143 DEBUG 14624 --- [http-nio-8001-exec-6] c.hzhang.dao.profile.TagDao.findTagList  : ==> Parameters: 
 2020-06-20 01:03:53.144 DEBUG 14624 --- [http-nio-8001-exec-6] c.hzhang.dao.profile.TagDao.findTagList  : <==      Total: 5
 2020-06-20 01:03:53.148 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 01:03:53.148 DEBUG 14624 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 01:03:53.148 DEBUG 14624 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 01:03:53.148 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 01:03:53.148 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 01:03:53.156 DEBUG 14624 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -741,11 +741,11 @@ Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversi
 2020-06-20 01:26:43.403  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 01:26:43.404  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592587601978
 2020-06-20 01:26:43.404  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1426 seconds
-2020-06-20 01:26:43.410 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 01:26:43.410 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 01:26:43.410 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 01:26:43.411 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 01:26:43.414 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 01:26:43.415 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 01:26:43.415 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 01:26:43.415 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 01:26:43.415 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 01:26:43.440 DEBUG 21512 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -776,8 +776,8 @@ Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversi
 2020-06-20 01:29:42.881  INFO 21512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 01:29:42.883  INFO 21512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592587781083
 2020-06-20 01:29:42.883  INFO 21512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1800 seconds
-2020-06-20 01:29:42.885 DEBUG 21512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 01:29:42.886 DEBUG 21512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-20 01:29:42.885 DEBUG 21512 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 01:29:42.886 DEBUG 21512 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-20 01:29:42.893 DEBUG 21512 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
 2020-06-20 01:29:42.895 DEBUG 21512 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.id, blog.title, blog.recommend, blog.update_time, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
 2020-06-20 01:29:42.895 DEBUG 21512 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
@@ -830,8 +830,8 @@ Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversi
 2020-06-20 01:34:51.817  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 01:34:51.818  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592588090133
 2020-06-20 01:34:51.818  INFO 21512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1685 seconds
-2020-06-20 01:34:51.820 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.6
-2020-06-20 01:34:51.821 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.6666666666666666
+2020-06-20 01:34:51.820 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.6
+2020-06-20 01:34:51.821 DEBUG 21512 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.6666666666666666
 2020-06-20 01:35:31.157  INFO 21512 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 509046fe99f5b5361a153db0c898f7f8
 2020-06-20 01:35:31.158  INFO 21512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 509046fe99f5b5361a153db0c898f7f8
 2020-06-20 01:35:31.158  INFO 21512 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
@@ -1329,11 +1329,11 @@ Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversi
 2020-06-20 02:06:48.432  INFO 18996 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 02:06:48.433  INFO 18996 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592589998594
 2020-06-20 02:06:48.433  INFO 18996 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 9839 seconds
-2020-06-20 02:06:48.440 DEBUG 18996 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 02:06:48.440 DEBUG 18996 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 02:06:48.440 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 02:06:48.441 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 02:06:48.444 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 02:06:48.445 DEBUG 18996 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 02:06:48.445 DEBUG 18996 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 02:06:48.445 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 02:06:48.445 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 02:06:48.477 DEBUG 18996 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -2086,8 +2086,8 @@ VALUES(1, 10), (1, 3), (8, 11);
 2020-06-20 02:14:00.159  INFO 18996 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592590390943
 2020-06-20 02:14:00.159  INFO 18996 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 49216 seconds
 2020-06-20 02:14:00.160  INFO 18996 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-20 02:14:00.163 DEBUG 18996 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 02:14:00.163 DEBUG 18996 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-20 02:14:00.163 DEBUG 18996 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 02:14:00.163 DEBUG 18996 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-20 02:14:00.164 DEBUG 18996 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 02:14:00.164 DEBUG 18996 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 02:14:00.165 DEBUG 18996 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -2181,13 +2181,13 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 2020-06-20 09:52:51.938  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 09:52:51.939  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592617970111
 2020-06-20 09:52:51.939  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1828 seconds
-2020-06-20 09:52:52.018 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 09:52:52.018 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 09:52:52.019 DEBUG 10900 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 09:52:52.019 DEBUG 10900 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 09:52:52.022 DEBUG 10900 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
 2020-06-20 09:52:52.023 DEBUG 10900 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
 2020-06-20 09:52:52.026 DEBUG 10900 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 09:52:52.027 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 09:52:52.027 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 09:52:52.027 DEBUG 10900 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 09:52:52.027 DEBUG 10900 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 09:52:52.037 DEBUG 10900 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
@@ -2199,8 +2199,8 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 2020-06-20 09:52:53.597  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 09:52:53.600  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592617970111
 2020-06-20 09:52:53.600  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 3489 seconds
-2020-06-20 09:52:53.604 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 09:52:53.606 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-20 09:52:53.604 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 09:52:53.606 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-20 09:52:53.607 DEBUG 10900 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 09:52:53.607 DEBUG 10900 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 09:52:53.610 DEBUG 10900 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -2270,9 +2270,9 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 2020-06-20 09:54:43.538 DEBUG 10900 --- [http-nio-8001-exec-8] c.h.dao.profile.TagDao.findTagByName     : ==>  Preparing: select * from tag where name = ? 
 2020-06-20 09:54:43.538 DEBUG 10900 --- [http-nio-8001-exec-8] c.h.dao.profile.TagDao.findTagByName     : ==> Parameters: SQL(String)
 2020-06-20 09:54:43.539 DEBUG 10900 --- [http-nio-8001-exec-8] c.h.dao.profile.TagDao.findTagByName     : <==      Total: 0
-2020-06-20 09:54:43.540 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?) 
-2020-06-20 09:54:43.540 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.saveTag    : ==> Parameters: SQL(String)
-2020-06-20 09:54:43.571 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.saveTag    : <==    Updates: 1
+2020-06-20 09:54:43.540 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?)
+2020-06-20 09:54:43.540 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.saveTag    : ==> Parameters: SQL(String)
+2020-06-20 09:54:43.571 DEBUG 10900 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.saveTag    : <==    Updates: 1
 2020-06-20 09:54:45.754  INFO 10900 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 09:54:45.756  INFO 10900 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 09:54:45.758  INFO 10900 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592618061080
@@ -2585,7 +2585,7 @@ VALUES(1, 10), (1, 3), (8, 11);
 2020-06-20 09:56:09.595  INFO 10900 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 09:56:09.596  INFO 10900 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592618151315
 2020-06-20 09:56:09.596  INFO 10900 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 18281 seconds
-2020-06-20 09:56:09.598 DEBUG 10900 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
+2020-06-20 09:56:09.598 DEBUG 10900 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
 2020-06-20 09:56:09.599 DEBUG 10900 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-20 09:56:09.600 DEBUG 10900 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 12(Long)
 2020-06-20 09:56:09.602 DEBUG 10900 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -3994,8 +3994,8 @@ VALUES(1, 10), (1, 3), (8, 11);
 2020-06-20 10:54:06.125  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592621406890
 2020-06-20 10:54:06.125  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 239235 seconds
 2020-06-20 10:54:06.125  INFO 10900 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-20 10:54:06.130 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 10:54:06.130 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.42857142857142855
+2020-06-20 10:54:06.130 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 10:54:06.130 DEBUG 10900 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.42857142857142855
 2020-06-20 10:54:06.130  INFO 10900 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 10:54:06.130  INFO 10900 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 10:54:06.131  INFO 10900 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592621646126
@@ -5762,8 +5762,8 @@ Caused by: java.sql.SQLException: Field 'create_time' doesn't have a default val
 2020-06-20 11:35:44.589  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592624093709
 2020-06-20 11:35:44.589  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 50880 seconds
 2020-06-20 11:35:44.589  INFO 10900 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-20 11:35:44.592 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
-2020-06-20 11:35:44.593 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5555555555555556
+2020-06-20 11:35:44.592 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
+2020-06-20 11:35:44.593 DEBUG 10900 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5555555555555556
 2020-06-20 11:35:45.254  INFO 10900 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 11:35:45.254  INFO 10900 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 11:35:45.255  INFO 10900 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592624144589
@@ -7469,14 +7469,14 @@ Caused by: java.sql.SQLException: Field 'user_id' doesn't have a default value
 2020-06-20 12:02:07.961  INFO 13620 --- [http-nio-8001-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 2020-06-20 12:02:07.976 DEBUG 13620 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
 2020-06-20 12:02:07.997 DEBUG 13620 --- [http-nio-8001-exec-8] c.h.d.profile.TagDao.findTagList_COUNT   : ==>  Preparing: SELECT count(0) FROM tag 
-2020-06-20 12:02:08.000 DEBUG 13620 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 12:02:08.000 DEBUG 13620 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 12:02:08.002 DEBUG 13620 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 12:02:08.002 DEBUG 13620 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 12:02:08.002 DEBUG 13620 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 8(Long)
 2020-06-20 12:02:08.003 DEBUG 13620 --- [http-nio-8001-exec-8] c.h.d.profile.TagDao.findTagList_COUNT   : ==> Parameters: 
 2020-06-20 12:02:08.033 DEBUG 13620 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
 2020-06-20 12:02:08.033 DEBUG 13620 --- [http-nio-8001-exec-8] c.h.d.profile.TagDao.findTagList_COUNT   : <==      Total: 1
-2020-06-20 12:02:08.034 DEBUG 13620 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 12:02:08.034 DEBUG 13620 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 12:02:08.034 DEBUG 13620 --- [http-nio-8001-exec-8] c.hzhang.dao.profile.TagDao.findTagList  : ==>  Preparing: select * from tag 
 2020-06-20 12:02:08.034 DEBUG 13620 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 12:02:08.034 DEBUG 13620 --- [http-nio-8001-exec-8] c.hzhang.dao.profile.TagDao.findTagList  : ==> Parameters: 
@@ -8671,7 +8671,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 13:51:43.200 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
 2020-06-20 13:51:43.201 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 10(Long)
 2020-06-20 13:51:43.203 DEBUG 2064 --- [http-nio-8001-exec-5] c.h.d.profile.TagDao.findTagList_COUNT   : ==>  Preparing: SELECT count(0) FROM tag 
-2020-06-20 13:51:43.203 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 13:51:43.203 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 13:51:43.203 DEBUG 2064 --- [http-nio-8001-exec-5] c.h.d.profile.TagDao.findTagList_COUNT   : ==> Parameters: 
 2020-06-20 13:51:43.204 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 13:51:43.204 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
@@ -8681,7 +8681,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 13:51:43.208 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.TagDao.findTagListByBlogId       : <==      Total: 2
 2020-06-20 13:51:43.219 DEBUG 2064 --- [http-nio-8001-exec-5] c.h.d.profile.TagDao.findTagList_COUNT   : <==      Total: 1
 2020-06-20 13:51:43.219 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 13:51:43.220 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 13:51:43.220 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 13:51:43.220 DEBUG 2064 --- [http-nio-8001-exec-5] c.hzhang.dao.profile.TagDao.findTagList  : ==>  Preparing: select * from tag 
 2020-06-20 13:51:43.220 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 13:51:43.220 DEBUG 2064 --- [http-nio-8001-exec-5] c.hzhang.dao.profile.TagDao.findTagList  : ==> Parameters: 
@@ -9681,8 +9681,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:46:58.573  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635569567
 2020-06-20 14:46:58.573  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 49006 seconds
 2020-06-20 14:46:58.574  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-20 14:46:58.576 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 14:46:58.577 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-20 14:46:58.576 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 14:46:58.577 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-20 14:46:58.577 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 14:46:58.577 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 14:46:58.578 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -9695,7 +9695,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:48:00.225  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:48:00.225  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635677283
 2020-06-20 14:48:00.225  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 2942 seconds
-2020-06-20 14:48:00.227 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
+2020-06-20 14:48:00.227 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
 2020-06-20 14:48:00.228 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-20 14:48:00.228 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 30(Long)
 2020-06-20 14:48:00.229 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -9710,11 +9710,11 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:48:08.720  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:48:08.721  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635677283
 2020-06-20 14:48:08.721  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 11438 seconds
-2020-06-20 14:48:08.722 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.16666666666666666
+2020-06-20 14:48:08.722 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.16666666666666666
 2020-06-20 14:48:08.722 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 14:48:08.722 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 14:48:08.742 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 14:48:08.743 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.14285714285714285
+2020-06-20 14:48:08.743 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.14285714285714285
 2020-06-20 14:48:08.743 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 14:48:08.743 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 14:48:08.744 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -9740,9 +9740,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:49:32.941  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:49:32.942  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635765645
 2020-06-20 14:49:32.942  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 7297 seconds
-2020-06-20 14:49:32.945 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:49:32.946 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:49:33.146 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:49:32.945 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:49:32.946 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:49:33.146 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:49:35.183  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:49:35.183  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:49:35.183  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635765645
@@ -9764,9 +9764,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:49:56.522  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:49:56.523  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635765645
 2020-06-20 14:49:56.523  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 30878 seconds
-2020-06-20 14:49:56.524 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:49:56.524 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: 你好(String), 11(Long)
-2020-06-20 14:49:56.617 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:49:56.524 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:49:56.524 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: 你好(String), 11(Long)
+2020-06-20 14:49:56.617 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:49:58.652  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:49:58.653  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:49:58.653  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635765645
@@ -9809,9 +9809,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:51:41.833  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:51:41.833  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635895611
 2020-06-20 14:51:41.833  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 6222 seconds
-2020-06-20 14:51:41.835 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:51:41.835 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: 画画话(String), 7(Long)
-2020-06-20 14:51:41.996 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:51:41.835 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:51:41.835 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: 画画话(String), 7(Long)
+2020-06-20 14:51:41.996 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:51:42.064  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:51:42.064  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:51:42.065  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592635895611
@@ -9834,9 +9834,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:53:41.782  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:41.783  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
 2020-06-20 14:53:41.783  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 1537 seconds
-2020-06-20 14:53:41.784 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:53:41.785 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:53:41.785 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:53:41.784 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:53:41.785 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:53:41.785 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:53:41.823  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:53:41.824  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:41.824  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
@@ -9862,9 +9862,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:53:49.239  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:49.239  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
 2020-06-20 14:53:49.239  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 8993 seconds
-2020-06-20 14:53:49.241 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:53:49.241 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:53:49.242 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:53:49.241 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:53:49.241 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:53:49.242 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:53:49.339  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:53:49.339  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:49.340  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
@@ -9886,9 +9886,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:53:58.422  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:58.422  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
 2020-06-20 14:53:58.423  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 18177 seconds
-2020-06-20 14:53:58.424 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:53:58.424 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:53:58.425 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:53:58.424 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:53:58.424 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:53:58.425 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:53:58.471  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:53:58.471  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:53:58.471  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
@@ -9914,9 +9914,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:54:14.437  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:54:14.437  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
 2020-06-20 14:54:14.438  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 34192 seconds
-2020-06-20 14:54:14.439 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:54:14.439 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:54:14.440 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:54:14.439 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:54:14.439 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:54:14.440 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:54:14.476  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:54:14.476  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:54:14.476  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636020246
@@ -9939,9 +9939,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:54:24.820  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:54:24.820  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636064021
 2020-06-20 14:54:24.820  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 799 seconds
-2020-06-20 14:54:24.823 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:54:24.823 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:54:24.824 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:54:24.823 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:54:24.823 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:54:24.824 DEBUG 2064 --- [http-nio-8001-exec-1] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:54:24.859  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:54:24.859  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:54:24.859  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636064021
@@ -9964,9 +9964,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:56:59.487  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:56:59.487  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
 2020-06-20 14:56:59.487  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1023 seconds
-2020-06-20 14:56:59.489 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:56:59.489 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:56:59.490 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:56:59.489 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:56:59.489 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:56:59.490 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:56:59.527  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:56:59.528  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:56:59.528  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
@@ -9988,9 +9988,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:57:02.233  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:02.233  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
 2020-06-20 14:57:02.233  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 3769 seconds
-2020-06-20 14:57:02.234 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:57:02.235 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:57:02.235 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:57:02.234 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:57:02.235 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:57:02.235 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:57:02.270  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:57:02.270  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:02.271  INFO 2064 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
@@ -10016,9 +10016,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:57:39.563  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:39.564  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
 2020-06-20 14:57:39.564  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 41100 seconds
-2020-06-20 14:57:39.566 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:57:39.566 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:57:39.567 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:57:39.566 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:57:39.566 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:57:39.567 DEBUG 2064 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:57:39.680  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:57:39.681  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:39.681  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636218464
@@ -10045,9 +10045,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 14:57:52.992  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:52.993  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636271176
 2020-06-20 14:57:52.993  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 1817 seconds
-2020-06-20 14:57:52.994 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ? 
-2020-06-20 14:57:52.994 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
-2020-06-20 14:57:52.995 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TagDao.updateTag  : <==    Updates: 1
+2020-06-20 14:57:52.994 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : ==>  Preparing: update tag set name = ? where id = ?
+2020-06-20 14:57:52.994 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : ==> Parameters: MySQL(String), 13(Long)
+2020-06-20 14:57:52.995 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TagDao.updateTag  : <==    Updates: 1
 2020-06-20 14:57:53.076  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 14:57:53.076  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 14:57:53.077  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636271176
@@ -10074,9 +10074,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:00:15.647 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TagDao.findTagByName     : ==>  Preparing: select * from tag where name = ? 
 2020-06-20 15:00:15.647 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TagDao.findTagByName     : ==> Parameters: 我的标签(String)
 2020-06-20 15:00:15.648 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TagDao.findTagByName     : <==      Total: 0
-2020-06-20 15:00:15.648 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?) 
-2020-06-20 15:00:15.649 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.saveTag    : ==> Parameters: 我的标签(String)
-2020-06-20 15:00:15.681 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.saveTag    : <==    Updates: 1
+2020-06-20 15:00:15.648 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?)
+2020-06-20 15:00:15.649 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.saveTag    : ==> Parameters: 我的标签(String)
+2020-06-20 15:00:15.681 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.saveTag    : <==    Updates: 1
 2020-06-20 15:00:15.822  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 15:00:15.823  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:00:15.824  INFO 2064 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636395937
@@ -10101,22 +10101,22 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:03:51.798  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:03:51.798  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636625523
 2020-06-20 15:03:51.798  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 6275 seconds
-2020-06-20 15:03:51.803 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.125
+2020-06-20 15:03:51.803 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.125
 2020-06-20 15:03:51.803 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeByName   : ==>  Preparing: select * from type where name = ? 
 2020-06-20 15:03:51.803 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeByName   : ==> Parameters: Mysql(String)
 2020-06-20 15:03:51.804 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeByName   : <==      Total: 0
-2020-06-20 15:03:51.805 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.saveType  : ==>  Preparing: insert into type(name) values(?) 
-2020-06-20 15:03:51.805 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.saveType  : ==> Parameters: Mysql(String)
-2020-06-20 15:03:51.831 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao.saveType  : <==    Updates: 1
+2020-06-20 15:03:51.805 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.saveType  : ==>  Preparing: insert into type(name) values(?)
+2020-06-20 15:03:51.805 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.saveType  : ==> Parameters: Mysql(String)
+2020-06-20 15:03:51.831 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao.saveType  : <==    Updates: 1
 2020-06-20 15:03:51.962  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 15:03:51.963  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:03:51.964  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636625523
 2020-06-20 15:03:51.964  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 6441 seconds
-2020-06-20 15:03:51.965 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.1111111111111111
+2020-06-20 15:03:51.965 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.1111111111111111
 2020-06-20 15:03:51.966 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 15:03:51.966 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 15:03:51.967 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 15:03:51.968 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.1
+2020-06-20 15:03:51.968 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.1
 2020-06-20 15:03:51.968 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 15:03:51.968 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 15:03:51.969 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10124,7 +10124,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:03:56.485  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:03:56.485  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636625523
 2020-06-20 15:03:56.485  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 10962 seconds
-2020-06-20 15:03:56.486 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.09090909090909091
+2020-06-20 15:03:56.486 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.09090909090909091
 2020-06-20 15:03:56.487 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-20 15:03:56.487 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 32(Long)
 2020-06-20 15:03:56.488 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -10139,7 +10139,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:04:27.274  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:04:27.275  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636625523
 2020-06-20 15:04:27.275  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 41752 seconds
-2020-06-20 15:04:27.278 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.08333333333333333
+2020-06-20 15:04:27.278 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.08333333333333333
 2020-06-20 15:04:27.278 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-20 15:04:27.279 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 32(Long)
 2020-06-20 15:04:27.279 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -10159,11 +10159,11 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:05:32.239  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:05:32.239  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636713228
 2020-06-20 15:05:32.239  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 19011 seconds
-2020-06-20 15:05:32.241 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.07692307692307693
+2020-06-20 15:05:32.241 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.07692307692307693
 2020-06-20 15:05:32.242 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 15:05:32.243 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 15:05:32.251 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 15:05:32.252 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.07142857142857142
+2020-06-20 15:05:32.252 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.07142857142857142
 2020-06-20 15:05:32.252 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 15:05:32.252 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 15:05:32.253 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10171,7 +10171,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:05:34.834  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:05:34.834  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636713228
 2020-06-20 15:05:34.835  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 21607 seconds
-2020-06-20 15:05:34.836 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.06666666666666667
+2020-06-20 15:05:34.836 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.06666666666666667
 2020-06-20 15:05:34.836 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-20 15:05:34.836 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 32(Long)
 2020-06-20 15:05:34.837 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -10186,11 +10186,11 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:05:36.665  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:05:36.665  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636713228
 2020-06-20 15:05:36.665  INFO 2064 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 23437 seconds
-2020-06-20 15:05:36.666 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0625
+2020-06-20 15:05:36.666 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0625
 2020-06-20 15:05:36.666 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 15:05:36.667 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 15:05:36.675 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 15:05:36.676 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.058823529411764705
+2020-06-20 15:05:36.676 DEBUG 2064 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.058823529411764705
 2020-06-20 15:05:36.676 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 15:05:36.676 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 15:05:36.677 DEBUG 2064 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10208,8 +10208,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:05:40.747  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:05:40.748  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592636713228
 2020-06-20 15:05:40.748  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 27520 seconds
-2020-06-20 15:05:40.749 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.1111111111111111
-2020-06-20 15:05:40.750 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.10526315789473684
+2020-06-20 15:05:40.749 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.1111111111111111
+2020-06-20 15:05:40.750 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.10526315789473684
 2020-06-20 15:05:40.750 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 15:05:40.750 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 15:05:40.751 DEBUG 2064 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10417,11 +10417,11 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:14:25.573  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:14:25.573  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637250953
 2020-06-20 15:14:25.573  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 14620 seconds
-2020-06-20 15:14:25.575 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.1
+2020-06-20 15:14:25.575 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.1
 2020-06-20 15:14:25.575 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 15:14:25.575 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 15:14:25.577 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 15:14:25.578 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.09523809523809523
+2020-06-20 15:14:25.578 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.09523809523809523
 2020-06-20 15:14:25.578 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 15:14:25.578 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 15:14:25.579 DEBUG 2064 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -10439,8 +10439,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:14:31.100  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:14:31.101  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637250953
 2020-06-20 15:14:31.101  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 20148 seconds
-2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.13636363636363635
-2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.13043478260869565
+2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.13636363636363635
+2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.13043478260869565
 2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 15:14:31.102 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 15:14:31.103 DEBUG 2064 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -10538,22 +10538,22 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:17:35.548  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:17:35.549  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637445944
 2020-06-20 15:17:35.549  INFO 2064 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 9605 seconds
-2020-06-20 15:17:35.551 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.125
+2020-06-20 15:17:35.551 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.125
 2020-06-20 15:17:35.551 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeByName   : ==>  Preparing: select * from type where name = ? 
 2020-06-20 15:17:35.552 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeByName   : ==> Parameters: Python(String)
 2020-06-20 15:17:35.552 DEBUG 2064 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeByName   : <==      Total: 0
-2020-06-20 15:17:35.553 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.saveType  : ==>  Preparing: insert into type(name) values(?) 
-2020-06-20 15:17:35.553 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.saveType  : ==> Parameters: Python(String)
-2020-06-20 15:17:35.582 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao.saveType  : <==    Updates: 1
+2020-06-20 15:17:35.553 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.saveType  : ==>  Preparing: insert into type(name) values(?)
+2020-06-20 15:17:35.553 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.saveType  : ==> Parameters: Python(String)
+2020-06-20 15:17:35.582 DEBUG 2064 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao.saveType  : <==    Updates: 1
 2020-06-20 15:17:35.764  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 15:17:35.765  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:17:35.765  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637445944
 2020-06-20 15:17:35.765  INFO 2064 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 9821 seconds
-2020-06-20 15:17:35.766 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.12
+2020-06-20 15:17:35.766 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.12
 2020-06-20 15:17:35.767 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 15:17:35.767 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 15:17:35.879 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 15:17:35.880 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.11538461538461539
+2020-06-20 15:17:35.880 DEBUG 2064 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.11538461538461539
 2020-06-20 15:17:35.881 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 15:17:35.881 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 15:17:35.882 DEBUG 2064 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10569,8 +10569,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:17:39.415  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:17:39.415  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637445944
 2020-06-20 15:17:39.415  INFO 2064 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 13471 seconds
-2020-06-20 15:17:39.416 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.14814814814814814
-2020-06-20 15:17:39.416 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.14285714285714285
+2020-06-20 15:17:39.416 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.14814814814814814
+2020-06-20 15:17:39.416 DEBUG 2064 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.14285714285714285
 2020-06-20 15:17:39.416 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 15:17:39.417 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 15:17:39.417 DEBUG 2064 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -10661,9 +10661,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 15:17:54.360  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:17:54.360  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637445944
 2020-06-20 15:17:54.360  INFO 2064 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 28416 seconds
-2020-06-20 15:17:54.362 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-20 15:17:54.362 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 11(Long)
-2020-06-20 15:17:54.580 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 1
+2020-06-20 15:17:54.362 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-20 15:17:54.362 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 11(Long)
+2020-06-20 15:17:54.580 DEBUG 2064 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 1
 2020-06-20 15:17:54.611  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: cd185d9ad81c810e6475b78223135b56
 2020-06-20 15:17:54.611  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 15:17:54.612  INFO 2064 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592637445944
@@ -11424,8 +11424,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 16:03:24.045  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 16:03:24.045  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592640202740
 2020-06-20 16:03:24.045  INFO 2064 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1305 seconds
-2020-06-20 16:03:24.046 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.1724137931034483
-2020-06-20 16:03:24.047 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
+2020-06-20 16:03:24.046 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.1724137931034483
+2020-06-20 16:03:24.047 DEBUG 2064 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
 2020-06-20 16:03:25.909  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 8528a54917bb1bd0475fae8c56afbe03
 2020-06-20 16:03:25.912  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 16:03:25.912  INFO 2064 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592640202740
@@ -11536,7 +11536,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 16:04:38.783  INFO 8524 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 16:04:38.784  INFO 8524 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592640277248
 2020-06-20 16:04:38.785  INFO 8524 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 1537 seconds
-2020-06-20 16:04:38.797 DEBUG 8524 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 16:04:38.797 DEBUG 8524 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 16:04:38.797 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 16:04:38.797 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 16:04:38.821 DEBUG 8524 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
@@ -11546,7 +11546,7 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 16:04:38.826 DEBUG 8524 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
 2020-06-20 16:04:38.855 DEBUG 8524 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 5
 2020-06-20 16:04:38.909 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-20 16:04:38.910 DEBUG 8524 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 16:04:38.910 DEBUG 8524 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 16:04:38.910 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 16:04:38.910 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 16:04:38.912 DEBUG 8524 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -11611,14 +11611,14 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 16:06:24.594  INFO 11880 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 16:06:24.600  INFO 11880 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592640383064
 2020-06-20 16:06:24.602  INFO 11880 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1538 seconds
-2020-06-20 16:06:24.639 DEBUG 11880 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 16:06:24.639 DEBUG 11880 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 16:06:24.639 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-20 16:06:24.639 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-20 16:06:24.642 DEBUG 11880 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
 2020-06-20 16:06:24.642 DEBUG 11880 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
 2020-06-20 16:06:24.644 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
 2020-06-20 16:06:24.644 DEBUG 11880 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
-2020-06-20 16:06:24.645 DEBUG 11880 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-20 16:06:24.645 DEBUG 11880 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-20 16:06:24.645 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-20 16:06:24.645 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-20 16:06:24.646 DEBUG 11880 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -12079,8 +12079,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'blog_id' c
 2020-06-20 16:12:33.491  INFO 11880 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-20 16:12:33.493  INFO 11880 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592640725673
 2020-06-20 16:12:33.493  INFO 11880 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 27820 seconds
-2020-06-20 16:12:33.496 DEBUG 11880 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-20 16:12:33.497 DEBUG 11880 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-20 16:12:33.496 DEBUG 11880 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-20 16:12:33.497 DEBUG 11880 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-20 16:12:33.497 DEBUG 11880 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-20 16:12:33.498 DEBUG 11880 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-20 16:12:33.500 DEBUG 11880 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4

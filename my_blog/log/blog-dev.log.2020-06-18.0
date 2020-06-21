@@ -33,7 +33,7 @@
 2020-06-18 20:29:18.347  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-18 20:29:18.349  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
 2020-06-18 20:29:18.350  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 2745 seconds
-2020-06-18 20:29:18.444 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 20:29:18.444 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-18 20:29:18.444 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-18 20:29:18.445 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-18 20:29:18.447 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
@@ -42,7 +42,7 @@
 2020-06-18 20:29:18.493 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.*, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
 2020-06-18 20:29:18.494 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
 2020-06-18 20:29:18.495 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-18 20:29:18.495 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 20:29:18.495 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-18 20:29:18.496 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-18 20:29:18.496 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-18 20:29:18.497 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -125,8 +125,8 @@
 2020-06-18 20:41:33.191  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
 2020-06-18 20:41:33.191  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 548378 seconds
 2020-06-18 20:41:33.193  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-18 20:41:33.195 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-18 20:41:33.196 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-18 20:41:33.195 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-18 20:41:33.196 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-18 20:41:33.197 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-18 20:41:33.198 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-18 20:41:33.200 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -487,8 +487,8 @@
 2020-06-18 21:34:03.099  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
 2020-06-18 21:34:03.099  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 50580 seconds
 2020-06-18 21:34:03.102  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-18 21:34:03.106 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4
-2020-06-18 21:34:03.107 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
+2020-06-18 21:34:03.106 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4
+2020-06-18 21:34:03.107 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
 2020-06-18 21:34:03.109 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-18 21:34:03.110 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 10(Integer)
 2020-06-18 21:34:03.113 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -496,14 +496,14 @@
 2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487243102
 2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 9336 seconds
-2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.42857142857142855
-2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.42857142857142855
+2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-18 21:34:25.851  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
 2020-06-18 21:34:25.852  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-18 21:34:25.852  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487243102
 2020-06-18 21:34:25.853  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 22751 seconds
-2020-06-18 21:34:25.854 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5555555555555556
-2020-06-18 21:34:25.855 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-18 21:34:25.854 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5555555555555556
+2020-06-18 21:34:25.855 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 1(Integer)
 2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 1
@@ -1220,14 +1220,14 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2020-06-18 21:58:39.853  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-18 21:58:39.855  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
 2020-06-18 21:58:39.856  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 17131 seconds
-2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-18 21:58:39.894 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
 2020-06-18 21:58:39.894 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
 2020-06-18 21:58:39.896 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
 2020-06-18 21:58:39.896 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-18 21:58:39.899 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2

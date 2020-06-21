@@ -787,7 +787,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:25:37.546 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ====>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:25:37.547 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ====> Parameters: 3(Long)
 2020-06-16 00:25:37.549 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <====      Total: 0
-2020-06-16 00:25:37.551 DEBUG 17200 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:25:37.551 DEBUG 17200 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:25:37.552 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ====>  Preparing: select * from type where id = ? 
 2020-06-16 00:25:37.552 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ====> Parameters: 8(Long)
 2020-06-16 00:25:37.593 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <====      Total: 1
@@ -797,7 +797,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:25:37.597 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ====>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:25:37.598 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ====> Parameters: 2(Long)
 2020-06-16 00:25:37.599 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <====      Total: 0
-2020-06-16 00:25:37.601 DEBUG 17200 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:25:37.601 DEBUG 17200 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:25:37.602 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ====>  Preparing: select * from type where id = ? 
 2020-06-16 00:25:37.602 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ====> Parameters: 17(Long)
 2020-06-16 00:25:37.603 DEBUG 17200 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <====      Total: 1
@@ -1805,7 +1805,7 @@ Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No ser
 2020-06-16 00:36:43.094 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:36:43.094 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 3(Long)
 2020-06-16 00:36:43.097 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:36:43.098 DEBUG 11324 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:36:43.098 DEBUG 11324 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:36:43.099 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:36:43.099 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 00:36:43.101 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -1815,7 +1815,7 @@ Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No ser
 2020-06-16 00:36:43.108 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:36:43.108 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 2(Long)
 2020-06-16 00:36:43.109 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:36:43.110 DEBUG 11324 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:36:43.110 DEBUG 11324 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:36:43.110 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:36:43.111 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 00:36:43.112 DEBUG 11324 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2045,7 +2045,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:38:07.100 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:38:07.101 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 3(Long)
 2020-06-16 00:38:07.103 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:38:07.105 DEBUG 19988 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:38:07.105 DEBUG 19988 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:38:07.105 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:38:07.105 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 00:38:07.114 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2055,7 +2055,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:38:07.124 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:38:07.124 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 2(Long)
 2020-06-16 00:38:07.125 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:38:07.126 DEBUG 19988 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:38:07.126 DEBUG 19988 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:38:07.126 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:38:07.127 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 00:38:07.128 DEBUG 19988 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2103,7 +2103,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:39:20.244 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:39:20.244 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 3(Long)
 2020-06-16 00:39:20.245 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:39:20.247 DEBUG 12752 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:39:20.247 DEBUG 12752 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:39:20.247 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:39:20.248 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 00:39:20.249 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2113,7 +2113,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:39:20.263 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:39:20.264 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 2(Long)
 2020-06-16 00:39:20.265 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:39:20.265 DEBUG 12752 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:39:20.265 DEBUG 12752 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:39:20.266 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:39:20.266 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 00:39:20.267 DEBUG 12752 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2251,7 +2251,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:39:49.454 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:39:49.455 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 3(Long)
 2020-06-16 00:39:49.456 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:39:49.458 DEBUG 23208 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:39:49.458 DEBUG 23208 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:39:49.459 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:39:49.459 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 00:39:49.468 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2261,7 +2261,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:39:49.474 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:39:49.475 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 2(Long)
 2020-06-16 00:39:49.476 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:39:49.476 DEBUG 23208 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:39:49.476 DEBUG 23208 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:39:49.477 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:39:49.477 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 00:39:49.478 DEBUG 23208 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2402,7 +2402,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:42:24.017 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:42:24.017 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 3(Long)
 2020-06-16 00:42:24.018 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:42:24.020 DEBUG 17420 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:42:24.020 DEBUG 17420 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:42:24.020 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:42:24.020 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 00:42:24.029 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -2412,7 +2412,7 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-16 00:42:24.035 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
 2020-06-16 00:42:24.035 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 2(Long)
 2020-06-16 00:42:24.037 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.d.C.findCommentListByBlogId          : <==      Total: 0
-2020-06-16 00:42:24.037 DEBUG 17420 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 00:42:24.037 DEBUG 17420 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 00:42:24.038 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 00:42:24.038 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 00:42:24.039 DEBUG 17420 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -3033,7 +3033,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 08:29:31.466 DEBUG 22408 --- [main] c.h.dao.profile.UserDao.findUserById     : ==>  Preparing: select * from user where id = ? 
 2020-06-16 08:29:31.466 DEBUG 22408 --- [main] c.h.dao.profile.UserDao.findUserById     : ==> Parameters: 1(Long)
 2020-06-16 08:29:31.469 DEBUG 22408 --- [main] c.h.dao.profile.UserDao.findUserById     : <==      Total: 1
-2020-06-16 08:29:31.471 DEBUG 22408 --- [main] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 08:29:31.471 DEBUG 22408 --- [main] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 08:29:31.471 DEBUG 22408 --- [main] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 08:29:31.472 DEBUG 22408 --- [main] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 17(Long)
 2020-06-16 08:29:31.473 DEBUG 22408 --- [main] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -3845,7 +3845,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 10:58:55.706 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
 2020-06-16 10:58:55.709 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.*, tag.id AS tag_id, tag.name AS tag_name FROM blog LEFT JOIN blog_tag ON blog.id = blog_tag.blog_id LEFT JOIN tag ON blog_tag.tag_id = tag.id WHERE type_id = ? order by update_time desc LIMIT ? 
 2020-06-16 10:58:55.710 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 9(Long), 5(Integer)
-2020-06-16 10:58:55.714 DEBUG 16388 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 10:58:55.714 DEBUG 16388 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 10:58:55.714 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ====>  Preparing: select * from type where id = ? 
 2020-06-16 10:58:55.715 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : ====> Parameters: 9(Long)
 2020-06-16 10:58:55.722 DEBUG 16388 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeById     : <====      Total: 1
@@ -3967,11 +3967,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 11:13:43.077  INFO 5020 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 11:13:43.079  INFO 5020 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592277215135
 2020-06-16 11:13:43.079  INFO 5020 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 7944 seconds
-2020-06-16 11:13:43.111 DEBUG 5020 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 11:13:43.111 DEBUG 5020 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 11:13:43.111 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 11:13:43.112 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 11:13:43.149 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 11:13:43.151 DEBUG 5020 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 11:13:43.151 DEBUG 5020 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 11:13:43.151 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 11:13:43.152 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 11:13:43.153 DEBUG 5020 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -4532,7 +4532,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 12:40:20.746 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.*, tag.id AS tag_id, tag.name AS tag_name FROM blog LEFT JOIN blog_tag ON blog.id = blog_tag.blog_id LEFT JOIN tag ON blog_tag.tag_id = tag.id WHERE type_id = ? order by update_time desc LIMIT ? 
 2020-06-16 12:40:20.747 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 8(Long), 5(Integer)
 2020-06-16 12:40:20.775 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 3
-2020-06-16 12:40:20.777 DEBUG 6900 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 12:40:20.777 DEBUG 6900 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 12:40:20.777 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 12:40:20.778 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 8(Long)
 2020-06-16 12:40:20.780 DEBUG 6900 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -4904,11 +4904,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:08:54.891  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:08:54.892  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592287717890
 2020-06-16 14:08:54.892  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 17002 seconds
-2020-06-16 14:08:54.903 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 14:08:54.903 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 14:08:54.904 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 14:08:54.904 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 14:08:54.907 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 14:08:54.908 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 14:08:54.908 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 14:08:54.908 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 14:08:54.908 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 14:08:54.910 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -4956,8 +4956,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:09:07.507  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:09:07.508  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592287717890
 2020-06-16 14:09:07.508  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 29618 seconds
-2020-06-16 14:09:07.509 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 14:09:07.510 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-16 14:09:07.509 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 14:09:07.510 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-16 14:09:07.510 DEBUG 16512 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 14:09:07.511 DEBUG 16512 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer), 5(Integer)
 2020-06-16 14:09:07.513 DEBUG 16512 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -4965,8 +4965,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:09:08.474  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:09:08.474  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592287717890
 2020-06-16 14:09:08.474  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 30584 seconds
-2020-06-16 14:09:08.475 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4
-2020-06-16 14:09:08.476 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
+2020-06-16 14:09:08.475 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4
+2020-06-16 14:09:08.476 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
 2020-06-16 14:09:08.477 DEBUG 16512 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 14:09:08.477 DEBUG 16512 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 10(Integer), 5(Integer)
 2020-06-16 14:09:08.478 DEBUG 16512 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -5270,7 +5270,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:37:01.433  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:37:01.433  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289417659
 2020-06-16 14:37:01.434  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 3775 seconds
-2020-06-16 14:37:01.436 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2857142857142857
+2020-06-16 14:37:01.436 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2857142857142857
 2020-06-16 14:37:01.437 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 14:37:01.437 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 24(Long)
 2020-06-16 14:37:01.438 DEBUG 16512 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 0
@@ -5417,8 +5417,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:41:04.671  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:41:04.671  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289629890
 2020-06-16 14:41:04.671  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 34781 seconds
-2020-06-16 14:41:04.672 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:41:04.673 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:41:04.672 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:41:04.673 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
 2020-06-16 14:41:09.783  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 14:41:09.783  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:41:09.784  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289629890
@@ -5436,8 +5436,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:41:35.112  INFO 16512 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:41:35.113  INFO 16512 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289681275
 2020-06-16 14:41:35.113  INFO 16512 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 13838 seconds
-2020-06-16 14:41:35.114 DEBUG 16512 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:41:35.114 DEBUG 16512 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:41:35.114 DEBUG 16512 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:41:35.114 DEBUG 16512 --- [http-nio-8001-exec-10] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
 2020-06-16 14:41:44.916  INFO 16512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 14:41:44.917  INFO 16512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:41:44.917  INFO 16512 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289681275
@@ -5458,8 +5458,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:42:01.960  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:42:01.960  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289681275
 2020-06-16 14:42:01.960  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 40685 seconds
-2020-06-16 14:42:01.962 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:42:01.962 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:42:01.962 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:42:01.962 DEBUG 16512 --- [http-nio-8001-exec-9] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
 2020-06-16 14:42:04.571  INFO 16512 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 14:42:04.571  INFO 16512 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:42:04.572  INFO 16512 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289681275
@@ -5470,24 +5470,24 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:43:41.240  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592283941927
 2020-06-16 14:43:41.240  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 5879313 seconds
 2020-06-16 14:43:41.241  INFO 16512 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 14:43:41.244 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:43:41.244 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:43:41.244 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:43:41.244 DEBUG 16512 --- [http-nio-8001-exec-3] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
 2020-06-16 14:47:14.980  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 8e683ab4de976b8775ae2ea83cfba9fb
 2020-06-16 14:47:14.981  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:47:14.981  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289821241
 2020-06-16 14:47:14.981  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 213740 seconds
 2020-06-16 14:47:14.982  INFO 16512 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 14:47:14.983 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:47:14.983 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
-2020-06-16 14:47:15.107 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 1
+2020-06-16 14:47:14.983 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:47:14.983 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:47:15.107 DEBUG 16512 --- [http-nio-8001-exec-5] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 1
 2020-06-16 14:51:26.511  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 8e683ab4de976b8775ae2ea83cfba9fb
 2020-06-16 14:51:26.512  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:51:26.512  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592290034982
 2020-06-16 14:51:26.512  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 251530 seconds
 2020-06-16 14:51:26.513  INFO 16512 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 14:51:26.516 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 14:51:26.516 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 9(Long)
-2020-06-16 14:51:26.583 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 0
+2020-06-16 14:51:26.516 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 14:51:26.516 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 9(Long)
+2020-06-16 14:51:26.583 DEBUG 16512 --- [http-nio-8001-exec-7] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 0
 2020-06-16 14:51:33.631  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 14:51:33.631  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:51:33.632  INFO 16512 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592289724573
@@ -5561,11 +5561,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:57:37.613  INFO 26000 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:57:37.615  INFO 26000 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592290647665
 2020-06-16 14:57:37.615  INFO 26000 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 9950 seconds
-2020-06-16 14:57:37.626 DEBUG 26000 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 14:57:37.626 DEBUG 26000 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 14:57:37.628 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 14:57:37.628 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 14:57:37.631 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 14:57:37.632 DEBUG 26000 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 14:57:37.632 DEBUG 26000 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 14:57:37.632 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 14:57:37.633 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 14:57:37.635 DEBUG 26000 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -5577,8 +5577,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:57:42.363  INFO 26000 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:57:42.364  INFO 26000 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592290647665
 2020-06-16 14:57:42.365  INFO 26000 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 14700 seconds
-2020-06-16 14:57:42.367 DEBUG 26000 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 14:57:42.368 DEBUG 26000 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-16 14:57:42.367 DEBUG 26000 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 14:57:42.368 DEBUG 26000 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-16 14:57:42.368 DEBUG 26000 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 14:57:42.369 DEBUG 26000 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer), 5(Integer)
 2020-06-16 14:57:42.370 DEBUG 26000 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -5586,8 +5586,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 14:57:43.978  INFO 26000 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 14:57:43.979  INFO 26000 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592290647665
 2020-06-16 14:57:43.979  INFO 26000 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 16314 seconds
-2020-06-16 14:57:43.980 DEBUG 26000 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4
-2020-06-16 14:57:43.981 DEBUG 26000 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
+2020-06-16 14:57:43.980 DEBUG 26000 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4
+2020-06-16 14:57:43.981 DEBUG 26000 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
 2020-06-16 14:57:43.982 DEBUG 26000 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 14:57:43.982 DEBUG 26000 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 10(Integer), 5(Integer)
 2020-06-16 14:57:43.984 DEBUG 26000 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -5900,11 +5900,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:05:01.332  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:05:01.333  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291100820
 2020-06-16 15:05:01.333  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 513 seconds
-2020-06-16 15:05:01.381 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 15:05:01.381 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 15:05:01.382 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 15:05:01.383 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 15:05:01.404 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 15:05:01.407 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 15:05:01.407 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 15:05:01.407 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 15:05:01.408 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer), 5(Integer)
 2020-06-16 15:05:01.409 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -5912,15 +5912,15 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:05:11.858  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:05:11.860  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291100820
 2020-06-16 15:05:11.860  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 11040 seconds
-2020-06-16 15:05:11.869 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 15:05:11.870 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-16 15:05:11.869 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 15:05:11.870 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-16 15:06:21.576  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:06:21.577  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:21.578  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291100820
 2020-06-16 15:06:21.578  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 80758 seconds
 2020-06-16 15:06:21.580  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 15:06:21.584 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.6
-2020-06-16 15:06:21.584 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-16 15:06:21.584 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.6
+2020-06-16 15:06:21.584 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-16 15:06:21.585 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 15:06:21.586 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 15:06:21.587 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -5928,8 +5928,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:06:24.607  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:24.608  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
 2020-06-16 15:06:24.609  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 3029 seconds
-2020-06-16 15:06:24.611 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5714285714285714
-2020-06-16 15:06:24.612 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.625
+2020-06-16 15:06:24.611 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5714285714285714
+2020-06-16 15:06:24.612 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.625
 2020-06-16 15:06:25.945  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:06:25.947  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:25.949  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
@@ -5959,11 +5959,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:06:35.717  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:35.718  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
 2020-06-16 15:06:35.718  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 14138 seconds
-2020-06-16 15:06:35.719 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5555555555555556
+2020-06-16 15:06:35.719 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5555555555555556
 2020-06-16 15:06:35.720 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 15:06:35.720 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 15:06:35.722 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 15:06:35.723 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-16 15:06:35.723 DEBUG 23124 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-16 15:06:35.723 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 15:06:35.723 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 15:06:35.725 DEBUG 23124 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -5971,8 +5971,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:06:39.094  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:39.095  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
 2020-06-16 15:06:39.096  INFO 23124 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 17516 seconds
-2020-06-16 15:06:39.097 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5454545454545454
-2020-06-16 15:06:39.098 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-16 15:06:39.097 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5454545454545454
+2020-06-16 15:06:39.098 DEBUG 23124 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.5
 2020-06-16 15:06:39.098 DEBUG 23124 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 15:06:39.099 DEBUG 23124 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer), 5(Integer)
 2020-06-16 15:06:39.101 DEBUG 23124 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -5994,9 +5994,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:06:44.500  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:44.501  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
 2020-06-16 15:06:44.501  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 22921 seconds
-2020-06-16 15:06:44.505 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 15:06:44.505 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 8(Long)
-2020-06-16 15:06:44.582 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 1
+2020-06-16 15:06:44.505 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 15:06:44.505 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 8(Long)
+2020-06-16 15:06:44.582 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 1
 2020-06-16 15:06:44.590  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:06:44.591  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:44.592  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
@@ -6011,9 +6011,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:06:47.701  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:47.702  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
 2020-06-16 15:06:47.702  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 26122 seconds
-2020-06-16 15:06:47.706 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 15:06:47.706 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 5(Long)
-2020-06-16 15:06:47.921 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 1
+2020-06-16 15:06:47.706 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 15:06:47.706 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 5(Long)
+2020-06-16 15:06:47.921 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 1
 2020-06-16 15:06:47.931  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:06:47.932  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:06:47.932  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592291181580
@@ -6222,9 +6222,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:43:51.616 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TagDao.findTagByName     : ==>  Preparing: select * from tag where name = ? 
 2020-06-16 15:43:51.616 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TagDao.findTagByName     : ==> Parameters: Zihang Hong(String)
 2020-06-16 15:43:51.617 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TagDao.findTagByName     : <==      Total: 0
-2020-06-16 15:43:51.618 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?) 
-2020-06-16 15:43:51.619 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TagDao.saveTag    : ==> Parameters: Zihang Hong(String)
-2020-06-16 15:43:51.632 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TagDao.saveTag    : <==    Updates: 1
+2020-06-16 15:43:51.618 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.TagDao.saveTag    : ==>  Preparing: insert into tag(name) values(?)
+2020-06-16 15:43:51.619 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.TagDao.saveTag    : ==> Parameters: Zihang Hong(String)
+2020-06-16 15:43:51.632 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.TagDao.saveTag    : <==    Updates: 1
 2020-06-16 15:43:53.760  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:43:53.761  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:43:53.761  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293419552
@@ -6239,9 +6239,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:43:58.133  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:43:58.134  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293419552
 2020-06-16 15:43:58.134  INFO 23124 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 18582 seconds
-2020-06-16 15:43:58.136 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ? 
-2020-06-16 15:43:58.136 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : ==> Parameters: 4(Long)
-2020-06-16 15:43:58.312 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TagDao.deleteTag  : <==    Updates: 1
+2020-06-16 15:43:58.136 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : ==>  Preparing: delete from tag where id = ?
+2020-06-16 15:43:58.136 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : ==> Parameters: 4(Long)
+2020-06-16 15:43:58.312 DEBUG 23124 --- [http-nio-8001-exec-6] com.hzhang.dao.TagDao.deleteTag  : <==    Updates: 1
 2020-06-16 15:43:58.321  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
 2020-06-16 15:43:58.322  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:43:58.323  INFO 23124 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293419552
@@ -6281,11 +6281,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:46:32.644  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:46:32.644  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293591345
 2020-06-16 15:46:32.644  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1299 seconds
-2020-06-16 15:46:32.646 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.46153846153846156
+2020-06-16 15:46:32.646 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.46153846153846156
 2020-06-16 15:46:32.646 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 15:46:32.646 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 15:46:32.648 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 15:46:32.649 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.42857142857142855
+2020-06-16 15:46:32.649 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.42857142857142855
 2020-06-16 15:46:32.649 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 15:46:32.650 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 15:46:32.651 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -6301,8 +6301,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:46:59.080  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:46:59.080  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293591345
 2020-06-16 15:46:59.080  INFO 23124 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 27735 seconds
-2020-06-16 15:46:59.081 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4666666666666667
-2020-06-16 15:46:59.082 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4375
+2020-06-16 15:46:59.081 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4666666666666667
+2020-06-16 15:46:59.082 DEBUG 23124 --- [http-nio-8001-exec-3] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4375
 2020-06-16 15:46:59.083 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?, ? 
 2020-06-16 15:46:59.083 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer), 5(Integer)
 2020-06-16 15:46:59.084 DEBUG 23124 --- [http-nio-8001-exec-3] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -6326,11 +6326,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:47:31.843  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:47:31.844  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293647881
 2020-06-16 15:47:31.844  INFO 23124 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 3963 seconds
-2020-06-16 15:47:31.845 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4117647058823529
+2020-06-16 15:47:31.845 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.4117647058823529
 2020-06-16 15:47:31.845 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 15:47:31.845 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 15:47:31.847 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 15:47:31.848 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3888888888888889
+2020-06-16 15:47:31.848 DEBUG 23124 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3888888888888889
 2020-06-16 15:47:31.849 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 15:47:31.849 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 15:47:31.850 DEBUG 23124 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -6338,7 +6338,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:47:42.292  INFO 23124 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:47:42.293  INFO 23124 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293647881
 2020-06-16 15:47:42.293  INFO 23124 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 14412 seconds
-2020-06-16 15:47:42.295 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3684210526315789
+2020-06-16 15:47:42.295 DEBUG 23124 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3684210526315789
 2020-06-16 15:47:42.296 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 15:47:42.296 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 12(Long)
 2020-06-16 15:47:42.297 DEBUG 23124 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -6358,7 +6358,7 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:47:47.701  INFO 23124 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 15:47:47.702  INFO 23124 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592293647881
 2020-06-16 15:47:47.702  INFO 23124 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 19821 seconds
-2020-06-16 15:47:47.704 DEBUG 23124 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.35
+2020-06-16 15:47:47.704 DEBUG 23124 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.35
 2020-06-16 15:47:47.704 DEBUG 23124 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==>  Preparing: select * from type where id = ? 
 2020-06-16 15:47:47.705 DEBUG 23124 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : ==> Parameters: 7(Long)
 2020-06-16 15:47:47.706 DEBUG 23124 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeById     : <==      Total: 1
@@ -6385,8 +6385,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 15:56:56.569  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592231210347
 2020-06-16 15:56:56.569  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 63006222 seconds
 2020-06-16 15:56:56.570  INFO 23124 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 15:56:56.572 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.38095238095238093
-2020-06-16 15:56:56.572 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.36363636363636365
+2020-06-16 15:56:56.572 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.38095238095238093
+2020-06-16 15:56:56.572 DEBUG 23124 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.36363636363636365
 2020-06-16 15:56:56.573 DEBUG 23124 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 15:56:56.573 DEBUG 23124 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 15:56:56.574 DEBUG 23124 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 6
@@ -6781,11 +6781,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 16:50:03.351  INFO 22628 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592297401628
 2020-06-16 16:50:03.351  INFO 22628 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1723 seconds
 2020-06-16 16:50:03.351 DEBUG 22628 --- [http-nio-8001-exec-10] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 3
-2020-06-16 16:50:03.358 DEBUG 22628 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:50:03.358 DEBUG 22628 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:50:03.359 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 16:50:03.359 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 16:50:03.435 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 16:50:03.435 DEBUG 22628 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:50:03.435 DEBUG 22628 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:50:03.435 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 16:50:03.435 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 16:50:03.436 DEBUG 22628 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 6
@@ -6956,11 +6956,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 16:55:44.775  INFO 9768 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 16:55:44.780  INFO 9768 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592297739518
 2020-06-16 16:55:44.780  INFO 9768 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 5262 seconds
-2020-06-16 16:55:44.788 DEBUG 9768 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:55:44.788 DEBUG 9768 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:55:44.789 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 16:55:44.789 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 16:55:44.791 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 16:55:44.792 DEBUG 9768 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:55:44.792 DEBUG 9768 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:55:44.793 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 16:55:44.793 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 16:55:44.795 DEBUG 9768 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -6975,11 +6975,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 16:55:48.017  INFO 9768 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 16:55:48.018  INFO 9768 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592297739518
 2020-06-16 16:55:48.018  INFO 9768 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 8500 seconds
-2020-06-16 16:55:48.021 DEBUG 9768 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:55:48.021 DEBUG 9768 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:55:48.021 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 16:55:48.021 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 16:55:48.026 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 16:55:48.027 DEBUG 9768 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 16:55:48.027 DEBUG 9768 --- [http-nio-8001-exec-10] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 16:55:48.028 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 16:55:48.028 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 16:55:48.031 DEBUG 9768 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -7248,14 +7248,14 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:09:02.177  INFO 13952 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-16 19:09:02.235  INFO 13952 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-16 19:09:02.553  INFO 13952 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 19:09:02.583 DEBUG 13952 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:09:02.583 DEBUG 13952 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:09:02.588 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 19:09:02.588 DEBUG 13952 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
 2020-06-16 19:09:02.606 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 19:09:02.606 DEBUG 13952 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
 2020-06-16 19:09:02.624 DEBUG 13952 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
 2020-06-16 19:09:02.624 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 19:09:02.625 DEBUG 13952 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:09:02.625 DEBUG 13952 --- [http-nio-8001-exec-6] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:09:02.625 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 19:09:02.625 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 19:09:02.627 DEBUG 13952 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -7266,8 +7266,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:09:26.749  INFO 13952 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 19:09:26.751  INFO 13952 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592305742176
 2020-06-16 19:09:26.751  INFO 13952 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 24575 seconds
-2020-06-16 19:09:26.756 DEBUG 13952 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 19:09:26.757 DEBUG 13952 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-16 19:09:26.756 DEBUG 13952 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 19:09:26.757 DEBUG 13952 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-16 19:09:26.758 DEBUG 13952 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 19:09:26.759 DEBUG 13952 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 19:09:26.762 DEBUG 13952 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 5
@@ -7334,11 +7334,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:23:14.992  INFO 25308 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592306508770
 2020-06-16 19:23:14.992  INFO 25308 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 86222 seconds
 2020-06-16 19:23:14.993  INFO 25308 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 19:23:15.043 DEBUG 25308 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:23:15.043 DEBUG 25308 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:23:15.044 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 19:23:15.044 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 19:23:15.061 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 19:23:15.064 DEBUG 25308 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:23:15.064 DEBUG 25308 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:23:15.064 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 19:23:15.064 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 19:23:15.066 DEBUG 25308 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -7354,11 +7354,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:24:14.305  INFO 25308 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592306594993
 2020-06-16 19:24:14.305  INFO 25308 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 59312 seconds
 2020-06-16 19:24:14.308  INFO 25308 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 19:24:14.312 DEBUG 25308 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:24:14.312 DEBUG 25308 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:24:14.313 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 19:24:14.313 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 19:24:14.314 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 19:24:14.315 DEBUG 25308 --- [http-nio-8001-exec-7] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:24:14.315 DEBUG 25308 --- [http-nio-8001-exec-7] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:24:14.315 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 19:24:14.315 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 19:24:14.316 DEBUG 25308 --- [http-nio-8001-exec-7] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -7366,8 +7366,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:24:17.807  INFO 25308 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 19:24:17.808  INFO 25308 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592306654308
 2020-06-16 19:24:17.809  INFO 25308 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 3501 seconds
-2020-06-16 19:24:17.811 DEBUG 25308 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
-2020-06-16 19:24:17.812 DEBUG 25308 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.16666666666666666
+2020-06-16 19:24:17.811 DEBUG 25308 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
+2020-06-16 19:24:17.812 DEBUG 25308 --- [http-nio-8001-exec-9] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.16666666666666666
 2020-06-16 19:24:17.812 DEBUG 25308 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 19:24:17.813 DEBUG 25308 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 19:24:17.814  INFO 25308 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 3b9983a17324d6d0466ce323f17e93a2
@@ -7415,11 +7415,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:46:28.892  INFO 21388 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-16 19:46:37.608  INFO 21388 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-16 19:46:37.945  INFO 21388 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 19:46:37.974 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:46:37.974 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:46:37.980 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 19:46:38.002 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 19:46:38.020 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 19:46:38.023 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 19:46:38.023 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 19:46:38.023 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 19:46:38.023 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 19:46:38.025 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -7435,8 +7435,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:46:58.697  INFO 21388 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 19:46:58.699  INFO 21388 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592307988892
 2020-06-16 19:46:58.699  INFO 21388 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 29807 seconds
-2020-06-16 19:46:58.702 DEBUG 21388 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 19:46:58.702 DEBUG 21388 --- [http-nio-8001-exec-8] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-16 19:46:58.702 DEBUG 21388 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 19:46:58.702 DEBUG 21388 --- [http-nio-8001-exec-8] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-16 19:46:58.704 DEBUG 21388 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 19:46:58.704 DEBUG 21388 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 19:46:58.706 DEBUG 21388 --- [http-nio-8001-exec-8] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 4
@@ -7453,11 +7453,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 19:54:26.023  INFO 21388 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592308406047
 2020-06-16 19:54:26.023  INFO 21388 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 59976 seconds
 2020-06-16 19:54:26.026  INFO 21388 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 19:54:26.029 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
+2020-06-16 19:54:26.029 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
 2020-06-16 19:54:26.030 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 19:54:26.031 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 19:54:26.033 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 19:54:26.034 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.16666666666666666
+2020-06-16 19:54:26.034 DEBUG 21388 --- [http-nio-8001-exec-1] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.16666666666666666
 2020-06-16 19:54:26.034 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 19:54:26.034 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 19:54:26.037 DEBUG 21388 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 3
@@ -7537,11 +7537,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 20:17:40.121  INFO 21388 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592308466026
 2020-06-16 20:17:40.122  INFO 21388 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1394096 seconds
 2020-06-16 20:17:40.124  INFO 21388 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
-2020-06-16 20:17:40.128 DEBUG 21388 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.14285714285714285
+2020-06-16 20:17:40.128 DEBUG 21388 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.14285714285714285
 2020-06-16 20:17:40.130 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 20:17:40.131 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 20:17:40.138 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 20:17:40.139 DEBUG 21388 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.125
+2020-06-16 20:17:40.139 DEBUG 21388 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.125
 2020-06-16 20:17:40.140 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 20:17:40.140 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 20:17:40.142 DEBUG 21388 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -7553,8 +7553,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 20:17:47.371  INFO 21388 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 20:17:47.372  INFO 21388 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592309860124
 2020-06-16 20:17:47.372  INFO 21388 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 7248 seconds
-2020-06-16 20:17:47.374 DEBUG 21388 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2222222222222222
-2020-06-16 20:17:47.374 DEBUG 21388 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.2
+2020-06-16 20:17:47.374 DEBUG 21388 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2222222222222222
+2020-06-16 20:17:47.374 DEBUG 21388 --- [http-nio-8001-exec-5] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.2
 2020-06-16 20:17:47.375 DEBUG 21388 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 20:17:47.376 DEBUG 21388 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 20:17:47.377 DEBUG 21388 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -7640,11 +7640,11 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 20:44:42.520  INFO 10876 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-16 20:44:42.549  INFO 10876 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-16 20:44:42.825  INFO 10876 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 20:44:42.850 DEBUG 10876 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 20:44:42.850 DEBUG 10876 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 20:44:42.856 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
 2020-06-16 20:44:42.873 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
 2020-06-16 20:44:42.889 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
-2020-06-16 20:44:42.891 DEBUG 10876 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-16 20:44:42.891 DEBUG 10876 --- [http-nio-8001-exec-2] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.0
 2020-06-16 20:44:42.891 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
 2020-06-16 20:44:42.891 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
 2020-06-16 20:44:42.893 DEBUG 10876 --- [http-nio-8001-exec-2] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
@@ -7652,8 +7652,8 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 20:44:53.052  INFO 10876 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 20:44:53.053  INFO 10876 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592311482521
 2020-06-16 20:44:53.053  INFO 10876 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 10532 seconds
-2020-06-16 20:44:53.056 DEBUG 10876 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
-2020-06-16 20:44:53.056 DEBUG 10876 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-16 20:44:53.056 DEBUG 10876 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.3333333333333333
+2020-06-16 20:44:53.056 DEBUG 10876 --- [http-nio-8001-exec-4] com.hzhang.dao.TypeDao           : Cache Hit Ratio [com.hzhang.dao.TypeDao]: 0.25
 2020-06-16 20:44:53.057 DEBUG 10876 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
 2020-06-16 20:44:53.057 DEBUG 10876 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
 2020-06-16 20:44:53.058 DEBUG 10876 --- [http-nio-8001-exec-4] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2

@@ -1,10 +1,10 @@
-package com.hzhang.service.profile.impl;
+package com.hzhang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hzhang.dao.profile.TagDao;
+import com.hzhang.dao.TagDao;
 import com.hzhang.pojo.Tag;
-import com.hzhang.service.profile.TagService;
+import com.hzhang.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

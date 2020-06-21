@@ -1,4 +1,4 @@
-package com.hzhang.service.profile;
+package com.hzhang.service;
 
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
@@ -6,7 +6,6 @@ import com.hzhang.pojo.Type;
 import com.hzhang.service.profile.impl.BlogManageServiceImpl;
 import org.springframework.cache.annotation.Cacheable;
 
-import java.util.List;
 
 /**
  * @author ：Hzhang
