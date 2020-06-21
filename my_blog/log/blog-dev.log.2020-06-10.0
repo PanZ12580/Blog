@@ -1,0 +1,430 @@
+2020-06-10 15:48:11.913  INFO 11408 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 11408 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 15:48:11.924 DEBUG 11408 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 15:48:11.924  INFO 11408 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 15:48:13.739  INFO 11408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 15:48:13.742  INFO 11408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 15:48:13.776  INFO 11408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-06-10 15:48:14.960  INFO 11408 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$697b3604] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 15:48:17.744  INFO 11408 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 15:48:18.464  INFO 11408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:48:19.450  INFO 11408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 15:48:19.474  INFO 11408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 15:48:19.488  INFO 11408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 15:48:19.722  INFO 11408 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 8.727 seconds (JVM running for 11.313)
+2020-06-10 15:48:20.512  INFO 11408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 15:48:29.069  INFO 11408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 15:48:29.127 DEBUG 11408 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-10 15:48:29.164 DEBUG 11408 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
+2020-06-10 15:48:29.595 DEBUG 11408 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
+2020-06-10 15:48:29.647  INFO 11408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:48:29.650  INFO 11408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 15:48:29.682  INFO 11408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 15:53:02.829  INFO 1468 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 1468 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 15:53:02.830 DEBUG 1468 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 15:53:02.831  INFO 1468 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 15:53:04.174  INFO 1468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 15:53:04.176  INFO 1468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 15:53:04.210  INFO 1468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-06-10 15:53:04.910  INFO 1468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$8cf4cae2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 15:53:07.391  INFO 1468 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 15:53:07.948  INFO 1468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:53:08.628  INFO 1468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 15:53:08.650  INFO 1468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 15:53:08.669  INFO 1468 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 15:53:08.912  INFO 1468 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 6.629 seconds (JVM running for 7.971)
+2020-06-10 15:53:09.333  INFO 1468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 15:53:18.189  INFO 1468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 15:53:18.245 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-10 15:53:18.281 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
+2020-06-10 15:53:18.313 DEBUG 1468 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
+2020-06-10 15:53:18.322 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:53:18.323 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:53:18.324 DEBUG 1468 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:53:18.455  INFO 1468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:53:18.464  INFO 1468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 15:53:18.534  INFO 1468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 15:54:30.332  INFO 10864 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 10864 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 15:54:30.334 DEBUG 10864 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 15:54:30.335  INFO 10864 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 15:54:31.584  INFO 10864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 15:54:31.586  INFO 10864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 15:54:31.618  INFO 10864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-10 15:54:32.365  INFO 10864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$159c7235] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 15:54:34.276  INFO 10864 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 15:54:34.772  INFO 10864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:54:35.545  INFO 10864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 15:54:35.571  INFO 10864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 15:54:35.589  INFO 10864 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 15:54:35.843  INFO 10864 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 6.085 seconds (JVM running for 7.695)
+2020-06-10 15:54:36.411  INFO 10864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 15:54:45.126  INFO 10864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 15:54:45.216 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-10 15:54:45.255 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
+2020-06-10 15:54:45.434 DEBUG 10864 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
+2020-06-10 15:54:45.444 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:54:45.447 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:54:45.450 DEBUG 10864 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:54:45.561  INFO 10864 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:54:45.566  INFO 10864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 15:54:45.619  INFO 10864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 15:56:35.323  INFO 7172 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 7172 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 15:56:35.324 DEBUG 7172 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 15:56:35.325  INFO 7172 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 15:56:37.358  INFO 7172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 15:56:37.371  INFO 7172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 15:56:37.428  INFO 7172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2020-06-10 15:56:38.523  INFO 7172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$f84ac4e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 15:56:40.696  INFO 7172 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 15:56:41.449  INFO 7172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:56:42.250  INFO 7172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 15:56:42.273  INFO 7172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 15:56:42.300  INFO 7172 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 15:56:42.542  INFO 7172 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.869 seconds (JVM running for 9.439)
+2020-06-10 15:56:43.019  INFO 7172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 15:56:52.794  INFO 7172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 15:56:52.860 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-10 15:56:52.898 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
+2020-06-10 15:56:53.060 DEBUG 7172 --- [main] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
+2020-06-10 15:56:53.070 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: select * from type LIMIT ?
+2020-06-10 15:56:53.071 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 15:56:53.081 DEBUG 7172 --- [main] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1
+2020-06-10 15:56:53.211  INFO 7172 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 15:56:53.234  INFO 7172 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 15:56:53.279  INFO 7172 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 16:14:16.008  INFO 16492 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 16492 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:14:16.009 DEBUG 16492 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:14:16.010  INFO 16492 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:14:17.446  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:14:17.449  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:14:17.481  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-10 16:14:18.256  INFO 16492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$1d8a1853] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:14:20.590  INFO 16492 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:14:21.241  INFO 16492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:14:22.116  INFO 16492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:14:22.142  INFO 16492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:14:22.175  INFO 16492 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:14:22.413  INFO 16492 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.275 seconds (JVM running for 8.679)
+2020-06-10 16:14:22.868  INFO 16492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 16:14:32.686  INFO 16492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 16:14:32.696 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-10 16:14:32.751 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
+2020-06-10 16:14:33.047 DEBUG 16492 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-10 16:14:33.177  INFO 16492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:14:33.219  INFO 16492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 16:14:33.268  INFO 16492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 16:15:36.282  INFO 13128 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 13128 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:15:36.283 DEBUG 13128 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:15:36.283  INFO 13128 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:15:37.814  INFO 13128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:15:37.816  INFO 13128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:15:37.848  INFO 13128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-10 16:15:38.606  INFO 13128 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$150e6565] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:15:40.942  INFO 13128 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:15:41.677  INFO 13128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:15:42.486  INFO 13128 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:15:42.509  INFO 13128 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:15:42.526  INFO 13128 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:15:42.754  INFO 13128 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.224 seconds (JVM running for 8.744)
+2020-06-10 16:15:43.265  INFO 13128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 16:15:52.721  INFO 13128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 16:15:52.732 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==>  Preparing: update type set name = ? where id = ?
+2020-06-10 16:15:52.772 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : ==> Parameters: MySQL(String), 1(Long)
+2020-06-10 16:15:52.775 DEBUG 13128 --- [main] com.hzhang.dao.profile.TypeDao.updateType        : <==    Updates: 1
+2020-06-10 16:15:52.810  INFO 13128 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:15:52.815  INFO 13128 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 16:15:52.820  INFO 13128 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 16:38:59.444  INFO 17284 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 17284 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:38:59.446 DEBUG 17284 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:38:59.447  INFO 17284 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:39:00.905  INFO 17284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:39:00.907  INFO 17284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:39:00.950  INFO 17284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-06-10 16:39:01.973  INFO 17284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$3df45276] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:39:05.057  INFO 17284 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:39:05.845  INFO 17284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:39:06.850  INFO 17284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:39:06.875  INFO 17284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:39:06.907  INFO 17284 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:39:07.368  INFO 17284 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 8.621 seconds (JVM running for 10.868)
+2020-06-10 16:39:08.036  INFO 17284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:39:43.155  INFO 16112 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 16112 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:39:43.156 DEBUG 16112 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:39:43.156  INFO 16112 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:39:44.903  INFO 16112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:39:44.906  INFO 16112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:39:44.955  INFO 16112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 Redis repository interfaces.
+2020-06-10 16:39:46.007  INFO 16112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$ff3b7521] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:39:49.460  INFO 16112 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:39:50.597  INFO 16112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:39:51.642  INFO 16112 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:39:51.707  INFO 16112 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:39:51.744  INFO 16112 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:39:52.112  INFO 16112 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 9.543 seconds (JVM running for 11.175)
+2020-06-10 16:39:52.995  INFO 16112 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:40:36.116  INFO 4536 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 4536 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:40:36.118 DEBUG 4536 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:40:36.118  INFO 4536 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:40:37.593  INFO 4536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:40:37.595  INFO 4536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:40:37.627  INFO 4536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-06-10 16:40:38.818  INFO 4536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$7303897] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:40:41.407  INFO 4536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:40:42.256  INFO 4536 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:40:43.358  INFO 4536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:40:43.406  INFO 4536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:40:43.426  INFO 4536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:40:43.648  INFO 4536 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 8.287 seconds (JVM running for 9.867)
+2020-06-10 16:40:44.140  INFO 4536 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:44:51.277  INFO 10344 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 10344 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:44:51.278 DEBUG 10344 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:44:51.279  INFO 10344 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:44:52.842  INFO 10344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:44:52.844  INFO 10344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:44:52.877  INFO 10344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-10 16:44:53.660  INFO 10344 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$7303897] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:44:56.148  INFO 10344 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:44:56.768  INFO 10344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:44:57.771  INFO 10344 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:44:57.804  INFO 10344 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:44:57.821  INFO 10344 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:44:58.028  INFO 10344 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.396 seconds (JVM running for 8.913)
+2020-06-10 16:45:08.855  INFO 10344 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:46:19.004  INFO 21036 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 21036 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:46:19.005 DEBUG 21036 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:46:19.006  INFO 21036 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:46:20.501  INFO 21036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:46:20.506  INFO 21036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:46:20.537  INFO 21036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-06-10 16:46:21.311  INFO 21036 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$b556cdfb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:46:23.772  INFO 21036 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:46:24.368  INFO 21036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:46:25.263  INFO 21036 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:46:25.306  INFO 21036 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:46:25.325  INFO 21036 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:46:25.604  INFO 21036 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.395 seconds (JVM running for 8.77)
+2020-06-10 16:46:37.009  INFO 21036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 16:46:37.519  INFO 21036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 16:46:37.529 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:46:37.567 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 1(Long)
+2020-06-10 16:46:37.597 DEBUG 21036 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 1
+2020-06-10 16:46:37.687  INFO 21036 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:46:37.925  INFO 21036 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 16:46:37.946  INFO 21036 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 16:47:56.159  INFO 14716 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 14716 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:47:56.162 DEBUG 14716 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:47:56.162  INFO 14716 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:47:58.241  INFO 14716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:47:58.245  INFO 14716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:47:58.279  INFO 14716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-06-10 16:47:59.397  INFO 14716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$ff3b7521] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:48:05.714  INFO 14716 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:48:07.136  INFO 14716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:48:08.657  INFO 14716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:48:08.706  INFO 14716 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:48:08.750  INFO 14716 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:48:09.229  INFO 14716 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 13.938 seconds (JVM running for 15.685)
+2020-06-10 16:48:22.361  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 16:48:23.014  INFO 14716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 16:48:23.025 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:48:23.073 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 1(Long)
+2020-06-10 16:48:23.106 DEBUG 14716 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 1
+2020-06-10 16:48:23.362  INFO 14716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:48:23.387  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 16:48:23.449  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 16:49:27.988  INFO 1236 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 1236 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 16:49:27.990 DEBUG 1236 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 16:49:27.990  INFO 1236 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-10 16:49:30.317  INFO 1236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 16:49:30.320  INFO 1236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 16:49:30.367  INFO 1236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2020-06-10 16:49:31.619  INFO 1236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$b65b40d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 16:49:35.639  INFO 1236 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 16:49:37.108  INFO 1236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:49:38.481  INFO 1236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 16:49:38.520  INFO 1236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 16:49:38.540  INFO 1236 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 16:49:38.858  INFO 1236 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 11.759 seconds (JVM running for 14.313)
+2020-06-10 16:49:51.632  INFO 1236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 16:49:52.431  INFO 1236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 16:49:52.443 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==>  Preparing: select * from type where id = ?
+2020-06-10 16:49:52.497 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : ==> Parameters: 2(Long)
+2020-06-10 16:49:52.530 DEBUG 1236 --- [main] com.hzhang.dao.profile.TypeDao.findType          : <==      Total: 0
+2020-06-10 16:49:52.831  INFO 1236 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 16:49:52.833  INFO 1236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 16:49:52.883  INFO 1236 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 17:13:26.801  INFO 22324 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 22324 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 17:13:26.803 DEBUG 22324 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 17:13:26.803  INFO 22324 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-10 17:13:27.666  INFO 22324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 17:13:27.668  INFO 22324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 17:13:27.690  INFO 22324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-06-10 17:13:28.085  INFO 22324 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$4a3dada4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 17:13:28.498  INFO 22324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-10 17:13:28.507  INFO 22324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 17:13:28.508  INFO 22324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 17:13:28.635  INFO 22324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 17:13:28.635  INFO 22324 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1801 ms
+2020-06-10 17:13:29.812  INFO 22324 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 17:13:29.993  INFO 22324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:13:30.612  WARN 22324 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-10 17:13:30.613  INFO 22324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:13:30.627  INFO 22324 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-10 17:13:30.685  INFO 22324 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-10 17:13:30.688 ERROR 22324 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-10 17:14:39.135  INFO 16396 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 16396 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 17:14:39.137 DEBUG 16396 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 17:14:39.137  INFO 16396 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-10 17:14:40.438  INFO 16396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 17:14:40.440  INFO 16396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 17:14:40.466  INFO 16396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-10 17:14:40.932  INFO 16396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$6f4701fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 17:14:41.489  INFO 16396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-10 17:14:41.498  INFO 16396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 17:14:41.499  INFO 16396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 17:14:41.600  INFO 16396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 17:14:41.601  INFO 16396 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2419 ms
+2020-06-10 17:14:42.853  INFO 16396 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 17:14:43.072  INFO 16396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:14:43.685  WARN 16396 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-10 17:14:43.687  INFO 16396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:14:43.716  INFO 16396 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-10 17:14:43.727  INFO 16396 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-10 17:14:43.731 ERROR 16396 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-10 17:17:57.300  INFO 18076 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 18076 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 17:17:57.302 DEBUG 18076 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 17:17:57.302  INFO 18076 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-10 17:17:58.604  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 17:17:58.605  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 17:17:58.624  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-06-10 17:17:58.931  INFO 18076 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$e13c0fec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 17:17:59.252  INFO 18076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-10 17:17:59.260  INFO 18076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 17:17:59.261  INFO 18076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 17:17:59.342  INFO 18076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 17:17:59.343  INFO 18076 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2011 ms
+2020-06-10 17:18:00.237  INFO 18076 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 17:18:00.386  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:18:00.966  WARN 18076 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-10 17:18:00.967  INFO 18076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:18:00.982  INFO 18076 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-10 17:18:00.992  INFO 18076 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-10 17:18:00.996 ERROR 18076 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-10 17:19:03.266  INFO 21972 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 21972 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 17:19:03.269 DEBUG 21972 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 17:19:03.271  INFO 21972 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-10 17:19:04.505  INFO 21972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 17:19:04.508  INFO 21972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 17:19:04.540  INFO 21972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2020-06-10 17:19:05.033  INFO 21972 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$b0a790d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 17:19:05.674  INFO 21972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-10 17:19:05.682  INFO 21972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 17:19:05.682  INFO 21972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 17:19:05.786  INFO 21972 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 17:19:05.787  INFO 21972 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2402 ms
+2020-06-10 17:19:06.760  INFO 21972 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 17:19:07.045  INFO 21972 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:19:07.564  WARN 21972 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-10 17:19:07.565  INFO 21972 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:19:07.581  INFO 21972 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-10 17:19:07.590  INFO 21972 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-10 17:19:07.593 ERROR 21972 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-10 17:20:13.274  INFO 15864 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 15864 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-10 17:20:13.276 DEBUG 15864 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-10 17:20:13.276  INFO 15864 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-10 17:20:14.310  INFO 15864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 17:20:14.311  INFO 15864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-10 17:20:14.334  INFO 15864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-06-10 17:20:14.667  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$d54cc2d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 17:20:14.965  INFO 15864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-10 17:20:14.972  INFO 15864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 17:20:14.972  INFO 15864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-10 17:20:15.045  INFO 15864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 17:20:15.045  INFO 15864 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1736 ms
+2020-06-10 17:20:16.052  INFO 15864 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-10 17:20:16.201  INFO 15864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 17:20:16.642  INFO 15864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-10 17:20:16.643  INFO 15864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-10 17:20:16.654  INFO 15864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-10 17:20:16.665  INFO 15864 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-10 17:20:16.786  INFO 15864 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 3.866 seconds (JVM running for 13.649)
+2020-06-10 17:20:43.537  INFO 15864 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-10 17:20:43.538  INFO 15864 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-10 17:20:43.558  INFO 15864 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-06-10 17:20:43.596  INFO 15864 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-10 17:20:43.606  INFO 15864 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-10 17:20:44.043  INFO 15864 --- [http-nio-8001-exec-2] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-10 17:20:44.043  INFO 15864 --- [http-nio-8001-exec-2] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-10 17:20:55.816  INFO 15864 --- [http-nio-8001-exec-3] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-10 17:20:55.816  INFO 15864 --- [http-nio-8001-exec-3] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-10 17:21:17.379  INFO 15864 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-10 17:21:17.379  INFO 15864 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-10 17:21:17.427  INFO 15864 --- [http-nio-8001-exec-10] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-10 17:21:17.427  INFO 15864 --- [http-nio-8001-exec-10] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-10 17:21:49.566  INFO 15864 --- [http-nio-8001-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 17:21:49.824  INFO 15864 --- [http-nio-8001-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 17:21:49.854 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-10 17:21:49.872 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : ==> Parameters: 
+2020-06-10 17:21:49.889 DEBUG 15864 --- [http-nio-8001-exec-5] c.hzhang.dao.TypeDao.findTypeList_COUNT  : <==      Total: 1
+2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ?
+2020-06-10 17:21:49.894 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : ==> Parameters: 10(Integer)
+2020-06-10 17:21:49.896 DEBUG 15864 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao.findTypeList      : <==      Total: 1

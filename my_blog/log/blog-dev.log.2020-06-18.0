@@ -1,0 +1,1278 @@
+2020-06-18 20:28:43.484  INFO 12368 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 12368 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-18 20:28:43.490 DEBUG 12368 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 20:28:43.490  INFO 12368 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-18 20:28:46.714  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 20:28:46.734  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-18 20:28:47.037  INFO 12368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-06-18 20:28:47.880  INFO 12368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$7d2e545b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-18 20:28:48.384  INFO 12368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-18 20:28:48.394  INFO 12368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 20:28:48.394  INFO 12368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 20:28:48.501  INFO 12368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 20:28:48.502  INFO 12368 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4839 ms
+2020-06-18 20:28:51.057  INFO 12368 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-18 20:28:51.308  INFO 12368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:28:51.990  INFO 12368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-18 20:28:51.991  INFO 12368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-18 20:28:52.037  INFO 12368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-18 20:28:52.051  INFO 12368 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-18 20:28:52.308  INFO 12368 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 10.228 seconds (JVM running for 19.958)
+2020-06-18 20:29:05.479  INFO 12368 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 20:29:05.479  INFO 12368 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 20:29:05.503  INFO 12368 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-06-18 20:29:15.027  INFO 12368 --- [http-nio-8001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-18 20:29:15.505  INFO 12368 --- [http-nio-8001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-18 20:29:15.511 DEBUG 12368 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
+2020-06-18 20:29:15.532 DEBUG 12368 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-18 20:29:15.585 DEBUG 12368 --- [http-nio-8001-exec-3] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-18 20:29:18.338  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:29:18.339  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:29:18.340  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:29:18.341  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 2736 seconds
+2020-06-18 20:29:18.346  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:29:18.347  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:29:18.349  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:29:18.350  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 2745 seconds
+2020-06-18 20:29:18.444 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 20:29:18.444 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-18 20:29:18.445 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
+2020-06-18 20:29:18.447 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
+2020-06-18 20:29:18.447 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
+2020-06-18 20:29:18.491 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
+2020-06-18 20:29:18.493 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.*, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
+2020-06-18 20:29:18.494 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
+2020-06-18 20:29:18.495 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
+2020-06-18 20:29:18.495 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 20:29:18.496 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
+2020-06-18 20:29:18.496 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
+2020-06-18 20:29:18.497 DEBUG 12368 --- [http-nio-8001-exec-9] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
+2020-06-18 20:29:18.587 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 3
+2020-06-18 20:29:35.803  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:29:35.805  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:29:35.806  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:29:35.806  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 20201 seconds
+2020-06-18 20:29:39.196  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:29:39.197  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:29:39.199  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:29:39.199  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 23594 seconds
+2020-06-18 20:29:42.401  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:29:42.403  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:29:42.405  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:29:42.406  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 26801 seconds
+2020-06-18 20:30:23.030  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:30:23.030  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:30:23.037  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:30:23.039  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:30:23.040  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:30:23.040  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 67435 seconds
+2020-06-18 20:30:23.041  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483355605
+2020-06-18 20:30:23.041  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 67436 seconds
+2020-06-18 20:30:23.044  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:30:23.044  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:30:25.701  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:30:25.705  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:30:25.734  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:30:25.736  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483423044
+2020-06-18 20:30:25.737  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 2693 seconds
+2020-06-18 20:30:25.737  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:30:25.738  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483423044
+2020-06-18 20:30:25.738  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 2694 seconds
+2020-06-18 20:31:12.356  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:31:12.358  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:31:12.358  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:31:12.359  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483423044
+2020-06-18 20:31:12.359  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 49315 seconds
+2020-06-18 20:31:12.361  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:31:12.361  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:31:12.361  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483423044
+2020-06-18 20:31:12.361  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 49317 seconds
+2020-06-18 20:31:12.363  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:31:22.223  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:31:22.224  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:31:22.226  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483472363
+2020-06-18 20:31:22.226  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 9863 seconds
+2020-06-18 20:32:24.808  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:24.809  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:24.810  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483472363
+2020-06-18 20:32:24.810  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 72447 seconds
+2020-06-18 20:32:24.812  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:32:29.680  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:29.682  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:29.683  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:32:29.683  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 4870 seconds
+2020-06-18 20:32:32.084  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:32.085  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:32.086  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:32:32.086  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 7273 seconds
+2020-06-18 20:32:37.935  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:37.936  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:37.937  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:32:37.937  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 13124 seconds
+2020-06-18 20:32:48.991  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:48.994  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:48.996  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:32:48.996  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 24183 seconds
+2020-06-18 20:32:48.998  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:32:49.000  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:32:49.001  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:32:49.001  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 24188 seconds
+2020-06-18 20:33:00.329  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:33:00.330  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:33:00.331  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:33:00.331  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 35518 seconds
+2020-06-18 20:41:33.188  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:41:33.190  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:41:33.191  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592483544813
+2020-06-18 20:41:33.191  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 548378 seconds
+2020-06-18 20:41:33.193  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:41:33.195 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
+2020-06-18 20:41:33.196 DEBUG 12368 --- [http-nio-8001-exec-10] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.25
+2020-06-18 20:41:33.197 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
+2020-06-18 20:41:33.198 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 5(Integer)
+2020-06-18 20:41:33.200 DEBUG 12368 --- [http-nio-8001-exec-10] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
+2020-06-18 20:41:34.669  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:41:34.670  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:41:34.671  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:41:34.671  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:41:34.674  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484093193
+2020-06-18 20:41:34.674  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 1481 seconds
+2020-06-18 20:41:34.675  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484093193
+2020-06-18 20:41:34.675  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 1482 seconds
+2020-06-18 20:42:25.448  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:42:25.450  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:42:25.451  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484093193
+2020-06-18 20:42:25.452  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 52259 seconds
+2020-06-18 20:42:25.454  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:42:30.140  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:42:30.141  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:42:30.142  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484145454
+2020-06-18 20:42:30.142  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 4688 seconds
+2020-06-18 20:43:08.740  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:08.741  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:08.742  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484145454
+2020-06-18 20:43:08.742  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 43288 seconds
+2020-06-18 20:43:08.743  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:43:13.415  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:13.417  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:13.418  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:13.418  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 4675 seconds
+2020-06-18 20:43:29.236  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:29.236  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:29.237  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:29.237  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 20494 seconds
+2020-06-18 20:43:32.276  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:32.277  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:32.277  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:32.278  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 23535 seconds
+2020-06-18 20:43:36.424  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:36.425  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:36.426  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:36.426  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 27683 seconds
+2020-06-18 20:43:40.254  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:40.255  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:40.256  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:40.256  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 31513 seconds
+2020-06-18 20:43:58.787  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:43:58.788  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:43:58.789  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484188743
+2020-06-18 20:43:58.789  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 50046 seconds
+2020-06-18 20:43:58.790  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:44:09.616  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:09.616  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:09.617  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484238790
+2020-06-18 20:44:09.617  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 10827 seconds
+2020-06-18 20:44:09.629  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:09.630  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:09.631  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484238790
+2020-06-18 20:44:09.631  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 10841 seconds
+2020-06-18 20:44:44.856  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:44.856  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:44.857  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484238790
+2020-06-18 20:44:44.857  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 46067 seconds
+2020-06-18 20:44:44.858  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:44:45.411  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:45.412  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:45.413  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:44:45.413  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 555 seconds
+2020-06-18 20:44:45.419 DEBUG 12368 --- [http-nio-8001-exec-3] c.h.d.profile.TagDao.findTagList_COUNT   : ==>  Preparing: SELECT count(0) FROM tag 
+2020-06-18 20:44:45.419 DEBUG 12368 --- [http-nio-8001-exec-3] c.h.d.profile.TagDao.findTagList_COUNT   : ==> Parameters: 
+2020-06-18 20:44:45.451 DEBUG 12368 --- [http-nio-8001-exec-3] c.h.d.profile.TagDao.findTagList_COUNT   : <==      Total: 1
+2020-06-18 20:44:45.452 DEBUG 12368 --- [http-nio-8001-exec-3] c.hzhang.dao.profile.TagDao.findTagList  : ==>  Preparing: SELECT * FROM tag order by id desc LIMIT ? 
+2020-06-18 20:44:45.452 DEBUG 12368 --- [http-nio-8001-exec-3] c.hzhang.dao.profile.TagDao.findTagList  : ==> Parameters: 5(Integer)
+2020-06-18 20:44:45.453 DEBUG 12368 --- [http-nio-8001-exec-3] c.hzhang.dao.profile.TagDao.findTagList  : <==      Total: 4
+2020-06-18 20:44:46.029  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:46.029  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:46.030  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:44:46.030  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 1172 seconds
+2020-06-18 20:44:49.511  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:49.512  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:49.513  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:44:49.513  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 4655 seconds
+2020-06-18 20:44:50.143  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:50.146  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:50.148  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:44:50.148  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 5290 seconds
+2020-06-18 20:44:51.688  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:44:51.689  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:44:51.690  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:44:51.690  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 6832 seconds
+2020-06-18 20:46:32.098  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:46:32.099  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:46:32.100  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484284858
+2020-06-18 20:46:32.100  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 107242 seconds
+2020-06-18 20:46:32.101  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:46:33.492  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:46:33.493  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:46:33.494  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484392101
+2020-06-18 20:46:33.494  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 1393 seconds
+2020-06-18 20:50:26.085  INFO 12368 --- [http-nio-8001-exec-2] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-18 20:50:26.094  INFO 12368 --- [http-nio-8001-exec-2] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-18 20:50:26.132  INFO 12368 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8001/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
+2020-06-18 20:50:26.132  INFO 12368 --- [http-nio-8001-exec-1] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
+2020-06-18 20:51:12.212  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:51:12.213  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:51:12.214  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484392101
+2020-06-18 20:51:12.214  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 280113 seconds
+2020-06-18 20:51:12.214  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:51:12.219 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 20:51:12.219 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 8(Long)
+2020-06-18 20:51:12.222 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 20:52:10.220  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:10.220  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:10.221  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484672214
+2020-06-18 20:52:10.221  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 58007 seconds
+2020-06-18 20:52:10.222  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:52:10.230  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:10.231  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:10.232  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:10.232  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 10 seconds
+2020-06-18 20:52:32.935  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:32.935  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:32.936  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:32.936  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 22714 seconds
+2020-06-18 20:52:42.934  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:42.935  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:42.935  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:42.935  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 32713 seconds
+2020-06-18 20:52:44.129  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:44.130  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:44.130  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:44.131  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 33909 seconds
+2020-06-18 20:52:46.149  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:46.150  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:46.151  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:46.151  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 35929 seconds
+2020-06-18 20:52:47.171  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:47.171  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:47.172  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:47.172  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 36950 seconds
+2020-06-18 20:52:47.175 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 20:52:47.176 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 2(Long)
+2020-06-18 20:52:47.179 DEBUG 12368 --- [http-nio-8001-exec-8] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 20:52:50.771  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:50.773  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:50.774  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:50.774  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 40552 seconds
+2020-06-18 20:52:51.808  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:51.809  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:51.810  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:51.810  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 41588 seconds
+2020-06-18 20:52:51.811 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 20:52:51.812 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-18 20:52:51.814 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 20:52:53.629  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:53.630  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:53.630  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484730222
+2020-06-18 20:52:53.630  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 43408 seconds
+2020-06-18 20:52:53.631  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 20:52:55.100  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:55.101  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:55.101  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484773631
+2020-06-18 20:52:55.102  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 1471 seconds
+2020-06-18 20:52:57.470  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:57.471  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:57.472  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484773631
+2020-06-18 20:52:57.472  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 3841 seconds
+2020-06-18 20:52:58.585  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 20:52:58.585  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 20:52:58.585  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484773631
+2020-06-18 20:52:58.586  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 4955 seconds
+2020-06-18 21:04:26.122  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:04:26.124  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:04:26.124  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592484773631
+2020-06-18 21:04:26.124  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 692493 seconds
+2020-06-18 21:04:26.125  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:06:29.145  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:06:29.146  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:06:29.147  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485466125
+2020-06-18 21:06:29.147  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 123022 seconds
+2020-06-18 21:06:29.148  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:06:29.151 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 21:06:29.151 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 2(Long)
+2020-06-18 21:06:29.154 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 21:08:14.867  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:08:14.869  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:08:14.876  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485589148
+2020-06-18 21:08:14.876  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 105728 seconds
+2020-06-18 21:08:14.877  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:09:27.966  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:09:27.967  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:09:27.968  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485694877
+2020-06-18 21:09:27.969  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 73092 seconds
+2020-06-18 21:09:27.969  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:10:47.379  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:10:47.380  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:10:47.381  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485767969
+2020-06-18 21:10:47.381  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 79412 seconds
+2020-06-18 21:10:47.382  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:11:02.759  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:11:02.760  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:11:02.760  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485847382
+2020-06-18 21:11:02.760  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 15378 seconds
+2020-06-18 21:11:58.837  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:11:58.838  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:11:58.838  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485847382
+2020-06-18 21:11:58.838  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 71456 seconds
+2020-06-18 21:11:58.839  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:13:20.509  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:13:20.510  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:13:20.513  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592485918839
+2020-06-18 21:13:20.513  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 81674 seconds
+2020-06-18 21:13:20.515  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:14:17.256  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:14:17.257  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:14:17.257  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486000515
+2020-06-18 21:14:17.258  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 56743 seconds
+2020-06-18 21:14:17.258  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:14:32.641  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:14:32.642  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:14:32.643  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486057258
+2020-06-18 21:14:32.643  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 15385 seconds
+2020-06-18 21:14:32.644  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:14:32.646  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:14:32.647  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486057258
+2020-06-18 21:14:32.647  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 15389 seconds
+2020-06-18 21:14:32.647 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
+2020-06-18 21:14:32.648 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
+2020-06-18 21:14:32.649 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
+2020-06-18 21:14:32.650 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.*, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
+2020-06-18 21:14:32.651 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
+2020-06-18 21:14:32.656 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 3
+2020-06-18 21:14:34.112  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:14:34.113  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:14:34.114  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486057258
+2020-06-18 21:14:34.114  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 16856 seconds
+2020-06-18 21:14:34.116 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 21:14:34.117 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-18 21:14:34.119 DEBUG 12368 --- [http-nio-8001-exec-6] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 21:17:10.899  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:17:10.900  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:17:10.900  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486057258
+2020-06-18 21:17:10.900  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 173642 seconds
+2020-06-18 21:17:10.901  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:17:12.124  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:17:12.125  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:17:12.126  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486230901
+2020-06-18 21:17:12.127  INFO 12368 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1225 seconds
+2020-06-18 21:17:26.650  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:17:26.651  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:17:26.651  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486230901
+2020-06-18 21:17:26.651  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 15750 seconds
+2020-06-18 21:17:27.997  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:17:27.998  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:17:27.998  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486230901
+2020-06-18 21:17:27.998  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 17097 seconds
+2020-06-18 21:20:40.475  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:20:40.476  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:20:40.476  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486230901
+2020-06-18 21:20:40.477  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 209576 seconds
+2020-06-18 21:20:40.478  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:23:41.929  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:23:41.930  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:23:41.931  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486440478
+2020-06-18 21:23:41.931  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 181453 seconds
+2020-06-18 21:23:41.932  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:24:31.370  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:24:31.371  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:24:31.371  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486621932
+2020-06-18 21:24:31.371  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 49439 seconds
+2020-06-18 21:24:31.372  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:26:21.749  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:26:21.750  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:26:21.754  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486671372
+2020-06-18 21:26:21.755  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 110383 seconds
+2020-06-18 21:26:21.758  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:26:48.412  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:26:48.413  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:26:48.413  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486781758
+2020-06-18 21:26:48.413  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 26655 seconds
+2020-06-18 21:28:24.851  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:28:24.852  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:28:24.852  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486781758
+2020-06-18 21:28:24.853  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 123095 seconds
+2020-06-18 21:28:24.853  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:28:24.857  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:28:24.858  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:28:24.858  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486904853
+2020-06-18 21:28:24.858  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 5 seconds
+2020-06-18 21:28:24.862  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:28:24.862  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:28:24.863  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486904853
+2020-06-18 21:28:24.863  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 10 seconds
+2020-06-18 21:28:24.866  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:28:24.866  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:28:24.866  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486904853
+2020-06-18 21:28:24.866  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 13 seconds
+2020-06-18 21:28:43.726  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:28:43.726  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:28:43.727  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486904853
+2020-06-18 21:28:43.727  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 18874 seconds
+2020-06-18 21:29:44.295  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:29:44.296  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:29:44.296  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486904853
+2020-06-18 21:29:44.296  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 79443 seconds
+2020-06-18 21:29:44.297  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:31:30.846  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.846  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.847  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592486984297
+2020-06-18 21:31:30.847  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 106550 seconds
+2020-06-18 21:31:30.848  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:31:30.853  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.854  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.854  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:31:30.854  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 6 seconds
+2020-06-18 21:31:30.858  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.858  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.860  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:31:30.860  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 12 seconds
+2020-06-18 21:31:30.863  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.864  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.864  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:31:30.864  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 16 seconds
+2020-06-18 21:31:30.868  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.869  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.869  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:31:30.869  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 21 seconds
+2020-06-18 21:31:30.873  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:31:30.873  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:31:30.874  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:31:30.874  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 26 seconds
+2020-06-18 21:33:12.516  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.518  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.518  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487090848
+2020-06-18 21:33:12.518  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 101670 seconds
+2020-06-18 21:33:12.519  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:33:12.528  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.528  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.529  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:33:12.529  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 10 seconds
+2020-06-18 21:33:12.534  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.535  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.537  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:33:12.537  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 18 seconds
+2020-06-18 21:33:12.568  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.569  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.570  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:33:12.570  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 51 seconds
+2020-06-18 21:33:12.579  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.579  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 61 seconds
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:33:12.580  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 61 seconds
+2020-06-18 21:34:03.096  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:03.098  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:03.099  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487192519
+2020-06-18 21:34:03.099  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 50580 seconds
+2020-06-18 21:34:03.102  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:34:03.106 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.4
+2020-06-18 21:34:03.107 DEBUG 12368 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.3333333333333333
+2020-06-18 21:34:03.109 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
+2020-06-18 21:34:03.110 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 10(Integer)
+2020-06-18 21:34:03.113 DEBUG 12368 --- [http-nio-8001-exec-5] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
+2020-06-18 21:34:12.437  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487243102
+2020-06-18 21:34:12.438  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 9336 seconds
+2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.42857142857142855
+2020-06-18 21:34:12.439 DEBUG 12368 --- [http-nio-8001-exec-9] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-18 21:34:25.851  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:25.852  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:25.852  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487243102
+2020-06-18 21:34:25.853  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 22751 seconds
+2020-06-18 21:34:25.854 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5555555555555556
+2020-06-18 21:34:25.855 DEBUG 12368 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.5
+2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: SELECT * FROM type order by id desc LIMIT ? 
+2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 1(Integer)
+2020-06-18 21:34:25.856 DEBUG 12368 --- [http-nio-8001-exec-1] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 1
+2020-06-18 21:34:47.597  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.597  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.598  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487243102
+2020-06-18 21:34:47.598  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 44496 seconds
+2020-06-18 21:34:47.598  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:34:47.604  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.605  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.605  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:34:47.605  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 7 seconds
+2020-06-18 21:34:47.608  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.609  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.609  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:34:47.609  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 11 seconds
+2020-06-18 21:34:47.612  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.612  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.613  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:34:47.613  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 15 seconds
+2020-06-18 21:34:47.615  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.616  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.616  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:34:47.616  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 18 seconds
+2020-06-18 21:34:47.618  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:34:47.619  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:34:47.619  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:34:47.619  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 21 seconds
+2020-06-18 21:35:16.804  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:35:16.805  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:35:16.805  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:35:16.805  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 29207 seconds
+2020-06-18 21:36:36.810  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:36:36.811  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:36:36.812  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487287598
+2020-06-18 21:36:36.812  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 109214 seconds
+2020-06-18 21:36:36.812  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:36:36.814 DEBUG 12368 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select * from blog where id = ? 
+2020-06-18 21:36:36.814 DEBUG 12368 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 8(Long)
+2020-06-18 21:36:36.817 DEBUG 12368 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 21:36:54.559  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:36:54.559  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:36:54.560  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487396812
+2020-06-18 21:36:54.560  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 17748 seconds
+2020-06-18 21:37:08.728  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:08.729  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:08.729  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487396812
+2020-06-18 21:37:08.729  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 31917 seconds
+2020-06-18 21:37:19.005  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:19.005  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:19.005  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:19.006  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487396812
+2020-06-18 21:37:19.006  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 42194 seconds
+2020-06-18 21:37:19.006  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:19.006  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487396812
+2020-06-18 21:37:19.006  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 42194 seconds
+2020-06-18 21:37:20.223  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:20.224  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:20.224  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487396812
+2020-06-18 21:37:20.224  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 43412 seconds
+2020-06-18 21:37:20.225  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:37:23.543  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:23.544  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:23.544  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487440225
+2020-06-18 21:37:23.544  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 3319 seconds
+2020-06-18 21:37:25.249  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:37:25.250  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:37:25.250  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487440225
+2020-06-18 21:37:25.250  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 5025 seconds
+2020-06-18 21:40:05.629  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:40:05.631  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:40:05.631  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487440225
+2020-06-18 21:40:05.631  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 165406 seconds
+2020-06-18 21:40:05.631  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:40:06.600  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:40:06.601  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:40:06.601  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487605631
+2020-06-18 21:40:06.601  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 970 seconds
+2020-06-18 21:40:27.900  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:40:27.900  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:40:27.900  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487605631
+2020-06-18 21:40:27.900  INFO 12368 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 22269 seconds
+2020-06-18 21:41:47.183  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:41:47.184  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:41:47.184  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487605631
+2020-06-18 21:41:47.184  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 101553 seconds
+2020-06-18 21:41:47.185  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:42:36.571  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:36.572  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:36.573  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487707185
+2020-06-18 21:42:36.573  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 49388 seconds
+2020-06-18 21:42:36.574  INFO 12368 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:42:41.283  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:41.283  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:41.283  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:41.283  INFO 12368 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : The token has been lived 4709 seconds
+2020-06-18 21:42:46.796  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:46.797  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:46.797  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:46.797  INFO 12368 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 10223 seconds
+2020-06-18 21:42:46.801  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:46.802  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:46.802  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:46.802  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 10228 seconds
+2020-06-18 21:42:47.864  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:47.865  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:47.865  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:47.865  INFO 12368 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 11291 seconds
+2020-06-18 21:42:51.664  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:51.665  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:51.665  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:51.665  INFO 12368 --- [http-nio-8001-exec-8] c.h.i.AuthorizationInterceptor           : The token has been lived 15091 seconds
+2020-06-18 21:42:53.280  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:53.281  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:53.282  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:53.282  INFO 12368 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : The token has been lived 16708 seconds
+2020-06-18 21:42:55.059  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:55.060  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:55.060  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:55.061  INFO 12368 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 18487 seconds
+2020-06-18 21:42:56.121  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:42:56.122  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:42:56.122  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:42:56.123  INFO 12368 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 19549 seconds
+2020-06-18 21:52:24.584  INFO 13760 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 13760 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-18 21:52:24.586 DEBUG 13760 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 21:52:24.586  INFO 13760 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-18 21:52:25.749  INFO 13760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 21:52:25.751  INFO 13760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-18 21:52:25.782  INFO 13760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2020-06-18 21:52:26.224  INFO 13760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$830a19c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-18 21:52:26.692  INFO 13760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-18 21:52:26.701  INFO 13760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 21:52:26.701  INFO 13760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 21:52:26.798  INFO 13760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 21:52:26.799  INFO 13760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2165 ms
+2020-06-18 21:52:27.913  INFO 13760 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-18 21:52:28.088  INFO 13760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:52:28.570  INFO 13760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-18 21:52:28.571  INFO 13760 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-18 21:52:28.583  INFO 13760 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-18 21:52:28.594  INFO 13760 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-18 21:52:28.771  INFO 13760 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 4.581 seconds (JVM running for 13.399)
+2020-06-18 21:53:15.164  INFO 13760 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 21:53:15.165  INFO 13760 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 21:53:15.177  INFO 13760 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-06-18 21:53:15.188  INFO 13760 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:53:17.045  INFO 13760 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:53:17.047  INFO 13760 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592487756574
+2020-06-18 21:53:17.047  INFO 13760 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 640473 seconds
+2020-06-18 21:53:17.053  INFO 13760 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:53:39.650  INFO 13760 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: b297d3eef8532cf790c83a4cf1d7e16e
+2020-06-18 21:53:53.447  INFO 13760 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-18 21:53:53.724  INFO 13760 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-18 21:53:53.729 DEBUG 13760 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
+2020-06-18 21:53:53.751 DEBUG 13760 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-18 21:53:53.771 DEBUG 13760 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-18 21:53:55.569  INFO 13760 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:53:55.571  INFO 13760 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:53:55.572  INFO 13760 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488433787
+2020-06-18 21:53:55.572  INFO 13760 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : The token has been lived 1785 seconds
+2020-06-18 21:53:55.641 DEBUG 13760 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
+2020-06-18 21:53:55.641 DEBUG 13760 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
+2020-06-18 21:53:55.643 DEBUG 13760 --- [http-nio-8001-exec-7] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
+2020-06-18 21:53:55.645 DEBUG 13760 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.id, blog.title, blog.recommend, blog.updateTime, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
+2020-06-18 21:53:55.646 DEBUG 13760 --- [http-nio-8001-exec-7] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
+2020-06-18 21:53:55.806 ERROR 13760 --- [http-nio-8001-exec-7] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8001/profile/findBlogList, Response Status_Code: 200, Exception: {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'blog.updateTime' in 'field list'
+### The error may exist in file [E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes\mybatis\mapper\BlogManageMapper.xml]
+### The error may involve com.hzhang.dao.profile.BlogManageDao.findBlogList-Inline
+### The error occurred while setting parameters
+### SQL: SELECT blog.id, blog.title, blog.recommend, blog.updateTime, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'blog.updateTime' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'blog.updateTime' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy100.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy101.findBlogList(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy102.findBlogList(Unknown Source)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl.findBlogList(BlogManageServiceImpl.java:35)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:53)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:365)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:420)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$EnhancerBySpringCGLIB$$760d0314.findBlogList(<generated>)
+	at com.hzhang.controller.profile.BlogManageController.findBlogList(BlogManageController.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'blog.updateTime' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy151.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy149.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 90 common frames omitted
+
+2020-06-18 21:55:14.813  INFO 9220 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 9220 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-18 21:55:14.815 DEBUG 9220 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 21:55:14.815  INFO 9220 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-18 21:55:15.756  INFO 9220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 21:55:15.758  INFO 9220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-18 21:55:15.780  INFO 9220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-06-18 21:55:16.135  INFO 9220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$1be55f1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-18 21:55:16.455  INFO 9220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-18 21:55:16.463  INFO 9220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 21:55:16.463  INFO 9220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 21:55:16.542  INFO 9220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 21:55:16.543  INFO 9220 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1688 ms
+2020-06-18 21:55:17.553  INFO 9220 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-18 21:55:17.719  INFO 9220 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:55:18.193  INFO 9220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-18 21:55:18.194  INFO 9220 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-18 21:55:18.205  INFO 9220 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-18 21:55:18.217  INFO 9220 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-18 21:55:18.381  INFO 9220 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 3.988 seconds (JVM running for 12.673)
+2020-06-18 21:55:26.531  INFO 9220 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 21:55:26.531  INFO 9220 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 21:55:26.542  INFO 9220 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-06-18 21:55:26.552  INFO 9220 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:55:28.327  INFO 9220 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:55:28.328  INFO 9220 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488433787
+2020-06-18 21:55:28.329  INFO 9220 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 94542 seconds
+2020-06-18 21:55:28.333  INFO 9220 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:55:28.373  INFO 9220 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-18 21:55:28.653  INFO 9220 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-18 21:55:28.659 DEBUG 9220 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type _id type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
+2020-06-18 21:55:28.678 DEBUG 9220 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-18 21:55:28.724 ERROR 9220 --- [http-nio-8001-exec-1] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8001/profile/findBlogById, Response Status_Code: 200, Exception: {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_id
+        type.name as type_name
+        from
+        blog
+        left join
+ ' at line 12
+### The error may exist in file [E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes\mybatis\mapper\BlogManageMapper.xml]
+### The error may involve com.hzhang.dao.profile.BlogManageDao.findBlogById-Inline
+### The error occurred while setting parameters
+### SQL: select         blog.id,         blog.appreciation,         blog.commentabled,         blog.content,         blog.first_picture,         blog.flag,         blog.published,         blog.recommend,         blog.share_statement,         blog.title,         type.id as type _id         type.name as type_name         from         blog         left join         type         on blog.type_id = type.id         where blog.id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_id
+        type.name as type_name
+        from
+        blog
+        left join
+ ' at line 12
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_id
+        type.name as type_name
+        from
+        blog
+        left join
+ ' at line 12
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy100.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy101.findBlogById(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy102.findBlogById(Unknown Source)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl.findBlogById(BlogManageServiceImpl.java:29)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:53)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:365)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:420)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$EnhancerBySpringCGLIB$$9a717ced.findBlogById(<generated>)
+	at com.hzhang.controller.profile.BlogManageController.findBlogById(BlogManageController.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_id
+        type.name as type_name
+        from
+        blog
+        left join
+ ' at line 12
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy150.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 89 common frames omitted
+
+2020-06-18 21:56:12.115  INFO 2044 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 2044 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-18 21:56:12.117 DEBUG 2044 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 21:56:12.118  INFO 2044 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-18 21:56:13.033  INFO 2044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 21:56:13.035  INFO 2044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-18 21:56:13.057  INFO 2044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-06-18 21:56:13.397  INFO 2044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$58f13b0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-18 21:56:13.710  INFO 2044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-18 21:56:13.718  INFO 2044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 21:56:13.718  INFO 2044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 21:56:13.798  INFO 2044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 21:56:13.799  INFO 2044 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1644 ms
+2020-06-18 21:56:14.800  INFO 2044 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-18 21:56:14.979  INFO 2044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:56:15.436  INFO 2044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-18 21:56:15.437  INFO 2044 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-18 21:56:15.449  INFO 2044 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-18 21:56:15.460  INFO 2044 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-18 21:56:15.621  INFO 2044 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 4.385 seconds (JVM running for 13.213)
+2020-06-18 21:56:58.679  INFO 2044 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 21:56:58.681  INFO 2044 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 21:56:58.695  INFO 2044 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-06-18 21:56:58.706  INFO 2044 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:57:00.527  INFO 2044 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:57:00.529  INFO 2044 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488528334
+2020-06-18 21:57:00.529  INFO 2044 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 92195 seconds
+2020-06-18 21:57:00.535  INFO 2044 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:57:00.576  INFO 2044 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-18 21:57:00.843  INFO 2044 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-18 21:57:00.850 DEBUG 2044 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
+2020-06-18 21:57:00.869 DEBUG 2044 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-18 21:57:00.919 ERROR 2044 --- [http-nio-8001-exec-1] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8001/profile/findBlogById, Response Status_Code: 200, Exception: {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type.name as type_name
+        from
+        blog
+        left join
+        type
+' at line 13
+### The error may exist in file [E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes\mybatis\mapper\BlogManageMapper.xml]
+### The error may involve com.hzhang.dao.profile.BlogManageDao.findBlogById-Inline
+### The error occurred while setting parameters
+### SQL: select         blog.id,         blog.appreciation,         blog.commentabled,         blog.content,         blog.first_picture,         blog.flag,         blog.published,         blog.recommend,         blog.share_statement,         blog.title,         type.id as type_id         type.name as type_name         from         blog         left join         type         on blog.type_id = type.id         where blog.id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type.name as type_name
+        from
+        blog
+        left join
+        type
+' at line 13
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type.name as type_name
+        from
+        blog
+        left join
+        type
+' at line 13
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy100.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy101.findBlogById(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy102.findBlogById(Unknown Source)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl.findBlogById(BlogManageServiceImpl.java:29)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:53)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:365)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:420)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$EnhancerBySpringCGLIB$$3f246fd9.findBlogById(<generated>)
+	at com.hzhang.controller.profile.BlogManageController.findBlogById(BlogManageController.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type.name as type_name
+        from
+        blog
+        left join
+        type
+' at line 13
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy150.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:143)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 89 common frames omitted
+
+2020-06-18 21:58:16.752  INFO 3772 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 3772 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-18 21:58:16.754 DEBUG 3772 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 21:58:16.754  INFO 3772 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
+2020-06-18 21:58:17.835  INFO 3772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 21:58:17.838  INFO 3772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-18 21:58:17.869  INFO 3772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-06-18 21:58:18.212  INFO 3772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$23a2a4ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-18 21:58:18.522  INFO 3772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2020-06-18 21:58:18.530  INFO 3772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 21:58:18.530  INFO 3772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 21:58:18.604  INFO 3772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 21:58:18.604  INFO 3772 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1815 ms
+2020-06-18 21:58:19.613  INFO 3772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-18 21:58:19.784  INFO 3772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:58:20.275  INFO 3772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2020-06-18 21:58:20.276  INFO 3772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-18 21:58:20.288  INFO 3772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-18 21:58:20.300  INFO 3772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-18 21:58:20.467  INFO 3772 --- [main] com.hzhang.MyBlogApplication             : Started MyBlogApplication in 4.781 seconds (JVM running for 13.467)
+2020-06-18 21:58:20.519  INFO 3772 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 21:58:20.519  INFO 3772 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 21:58:20.530  INFO 3772 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-06-18 21:58:20.539  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:22.718  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:22.719  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488620535
+2020-06-18 21:58:22.720  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 82185 seconds
+2020-06-18 21:58:22.724  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
+2020-06-18 21:58:22.763  INFO 3772 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-18 21:58:23.061  INFO 3772 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-18 21:58:23.067 DEBUG 3772 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
+2020-06-18 21:58:23.086 DEBUG 3772 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-18 21:58:23.123 DEBUG 3772 --- [http-nio-8001-exec-1] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 21:58:39.846  INFO 3772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:39.848  INFO 3772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:39.849  INFO 3772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
+2020-06-18 21:58:39.849  INFO 3772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : The token has been lived 17124 seconds
+2020-06-18 21:58:39.852  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:39.853  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:39.855  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
+2020-06-18 21:58:39.856  INFO 3772 --- [http-nio-8001-exec-6] c.h.i.AuthorizationInterceptor           : The token has been lived 17131 seconds
+2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==>  Preparing: SELECT count(0) FROM type 
+2020-06-18 21:58:39.892 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : ==> Parameters: 
+2020-06-18 21:58:39.894 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==>  Preparing: SELECT count(0) FROM blog LEFT JOIN type ON blog.type_id = type.id 
+2020-06-18 21:58:39.894 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : ==> Parameters: 
+2020-06-18 21:58:39.896 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.B.findBlogList_COUNT             : <==      Total: 1
+2020-06-18 21:58:39.896 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.d.p.TypeDao.findTypeList_COUNT       : <==      Total: 1
+2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.TypeDao           : Cache Hit Ratio [com.hzhang.dao.profile.TypeDao]: 0.0
+2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==>  Preparing: select * from type 
+2020-06-18 21:58:39.897 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : ==> Parameters: 
+2020-06-18 21:58:39.899 DEBUG 3772 --- [http-nio-8001-exec-6] c.h.dao.profile.TypeDao.findTypeList     : <==      Total: 2
+2020-06-18 21:58:39.899 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogList       : ==>  Preparing: SELECT blog.id, blog.title, blog.recommend, blog.update_time, type.name AS type_name FROM blog LEFT JOIN type ON blog.type_id = type.id order by update_time desc LIMIT ? 
+2020-06-18 21:58:39.900 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogList       : ==> Parameters: 5(Integer)
+2020-06-18 21:58:39.905 DEBUG 3772 --- [http-nio-8001-exec-5] c.h.d.p.BlogManageDao.findBlogList       : <==      Total: 3
+2020-06-18 21:58:41.163  INFO 3772 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:41.166  INFO 3772 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:41.169  INFO 3772 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
+2020-06-18 21:58:41.169  INFO 3772 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : The token has been lived 18444 seconds
+2020-06-18 21:58:41.179 DEBUG 3772 --- [http-nio-8001-exec-9] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
+2020-06-18 21:58:41.180 DEBUG 3772 --- [http-nio-8001-exec-9] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 8(Long)
+2020-06-18 21:58:41.182 DEBUG 3772 --- [http-nio-8001-exec-9] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-18 21:58:45.150  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:45.151  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:45.152  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
+2020-06-18 21:58:45.152  INFO 3772 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : The token has been lived 22427 seconds
+2020-06-18 21:58:46.225  INFO 3772 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 49f8612704f3e9cfebd9bf71cfc17846
+2020-06-18 21:58:46.226  INFO 3772 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
+2020-06-18 21:58:46.227  INFO 3772 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592488702725
+2020-06-18 21:58:46.228  INFO 3772 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : The token has been lived 23503 seconds
+2020-06-19 00:07:02.698  INFO 17492 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 17492 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-19 00:07:02.703 DEBUG 17492 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-19 00:07:02.704  INFO 17492 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-19 00:07:04.028  INFO 17492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-19 00:07:04.031  INFO 17492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-19 00:07:04.062  INFO 17492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-06-19 00:07:04.975  INFO 17492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$21fbbd42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 00:07:07.580  INFO 17492 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-19 00:07:08.368  INFO 17492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-19 00:07:09.197  INFO 17492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-19 00:07:09.220  INFO 17492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-19 00:07:09.240  INFO 17492 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-19 00:07:09.645  INFO 17492 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.534 seconds (JVM running for 9.273)
+2020-06-19 00:07:21.085  INFO 17492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-19 00:07:21.516  INFO 17492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-19 00:07:21.527 DEBUG 17492 --- [main] c.h.d.p.BlogManageDao.findBlogById       : ==>  Preparing: select blog.id, blog.appreciation, blog.commentabled, blog.content, blog.first_picture, blog.flag, blog.published, blog.recommend, blog.share_statement, blog.title, type.id as type_id, type.name as type_name from blog left join type on blog.type_id = type.id where blog.id = ? 
+2020-06-19 00:07:21.562 DEBUG 17492 --- [main] c.h.d.p.BlogManageDao.findBlogById       : ==> Parameters: 1(Long)
+2020-06-19 00:07:21.676 DEBUG 17492 --- [main] c.h.d.p.BlogManageDao.findBlogById       : <==      Total: 1
+2020-06-19 00:07:21.720 DEBUG 17492 --- [main] c.h.d.C.findCommentListByBlogId          : ==>  Preparing: select * from comment where blog_id = ? 
+2020-06-19 00:07:21.721 DEBUG 17492 --- [main] c.h.d.C.findCommentListByBlogId          : ==> Parameters: 1(Long)
+2020-06-19 00:07:21.788 DEBUG 17492 --- [main] c.h.d.C.findCommentListByBlogId          : <==      Total: 3
+2020-06-19 00:07:21.789 DEBUG 17492 --- [main] c.h.d.p.TagDao.findTagListByBlogId       : ==>  Preparing: SELECT tag.id, tag.name FROM blog_tag LEFT JOIN tag ON blog_tag.tag_id = tag.id WHERE blog_tag.blog_id = ? 
+2020-06-19 00:07:21.789 DEBUG 17492 --- [main] c.h.d.p.TagDao.findTagListByBlogId       : ==> Parameters: 1(Integer)
+2020-06-19 00:07:21.797 DEBUG 17492 --- [main] c.h.d.p.TagDao.findTagListByBlogId       : <==      Total: 2
+2020-06-19 00:07:22.043  INFO 17492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-19 00:07:22.048  INFO 17492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-19 00:07:22.091  INFO 17492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

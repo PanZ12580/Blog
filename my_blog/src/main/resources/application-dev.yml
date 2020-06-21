@@ -1,0 +1,14 @@
+# 数据库连接
+spring:
+  devtools:
+    restart:
+      exclude:
+# 日志
+logging:
+  level:
+    root: info
+    com.hzhang: debug
+  file:
+    name: log/blog-dev.log
+server:
+  port: 8001

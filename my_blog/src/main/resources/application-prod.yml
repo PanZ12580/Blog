@@ -1,0 +1,10 @@
+# 日志
+logging:
+  level:
+    root: warn
+    com.hzhang: info
+  file:
+    name: log/blog-prod.log
+# 端口号
+server:
+  port: 8081

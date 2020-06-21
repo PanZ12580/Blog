@@ -1,0 +1,120 @@
+2020-06-01 21:45:04.635  INFO 436 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 436 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:45:04.637 DEBUG 436 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:45:04.638  INFO 436 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:45:05.973  INFO 436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:45:05.976  INFO 436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:45:06.007  INFO 436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-06-01 21:45:06.824  INFO 436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$621de393] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:45:08.870  INFO 436 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:45:09.504  INFO 436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:45:09.793  WARN 436 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:45:10.445  INFO 436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:45:10.494  INFO 436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:45:10.517  INFO 436 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:45:10.786  INFO 436 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 6.957 seconds (JVM running for 8.478)
+2020-06-01 21:45:11.376  INFO 436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:46:41.577  INFO 20152 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 20152 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:46:41.578 DEBUG 20152 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:46:41.579  INFO 20152 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:46:42.860  INFO 20152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:46:42.863  INFO 20152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:46:42.890  INFO 20152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-01 21:46:43.682  INFO 20152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$362d450d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:46:45.970  INFO 20152 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:46:46.730  INFO 20152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:46:47.271  WARN 20152 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:46:48.294  INFO 20152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:46:48.343  INFO 20152 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:46:48.373  INFO 20152 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:46:48.665  INFO 20152 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.733 seconds (JVM running for 9.197)
+2020-06-01 21:46:49.687  INFO 20152 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:54:21.298  INFO 18544 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 18544 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:54:21.306 DEBUG 18544 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:54:21.306  INFO 18544 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:54:22.685  INFO 18544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:54:22.688  INFO 18544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:54:22.717  INFO 18544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-06-01 21:54:23.578  INFO 18544 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$362d450d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:54:26.201  INFO 18544 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:54:26.747  INFO 18544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:54:27.011  WARN 18544 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:54:27.582  INFO 18544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:54:27.619  INFO 18544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:54:27.644  INFO 18544 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:54:27.934  INFO 18544 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.347 seconds (JVM running for 9.036)
+2020-06-01 21:54:28.407  INFO 18544 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:57:07.564  INFO 5292 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 5292 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:57:07.565 DEBUG 5292 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:57:07.566  INFO 5292 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:57:08.811  INFO 5292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:57:08.815  INFO 5292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:57:08.846  INFO 5292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-06-01 21:57:09.646  INFO 5292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$860b1d6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:57:12.520  INFO 5292 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:57:13.054  INFO 5292 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:57:13.411  WARN 5292 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:57:13.983  INFO 5292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:57:14.017  INFO 5292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:57:14.039  INFO 5292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:57:14.260  INFO 5292 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.272 seconds (JVM running for 8.681)
+2020-06-01 21:57:14.791  INFO 5292 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:58:10.351  INFO 8284 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 8284 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:58:10.353 DEBUG 8284 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:58:10.355  INFO 8284 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:58:11.958  INFO 8284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:58:11.961  INFO 8284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:58:11.990  INFO 8284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-01 21:58:12.921  INFO 8284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$14a26728] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:58:15.125  INFO 8284 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:58:15.746  INFO 8284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:58:16.041  WARN 8284 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:58:16.752  INFO 8284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:58:16.786  INFO 8284 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:58:16.808  INFO 8284 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:58:17.060  INFO 8284 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.386 seconds (JVM running for 9.29)
+2020-06-01 21:58:17.578  INFO 8284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:59:29.348  INFO 20676 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 20676 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 21:59:29.349 DEBUG 20676 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 21:59:29.349  INFO 20676 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 21:59:30.863  INFO 20676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 21:59:30.867  INFO 20676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 21:59:30.895  INFO 20676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-06-01 21:59:31.743  INFO 20676 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$362d450d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 21:59:34.079  INFO 20676 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 21:59:34.703  INFO 20676 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 21:59:35.009  WARN 20676 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 21:59:35.764  INFO 20676 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 21:59:35.803  INFO 20676 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 21:59:35.828  INFO 20676 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 21:59:36.070  INFO 20676 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.485 seconds (JVM running for 8.894)
+2020-06-01 21:59:36.590  INFO 20676 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 22:06:23.799  INFO 20992 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 20992 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 22:06:23.802 DEBUG 20992 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 22:06:23.803  INFO 20992 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 22:06:25.114  INFO 20992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 22:06:25.118  INFO 20992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 22:06:25.144  INFO 20992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-06-01 22:06:25.954  INFO 20992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$1976cb5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 22:06:28.144  INFO 20992 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 22:06:28.748  INFO 20992 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 22:06:29.038  WARN 20992 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 22:06:29.817  INFO 20992 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 22:06:29.856  INFO 20992 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 22:06:29.881  INFO 20992 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 22:06:30.131  INFO 20992 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 6.9 seconds (JVM running for 8.36)
+2020-06-01 22:06:30.708  INFO 20992 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 22:11:42.440  INFO 24164 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 24164 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
+2020-06-01 22:11:42.441 DEBUG 24164 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-01 22:11:42.442  INFO 24164 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
+2020-06-01 22:11:43.595  INFO 24164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-01 22:11:43.598  INFO 24164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-01 22:11:43.627  INFO 24164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-06-01 22:11:44.446  INFO 24164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.hzhang.config.RedisConfig$$EnhancerBySpringCGLIB$$d29503cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 22:11:46.817  INFO 24164 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 22:11:47.767  INFO 24164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 22:11:48.062  WARN 24164 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-01 22:11:49.074  INFO 24164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 22:11:49.109  INFO 24164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 22:11:49.131  INFO 24164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 22:11:49.521  INFO 24164 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 7.744 seconds (JVM running for 9.118)
+2020-06-01 22:11:50.477  INFO 24164 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

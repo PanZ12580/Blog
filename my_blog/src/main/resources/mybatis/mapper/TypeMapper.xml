@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzhang.dao.profile.TypeDao">
+    <cache readOnly="true"></cache>
+    <insert id="saveType" useGeneratedKeys="true" keyProperty="id" parameterType="type">
+        insert into type(name) values(#{name})
+    </insert>
+
+    <update id="updateType" parameterType="type">
+        update type set name = #{name} where id = #{id}
+    </update>
+
+    <delete id="deleteType" parameterType="Long">
+        delete from type where id = #{id}
+    </delete>
+
+    <select id="findTypeById" parameterType="Long" resultType="type">
+        select * from type where id = #{id}
+    </select>
+
+    <select id="findTypeByName" parameterType="String" resultType="type">
+        select * from type where name = #{name}
+    </select>
+
+    <select id="findTypeList" resultType="type">
+        select * from type
+    </select>
+</mapper>
