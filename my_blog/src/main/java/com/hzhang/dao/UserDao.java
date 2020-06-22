@@ -1,4 +1,4 @@
-package com.hzhang.dao.profile;
+package com.hzhang.dao;
 
 import com.hzhang.pojo.User;
 import org.apache.ibatis.annotations.Mapper;

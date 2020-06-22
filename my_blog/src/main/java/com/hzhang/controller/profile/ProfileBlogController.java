@@ -5,7 +5,7 @@ import com.hzhang.annotation.AuthToken;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Result;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
-import com.hzhang.service.profile.BlogManageService;
+import com.hzhang.service.BlogService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/profile")
 @AuthToken
-public class BlogManageController {
+public class ProfileBlogController {
     @Autowired
-    private BlogManageService blogManageService;
+    private BlogService blogService;
 
     @PostMapping("/findBlogList")
     @ApiOperation("根据传入条件查询博客列表")
@@ -35,7 +35,7 @@ public class BlogManageController {
         if (blogManageQueryVo == null) {
             blogManageQueryVo = new BlogManageQueryVo();
         }
-        PageInfo<Blog> blogList = blogManageService.findBlogList(
+        PageInfo<Blog> blogList = blogService.findBlogList(
                 blogManageQueryVo.getCurrentPage(),
                 blogManageQueryVo.getPageSize(),
                 blogManageQueryVo
@@ -51,7 +51,7 @@ public class BlogManageController {
     @ApiOperation("根据id查找博客")
     public Result findBlogById(@RequestParam("id") Long id){
         String errorMsg = "指定博客不存在";
-        Blog blogById = blogManageService.findBlogById(id);
+        Blog blogById = blogService.findBlogById(id);
         if(blogById != null){
             return Result.builder()
                     .flag(true)
@@ -70,7 +70,7 @@ public class BlogManageController {
     public Result saveBlog(@RequestBody Blog blog) {
         String errorMsg = "服务器发生错误";
         if (blog != null) {
-            int record = blogManageService.saveBlog(blog);
+            int record = blogService.saveBlog(blog);
             if (record != 0) {
                 return Result.builder()
                         .statusCode(HttpStatus.OK.value())
@@ -92,7 +92,7 @@ public class BlogManageController {
     public Result updateBlog(@RequestBody Blog blog){
         String errorMsg = "服务器发生错误";
         if (blog != null) {
-            int record = blogManageService.updateBlog(blog);
+            int record = blogService.updateBlog(blog);
             if (record != 0) {
                 return Result.builder()
                         .statusCode(HttpStatus.OK.value())
@@ -109,7 +109,7 @@ public class BlogManageController {
     @DeleteMapping("/deleteBlog")
     @ApiOperation("根据id删除指定博客")
     public Result deleteBlog(@RequestParam("id") Long id){
-        blogManageService.deleteBlog(id);
+        blogService.deleteBlog(id);
         return Result.builder()
                 .flag(true)
                 .statusCode(HttpStatus.OK.value())

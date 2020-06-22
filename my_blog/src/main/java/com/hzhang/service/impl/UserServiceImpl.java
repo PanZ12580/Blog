@@ -1,8 +1,8 @@
-package com.hzhang.service.profile.impl;
+package com.hzhang.service.impl;
 
-import com.hzhang.dao.profile.UserDao;
+import com.hzhang.dao.UserDao;
 import com.hzhang.pojo.User;
-import com.hzhang.service.profile.UserService;
+import com.hzhang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

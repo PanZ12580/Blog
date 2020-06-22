@@ -81,6 +81,7 @@ export function request(config) {
     return config;
   }, err => {
     console.log(err)
+    clearTimeout(timer)
     store.commit(SET_LOADING, false)
     router.replace('/500')
     return err;
@@ -92,20 +93,21 @@ export function request(config) {
     // 隐藏加载动画
     clearTimeout(timer)
     store.commit(SET_LOADING, false)
-    if (res.data.statusCode === 500) {
+    if (res.data.statusCode == 500) {
       store.commit(SET_LOADING, false)
       router.replace('/500')
-    } else if (res.data.statusCode === 404) {
+    } else if (res.data.statusCode == 404) {
+      console.log("404")
       store.commit(SET_LOADING, false)
       router.replace('/404')
-    } else if (res.data.statusCode === 401) {
+    } else if (res.data.statusCode == 401) {
       store.commit(SET_LOADING, false)
       router.replace('/401')
     }
     return res
   }, err => {
+    clearTimeout(timer)
     store.commit(SET_LOADING, false)
-    console.log(err)
     router.replace('/500')
     return err
   })

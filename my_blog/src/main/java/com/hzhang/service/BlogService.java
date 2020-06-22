@@ -1,10 +1,13 @@
-package com.hzhang.service.profile;
+package com.hzhang.service;
 
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 /**
  * @author ：Hzhang
@@ -13,7 +16,7 @@ import org.springframework.cache.annotation.Cacheable;
  * @modified By：
  * @version: $
  */
-public interface BlogManageService {
+public interface BlogService {
     /**
      * 根据id查询博客
      * @param id
@@ -21,6 +24,35 @@ public interface BlogManageService {
      */
     @Cacheable(cacheNames = "cache")
     Blog findBlogById(Long id);
+
+    /**
+     * 查询首页博客分页列表
+     * @param currentPage
+     * @param pageSize
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize);
+
+    /**
+     * 查询最近更新的前top条推荐的博客
+     * @param top
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    List<Blog> findTopRecommendBlogList(Integer top);
+
+    /**
+     * 查询博客搜索结果
+     * @param currentPage
+     * @param pageSize
+     * @param search
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    PageInfo<Blog> findSearchBlog(Integer currentPage, Integer pageSize, String search);
+
+//    -----------------------------------------后台功能---------------------------------------------
 
     /**
      * 查询博客列表

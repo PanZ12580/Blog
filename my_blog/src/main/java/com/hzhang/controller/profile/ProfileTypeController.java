@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/profile")
 @AuthToken
-public class TypeController {
+public class ProfileTypeController {
     @Autowired
     private TypeService typeService;
 

@@ -1,18 +1,17 @@
-package com.hzhang.service.profile.impl;
+package com.hzhang.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hzhang.dao.profile.BlogManageDao;
+import com.hzhang.dao.BlogDao;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Tag;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
-import com.hzhang.service.profile.BlogManageService;
+import com.hzhang.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,13 +22,14 @@ import java.util.List;
  * @version: $
  */
 @Service
-public class BlogManageServiceImpl implements BlogManageService {
+public class BlogServiceImpl implements BlogService {
     @Autowired
-    private BlogManageDao blogManageDao;
+    private BlogDao blogDao;
 
     @Override
     public Blog findBlogById(Long id) {
-        Blog blogById = blogManageDao.findBlogById(id);
+        Blog blogById = blogDao.findBlogById(id);
+        blogById.getType();
         List<Tag> tagList = blogById.getTagList();
         List<Long> tagIds = new ArrayList<>();
         if (tagList.size() > 0) {
@@ -44,8 +44,33 @@ public class BlogManageServiceImpl implements BlogManageService {
     @Override
     public PageInfo<Blog> findBlogList(Integer currentPage, Integer pageSize, BlogManageQueryVo blogManageQueryVo) {
         PageHelper.startPage(currentPage, pageSize, "update_time desc");
-        List<Blog> blogList = blogManageDao.findBlogList(blogManageQueryVo);
+        List<Blog> blogList = blogDao.findBlogList(blogManageQueryVo);
+        blogList.forEach(item -> item.getType());
         return new PageInfo<Blog>(blogList);
+    }
+
+    @Override
+    public PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize) {
+        PageHelper.startPage(currentPage, pageSize, "create_time desc");
+        List<Blog> blogList = blogDao.findHomeBlogList();
+        blogList.forEach(item -> {
+            item.getType();
+            item.getUser();
+        });
+        return new PageInfo<Blog>(blogList);
+    }
+
+    @Override
+    public List<Blog> findTopRecommendBlogList(Integer top) {
+        return blogDao.findTopRecommendBlogList(top);
+    }
+
+    @Override
+    public PageInfo<Blog> findSearchBlog(Integer currentPage, Integer pageSize, String search) {
+        PageHelper.startPage(currentPage, pageSize);
+        List<Blog> searchBlog = blogDao.findSearchBlog(search);
+        searchBlog.forEach(item -> item.getType());
+        return new PageInfo<Blog>(searchBlog);
     }
 
     @Override
@@ -54,8 +79,8 @@ public class BlogManageServiceImpl implements BlogManageService {
         blog.setCreateTime(System.currentTimeMillis());
         blog.setUpdateTime(System.currentTimeMillis());
         blog.setViews(0);
-        int record = blogManageDao.saveBlog(blog);
-        blogManageDao.saveBlogTag(blog);
+        int record = blogDao.saveBlog(blog);
+        blogDao.saveBlogTag(blog);
         return record;
     }
 
@@ -65,10 +90,10 @@ public class BlogManageServiceImpl implements BlogManageService {
         Blog blogById = findBlogById(blog.getId());
         if (blogById != null) {
             blog.setUpdateTime(System.currentTimeMillis());
-            int record = blogManageDao.updateBlog(blog);
-            blogManageDao.deleteBlogTag(blog);
+            int record = blogDao.updateBlog(blog);
+            blogDao.deleteBlogTag(blog);
             if (blog.getTagList().size() > 0) {
-                blogManageDao.saveBlogTag(blog);
+                blogDao.saveBlogTag(blog);
             }
             return record;
         }
@@ -77,6 +102,6 @@ public class BlogManageServiceImpl implements BlogManageService {
 
     @Override
     public void deleteBlog(Long id) {
-        blogManageDao.deleteBlog(id);
+        blogDao.deleteBlog(id);
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="ui button labeled m-margin-tb-tiny" @click="itemClick">
-    <button class="ui button m-hover link" :class="{active: currentIndex === index}">{{typeName}}</button>
+    <div class="ui button m-hover link" :class="{active: currentIndex === index}">{{typeName}}</div>
     <div class="ui basic left pointing label" :class="{active: currentIndex === index}">{{typeCount}}</div>
   </div>
 </template>

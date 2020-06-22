@@ -1,7 +1,7 @@
 <template>
   <router-link to="/tags">
-    <span>{{tagName}}</span>
-    <div class="m-inline-block">{{tagCount}}</div>
+    <span v-text="tagName"></span>
+    <div class="m-inline-block" v-text="blogCount"></div>
   </router-link>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: "TagsItem",
   props: {
     tagName: String,
-    tagCount: {
+    blogCount: {
       type: Number,
       default: 0
     }
@@ -18,5 +18,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.m-inline-block {
+  margin-left: 1em;
+  font-size: 1.1em;
+}
 </style>

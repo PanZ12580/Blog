@@ -4,7 +4,7 @@
     <div class="ui active inverted dimmer" v-show="isLoading">
       <div class="ui large text loader">加载中</div>
     </div>
-    <keep-alive>
+    <keep-alive :max="5">
       <router-view :key="$router.fullPath"></router-view>
     </keep-alive>
     <my-footer></my-footer>

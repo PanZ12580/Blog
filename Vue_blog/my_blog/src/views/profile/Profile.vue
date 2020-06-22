@@ -2,7 +2,7 @@
   <div>
     <profile-nav-bar></profile-nav-bar>
     <second-nav-bar></second-nav-bar>
-    <keep-alive :exclude="/.*Publish/">
+    <keep-alive :exclude="/.*Publish/" :max="5">
       <router-view v-show="isShow" :key="$router.fullPath"></router-view>
     </keep-alive>
   </div>

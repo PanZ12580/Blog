@@ -7,7 +7,7 @@
             <img src="~assets/logo.png" class="image" />
             <div class="content">个人中心登录</div>
           </h2>
-          <form class="ui large form">
+          <form class="ui large form" @submit.native.prevent>
             <div class="ui segment">
               <div class="field">
                 <div class="ui left icon input">

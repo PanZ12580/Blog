@@ -955,9 +955,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 
 2020-06-12 09:05:40.116  INFO 5284 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-12 09:05:40.599  INFO 5284 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-12 09:05:40.606 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-12 09:05:40.637 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-12 09:05:40.805 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-12 09:05:40.606 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-12 09:05:40.637 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-12 09:05:40.805 DEBUG 5284 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-12 09:05:43.284  INFO 5284 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: 667b90ec6215e9b5f4551d6e0a61108b
 2020-06-12 09:05:43.286  INFO 5284 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-12 09:05:43.288  INFO 5284 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591923940930

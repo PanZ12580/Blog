@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzhang.dao.BlogTagDao">
+    <resultMap id="blogTagMap" type="blogTag">
+        <id property="blogId" column="blog_id"></id>
+        <id property="tagId" column="tag_id"></id>
+        <association property="blog"
+                    column="blog_id"
+                    select="com.hzhang.dao.BlogDao.findBlogById"></association>
+        <association property="tag"
+                    column="tag_id"
+                    select="com.hzhang.dao.TagDao.findTagById"></association>
+    </resultMap>
+
+    <select id="findBlogTagByTagId" resultMap="blogTagMap">
+        select blog_id, tag_id
+        from blog_tag
+        where tag_id = #{tagId}
+    </select>
+
+    <select id="findBlogTagByBlogId" resultMap="blogTagMap">
+        select tag_id, blog_id
+        from blog_tag
+        where blog_id = #{blogId}
+    </select>
+
+    <select id="findCountByTagId" resultType="Integer">
+        select count(*)
+        from blog_tag
+        where tag_id = #{tagId}
+    </select>
+</mapper>

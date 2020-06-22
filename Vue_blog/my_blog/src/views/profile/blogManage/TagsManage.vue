@@ -26,7 +26,7 @@ export default {
   name: "TagsManage",
   data() {
     return {
-      tableHeader: ["", "名称", "操作"],
+      tableHeader: ["", "名称", "博客数量", "操作"],
       tagList: null,
       currentPage: 1,
       pageSize: 5,

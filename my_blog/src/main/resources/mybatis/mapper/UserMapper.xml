@@ -2,12 +2,38 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hzhang.dao.profile.UserDao">
+<mapper namespace="com.hzhang.dao.UserDao">
     <select id="findUser" resultType="User">
-        select * from user where username = #{username} and password = #{password}
+        select
+        id,
+        avatar,
+        create_time,
+        email,
+        nickname,
+        type,
+        update_time,
+        username,
+        ip,
+        wechat_pay,
+        alipay,
+        qq,
+        wechat,
+        wechat_code
+        from user where username = #{username} and password = #{password}
     </select>
 
     <select id="findUserById" resultType="user">
-        select * from user where id = #{id}
+        select
+        id,
+        avatar,
+        email,
+        nickname,
+        type,
+        wechat_pay,
+        alipay,
+        qq,
+        wechat,
+        wechat_code
+        from user where id = #{id}
     </select>
 </mapper>

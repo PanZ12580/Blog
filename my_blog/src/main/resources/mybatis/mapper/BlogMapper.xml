@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hzhang.dao.profile.BlogManageDao">
+<mapper namespace="com.hzhang.dao.BlogDao">
     <resultMap id="blogMap" type="blog">
         <id property="id" column="id"></id>
         <result property="title" column="title"></result>
@@ -19,12 +19,11 @@
         <result property="recommend" column="recommend"></result>
         <result property="createTime" column="create_time"></result>
         <result property="updateTime" column="update_time"></result>
-        <association property="type" column="type_id" javaType="type">
-            <id property="id" column="type_id"></id>
-            <result property="name" column="type_name"></result>
+        <association property="type" column="type_id" javaType="type"
+                     select="com.hzhang.dao.TypeDao.findTypeById">
         </association>
         <association property="user" column="user_id" javaType="user"
-                     select="com.hzhang.dao.profile.UserDao.findUserById"></association>
+                     select="com.hzhang.dao.UserDao.findUserById"></association>
         <collection property="commentList" column="id"
                     select="com.hzhang.dao.CommentDao.findCommentListByBlogId"></collection>
         <collection property="tagList" column="id"
@@ -44,24 +43,16 @@
         blog.recommend,
         blog.share_statement,
         blog.title,
-        type.id as type_id,
-        type.name as type_name
+        blog.type_id
         from
         blog
-        left join
-        type
-        on blog.type_id = type.id
         where blog.id = #{id}
     </select>
 
     <select id="findBlogList" resultMap="blogMap" parameterType="blogManageQueryVo">
         select
-        blog.id, blog.title, blog.recommend, blog.published, blog.update_time,
-        type.name as type_name
+        blog.id, blog.title, blog.recommend, blog.published, blog.update_time, blog.type_id
         from blog
-        left join type
-        on
-        blog.type_id = type.id
         <where>
             <if test="title != null">
                 <bind name="title_pattern" value="'%' + title + '%'"></bind>
@@ -70,6 +61,16 @@
             <if test="typeId != null">and type_id = #{typeId}</if>
             <if test="recommend != null">and recommend = #{recommend}</if>
         </where>
+    </select>
+
+    <select id="findHomeBlogList" resultMap="blogMap">
+        SELECT
+        blog.id, blog.title, blog.update_time, blog.create_time,
+        blog.description, blog.first_picture, blog.views,
+        blog.user_id, blog.type_id
+        FROM
+        blog
+        WHERE blog.published = TRUE
     </select>
 
     <insert id="saveBlog" parameterType="blog" useGeneratedKeys="true" keyProperty="id">
@@ -147,4 +148,43 @@
     <delete id="deleteBlogTag" parameterType="blog">
         delete from blog_tag where blog_id = #{id}
     </delete>
+
+    <select id="findBlogByTypeId" resultMap="blogMap">
+        select id
+        from blog
+        where type_id = #{typeId}
+    </select>
+
+    <select id="findCountByTypeId" resultType="Integer">
+        select count(*)
+        from blog
+        where
+        type_id = #{typeId}
+    </select>
+
+    <select id="findTopRecommendBlogList" resultType="blog">
+        select id, title
+        from
+        blog
+        where
+        recommend = true
+        order by update_time desc
+        limit #{top}
+    </select>
+
+    <select id="findSearchBlog" resultMap="blogMap">
+        SELECT
+        blog.id, blog.title, blog.update_time, blog.create_time,
+        blog.description, blog.first_picture, blog.views,
+        blog.type_id
+        FROM
+        blog
+        <where>
+            <if test="search != null and search != ''">
+                <bind name="search_pattern" value="'*' + search + '*'"></bind>
+                and match(blog.title, blog.content, blog.description) against(#{search_pattern} in boolean mode)
+            </if>
+            and blog.published = true
+        </where>
+    </select>
 </mapper>

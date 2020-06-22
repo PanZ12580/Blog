@@ -6,7 +6,7 @@
       </div>
       <div class="right aligned column">
         共
-        <h2 class="ui orange header m-inline-block">&nbsp;14&nbsp;</h2>篇
+        <h2 class="ui orange header m-inline-block" v-text="totalBlogs"></h2>篇
       </div>
     </div>
   </div>
@@ -14,9 +14,16 @@
 
 <script>
 export default {
-    name: 'ListHeader'
+  name: "ListHeader",
+  props: {
+    totalBlogs: 0
+  }
 };
 </script>
 
-<style>
+<style scoped>
+.ui.orange.header.m-inline-block{
+  margin-left: 1em;
+  margin-right: 1em;
+}
 </style>

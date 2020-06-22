@@ -27,9 +27,9 @@
 2020-06-15 22:21:17.942  INFO 400 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: null
 2020-06-15 22:21:43.440  INFO 400 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-15 22:21:44.253  INFO 400 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-15 22:21:44.261 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-15 22:21:44.299 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-15 22:21:44.597 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-15 22:21:44.261 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-15 22:21:44.299 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-15 22:21:44.597 DEBUG 400 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-15 22:22:07.042  INFO 400 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: 28f90c15adc978441b09b127447aa539
 2020-06-15 22:22:07.081 ERROR 400 --- [http-nio-8001-exec-7] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8001/profile/findBlogList, Response Status_Code: 200, Exception: {}
 
@@ -264,9 +264,9 @@ java.lang.NullPointerException: null
 2020-06-15 22:26:37.434  INFO 25720 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Token in the request header: 28f90c15adc978441b09b127447aa539
 2020-06-15 22:26:49.936  INFO 25720 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-15 22:26:50.249  INFO 25720 --- [http-nio-8001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-15 22:26:50.256 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-15 22:26:50.277 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-15 22:26:50.297 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-15 22:26:50.256 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-15 22:26:50.277 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-15 22:26:50.297 DEBUG 25720 --- [http-nio-8001-exec-2] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-15 22:27:03.382  INFO 25720 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: e705892f7e58eef9140bfdc0c1a4acd
 2020-06-15 22:27:06.564  INFO 25720 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: e705892f7e58eef9140bfdc0c1a4acd
 2020-06-15 22:27:07.212  INFO 25720 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: e705892f7e58eef9140bfdc0c1a4acd
@@ -297,9 +297,9 @@ java.lang.NullPointerException: null
 2020-06-15 22:32:29.560  INFO 24300 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: e705892f7e58eef9140bfdc0c1a4acd
 2020-06-15 22:36:17.661  INFO 24300 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-15 22:36:18.036  INFO 24300 --- [http-nio-8001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-15 22:36:18.044 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-15 22:36:18.065 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-15 22:36:18.093 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-15 22:36:18.044 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-15 22:36:18.065 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-15 22:36:18.093 DEBUG 24300 --- [http-nio-8001-exec-1] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-15 22:36:34.252  INFO 24300 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 24b82aa7731abd335b8361d9692b7cc4
 2020-06-15 22:36:34.313  INFO 24300 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-15 22:36:34.315  INFO 24300 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592231778116
@@ -408,8 +408,8 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy97.findBlogList(Unknown Source)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl.findBlogList(BlogManageServiceImpl.java:33)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
+	at BlogServiceImpl.findBlogList(BlogManageServiceImpl.java:33)
+	at BlogServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -422,7 +422,7 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$EnhancerBySpringCGLIB$$2a97135.findBlogList(<generated>)
+	at BlogServiceImpl$$EnhancerBySpringCGLIB$$2a97135.findBlogList(<generated>)
 	at com.hzhang.controller.profile.BlogManageController.findBlogList(BlogManageController.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3145,9 +3145,9 @@ Caused by: org.apache.ibatis.executor.ExecutorException: Cannot get Configuratio
 2020-06-15 23:26:06.343  INFO 22772 --- [http-nio-8001-exec-7] c.h.i.AuthorizationInterceptor           : Token in the request header: null
 2020-06-15 23:26:37.871  INFO 22772 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-15 23:26:38.158  INFO 22772 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-15 23:26:38.165 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-15 23:26:38.184 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-15 23:26:38.248 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-15 23:26:38.165 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-15 23:26:38.184 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-15 23:26:38.248 DEBUG 22772 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-15 23:26:50.439  INFO 22772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Token in the request header: 8e683ab4de976b8775ae2ea83cfba9fb
 2020-06-15 23:26:50.441  INFO 22772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-15 23:26:50.442  INFO 22772 --- [http-nio-8001-exec-5] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592234798261

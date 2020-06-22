@@ -3,8 +3,10 @@ package com.hzhang.service;
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.pojo.Type;
-import com.hzhang.service.profile.impl.BlogManageServiceImpl;
+import com.hzhang.service.impl.BlogServiceImpl;
 import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 
 /**
@@ -49,17 +51,25 @@ public interface TypeService {
     PageInfo<Type> findTypeList(Integer currentPage, Integer pageSize);
 
     /**
+     * 查询博客数目最多的前top条分类
+     * @param top
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    List<Type> findTopTypeList(Integer top);
+
+    /**
      * 修改分类
      * @param type
      * @return
      */
-    @ClearRedisCache(cascade = BlogManageServiceImpl.class)
+    @ClearRedisCache(cascade = BlogServiceImpl.class)
     int updateType(Type type);
 
     /**
      * 根据id删除分类
      * @param id
      */
-    @ClearRedisCache(cascade = BlogManageServiceImpl.class)
+    @ClearRedisCache(cascade = BlogServiceImpl.class)
     void deleteType(Long id);
 }

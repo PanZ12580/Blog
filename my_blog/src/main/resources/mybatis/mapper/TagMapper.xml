@@ -3,6 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hzhang.dao.TagDao">
+    <resultMap id="tagMap" type="tag">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <association property="blogCount"
+                     column="id"
+                     select="com.hzhang.dao.BlogTagDao.findCountByTagId"></association>
+    </resultMap>
     <insert id="saveTag" useGeneratedKeys="true" keyProperty="id" parameterType="tag">
         insert into tag(name) values(#{name})
     </insert>
@@ -15,16 +22,16 @@
         delete from tag where id = #{id}
     </delete>
 
-    <select id="findTagById" parameterType="Long" resultType="tag">
-        select * from tag where id = #{id}
+    <select id="findTagById" parameterType="Long" resultMap="tagMap">
+        select id, name from tag where id = #{id}
     </select>
 
     <select id="findTagByName" parameterType="String" resultType="tag">
-        select * from tag where name = #{name}
+        select id, name from tag where name = #{name}
     </select>
 
-    <select id="findTagList" resultType="tag">
-        select * from tag
+    <select id="findTagList" resultMap="tagMap">
+        select id, name from tag
     </select>
 
     <select id="findTagListByBlogId" resultType="tag" parameterType="Integer">

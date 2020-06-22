@@ -1,5 +1,6 @@
 package com.hzhang.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ import java.util.List;
 @Data
 @ToString
 @ApiModel("留言实体类")
+@JsonIgnoreProperties(value = {"handler"})
 public class Message implements Serializable {
     @ApiModelProperty("留言id")
     private Integer id;

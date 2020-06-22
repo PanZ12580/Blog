@@ -2,7 +2,7 @@ package com.hzhang.controller.profile;
 
 import com.hzhang.pojo.Result;
 import com.hzhang.pojo.User;
-import com.hzhang.service.profile.UserService;
+import com.hzhang.service.UserService;
 import com.hzhang.utils.RedisUtil;
 import com.hzhang.utils.tokenUtils.Const;
 import com.hzhang.utils.tokenUtils.TokenGenerator;

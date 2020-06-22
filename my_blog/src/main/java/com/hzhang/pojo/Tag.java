@@ -23,6 +23,7 @@ import java.util.List;
 @Data
 @ToString
 @ApiModel("标签实体类")
+@JsonIgnoreProperties(value = {"handler"})
 public class Tag implements Serializable {
     @ApiModelProperty("标签id")
     private Long id;
@@ -31,4 +32,7 @@ public class Tag implements Serializable {
 
     @ApiModelProperty("该标签下的博客列表")
     private List<Blog> blogList;
+
+    @ApiModelProperty("该标签下的博客数目")
+    private Integer blogCount;
 }

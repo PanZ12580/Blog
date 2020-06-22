@@ -17,7 +17,12 @@
     <div class="cloud m-bg">
       <ul>
         <li>
-          <tags-item v-for="(tag,index) in tagsList" :key="index" :tagName="tag.name" :tagCount="tag.count"></tags-item>
+          <tags-item
+            v-for="(tag,index) in tagsList"
+            :key="index"
+            :tagName="tag.name"
+            :blogCount="tag.blogCount"
+          ></tags-item>
         </li>
       </ul>
     </div>
@@ -25,13 +30,19 @@
 </template>
 
 <script>
-
 export default {
   name: "Tags",
   components: {
-    "tags-item": () => import('./TagsItem')
+    "tags-item": () => import("./TagsItem")
   },
-  inject: ["tagsList"]
+  props: {
+    tagsList: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  }
 };
 </script>
 

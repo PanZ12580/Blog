@@ -1,6 +1,7 @@
 import {
   SET_USER,
-  SET_LOADING
+  SET_LOADING,
+  SET_SEARCH
 } from './mutation_types'
 
 export default {
@@ -9,5 +10,8 @@ export default {
   },
   [SET_LOADING](state, payload) {
     state.loading = payload
+  },
+  [SET_SEARCH](state, payload) {
+    state.search = payload
   }
 }

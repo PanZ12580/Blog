@@ -555,9 +555,9 @@ Caused by: java.lang.NumberFormatException: For input string: "{currentPage}"
 2020-06-11 18:52:16.730  INFO 11612 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: null
 2020-06-11 18:54:06.656  INFO 11612 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-11 18:54:06.987  INFO 11612 --- [http-nio-8001-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-11 18:54:06.994 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-11 18:54:07.014 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-11 18:54:07.307 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-11 18:54:06.994 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-11 18:54:07.014 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-11 18:54:07.307 DEBUG 11612 --- [http-nio-8001-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-11 18:55:55.570  INFO 11612 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 810759ba27e9144fe6c1b9fef9f71a63
 2020-06-11 18:55:55.572  INFO 11612 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-11 18:55:55.573  INFO 11612 --- [http-nio-8001-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591872849104
@@ -2351,9 +2351,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-2020-06-11 21:03:26.188 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-11 21:03:26.188 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-11 21:03:26.197 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-11 21:03:26.188 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-11 21:03:26.188 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-11 21:03:26.197 DEBUG 22308 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-11 21:03:41.236 ERROR 22308 --- [http-nio-8001-exec-10] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8001/profile/save, Response Status_Code: 200, Exception: {}
 
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
@@ -4166,9 +4166,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 
 2020-06-11 21:44:45.659  INFO 22364 --- [http-nio-8001-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-11 21:44:45.948  INFO 22364 --- [http-nio-8001-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-11 21:44:45.956 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-11 21:44:45.974 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-11 21:44:45.993 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-11 21:44:45.956 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-11 21:44:45.974 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-11 21:44:45.993 DEBUG 22364 --- [http-nio-8001-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-11 21:44:56.038  INFO 22364 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Token in the request header: eb6db88f113a8426e50c4f5723d9ec7f
 2020-06-11 21:44:56.040  INFO 22364 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-11 21:44:56.042  INFO 22364 --- [http-nio-8001-exec-9] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591883086011

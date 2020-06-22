@@ -315,7 +315,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 01:03:56.790  WARN 13308 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present]
 2020-06-02 01:04:53.433 ERROR 13308 --- [http-nio-8080-exec-4] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
-java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.hzhang.pojo.User com.hzhang.service.profile.impl.UserServiceImpl.findUser(java.lang.String,java.lang.String)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@17697950'. At least one cache should be provided per cache operation.
+java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.hzhang.pojo.User com.hzhang.service.impl.UserServiceImpl.findUser(java.lang.String,java.lang.String)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@17697950'. At least one cache should be provided per cache operation.
 	at org.springframework.cache.interceptor.CacheAspectSupport.getCaches(CacheAspectSupport.java:255)
 	at org.springframework.cache.interceptor.CacheAspectSupport$CacheOperationContext.<init>(CacheAspectSupport.java:707)
 	at org.springframework.cache.interceptor.CacheAspectSupport.getOperationContext(CacheAspectSupport.java:265)
@@ -328,7 +328,7 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -381,7 +381,7 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-2020-06-02 01:04:53.434  WARN 13308 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.hzhang.pojo.User com.hzhang.service.profile.impl.UserServiceImpl.findUser(java.lang.String,java.lang.String)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@17697950'. At least one cache should be provided per cache operation.]
+2020-06-02 01:04:53.434  WARN 13308 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalStateException: No cache could be resolved for 'Builder[public com.hzhang.pojo.User com.hzhang.service.impl.UserServiceImpl.findUser(java.lang.String,java.lang.String)] caches=[] | key='' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@17697950'. At least one cache should be provided per cache operation.]
 2020-06-02 01:07:10.091  INFO 13308 --- [Thread-757] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-02 01:07:10.168  INFO 13308 --- [restartedMain] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 13308 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 01:07:10.168 DEBUG 13308 --- [restartedMain] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
@@ -410,9 +410,9 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2020-06-02 01:07:14.502  INFO 13308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
 2020-06-02 01:07:14.584  INFO 13308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 01:07:15.394  INFO 13308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 01:07:15.425 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 01:07:15.474 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 01:07:15.528 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 01:07:15.425 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 01:07:15.474 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 01:07:15.528 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 01:11:36.122  INFO 13308 --- [Thread-946] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-02 01:11:36.124  INFO 13308 --- [Thread-946] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-02 01:11:36.170  INFO 13308 --- [Thread-946] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -466,9 +466,9 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2020-06-02 01:12:45.753  INFO 13308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
 2020-06-02 01:12:45.763  INFO 13308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
 2020-06-02 01:12:45.781  INFO 13308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-06-02 01:12:45.781 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 01:12:45.782 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 01:12:45.784 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 01:12:45.781 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 01:12:45.782 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 01:12:45.784 DEBUG 13308 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 01:12:58.962 ERROR 13308 --- [http-nio-8080-exec-3] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/auth, Response Status_Code: 200, Exception: {}
 
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
@@ -1292,13 +1292,13 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2020-06-02 01:23:41.965  INFO 13308 --- [http-nio-8080-exec-2] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
 2020-06-02 01:23:51.523  INFO 13308 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
 2020-06-02 01:23:51.538  INFO 13308 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2020-06-02 01:23:51.538 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 01:23:51.539 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 01:23:51.547 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 01:23:51.538 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 01:23:51.539 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 01:23:51.547 DEBUG 13308 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 01:24:16.987 ERROR 13308 --- [http-nio-8080-exec-4] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @7d00b3c4)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1355,7 +1355,7 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 01:24:52.933 ERROR 13308 --- [http-nio-8080-exec-5] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @7d00b3c4)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1412,7 +1412,7 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 01:24:55.633 ERROR 13308 --- [http-nio-8080-exec-6] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @7d00b3c4)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$139cfbd3.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1543,7 +1543,7 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 01:28:37.601 ERROR 13240 --- [http-nio-8080-exec-1] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @14b6693)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$5699bdb8.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$5699bdb8.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1600,7 +1600,7 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 01:28:41.504 ERROR 13240 --- [http-nio-8080-exec-8] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @14b6693)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$5699bdb8.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$5699bdb8.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1831,7 +1831,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 01:44:48.730 ERROR 7680 --- [http-nio-8080-exec-7] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @7a2b1739)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$7ebc901f.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$7ebc901f.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1913,9 +1913,9 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 09:26:36.945  INFO 17520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 57 ms
 2020-06-02 09:26:39.345  INFO 17520 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 09:26:39.948  INFO 17520 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 09:26:39.955 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 09:26:39.990 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 09:26:40.017 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 09:26:39.955 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 09:26:39.990 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 09:26:40.017 DEBUG 17520 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 09:29:42.545  INFO 4924 --- [restartedMain] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 4924 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 09:29:42.639 DEBUG 4924 --- [restartedMain] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 09:29:42.639  INFO 4924 --- [restartedMain] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -1945,7 +1945,7 @@ java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class
 2020-06-02 09:29:54.191 ERROR 4924 --- [http-nio-8080-exec-1] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.ClassCastException: class com.hzhang.pojo.User cannot be cast to class com.hzhang.pojo.User (com.hzhang.pojo.User is in unnamed module of loader 'app'; com.hzhang.pojo.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @37af3419)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$3bee9c4d.findUser(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$3bee9c4d.findUser(<generated>)
 	at com.hzhang.controller.profile.LoginController.login(LoginController.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2141,12 +2141,12 @@ Unconditional classes:
 2020-06-02 09:41:59.812  INFO 23740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
 2020-06-02 09:42:01.670  INFO 23740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 09:42:01.987  INFO 23740 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 09:42:01.994 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 09:42:02.014 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 09:42:02.039 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 09:43:17.361 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 09:43:17.361 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 12345(String)
-2020-06-02 09:43:17.362 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
+2020-06-02 09:42:01.994 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 09:42:02.014 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 09:42:02.039 DEBUG 23740 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 09:43:17.361 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 09:43:17.361 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 12345(String)
+2020-06-02 09:43:17.362 DEBUG 23740 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
 2020-06-02 09:51:15.893  INFO 21416 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 21416 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 09:51:15.896 DEBUG 21416 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 09:51:15.896  INFO 21416 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -2409,7 +2409,7 @@ java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$9704f9ea.save(<generated>)
+	at com.hzhang.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$9704f9ea.save(<generated>)
 	at com.hzhang.controller.IndexController.firstController(IndexController.java:30)
 	at com.hzhang.controller.IndexController$$FastClassBySpringCGLIB$$92a7c619.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
@@ -2750,9 +2750,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 
 2020-06-02 10:31:19.248  INFO 12104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 10:31:19.677  INFO 12104 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 10:31:19.685 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 10:31:19.708 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 10:31:19.731 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 10:31:19.685 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 10:31:19.708 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 10:31:19.731 DEBUG 12104 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 10:31:39.315  INFO 12104 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-02 10:31:39.316  INFO 12104 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-02 10:31:39.334  INFO 12104 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -2780,12 +2780,12 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 10:32:36.056  INFO 2648 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
 2020-06-02 10:32:38.074  INFO 2648 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 10:32:38.513  INFO 2648 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 10:32:38.522 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 10:32:38.546 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 10:32:38.575 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 10:33:01.308 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 10:33:01.309 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 10:33:01.311 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 10:32:38.522 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 10:32:38.546 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 10:32:38.575 DEBUG 2648 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 10:33:01.308 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 10:33:01.309 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 10:33:01.311 DEBUG 2648 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 10:33:56.660  INFO 2648 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-02 10:33:56.662  INFO 2648 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-02 10:33:56.674  INFO 2648 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -2822,9 +2822,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 10:36:23.174  INFO 8416 --- [http-nio-8080-exec-6] com.hzhang.aspect.LogAspect              : Result: index
 2020-06-02 10:37:11.631  INFO 8416 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 10:37:12.044  INFO 8416 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 10:37:12.053 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 10:37:12.075 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 10:37:12.104 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 10:37:12.053 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 10:37:12.075 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 10:37:12.104 DEBUG 8416 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 10:39:46.706 ERROR 8416 --- [http-nio-8080-exec-1] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/auth, Response Status_Code: 200, Exception: {}
 
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
@@ -2910,9 +2910,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 10:40:53.822  INFO 18936 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
 2020-06-02 10:40:55.793  INFO 18936 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 10:40:56.243  INFO 18936 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 10:40:56.253 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 10:40:56.277 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 10:40:56.304 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 10:40:56.253 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 10:40:56.277 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 10:40:56.304 DEBUG 18936 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 10:41:27.009  INFO 18936 --- [http-nio-8080-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: a89738f72f1f49de0c2d0250aa3d1978
 2020-06-02 10:41:27.032  INFO 18936 --- [http-nio-8080-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-02 10:41:27.037  INFO 18936 --- [http-nio-8080-exec-3] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591065590571
@@ -3041,9 +3041,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 16:05:21.459  INFO 8128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
 2020-06-02 16:05:50.293  INFO 8128 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 16:05:50.616  INFO 8128 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 16:05:50.625 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:05:50.644 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 16:05:50.665 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 16:05:50.625 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:05:50.644 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 16:05:50.665 DEBUG 8128 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 16:07:02.894  INFO 8128 --- [http-nio-8080-exec-6] c.h.i.AuthorizationInterceptor           : Token in the request header: 747bb502b09ead1df211bec737fd5d7d
 2020-06-02 16:07:02.915  INFO 8128 --- [http-nio-8080-exec-6] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-02 16:07:02.917  INFO 8128 --- [http-nio-8080-exec-6] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1591085150688
@@ -3080,9 +3080,9 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 16:09:11.787  INFO 19396 --- [http-nio-8080-exec-3] c.h.i.AuthorizationInterceptor           : Username in redis with token is null
 2020-06-02 16:17:48.670  INFO 19396 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 16:17:49.023  INFO 19396 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 16:17:49.030 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:17:49.052 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
-2020-06-02 16:17:49.070 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:17:49.030 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:17:49.052 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
+2020-06-02 16:17:49.070 DEBUG 19396 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
 2020-06-02 16:17:49.080 ERROR 19396 --- [http-nio-8080-exec-5] com.hzhang.handler.MyExceptionHandler    : Request URL: http://localhost:8080/profile/login, Response Status_Code: 200, Exception: {}
 
 java.lang.NullPointerException: null
@@ -3162,9 +3162,9 @@ java.lang.NullPointerException: null
 2020-06-02 16:18:51.121  INFO 7212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 2020-06-02 16:18:51.180  INFO 7212 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 16:18:51.471  INFO 7212 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 16:18:51.479 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:18:51.497 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
-2020-06-02 16:18:51.514 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:18:51.479 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:18:51.497 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
+2020-06-02 16:18:51.514 DEBUG 7212 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
 2020-06-02 16:35:55.384  INFO 24424 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 24424 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 16:35:55.385 DEBUG 24424 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 16:35:55.385  INFO 24424 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
@@ -3179,15 +3179,15 @@ java.lang.NullPointerException: null
 2020-06-02 16:36:01.322  INFO 24424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 2020-06-02 16:36:01.611  INFO 24424 --- [main] com.hzhang.MyBlogApplicationTests        : Started MyBlogApplicationTests in 6.792 seconds (JVM running for 8.191)
 2020-06-02 16:36:02.748  INFO 24424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-02 16:36:41.969 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:36:41.970 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
-2020-06-02 16:36:41.971 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 16:36:46.456 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:36:46.457 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 16:36:46.458 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 16:36:49.986 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:36:49.987 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 16:36:49.988 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:36:41.969 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:36:41.970 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 12345633(String)
+2020-06-02 16:36:41.971 DEBUG 7212 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:36:46.456 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:36:46.457 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 16:36:46.458 DEBUG 7212 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:36:49.986 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:36:49.987 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 16:36:49.988 DEBUG 7212 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
 2020-06-02 16:38:33.467  INFO 20464 --- [main] com.hzhang.MyBlogApplicationTests        : Starting MyBlogApplicationTests on Hzhang with PID 20464 (started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 16:38:33.468 DEBUG 20464 --- [main] com.hzhang.MyBlogApplicationTests        : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 16:38:33.468  INFO 20464 --- [main] com.hzhang.MyBlogApplicationTests        : The following profiles are active: dev
@@ -3206,12 +3206,12 @@ java.lang.NullPointerException: null
 2020-06-02 16:39:53.799  INFO 7212 --- [http-nio-8080-exec-9] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
 2020-06-02 16:39:58.022  INFO 7212 --- [http-nio-8080-exec-2] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://localhost:8080/error, ip=0:0:0:0:0:0:0:1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
 2020-06-02 16:39:58.023  INFO 7212 --- [http-nio-8080-exec-2] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
-2020-06-02 16:40:51.204 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:40:51.205 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 16:40:51.207 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 16:41:54.191 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:41:54.192 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
-2020-06-02 16:41:54.193 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:40:51.204 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:40:51.205 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 16:40:51.207 DEBUG 7212 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 16:41:54.191 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:41:54.192 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 123456(String)
+2020-06-02 16:41:54.193 DEBUG 7212 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
 2020-06-02 16:43:38.951  INFO 16096 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 16096 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 16:43:38.954 DEBUG 16096 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 16:43:38.954  INFO 16096 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3266,9 +3266,9 @@ java.lang.NullPointerException: null
 2020-06-02 16:51:59.700  INFO 15308 --- [http-nio-8080-exec-8] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
 2020-06-02 16:53:09.472  INFO 15308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 16:53:09.756  INFO 15308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 16:53:09.765 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 16:53:09.784 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 16:53:09.805 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 16:53:09.765 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 16:53:09.784 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 16:53:09.805 DEBUG 15308 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 16:54:49.214  INFO 15308 --- [http-nio-8080-exec-2] c.h.i.AuthorizationInterceptor           : Token in the request header: null
 2020-06-02 17:05:11.240  INFO 19044 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 19044 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 17:05:11.242 DEBUG 19044 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
@@ -3530,15 +3530,15 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 18:02:07.106  INFO 16584 --- [http-nio-8080-exec-3] c.h.i.AuthorizationInterceptor           : Token in the request header: 
 2020-06-02 19:26:50.369  INFO 16584 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 19:26:50.770  INFO 16584 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 19:26:50.779 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 19:26:50.804 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 19:26:50.835 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 20:20:27.839 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:20:27.844 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 20:20:27.851 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 20:22:32.323 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:22:32.323 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 20:22:32.325 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 19:26:50.779 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 19:26:50.804 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 19:26:50.835 DEBUG 16584 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 20:20:27.839 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:20:27.844 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 20:20:27.851 DEBUG 16584 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 20:22:32.323 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:22:32.323 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 20:22:32.325 DEBUG 16584 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 20:24:06.011  INFO 9916 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 9916 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 20:24:06.017 DEBUG 9916 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 20:24:06.017  INFO 9916 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3563,9 +3563,9 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 20:24:22.475  INFO 9916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
 2020-06-02 20:24:22.518  INFO 9916 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 20:24:22.803  INFO 9916 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 20:24:22.810 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:24:22.829 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 20:24:22.851 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 20:24:22.810 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:24:22.829 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 20:24:22.851 DEBUG 9916 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 20:25:18.155  INFO 13252 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 13252 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 20:25:18.157 DEBUG 13252 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 20:25:18.157  INFO 13252 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3590,9 +3590,9 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 20:35:23.233  INFO 13252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
 2020-06-02 20:35:23.296  INFO 13252 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 20:35:23.655  INFO 13252 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 20:35:23.682 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:35:23.708 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 20:35:23.744 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 20:35:23.682 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:35:23.708 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 20:35:23.744 DEBUG 13252 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 20:39:31.098  INFO 24300 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 24300 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 20:39:31.100 DEBUG 24300 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 20:39:31.101  INFO 24300 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3639,63 +3639,63 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 20:41:27.838  INFO 15716 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
 2020-06-02 20:41:27.884  INFO 15716 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 20:41:28.157  INFO 15716 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 20:41:28.165 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:41:28.184 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
-2020-06-02 20:41:28.220 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:42:53.792 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:42:53.793 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: zhangsan(String), 202cb962ac59075b964b07152d234b70(String)
-2020-06-02 20:42:53.794 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:43:32.392 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:43:32.393 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 130d7630b6a6e9b6cfd30a71e0819fc8(String)
-2020-06-02 20:43:32.394 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:44:25.760 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:44:25.760 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: 201706010127(String), 6bdcbb606161c47eab0615ff6e13313f(String)
-2020-06-02 20:44:25.761 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:45:03.472 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:45:03.472 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), b6d767d2f8ed5d21a44b0e5886680cb9(String)
-2020-06-02 20:45:03.473 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:45:19.901 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:45:19.902 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: wq(String), 2c204d849495890a8fad6b44ee78ac73(String)
-2020-06-02 20:45:19.903 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:46:05.044 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:46:05.045 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 02f36950c7dc96375a19462d425c35b9(String)
-2020-06-02 20:46:05.046 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:47:51.757 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:47:51.758 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
-2020-06-02 20:47:51.759 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:50:47.944 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:50:47.944 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 1f2121f36f817bd18540e5fa7de06f59(String)
-2020-06-02 20:50:47.946 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:51:23.880 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:51:23.880 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), df22f17124884fc51f1ac69d610096ac(String)
-2020-06-02 20:51:23.881 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 20:51:39.368 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 20:51:39.369 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 20:51:39.377 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 21:02:57.676 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:02:57.677 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: asd(String), c20ad4d76fe97759aa27a0c99bff6710(String)
-2020-06-02 21:02:57.678 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:03:25.753 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:03:25.754 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: asd(String), 5f039b4ef0058a1d652f13d612375a5b(String)
-2020-06-02 21:03:25.755 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:03:32.765 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:03:32.765 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:03:32.768 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 21:04:05.508 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:04:05.508 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: ad(String), 523af537946b79c4f8369ed39ba78605(String)
-2020-06-02 21:04:05.509 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:04:10.968 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:04:10.969 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:04:10.971 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 21:05:39.430 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:05:39.430 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:05:39.432 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 21:05:58.915 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:05:58.915 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:05:58.916 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 21:06:25.766 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:06:25.766 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:06:25.768 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 20:41:28.165 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:41:28.184 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
+2020-06-02 20:41:28.220 DEBUG 15716 --- [http-nio-8080-exec-1] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:42:53.792 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:42:53.793 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: zhangsan(String), 202cb962ac59075b964b07152d234b70(String)
+2020-06-02 20:42:53.794 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:43:32.392 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:43:32.393 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 130d7630b6a6e9b6cfd30a71e0819fc8(String)
+2020-06-02 20:43:32.394 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:44:25.760 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:44:25.760 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==> Parameters: 201706010127(String), 6bdcbb606161c47eab0615ff6e13313f(String)
+2020-06-02 20:44:25.761 DEBUG 15716 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:45:03.472 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:45:03.472 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), b6d767d2f8ed5d21a44b0e5886680cb9(String)
+2020-06-02 20:45:03.473 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:45:19.901 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:45:19.902 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==> Parameters: wq(String), 2c204d849495890a8fad6b44ee78ac73(String)
+2020-06-02 20:45:19.903 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:46:05.044 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:46:05.045 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 02f36950c7dc96375a19462d425c35b9(String)
+2020-06-02 20:46:05.046 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:47:51.757 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:47:51.758 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
+2020-06-02 20:47:51.759 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:50:47.944 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:50:47.944 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 1f2121f36f817bd18540e5fa7de06f59(String)
+2020-06-02 20:50:47.946 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:51:23.880 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:51:23.880 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), df22f17124884fc51f1ac69d610096ac(String)
+2020-06-02 20:51:23.881 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 20:51:39.368 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 20:51:39.369 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 20:51:39.377 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:02:57.676 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:02:57.677 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: asd(String), c20ad4d76fe97759aa27a0c99bff6710(String)
+2020-06-02 21:02:57.678 DEBUG 15716 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:03:25.753 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:03:25.754 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : ==> Parameters: asd(String), 5f039b4ef0058a1d652f13d612375a5b(String)
+2020-06-02 21:03:25.755 DEBUG 15716 --- [http-nio-8080-exec-7] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:03:32.765 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:03:32.765 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:03:32.768 DEBUG 15716 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:04:05.508 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:04:05.508 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==> Parameters: ad(String), 523af537946b79c4f8369ed39ba78605(String)
+2020-06-02 21:04:05.509 DEBUG 15716 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:04:10.968 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:04:10.969 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:04:10.971 DEBUG 15716 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:05:39.430 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:05:39.430 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:05:39.432 DEBUG 15716 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:05:58.915 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:05:58.915 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:05:58.916 DEBUG 15716 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:06:25.766 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:06:25.766 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:06:25.768 DEBUG 15716 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 21:30:36.752  INFO 16748 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 16748 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 21:30:36.754 DEBUG 16748 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 21:30:36.755  INFO 16748 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3772,9 +3772,9 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 21:47:52.898  INFO 2260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
 2020-06-02 21:48:11.353  INFO 2260 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 21:48:11.635  INFO 2260 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 21:48:11.642 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:48:11.664 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:48:11.706 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:48:11.642 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:48:11.664 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:48:11.706 DEBUG 2260 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 21:50:52.495  INFO 19892 --- [main] com.hzhang.MyBlogApplication             : Starting MyBlogApplication on Hzhang with PID 19892 (E:\IdeaProjects\SpringBoot\Blog\my_blog\target\classes started by Hzhang in E:\IdeaProjects\SpringBoot\Blog\my_blog)
 2020-06-02 21:50:52.497 DEBUG 19892 --- [main] com.hzhang.MyBlogApplication             : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
 2020-06-02 21:50:52.497  INFO 19892 --- [main] com.hzhang.MyBlogApplication             : The following profiles are active: dev
@@ -3821,36 +3821,36 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required S
 2020-06-02 21:53:28.050  INFO 13412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
 2020-06-02 21:57:10.855  INFO 13412 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 21:57:11.152  INFO 13412 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 21:57:11.159 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:57:11.179 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
-2020-06-02 21:57:11.197 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:58:48.247 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:58:48.248 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
-2020-06-02 21:58:48.249 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:58:58.262 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:58:58.262 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
-2020-06-02 21:58:58.263 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 21:59:05.707 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 21:59:05.708 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 21:59:05.716 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:02:52.497 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:02:52.498 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:02:52.501 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:04:07.148 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:04:07.148 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:04:07.149 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:06:05.708 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:06:05.709 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:06:05.711 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:07:15.634 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:07:15.635 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:07:15.636 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:10:18.326 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:10:18.326 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
-2020-06-02 22:10:18.327 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 22:10:22.933 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:10:22.934 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:10:22.935 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 21:57:11.159 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:57:11.179 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
+2020-06-02 21:57:11.197 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:58:48.247 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:58:48.248 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
+2020-06-02 21:58:48.249 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:58:58.262 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:58:58.262 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), 202cb962ac59075b964b07152d234b70(String)
+2020-06-02 21:58:58.263 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 21:59:05.707 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 21:59:05.708 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 21:59:05.716 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:02:52.497 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:02:52.498 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:02:52.501 DEBUG 13412 --- [http-nio-8080-exec-8] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:04:07.148 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:04:07.148 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:04:07.149 DEBUG 13412 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:06:05.708 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:06:05.709 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:06:05.711 DEBUG 13412 --- [http-nio-8080-exec-10] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:07:15.634 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:07:15.635 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:07:15.636 DEBUG 13412 --- [http-nio-8080-exec-5] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:10:18.326 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:10:18.326 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
+2020-06-02 22:10:18.327 DEBUG 13412 --- [http-nio-8080-exec-2] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 22:10:22.933 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:10:22.934 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:10:22.935 DEBUG 13412 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
 2020-06-02 22:19:29.136 ERROR 13412 --- [http-nio-8080-exec-6] com.hzhang.handler.MyExceptionHandler    : Request URL: http://127.0.0.1:8080/profile/findUserByToken, Response Status_Code: 200, Exception: {}
 
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
@@ -3926,21 +3926,21 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2020-06-02 22:23:06.839  INFO 8268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
 2020-06-02 22:39:28.112  INFO 8268 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-02 22:39:28.406  INFO 8268 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-02 22:39:28.413 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:39:28.432 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
-2020-06-02 22:39:28.449 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 0
-2020-06-02 22:39:31.727 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:39:31.728 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:39:31.736 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:45:07.623 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:45:07.623 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:45:07.625 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:45:36.198 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:45:36.199 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:45:36.200 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:46:17.188 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:46:17.189 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:46:17.191 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
-2020-06-02 22:46:28.217 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
-2020-06-02 22:46:28.217 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-02 22:46:28.219 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.profile.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:39:28.413 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:39:28.432 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), c20ad4d76fe97759aa27a0c99bff6710(String)
+2020-06-02 22:39:28.449 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 0
+2020-06-02 22:39:31.727 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:39:31.728 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:39:31.736 DEBUG 8268 --- [http-nio-8080-exec-4] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:45:07.623 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:45:07.623 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:45:07.625 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:45:36.198 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:45:36.199 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:45:36.200 DEBUG 8268 --- [http-nio-8080-exec-3] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:46:17.188 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:46:17.189 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:46:17.191 DEBUG 8268 --- [http-nio-8080-exec-6] com.hzhang.dao.UserDao.findUser          : <==      Total: 1
+2020-06-02 22:46:28.217 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-02 22:46:28.217 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-02 22:46:28.219 DEBUG 8268 --- [http-nio-8080-exec-9] com.hzhang.dao.UserDao.findUser          : <==      Total: 1

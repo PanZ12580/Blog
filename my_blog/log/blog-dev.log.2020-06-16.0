@@ -3359,8 +3359,8 @@ org.springframework.dao.DataIntegrityViolationException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy102.updateBlog(Unknown Source)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl.updateBlog(BlogManageServiceImpl.java:47)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
+	at BlogServiceImpl.updateBlog(BlogManageServiceImpl.java:47)
+	at BlogServiceImpl$$FastClassBySpringCGLIB$$3d89b09b.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -3370,7 +3370,7 @@ org.springframework.dao.DataIntegrityViolationException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.hzhang.service.profile.impl.BlogManageServiceImpl$$EnhancerBySpringCGLIB$$5f785004.updateBlog(<generated>)
+	at BlogServiceImpl$$EnhancerBySpringCGLIB$$5f785004.updateBlog(<generated>)
 	at com.hzhang.controller.profile.BlogManageController.updateBlog(BlogManageController.java:92)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3958,9 +3958,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 11:11:13.233  INFO 5020 --- [http-nio-8001-exec-1] c.h.i.AuthorizationInterceptor           : Successful to update expire time!
 2020-06-16 11:13:34.790  INFO 5020 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-16 11:13:35.073  INFO 5020 --- [http-nio-8001-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-06-16 11:13:35.081 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-16 11:13:35.101 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-16 11:13:35.120 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-16 11:13:35.081 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-16 11:13:35.101 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-16 11:13:35.120 DEBUG 5020 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-16 11:13:37.200  INFO 5020 --- [http-nio-8001-exec-10] com.hzhang.aspect.LogAspect              : Request: LogAspect.RequestLog(url=http://127.0.0.1:8001/error, ip=127.0.0.1, classMethod=com.hzhang.controller.NotFoundErrorController.handleError, args=[])
 2020-06-16 11:13:37.214  INFO 5020 --- [http-nio-8001-exec-10] com.hzhang.aspect.LogAspect              : Result: Result(flag=false, statusCode=404, errorMsg=访问路径不存在, data=null, token=null)
 2020-06-16 11:13:43.076  INFO 5020 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
@@ -6764,9 +6764,9 @@ Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (
 2020-06-16 16:48:36.319  INFO 22628 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592297316318
 2020-06-16 16:48:36.319  INFO 22628 --- [http-nio-8001-exec-2] c.h.i.AuthorizationInterceptor           : The token has been lived 1 seconds
 2020-06-16 16:49:44.262  INFO 22628 --- [http-nio-8001-exec-4] c.h.i.AuthorizationInterceptor           : Token in the request header: f830bac1e469904babf95741ad247633
-2020-06-16 16:50:01.617 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ? 
-2020-06-16 16:50:01.618 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
-2020-06-16 16:50:01.620 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.profile.UserDao.findUser  : <==      Total: 1
+2020-06-16 16:50:01.617 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==>  Preparing: select * from user where username = ? and password = ?
+2020-06-16 16:50:01.618 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-06-16 16:50:01.620 DEBUG 22628 --- [http-nio-8001-exec-6] com.hzhang.dao.UserDao.findUser  : <==      Total: 1
 2020-06-16 16:50:03.336  INFO 22628 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Token in the request header: 3b9983a17324d6d0466ce323f17e93a2
 2020-06-16 16:50:03.337  INFO 22628 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : Username in redis with token is admin
 2020-06-16 16:50:03.338  INFO 22628 --- [http-nio-8001-exec-10] c.h.i.AuthorizationInterceptor           : CreateTime of this token is 1592297401628

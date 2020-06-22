@@ -3,7 +3,17 @@
     <masthead ref="masthead"></masthead>
     <main-content ref="header">
       <template #blog_list>
-        <home-list></home-list>
+        <home-list
+          :mainList="mainList"
+          :typesList="typesList"
+          :tagsList="tagsList"
+          :recommendList="recommendList"
+          :totalBlogs="totalBlogs"
+          :hasPreviousPage="hasPreviousPage"
+          :hasNextPage="hasNextPage"
+          @prePage="toPrePage"
+          @nextPage="toNextPage"
+        ></home-list>
       </template>
     </main-content>
     <tool-bar ref="toolBar"></tool-bar>
@@ -15,6 +25,12 @@ import Masthead from "./masthead/Masthead";
 import MainContent from "components/blogList/MainContent";
 
 import { toolbarControl } from "common/mixin";
+import {
+  findBlogList,
+  findTypeList,
+  findTagList,
+  findRecommendList
+} from "network/homeAjax";
 
 export default {
   name: "Home",
@@ -25,89 +41,31 @@ export default {
   },
   data() {
     return {
-      mainList: [
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        }
-      ],
-      typesList: [
-        { name: "Java相关", count: 15 },
-        { name: "透视与结构", count: 4 },
-        { name: "光影与色彩", count: 3 },
-        { name: "构成分析", count: 21 },
-        { name: "MySQL", count: 9 },
-        { name: "Redis", count: 8 }
-      ],
-      tagsList: [
-        { name: "SpringMVC", count: 22 },
-        { name: "Spring", count: 4 },
-        { name: "Vue", count: 5 },
-        { name: "Java", count: 12 },
-        { name: "数据结构与算法", count: 3 },
-        { name: "Dubbo", count: 11 },
-        { name: "ES6", count: 6 }
-      ],
-      recommendList: ["用户故事", "装机必备", "算命", "补证办证"]
-    };
-  },
-  provide() {
-    return {
-      mainList: this.mainList,
-      typesList: this.typesList,
-      tagsList: this.tagsList,
-      recommendList: this.recommendList
+      pageSize: 10,
+      hasPreviousPage: Boolean,
+      hasNextPage: Boolean,
+      prePage: 0,
+      nextPage: 1,
+      totalBlogs: Number,
+      mainList: [],
+      typesList: [],
+      tagsList: [],
+      recommendList: []
     };
   },
   activated() {
     this.navControl();
+    this.getBlogList();
+    this.getTypeList();
+    this.getTagList();
+    this.getRecommendList();
   },
   methods: {
     /**
      * 控制导航栏显示于隐藏
      */
     navControl() {
-      const masthead = this.$refs.masthead.$el
+      const masthead = this.$refs.masthead.$el;
       $(masthead).visibility({
         once: false,
         onBottomPassed: function() {
@@ -116,6 +74,52 @@ export default {
         onBottomPassedReverse: function() {
           $(".fixed.menu").transition("fade out");
         }
+      });
+    },
+    /**
+     * 翻页
+     */
+    toPrePage() {
+      this.getBlogList(this.prePage)
+    },
+    toNextPage() {
+      this.getBlogList(this.nextPage)
+    },
+    /**
+     * 获取博客列表
+     */
+    getBlogList(currentPage = 1) {
+      findBlogList(currentPage, this.pageSize).then(res => {
+        this.mainList = res.data.data.list;
+        this.prePage = res.data.data.prePage;
+        this.nextPage = res.data.data.nextPage;
+        this.totalBlogs = res.data.data.total;
+        this.hasPreviousPage = res.data.data.hasPreviousPage;
+        this.hasNextPage = res.data.data.hasNextPage;
+      });
+    },
+    /**
+     * 获取分类列表
+     */
+    getTypeList() {
+      findTypeList().then(res => {
+        this.typesList = res.data.data;
+      });
+    },
+    /**
+     * 获取标签列表
+     */
+    getTagList() {
+      findTagList().then(res => {
+        this.tagsList = res.data.data;
+      });
+    },
+    /**
+     * 获取推荐博客列表
+     */
+    getRecommendList() {
+      findRecommendList().then(res => {
+        this.recommendList = res.data.data;
       });
     }
   },

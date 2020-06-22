@@ -1,4 +1,4 @@
-package com.hzhang.dao.profile;
+package com.hzhang.dao;
 
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
@@ -17,13 +17,50 @@ import java.util.List;
  */
 @Repository
 @Mapper
-public interface BlogManageDao {
+public interface BlogDao {
     /**
      * 根据id查询博客
      * @param id
      * @return
      */
     Blog findBlogById(Long id);
+
+    /**
+     * 根据分类Id查询博客列表
+     * @param typeId
+     * @return
+     */
+    List<Blog> findBlogByTypeId(@Param("typeId") Long typeId);
+
+    /**
+     * 根据分类Id查询该分类下具有的博客数目
+     * @param typeId
+     * @return
+     */
+    Integer findCountByTypeId(@Param("typeId") Long typeId);
+
+
+    /**
+     * 查询首页展示的博客列表
+     * @return
+     */
+    List<Blog> findHomeBlogList();
+
+    /**
+     * 查询最近更新的前top条推荐的博客
+     * @param top
+     * @return
+     */
+    List<Blog> findTopRecommendBlogList(@Param("top") Integer top);
+
+    /**
+     * 查询博客搜索结果
+     * @param search
+     * @return
+     */
+    List<Blog> findSearchBlog(@Param("search") String search);
+
+//    --------------------------------------------后台功能--------------------------------------------------
 
     /**
      * 根据查询条件（标题、分类、是否推荐）来查询博客列表

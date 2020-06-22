@@ -14,7 +14,8 @@
           class="item m-gray m-text-thin"
           v-for="(item,index) in recommendList"
           :key="index"
-        >{{item}}</router-link>
+          v-text="item.title"
+        ></router-link>
       </div>
     </div>
   </div>
@@ -23,7 +24,14 @@
 <script>
 export default {
   name: "Recommend",
-  inject: ["recommendList"]
+  props: {
+    recommendList: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  }
 };
 </script>
 

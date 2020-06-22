@@ -2,7 +2,7 @@
   <div>
     <div id="main" class="m-padding-tb-max m-container-small">
       <div id="main_container" class="ui container">
-        <categories-header ref="header" :count="count"></categories-header>
+        <common-header ref="header" :blogCount="count"></common-header>
         <categories-types :typesList="typesList"></categories-types>
         <main-list :attachClass="attachClass">
           <template #default>
@@ -17,15 +17,14 @@
 </template>
 
 <script>
-import CategoriesHeader from "./unit/CategoriesHeader";
+import CommonHeader from "components/commonHeader/CommonHeader";
 
-import {scrollEventListener, toolbarControl} from "common/mixin"
-
+import { scrollEventListener, toolbarControl } from "common/mixin";
 
 export default {
   name: "Categories",
   components: {
-    CategoriesHeader,
+    CommonHeader,
     "categories-types": () => import("./unit/CategoriesTypes"),
     "main-list": () => import("components/blogList/MainList"),
     "main-list-item": () => import("components/blogList/MainListItem"),

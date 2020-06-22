@@ -41,6 +41,13 @@ const routes = [{
     }
   },
   {
+    path: "/search",
+    component: () => import('views/search/Search'),
+    meta: {
+      title: "搜索结果"
+    }
+  },
+  {
     path: '/profile',
     component: () => import('views/profile/Profile'),
     children: [{

@@ -3,7 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hzhang.dao.TypeDao">
-    <cache readOnly="true"></cache>
+    <resultMap id="typeMap" type="type">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <association property="blogCount"
+                     column="id"
+                     select="com.hzhang.dao.BlogDao.findCountByTypeId"></association>
+    </resultMap>
+
+    <resultMap id="fullTypeMap" type="type" extends="typeMap">
+        <collection property="blogList"
+                    ofType="blog"
+                    column="id"
+                    select="com.hzhang.dao.BlogDao.findBlogByTypeId"></collection>
+    </resultMap>
+
     <insert id="saveType" useGeneratedKeys="true" keyProperty="id" parameterType="type">
         insert into type(name) values(#{name})
     </insert>
@@ -24,7 +38,8 @@
         select * from type where name = #{name}
     </select>
 
-    <select id="findTypeList" resultType="type">
+    <select id="findTypeList" resultMap="typeMap">
         select * from type
     </select>
+
 </mapper>

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/profile")
 @AuthToken
-public class TagController {
+public class ProfileTagController {
     @Autowired
     private TagService tagService;
 

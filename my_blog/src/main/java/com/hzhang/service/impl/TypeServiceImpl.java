@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @author ：Hzhang
  * @date ：Created in 2020/6/10 15:44
@@ -44,8 +48,21 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public PageInfo<Type> findTypeList(Integer currentPage, Integer pageSize) {
         PageHelper.startPage(currentPage, pageSize, "id desc");
-        PageInfo<Type> pageInfo = new PageInfo<>(typeDao.findTypeList());
+        List<Type> typeList = typeDao.findTypeList();
+        typeList.forEach(x -> x.getBlogCount());
+        PageInfo<Type> pageInfo = new PageInfo<>(typeList);
         return pageInfo;
+    }
+
+    @Override
+    public List<Type> findTopTypeList(Integer top) {
+        List<Type> typeList = typeDao.findTypeList();
+        Collections.sort(typeList, (a, b) -> b.getBlogCount() - a.getBlogCount());
+        if(top > typeList.size()){
+            top = typeList.size();
+        }
+        List<Type> types = new ArrayList<>(typeList.subList(0, top));
+        return types;
     }
 
     @Override

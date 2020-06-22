@@ -3,7 +3,10 @@ package com.hzhang.service;
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.pojo.Tag;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 /**
  * @author ：Hzhang
@@ -45,6 +48,14 @@ public interface TagService {
      */
     @Cacheable(cacheNames = "cache")
     PageInfo<Tag> findTagList(Integer currentPage, Integer pageSize);
+
+    /**
+     * 查询标签列表前top条数据
+     * @param top
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    List<Tag> findTopTagList(@Param("top") Integer top);
 
     /**
      * 修改分类

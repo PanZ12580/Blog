@@ -1,4 +1,4 @@
-package com.hzhang.service.profile;
+package com.hzhang.service;
 
 import com.hzhang.pojo.User;
 

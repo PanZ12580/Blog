@@ -1,7 +1,6 @@
 <template>
-  <router-link class="item" to="/categories">
-    {{typeName}}
-    <div class="ui orange basic label left pointing">{{typeCount}}</div>
+  <router-link class="item" to="/categories" v-text="typeName" tag="a">
+    <div class="ui orange basic label left pointing" v-text="blogCount"></div>
   </router-link>
 </template>
 
@@ -10,7 +9,7 @@ export default {
   name: "CategoriesItem",
   props: {
       typeName: String,
-      typeCount: {
+      blogCount: {
           type: Number,
           default: 0
       }
