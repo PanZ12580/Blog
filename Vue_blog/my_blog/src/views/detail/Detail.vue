@@ -4,19 +4,31 @@
     class="m-padding-tb-max m-container-small animate__animated animate__fadeIn line-numbers"
   >
     <div id="main_container" class="ui container">
-      <content-header ref="header"></content-header>
-      <content-img></content-img>
-      <main-content></main-content>
-      <blog-message></blog-message>
-      <comment ref="comment"></comment>
+      <content-header
+        ref="header"
+        :user="blog.user"
+        :createTime="blog.createTime"
+        :views="blog.views"
+      ></content-header>
+      <content-img :firstPicture="blog.firstPicture"></content-img>
+      <main-content
+        :content="blog.content"
+        :tagList="blog.tagList"
+        :title="blog.title"
+        :flag="blog.flag"
+        :appreciatable="blog.appreciation"
+        @afterMounted="initToolbar"
+      ></main-content>
+      <blog-message :user="blog.user" :createTime="blog.createTime" :updateTime="blog.updateTime"></blog-message>
+      <comment ref="comment" v-if="blog.commentabled"></comment>
     </div>
     <tool-bar ref="toolBar">
       <template #default>
-        <button id="toc_btn" type="buttton" class="ui button teal m-bg-teal">目录</button>
-        <a @click="toMessage" class="ui teal button m-bg-teal">留言</a>
-        <button class="ui icon button wechat_qr teal m-bg-teal">
-          <i class="ui icon weixin"></i>
-        </button>
+        <div id="toc_btn" class="ui button teal m-bg-teal">目录</div>
+        <a @click="toMessage" class="ui teal button m-bg-teal" v-if="blog.commentabled">留言</a>
+        <div class="ui icon button wechat_qr teal m-bg-teal">
+          <i class="ui icon large qrcode"></i>
+        </div>
       </template>
     </tool-bar>
     <!--    目录-->
@@ -24,44 +36,83 @@
       class="ui js-toc flowing toc_container popup transition m-padding-lr-tiny hidden"
       style="width: 250px !important;max-width: 500px !important;"
     ></div>
-    <!--    微信二维码-->
+    <!--    网站二维码-->
     <div
       id="qrcode"
       class="ui wechat flowing popup top left transition hidden"
       style="width: 120px;"
-    ></div>
+    >
+      <img
+        :src="'http://qr.liantu.com/api.php?text='+url"
+        class="ui rounded image"
+        style="width: 120px !important;"
+      />
+      <div style="text-align:center;font-size:12px">
+        <span>扫一扫</span>
+        <p>使用手机阅读</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import ContentHeader from "./mainContent/ContentHeader";
 
-import Prism from "assets/lib/prism/prism";
-import QRCode from "qrcodejs2";
 import tocbot from "assets/js/tocbot.min";
-import { scrollEventListener, toolbarControl } from "common/mixin";
+import {
+  NoAliveScrollEventListener,
+  NoAliveToolbarControl
+} from "common/mixin";
+import { findBlogDetail } from "network/detailAjax";
 
 export default {
   name: "Detail",
+  data() {
+    return {
+      id: 0,
+      blog: {
+        type: Object,
+        default() {
+          return {};
+        }
+      },
+      url: "http://192.168.100.5:8081"
+    };
+  },
   components: {
     ContentHeader,
     "content-img": () => import("./mainContent/ContentImg"),
     "main-content": () => import("./mainContent/MainContent"),
     "blog-message": () => import("./mainContent/BlogMessage"),
-    "comment": () => import("components/comment/Comment")
+    comment: () => import("components/comment/Comment")
   },
-  mounted() {
-    this.$nextTick(() => {
-      Prism.highlightAll();
+  async mounted() {
+    document.querySelector("#app-scroll").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+    if (this.$route.params.blogId) {
+      this.id = this.$route.params.blogId;
+    }
+    await this.getBlogDetail();
+    this.url += this.$route.path;
+    //    网站二维码
+    $(".wechat_qr").popup({
+      popup: $(".wechat.popup"),
+      position: "left center",
+      hoverable: true
+    });
+  },
+  methods: {
+    /**
+     * 功能条目录初始化
+     */
+    initToolbar() {
       tocbot.init({
-        // Where to render the table of contents.
         tocSelector: ".js-toc",
-        // Where to grab the headings to build the table of contents.
         contentSelector: ".js-toc-content",
-        // Which headings to grab inside of the contentSelector element.
         headingSelector: "h1, h2, h3"
-        // For headings inside relative or absolute positioned containers within content.
-        //   hasInnerContainers: true
       });
       //    目录
       $("#toc_btn").popup({
@@ -69,23 +120,18 @@ export default {
         on: "click",
         position: "left center"
       });
-      //    微信二维码
-      $(".wechat_qr").popup({
-        popup: $(".wechat.popup"),
-        position: "left center",
-        hoverable: true
+    },
+    /**
+     * 根据Id获取博客详情
+     */
+    async getBlogDetail() {
+      await findBlogDetail(this.id).then(res => {
+        this.blog = res.data.data;
       });
-      //    生成二维码
-      var qrcode = new QRCode("qrcode", {
-        text: window.location,
-        width: 120,
-        height: 120,
-        colorDark: "#000000",
-        colorLight: "#ffffff"
-      });
-    });
-  },
-  methods: {
+    },
+    /**
+     * 功能条点击跳转到评论区
+     */
     toMessage() {
       this.$refs.comment.$el.scrollIntoView({
         behavior: "smooth",
@@ -94,17 +140,13 @@ export default {
       });
     }
   },
-  mixins: [scrollEventListener, toolbarControl],
-  deactivated() {
-    $(".fixed.menu").transition("fade out");
-  }
+  mixins: [NoAliveScrollEventListener, NoAliveToolbarControl]
 };
 </script>
 
 <style scoped>
 @import "~assets/css/typo.css";
 @import "~assets/css/tocbot.css";
-@import "~assets/lib/prism/prism.css";
 #main {
   position: -webkit-sticky;
   position: sticky;

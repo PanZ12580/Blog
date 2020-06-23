@@ -3,28 +3,45 @@
     <!--            头部-->
     <div class="ui horizontal link list">
       <div class="item middle aligned m-padding-lr-medium">
-        <img src="https://picsum.photos/100/100" alt class="ui image avatar" />
+        <img :src="user.avatar" alt class="ui image avatar" />
         <div class="content">
           <a href="#" target="_blank" class="header">
-            <span class="m-deep-teal">PanzVor</span>
+            <span class="m-deep-teal" v-text="user.nickname"></span>
           </a>
         </div>
       </div>
       <div class="item middle aligned m-padding-lr-medium">
         <i class="calendar icon teal"></i>
-        <span>2020-5-14</span>
+        <span v-text="fCreateTime"></span>
       </div>
       <div class="item middle aligned m-padding-lr-medium">
         <i class="eye icon teal"></i>
-        <span>1999</span>
+        <span v-text="views"></span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { formatDate } from "common/utils";
+
 export default {
-    name: 'ContentHeader'
+  name: "ContentHeader",
+  props: {
+    user: {
+      type: Object,
+      default() {
+        return {};
+      }
+    },
+    createTime: "",
+    views: 0
+  },
+  computed: {
+    fCreateTime() {
+      return formatDate(new Date(this.createTime), "yyyy-MM-dd");
+    }
+  }
 };
 </script>
 

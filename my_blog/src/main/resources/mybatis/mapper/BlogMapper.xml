@@ -39,11 +39,15 @@
         blog.description,
         blog.first_picture,
         blog.flag,
+        blog.views,
+        blog.update_time,
+        blog.create_time,
         blog.published,
         blog.recommend,
         blog.share_statement,
         blog.title,
-        blog.type_id
+        blog.type_id,
+        blog.user_id
         from
         blog
         where blog.id = #{id}
@@ -150,9 +154,14 @@
     </delete>
 
     <select id="findBlogByTypeId" resultMap="blogMap">
-        select id
+        select
+        blog.id, blog.title, blog.update_time, blog.create_time,
+        blog.description, blog.first_picture, blog.views,
+        blog.user_id, blog.type_id
         from blog
-        where type_id = #{typeId}
+        <where>
+            <if test="typeId != 0">and type_id = #{typeId}</if>
+        </where>
     </select>
 
     <select id="findCountByTypeId" resultType="Integer">
@@ -176,7 +185,7 @@
         SELECT
         blog.id, blog.title, blog.update_time, blog.create_time,
         blog.description, blog.first_picture, blog.views,
-        blog.type_id
+        blog.user_id, blog.type_id
         FROM
         blog
         <where>
@@ -186,5 +195,20 @@
             </if>
             and blog.published = true
         </where>
+    </select>
+
+    <select id="findBlogByTagId" resultMap="blogMap">
+        SELECT
+        blog.id, blog.title, blog.update_time, blog.create_time,
+        blog.description, blog.first_picture, blog.views,
+        blog.user_id, blog.type_id
+        FROM
+        blog
+        <if test="tagId != 0">
+            INNER JOIN
+            blog_tag
+            ON blog.id = blog_tag.blog_id
+            where blog_tag.tag_id = #{tagId}
+        </if>
     </select>
 </mapper>

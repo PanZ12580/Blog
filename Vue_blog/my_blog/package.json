@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@moefe/vue-aplayer": "^2.0.0-beta.5",
     "axios": "^0.19.2",
     "better-scroll": "^2.0.0-beta.8",
     "core-js": "^3.6.4",

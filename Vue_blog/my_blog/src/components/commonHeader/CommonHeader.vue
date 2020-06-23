@@ -7,7 +7,7 @@
       </div>
       <div class="right aligned column">
         共
-        <h2 class="ui orange header m-inline-block" v-text="blogCount"></h2>个
+        <h2 class="ui orange header m-inline-block" v-text="count"></h2>个
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 export default {
   name: "CommonHeader",
   props: {
-    blogCount: {
+    count: {
       type: Number,
       default: 0
     },
@@ -26,5 +26,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.ui.orange.header.m-inline-block {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 </style>

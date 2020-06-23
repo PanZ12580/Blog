@@ -58,7 +58,7 @@ public class TypeServiceImpl implements TypeService {
     public List<Type> findTopTypeList(Integer top) {
         List<Type> typeList = typeDao.findTypeList();
         Collections.sort(typeList, (a, b) -> b.getBlogCount() - a.getBlogCount());
-        if(top > typeList.size()){
+        if (top > typeList.size()) {
             top = typeList.size();
         }
         List<Type> types = new ArrayList<>(typeList.subList(0, top));

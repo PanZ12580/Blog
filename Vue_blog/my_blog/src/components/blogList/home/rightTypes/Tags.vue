@@ -22,6 +22,7 @@
             :key="index"
             :tagName="tag.name"
             :blogCount="tag.blogCount"
+            :tagId="tag.id"
           ></tags-item>
         </li>
       </ul>

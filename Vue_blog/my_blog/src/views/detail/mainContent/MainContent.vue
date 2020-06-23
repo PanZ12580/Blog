@@ -1,21 +1,25 @@
 <template>
   <div class="ui attached padded segment m-bg">
-    <content-header></content-header>
-    <main-article></main-article>
-    <tag></tag>
-    <appreciation></appreciation>
+    <blog-title v-bind="$attrs"></blog-title>
+    <main-article v-bind="$attrs" v-on="$listeners"></main-article>
+    <tag v-bind="$attrs"></tag>
+    <appreciation v-if="appreciatable"></appreciation>
   </div>
 </template>
 
 <script>
+import BlogTitle from "./Title";
 
 export default {
+  props: {
+    appreciatable: true
+  },
   name: "MainContent",
   components: {
-    "content-header": () => import("./ContentHeader"),
     "main-article": () => import("./MainArticle"),
-    "tag": () => import("./Tag"),
-    "appreciation": () => import("./Appreciation")
+    tag: () => import("./Tag"),
+    appreciation: () => import("./Appreciation"),
+    BlogTitle
   }
 };
 </script>

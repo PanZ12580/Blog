@@ -1,15 +1,19 @@
 <template>
   <div>
     <div class="ui segment basic right aligned">
-      <div class="ui label basic orange">原创</div>
+      <div class="ui label basic orange" v-text="flag"></div>
     </div>
-    <h2 class="ui center aligned header">文章写作排版</h2>
+    <h2 class="ui center aligned header" v-text="title"></h2>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Title'
+  name: "Title",
+  props: {
+    title: "",
+    flag: ""
+  }
 };
 </script>
 

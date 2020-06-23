@@ -5,6 +5,7 @@
         <categories-item
           v-for="(type,index) in typesList"
           :key="index"
+          :typeId="type.id"
           :typeName="type.name"
           :blogCount="type.blogCount"
         ></categories-item>

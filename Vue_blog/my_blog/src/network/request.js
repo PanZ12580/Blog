@@ -114,3 +114,33 @@ export function request(config) {
 
   return instance(config)
 }
+
+// -----------------------------------------音乐获取接口-------------------------------------------------
+
+export function musicRequest(config) {
+  const instance = axios.create({
+    baseURL: 'https://autumnfish.cn',
+    timeout: 5000
+  })
+
+  // 请求拦截器
+  instance.interceptors.request.use(config => {
+    return config;
+  }, err => {
+    console.log(err)
+    router.replace('/500')
+    return err;
+  })
+
+
+  // 响应拦截器
+  instance.interceptors.response.use(res => {
+    return res
+  }, err => {
+    console.log(err)
+    router.replace('/500')
+    return err
+  })
+
+  return instance(config)
+}

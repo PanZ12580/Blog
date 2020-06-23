@@ -4,10 +4,11 @@
     <div class="ui grid middle aligned">
       <div class="ui eleven wide column">
         <ul class="list">
-          <li>作者：PanzVor（联系作者）</li>
-          <li>发表时间：2020-5-14 15:08</li>
+          <li>作者：{{user.nickname}}（联系作者）</li>
+          <li>发表时间：{{fCreateTime}}</li>
+          <li>最后更新时间：{{fUpdateTime}}</li>
           <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可）</li>
-          <li>公众号转载：请在文末添加作者公众号二维码</li>
+          <li>转载：请在文末添加作者原文链接</li>
         </ul>
       </div>
       <div class="ui five wide column">
@@ -23,8 +24,28 @@
 </template>
 
 <script>
+import { formatDate } from "common/utils";
+
 export default {
-    name: 'BlogMessage'
+  name: "BlogMessage",
+  props: {
+    user: {
+      type: Object,
+      default() {
+        return {};
+      }
+    },
+    createTime: "",
+    updateTime: "",
+  },
+  computed: {
+    fCreateTime() {
+      return formatDate(new Date(this.createTime), "yyyy-MM-dd hh:mm:ss");
+    },
+    fUpdateTime() {
+      return formatDate(new Date(this.updateTime), "yyyy-MM-dd hh:mm:ss")
+    }
+  }
 };
 </script>
 

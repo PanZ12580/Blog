@@ -42,8 +42,8 @@ export default {
   data() {
     return {
       pageSize: 10,
-      hasPreviousPage: Boolean,
-      hasNextPage: Boolean,
+      hasPreviousPage: false,
+      hasNextPage: false,
       prePage: 0,
       nextPage: 1,
       totalBlogs: Number,

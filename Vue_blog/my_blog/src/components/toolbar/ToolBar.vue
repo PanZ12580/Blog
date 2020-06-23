@@ -24,12 +24,21 @@ export default {
         inline: "nearest"
       });
     }
+  },
+  watch: {
+    $route() {
+      if (!this.$route.hash) {
+        $("#toolbar").transition("zoom out", {
+          silent: true
+        });
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
 #toolbar {
-  z-index: 999 !important;
+  z-index: 90 !important;
 }
 </style>

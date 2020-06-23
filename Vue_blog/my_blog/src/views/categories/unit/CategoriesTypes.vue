@@ -1,13 +1,11 @@
 <template>
-  <div class="ui segment attached m-bg m-padding-tb-medium">
+  <div class="ui segment attached m-bg m-padding-tb-medium" v-if="typesList.length !== 0">
     <type-item
-      v-for="(type,index) in typesList"
-      :key="index"
-      :typeName="type.name"
-      :typeCount="type.count"
-      :index="index"
-      :currentIndex="currentIndex"
-      @itemClick="itemClick(index)"
+      v-for="item in typesList"
+      :key="item.id"
+      :item="item"
+      v-bind="$attrs"
+      v-on="$listeners"
     ></type-item>
   </div>
 </template>
@@ -20,19 +18,9 @@ export default {
   props: {
     typesList: Array
   },
-  data() {
-    return {
-      currentIndex: 0
-    };
-  },
-  components: { TypeItem },
-  methods: {
-    itemClick(index) {
-      this.currentIndex = index;
-    }
-  }
+  components: { TypeItem }
 };
 </script>
 
-<style>
+<style scoped>
 </style>

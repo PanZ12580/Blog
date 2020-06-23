@@ -2,13 +2,18 @@
   <div>
     <div id="main" class="m-padding-tb-max m-container-small">
       <div id="main_container" class="ui container">
-        <common-header ref="header" :title="title" :blogCount="totalBlogs"></common-header>
+        <common-header ref="header" :title="title" :count="totalBlogs"></common-header>
         <main-list :attachClass="attachClass">
           <template #default>
             <main-list-item v-for="(item, index) in mainList" :key="index" :listItem="item"></main-list-item>
           </template>
         </main-list>
-        <list-footer></list-footer>
+        <list-footer
+          :hasPreviousPage="hasPreviousPage"
+          :hasNextPage="hasNextPage"
+          @prePage="toPrePage"
+          @nextPage="toNextPage"
+        ></list-footer>
       </div>
       <tool-bar ref="toolBar"></tool-bar>
     </div>
@@ -36,8 +41,8 @@ export default {
       title: "搜索结果",
       mainList: [],
       pageSize: 10,
-      hasPreviousPage: Boolean,
-      hasNextPage: Boolean,
+      hasPreviousPage: false,
+      hasNextPage: false,
       prePage: 0,
       nextPage: 1,
       totalBlogs: 0
@@ -49,12 +54,16 @@ export default {
   },
   mixins: [scrollEventListener, toolbarControl],
   deactivated() {
-    $(".fixed.menu").transition("fade out");
-    window.sessionStorage.removeItem("search");
-    this.$store.commit(SET_SEARCH, "");
-    this.$bus.$off("toSearch", this.getSearchBlogList);
+    if (this.$route.fullPath.indexOf("detail") === -1) {
+      window.sessionStorage.removeItem("search");
+      this.$store.commit(SET_SEARCH, "");
+      this.$bus.$off("toSearch", this.getSearchBlogList);
+    }
   },
   methods: {
+    /**
+     * 请求博客列表
+     */
     getSearchBlogList(currentPage = 1) {
       let search = window.sessionStorage.getItem("search");
       findSearchBlogList(currentPage, this.pageSize, search).then(res => {
@@ -67,6 +76,15 @@ export default {
         this.hasPreviousPage = res.data.data.hasPreviousPage;
         this.hasNextPage = res.data.data.hasNextPage;
       });
+    },
+    /**
+     * 翻页
+     */
+    toPrePage() {
+      this.getSearchBlogList(this.prePage);
+    },
+    toNextPage() {
+      this.getSearchBlogList(this.nextPage);
     }
   }
 };

@@ -1,5 +1,6 @@
 package com.hzhang.handler;
 
+import com.hzhang.exception.NotFoundException;
 import com.hzhang.pojo.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,7 @@ public class MyExceptionHandler {
 //        if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
 //            throw e;
 //        }
-        if(e instanceof NoHandlerFoundException){
+        if(e instanceof NoHandlerFoundException || e instanceof NotFoundException){
             return Result.builder()
                     .flag(false)
                     .errorMsg(e.getMessage())

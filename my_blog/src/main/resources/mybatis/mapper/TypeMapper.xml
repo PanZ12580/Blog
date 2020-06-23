@@ -31,15 +31,21 @@
     </delete>
 
     <select id="findTypeById" parameterType="Long" resultType="type">
-        select * from type where id = #{id}
+        select type.id, type.name from type where id = #{id}
     </select>
 
     <select id="findTypeByName" parameterType="String" resultType="type">
-        select * from type where name = #{name}
+        select type.id, type.name from type where name = #{name}
     </select>
 
     <select id="findTypeList" resultMap="typeMap">
-        select * from type
+        select type.id, type.name from type
     </select>
 
+    <select id="findBlogByTypeId" resultMap="fullTypeMap">
+        select type.id, type.name from type
+        <where>
+            <if test="typeId != 0">and type.id = #{typeId}</if>
+        </where>
+    </select>
 </mapper>

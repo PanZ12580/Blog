@@ -2,16 +2,22 @@
   <div class="ui padded vertical segment m-padding-tb-big m-padding-lr-medium m-mobile-clear">
     <div class="ui middle aligned mobile reversed stackable grid">
       <div class="eleven wide column">
-        <h3 class="ui header" v-text="listItem.title"></h3>
+        <router-link
+          class="ui header blog-title m-hover-orange router-h3"
+          v-text="listItem.title"
+          target="_blank"
+          :to="'/detail/' + listItem.id"
+          tag="a"
+        ></router-link>
         <p class="ui m-text" v-text="listItem.description"></p>
         <div class="ui stackable grid">
           <div class="eleven wide column top aligned">
             <div class="ui mini horizontal link list">
               <div class="item middle aligned">
-                <!-- <img v-lazy="listItem.user.avatar" alt class="ui image avatar" /> -->
+                <img v-lazy="listItem.user.avatar" alt class="ui image avatar" />
                 <div class="content">
                   <a target="_blank" class="header">
-                    <!-- <span class="m-deep-teal" v-text="listItem.user.nickname"></span> -->
+                    <span class="m-deep-teal m-hover-orange" v-text="listItem.user.nickname"></span>
                   </a>
                 </div>
               </div>
@@ -25,9 +31,9 @@
               </div>
             </div>
           </div>
-          <div class="five wide column right aligned middle aligned">
+          <div class="five wide column right aligned middle aligned" v-if="listItem.type">
             <a
-              href="#"
+              @click="toCategory(listItem.type.id)"
               target="_blank"
               class="ui basic teal label m-padding-lr-tiny m-text-thin m-padding-tb-mini"
               v-text="listItem.type.name"
@@ -36,7 +42,7 @@
         </div>
       </div>
       <div class="five wide column">
-        <a href="#" target="_blank">
+        <a class="blog-picture" @click="toDetail(listItem.id)">
           <img alt class="ui rounded image" v-lazy="listItem.firstPicture" />
         </a>
       </div>
@@ -54,15 +60,42 @@ export default {
   },
   computed: {
     createTime() {
-      return formatDate(new Date(this.listItem.createTime), "yyyy-MM-dd")
+      return formatDate(new Date(this.listItem.createTime), "yyyy-MM-dd");
+    }
+  },
+  methods: {
+    toCategory(typeId) {
+      this.$router.push({
+        name: "CategoriesWithId",
+        params: {
+          typeId: typeId
+        }
+      });
+    },
+    toDetail(blogId) {
+      this.$router.push({
+        name: "Detail",
+        params: { blogId }
+      });
     }
   }
 };
 </script>
 
 <style scoped>
-/* .ui.rounded.image{
-  width: 800px;
-  height: 150px;
-} */
+.blog-title,
+.blog-picture {
+  cursor: pointer;
+}
+.blog-title:active {
+  color: #c9c9c9;
+}
+.router-h3 {
+  display: block;
+  font-size: 1.28571429rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 </style>

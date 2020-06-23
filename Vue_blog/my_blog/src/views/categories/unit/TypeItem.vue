@@ -1,7 +1,15 @@
 <template>
-  <div class="ui button labeled m-margin-tb-tiny" @click="itemClick">
-    <div class="ui button m-hover link" :class="{active: currentIndex === index}">{{typeName}}</div>
-    <div class="ui basic left pointing label" :class="{active: currentIndex === index}">{{typeCount}}</div>
+  <div class="ui button labeled m-margin-tb-tiny" @click="itemClick" v-if="Object.keys(item).length !== 0">
+    <div
+      class="ui button m-hover link"
+      :class="{active: item.id === selectedId}"
+      v-text="item.name"
+    ></div>
+    <div
+      class="ui basic left pointing label"
+      :class="{active: item.id === selectedId}"
+      v-text="item.blogCount"
+    ></div>
   </div>
 </template>
 
@@ -9,28 +17,25 @@
 export default {
   name: "TagItem",
   props: {
-    typeName: {
-      type: String,
-      default: ""
+    item: {
+      type: Object,
+      default() {
+        return {
+          id: 0,
+          name: ''
+        };
+      }
     },
-    typeCount: {
-      type: Number,
-      default: 0
-    },
-    currentIndex: {
-      type: Number,
-      default: 0
-    },
-    index: {
+    selectedId: {
       type: Number,
       default: 0
     }
   },
-  methods: { 
+  methods: {
     itemClick() {
-      this.$emit("itemClick")
+      this.$emit("itemClick", this.item.id);
     }
-   }
+  }
 };
 </script>
 

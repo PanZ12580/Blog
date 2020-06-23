@@ -22,4 +22,10 @@ public interface UserDao {
      * @return
      */
     User findUserById(Long id);
+
+    /**
+     * 获取网站管理员用户
+     * @return
+     */
+    User findAdmin();
 }

@@ -72,6 +72,11 @@ export default {
       }
     }
   },
+  watch: {
+    $route() {
+      $(".fixed.menu").transition("fade out");
+    }
+  },
   methods: {
     toSearch() {
       window.sessionStorage.setItem("search", this.search);

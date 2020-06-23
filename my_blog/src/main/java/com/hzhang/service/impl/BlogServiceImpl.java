@@ -3,10 +3,13 @@ package com.hzhang.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hzhang.dao.BlogDao;
+import com.hzhang.exception.NotFoundException;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Tag;
+import com.hzhang.pojo.Type;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
 import com.hzhang.service.BlogService;
+import com.hzhang.utils.MarkdownUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +45,22 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public Blog findAndConvertBlogById(Long id) {
+        Blog blogById = blogDao.findBlogById(id);
+        if (blogById == null) {
+            throw new NotFoundException("博客不存在");
+        }
+        String content = blogById.getContent();
+        String parseContent = MarkdownUtils.markdownToHtmlExtensions(content);
+        blogById.setContent(parseContent);
+        blogById.getType();
+        blogById.getUser();
+        blogById.getTagList();
+        blogById.getCommentList();
+        return blogById;
+    }
+
+    @Override
     public PageInfo<Blog> findBlogList(Integer currentPage, Integer pageSize, BlogManageQueryVo blogManageQueryVo) {
         PageHelper.startPage(currentPage, pageSize, "update_time desc");
         List<Blog> blogList = blogDao.findBlogList(blogManageQueryVo);
@@ -69,8 +88,33 @@ public class BlogServiceImpl implements BlogService {
     public PageInfo<Blog> findSearchBlog(Integer currentPage, Integer pageSize, String search) {
         PageHelper.startPage(currentPage, pageSize);
         List<Blog> searchBlog = blogDao.findSearchBlog(search);
-        searchBlog.forEach(item -> item.getType());
+        searchBlog.forEach(item -> {
+            item.getType();
+            item.getUser();
+        });
         return new PageInfo<Blog>(searchBlog);
+    }
+
+    @Override
+    public PageInfo<Blog> findBlogByTagId(Integer currentPage, Integer pageSize, Long tagId) {
+        PageHelper.startPage(currentPage, pageSize);
+        List<Blog> blogByTagId = blogDao.findBlogByTagId(tagId);
+        blogByTagId.forEach(item -> {
+            item.getType();
+            item.getUser();
+        });
+        return new PageInfo<Blog>(blogByTagId);
+    }
+
+    @Override
+    public PageInfo<Blog> findBlogByTypeId(Integer currentPage, Integer pageSize, Long typeId) {
+        PageHelper.startPage(currentPage, pageSize);
+        List<Blog> blogByTypeId = blogDao.findBlogByTypeId(typeId);
+        blogByTypeId.forEach(item -> {
+            item.getType();
+            item.getUser();
+        });
+        return new PageInfo<Blog>(blogByTypeId);
     }
 
     @Override

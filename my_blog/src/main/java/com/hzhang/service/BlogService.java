@@ -3,6 +3,7 @@ package com.hzhang.service;
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
 import com.hzhang.pojo.Blog;
+import com.hzhang.pojo.Type;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.cache.annotation.Cacheable;
@@ -24,6 +25,14 @@ public interface BlogService {
      */
     @Cacheable(cacheNames = "cache")
     Blog findBlogById(Long id);
+
+    /**
+     * 根据Id获取并转换博客内容
+     * @param id
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    Blog findAndConvertBlogById(Long id);
 
     /**
      * 查询首页博客分页列表
@@ -51,6 +60,26 @@ public interface BlogService {
      */
     @Cacheable(cacheNames = "cache")
     PageInfo<Blog> findSearchBlog(Integer currentPage, Integer pageSize, String search);
+
+    /**
+     * 通过标签Id查询博客列表
+     * @param currentPage
+     * @param pageSize
+     * @param tagId
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    PageInfo<Blog>  findBlogByTagId(Integer currentPage, Integer pageSize, Long tagId);
+
+    /**
+     * 根据分类Id查询博客列表
+     * @param currentPage
+     * @param pageSize
+     * @param typeId
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    PageInfo<Blog> findBlogByTypeId(Integer currentPage, Integer pageSize, Long typeId);
 
 //    -----------------------------------------后台功能---------------------------------------------
 

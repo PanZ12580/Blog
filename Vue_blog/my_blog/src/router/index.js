@@ -27,7 +27,8 @@ const routes = [{
     }
   },
   {
-    path: '/detail',
+    name: "Detail",
+    path: '/detail/:blogId',
     component: () => import('views/detail/Detail'),
     meta: {
       title: "博客详细"
@@ -38,6 +39,29 @@ const routes = [{
     component: () => import('views/categories/Categories'),
     meta: {
       title: "分类"
+    }
+  },
+  {
+    name: "CategoriesWithId",
+    path: '/categories/:typeId',
+    component: () => import('views/categories/Categories'),
+    meta: {
+      title: "分类"
+    }
+  },
+  {
+    path: '/tags',
+    component: () => import('views/tags/Tags'),
+    meta: {
+      title: "标签"
+    }
+  },
+  {
+    name: "TagsWithId",
+    path: '/tags/:tagId',
+    component: () => import('views/tags/Tags'),
+    meta: {
+      title: "标签"
     }
   },
   {

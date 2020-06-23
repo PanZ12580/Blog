@@ -18,24 +18,36 @@
         <div class="three wide column m-text-lined">
           <h4 class="ui header m-text-thin m-text-spaced">最新博客</h4>
           <div class="ui link list">
-            <a href="#" class="item m-text-lined">Sitemap</a>
-            <a href="#" class="item m-text-lined">Contact Us</a>
-            <a href="#" class="item m-text-lined">Religious Ceremonies</a>
-            <a href="#" class="item m-text-lined">Gazebo Plans</a>
+            <router-link
+              class="item m-text-lined"
+              v-for="item in lastBlogList"
+              :key="item.id"
+              v-text="item.title"
+              :to="'/detail/' + item.id"
+              target="_blank"
+              tag="a"
+            ></router-link>
           </div>
         </div>
         <div class="three wide column">
           <h4 class="ui header m-text-thin m-text-spaced">联系我</h4>
           <div class="ui link list">
-            <a href="#" class="item m-text-lined">Email: 344096911@qq.com</a>
-            <a href="#" class="item m-text-lined">QQ: 344096911</a>
+            <a
+              :href="'mailto:' + admin.email"
+              class="item m-text-lined"
+              v-text="'Email: ' + admin.email"
+            ></a>
+            <a
+              :href="'http://wpa.qq.com/msgrd?v=3&amp;uin=' + admin.qq + '&amp;site=qq&amp;menu=yes'"
+              target="_blank"
+              class="item m-text-lined"
+              v-text="'QQ: ' + admin.qq"
+            ></a>
           </div>
         </div>
         <div class="seven wide column">
           <h4 class="ui header m-text-thin m-text-spaced">博客介绍</h4>
-          <p
-            class="m-text-thin m-text-spaced m-opacity-mini m-text-lined"
-          >Extra space for a call to action inside the footer that could help re-engage users.</p>
+          <p class="m-text-thin m-text-spaced m-opacity-mini m-text-lined" v-text="introduce"></p>
         </div>
       </div>
       <div class="ui section divider"></div>
@@ -48,7 +60,29 @@
 
 <script>
 export default {
-    name: 'Footer'
+  name: "Footer",
+  data() {
+    return {
+      introduce:
+        "基于Vue + SpringBoot开发的个人博客，UI框架使用SemanticUI，博客将一直维护下去，欢迎大佬们指出bug或改进，欢迎交流！欢迎互链！",
+      admin: {
+        type: Object,
+        default() {
+          return {};
+        }
+      },
+      lastBlogList: {
+        type: Array,
+        default() {
+          return [];
+        }
+      }
+    };
+  },
+  mounted() {
+    this.admin = this.$store.state.admin;
+    this.lastBlogList = this.$store.state.lastBlogList;
+  }
 };
 </script>
 

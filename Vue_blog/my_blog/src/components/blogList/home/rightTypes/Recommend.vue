@@ -9,7 +9,7 @@
     <div class="ui teal segment m-bg">
       <div class="ui fluid menu vertical m-bg">
         <router-link
-          to="/detail"
+          :to="'/detail/' + item.id"
           target="_blank"
           class="item m-gray m-text-thin"
           v-for="(item,index) in recommendList"

@@ -60,6 +60,13 @@ public interface BlogDao {
      */
     List<Blog> findSearchBlog(@Param("search") String search);
 
+    /**
+     * 通过标签Id查询博客列表
+     * @param tagId
+     * @return
+     */
+    List<Blog> findBlogByTagId(@Param("tagId") Long tagId);
+
 //    --------------------------------------------后台功能--------------------------------------------------
 
     /**

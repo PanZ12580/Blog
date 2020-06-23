@@ -2,14 +2,19 @@
   <div>
     <div id="main" class="m-padding-tb-max m-container-small">
       <div id="main_container" class="ui container">
-        <common-header ref="header" :blogCount="count"></common-header>
-        <categories-types :typesList="typesList"></categories-types>
+        <common-header ref="header" :title="title" :count="totalTypes"></common-header>
+        <categories-types :selectedId="typeId" :typesList="typeList" @itemClick="itemClick"></categories-types>
         <main-list :attachClass="attachClass">
           <template #default>
             <main-list-item v-for="(item,index) in mainList" :key="index" :listItem="item"></main-list-item>
           </template>
         </main-list>
-        <list-footer></list-footer>
+        <list-footer
+          :hasPreviousPage="hasPreviousPage"
+          :hasNextPage="hasNextPage"
+          @prePage="toPrePage"
+          @nextPage="toNextPage"
+        ></list-footer>
       </div>
       <tool-bar ref="toolBar"></tool-bar>
     </div>
@@ -20,6 +25,7 @@
 import CommonHeader from "components/commonHeader/CommonHeader";
 
 import { scrollEventListener, toolbarControl } from "common/mixin";
+import { findTypeList, findBlogByTypeId } from "network/typeAjax";
 
 export default {
   name: "Categories",
@@ -32,67 +38,81 @@ export default {
   },
   data() {
     return {
-      count: 14,
+      totalTypes: 14,
+      title: "分类",
       attachClass: ["top", "teal"],
-      typesList: [
-        { name: "Java相关", count: 24 },
-        { name: "透视与结构", count: 24 },
-        { name: "光影与色彩", count: 24 },
-        { name: "构成分析", count: 24 },
-        { name: "MySQL", count: 24 },
-        { name: "Redis", count: 24 }
-      ],
-      mainList: [
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        },
-        {
-          header: "Java从入门到入土",
-          text:
-            "Unsplash IT 网站是一个基于免费高清壁纸分享网UnSplash网站的一个图片自定义链接参数设定的站点,可以帮助网页设计师使用UnSplash网站上的高清图片来做网页占位图放置在...",
-          author: "PanzVor",
-          date: "2020-5-14",
-          views: 1999,
-          type: "Java相关",
-          imgSrc: "https://picsum.photos/800/500",
-          headImg: "https://picsum.photos/100/100"
-        }
-      ]
+      typeList: [],
+      typeId: 0,
+      mainList: [],
+      pageSize: 10,
+      hasPreviousPage: false,
+      hasNextPage: false,
+      prePage: 0,
+      nextPage: 1
     };
+  },
+  watch: {
+    $route() {
+      if (this.$route.params.typeId) {
+        this.typeId = Number(this.$route.params.typeId);
+      }
+      this.getTypeList();
+      this.getBlogByTypeId();
+    }
+  },
+  activated() {
+    if (this.$route.params.typeId) {
+      this.typeId = Number(this.$route.params.typeId);
+    }
+    this.getTypeList();
+    this.getBlogByTypeId();
+  },
+  methods: {
+    /**
+     * 获取分类列表
+     */
+    getTypeList() {
+      findTypeList().then(res => {
+        this.typeList = res.data.data.list;
+        this.totalTypes = res.data.data.total;
+      });
+    },
+    /**
+     * 根据分类Id获取博客列表
+     */
+    getBlogByTypeId(currentPage = 1) {
+      findBlogByTypeId(currentPage, this.pageSize, this.typeId).then(res => {
+        this.mainList = res.data.data.list;
+        this.prePage = res.data.data.prePage;
+        this.nextPage = res.data.data.nextPage;
+        this.hasPreviousPage = res.data.data.hasPreviousPage;
+        this.hasNextPage = res.data.data.hasNextPage;
+      });
+    },
+    /**
+     * 翻页
+     */
+    toPrePage() {
+      this.getBlogByTypeId(this.prePage);
+    },
+    toNextPage() {
+      this.getBlogByTypeId(this.nextPage);
+    },
+    /**
+     * 标签点击
+     */
+    itemClick(typeId) {
+      this.$router.push({
+        name: "CategoriesWithId",
+        params: {
+          'typeId': typeId
+        }
+      })
+    }
   },
   mixins: [scrollEventListener, toolbarControl],
   deactivated() {
-    $(".fixed.menu").transition("fade out");
+    Object.assign(this.$data, this.$options.data());
   }
 };
 </script>

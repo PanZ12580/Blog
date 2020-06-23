@@ -19,7 +19,8 @@
         qq,
         wechat,
         wechat_code
-        from user where username = #{username} and password = #{password}
+        from user
+        where username = #{username} and password = #{password}
     </select>
 
     <select id="findUserById" resultType="user">
@@ -35,5 +36,21 @@
         wechat,
         wechat_code
         from user where id = #{id}
+    </select>
+
+    <select id="findAdmin" resultType="user">
+        select
+        id,
+        avatar,
+        email,
+        nickname,
+        type,
+        wechat_pay,
+        alipay,
+        qq,
+        wechat,
+        wechat_code
+        from user
+        where type = 1
     </select>
 </mapper>
