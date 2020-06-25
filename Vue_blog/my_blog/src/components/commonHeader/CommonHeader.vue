@@ -7,7 +7,8 @@
       </div>
       <div class="right aligned column">
         共
-        <h2 class="ui orange header m-inline-block" v-text="count"></h2>个
+        <h2 class="ui orange header m-inline-block" v-text="count"></h2>
+        <span v-text="unit"></span>
       </div>
     </div>
   </div>
@@ -21,6 +22,7 @@ export default {
       type: Number,
       default: 0
     },
+    unit: "",
     title: String
   }
 };

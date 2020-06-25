@@ -6,6 +6,7 @@ import com.hzhang.pojo.Result;
 import com.hzhang.pojo.Tag;
 import com.hzhang.service.BlogService;
 import com.hzhang.service.TagService;
+import com.hzhang.utils.RedisUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,9 @@ public class TagController {
     @Autowired
     private BlogService blogService;
 
+    @Autowired
+    private RedisUtil redisUtil;
+
     @GetMapping("/findTagList")
     @ApiOperation("获取标签列表")
     public Result findTagList() {
@@ -47,6 +51,10 @@ public class TagController {
                                   @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,
                                   @RequestParam(value = "tagId", defaultValue = "0") Long tagId){
         PageInfo<Blog> blogByTagId = blogService.findBlogByTagId(currentPage, pageSize, tagId);
+        blogByTagId.getList().forEach(blog -> {
+            String key = "blogId::" + blog.getId();
+            blog.setViews(redisUtil.pfcount(key));
+        });
         return Result.builder()
                 .flag(true)
                 .statusCode(HttpStatus.OK.value())

@@ -1,11 +1,16 @@
 <template>
   <div class="m-padding-tb-max m-container-small">
     <div id="main_container" class="ui container">
-      <common-header ref="header" :title="title" :count="totalTags"></common-header>
+      <common-header ref="header" :title="title" :count="totalTags" :unit="unit"></common-header>
       <tag-list :tagList="tagList" @itemClick="itemClick" :selectedId="tagId"></tag-list>
       <main-list :attachClass="attachClass">
         <template #default>
-          <main-list-item v-for="(item,index) in mainList" :key="index" :listItem="item"></main-list-item>
+          <main-list-item
+            :selectedId="tagId"
+            v-for="(item,index) in mainList"
+            :key="index"
+            :listItem="item"
+          ></main-list-item>
         </template>
       </main-list>
       <list-footer
@@ -32,6 +37,7 @@ export default {
       title: "标签",
       attachClass: ["top", "teal"],
       totalTags: 0,
+      unit: "个",
       tagList: [],
       tagId: 0,
       mainList: [],

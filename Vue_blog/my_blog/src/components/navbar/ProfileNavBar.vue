@@ -51,7 +51,7 @@ import { profileLogout } from "network/profileAjax";
 import { SET_USER } from "store/mutation_types";
 
 export default {
-  name: "NavBar",
+  name: "ProfileNavBar",
   data() {
     return {
       titles: [

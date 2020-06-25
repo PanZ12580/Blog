@@ -8,6 +8,7 @@ import com.hzhang.pojo.Type;
 import com.hzhang.service.BlogService;
 import com.hzhang.service.TagService;
 import com.hzhang.service.TypeService;
+import com.hzhang.utils.RedisUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,11 +38,18 @@ public class HomeController {
     @Autowired
     private TagService tagService;
 
+    @Autowired
+    private RedisUtil redisUtil;
+
     @GetMapping("/findBlogList")
     @ApiOperation("首页查询博客的分页列表")
     public Result findBlogList(@RequestParam(value = "currentPage", defaultValue = "1") Integer currentPage,
                                @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize){
         PageInfo<Blog> homeBlogList = blogService.findHomeBlogList(currentPage, pageSize);
+        homeBlogList.getList().forEach(blog -> {
+            String key = "blogId::" + blog.getId();
+            blog.setViews(redisUtil.pfcount(key));
+        });
         return Result.builder()
                 .statusCode(HttpStatus.OK.value())
                 .flag(true)
@@ -88,6 +96,10 @@ public class HomeController {
                                      @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,
                                      @RequestParam(value = "search", defaultValue = "") String search) {
         PageInfo<Blog> searchBlog = blogService.findSearchBlog(currentPage, pageSize, search);
+        searchBlog.getList().forEach(blog -> {
+            String key = "blogId::" + blog.getId();
+            blog.setViews(redisUtil.pfcount(key));
+        });
         return Result.builder()
                 .statusCode(HttpStatus.OK.value())
                 .flag(true)

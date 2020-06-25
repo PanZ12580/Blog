@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BlogTitle from "./Title";
+import BlogTitle from "./BlogTitle";
 
 export default {
   props: {

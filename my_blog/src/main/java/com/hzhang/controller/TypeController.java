@@ -6,6 +6,7 @@ import com.hzhang.pojo.Result;
 import com.hzhang.pojo.Type;
 import com.hzhang.service.BlogService;
 import com.hzhang.service.TypeService;
+import com.hzhang.utils.RedisUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,9 @@ public class TypeController {
     @Autowired
     private BlogService blogService;
 
+    @Autowired
+    private RedisUtil redisUtil;
+
     @GetMapping("/findTypeList")
     @ApiOperation("获取分类列表")
     public Result findTypeList() {
@@ -47,6 +51,10 @@ public class TypeController {
                                   @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,
                                   @RequestParam(value = "typeId", defaultValue = "0") Long typeId){
         PageInfo<Blog> blogByTypeId = blogService.findBlogByTypeId(currentPage, pageSize, typeId);
+        blogByTypeId.getList().forEach(blog -> {
+            String key = "blogId::" + blog.getId();
+            blog.setViews(redisUtil.pfcount(key));
+        });
         return Result.builder()
                 .flag(true)
                 .statusCode(HttpStatus.OK.value())

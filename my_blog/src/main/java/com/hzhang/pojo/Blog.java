@@ -40,7 +40,7 @@ public class Blog implements Serializable {
     @ApiModelProperty("博客标记（原创、转载、翻译）")
     private String flag;
     @ApiModelProperty("博客浏览次数")
-    private Integer views;
+    private Long views;
     @ApiModelProperty("博客是否开放赞赏")
     private boolean appreciation;
     @ApiModelProperty("博客是否允许转载")

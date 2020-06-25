@@ -1,68 +1,43 @@
 <template>
-  <div id="comment_area" class="ui teal segment m-bg">
-    <div class="ui threaded comments" style="max-width: none !important;">
-      <h3 class="ui dividing header">Comments</h3>
-      <div class="comment">
-        <a href="#" class="avatar">
-          <img src="~assets/images/59558867.jpg" />
+  <div id="comment_area" class="ui teal segment m-bg" v-if="commentList.length !== 0">
+    <div class="ui threaded comments" style="max-width: 100% !important;">
+      <h3 class="ui dividing header">评论</h3>
+      <div class="comment" v-for="(item, index) in commentList" :key="item.id + '-' + index">
+        <a class="avatar">
+          <img :src="item.user.avatar" alt class="comment-avatar" />
         </a>
         <div class="content">
-          <a href="#" class="author">Matt</a>
+          <a class="author" @click="reply(item.id, item.user.nickname)">
+            <span v-text="item.user.nickname"></span>
+            <div class="ui basic left pointing label" v-if="item.adminComment">御主</div>
+          </a>
           <div class="metadata">
-            <span class="date">今天下午 5:42</span>
+            <span class="date" v-text="toFormatDate(item.createTime)"></span>
           </div>
-          <div class="text">太赞了！</div>
+          <div class="text" v-text="item.content"></div>
           <div class="actions">
-            <a href="#" class="reply m_reply">回复</a>
+            <a class="reply m_reply" @click="reply(item.id, item.user.nickname)">回复</a>
           </div>
         </div>
-      </div>
-      <div class="comment">
-        <a href="#" class="avatar">
-          <img src="~assets/images/59558867.jpg" />
-        </a>
-        <div class="content">
-          <a href="#" class="author">Elliot Fu</a>
-          <div class="metadata">
-            <span class="date">昨天上午12:30</span>
-          </div>
-          <div class="text">
-            <p>這對我的研究是非常有用.謝謝!</p>
-          </div>
-          <div class="actions">
-            <a href="#" class="reply m_reply">回复</a>
-          </div>
-        </div>
-        <div class="comments">
-          <div class="comment">
-            <a href="#" class="avatar">
-              <img src="~assets/images/59558867.jpg" />
+        <div class="comments" v-if="item.childComments && item.childComments.length !== 0">
+          <div class="comment" v-for="(item2, index) in item.childComments" :key="item2.id + '-' + index">
+            <a class="avatar">
+              <img :src="item2.user.avatar" class="comment-avatar" alt />
             </a>
             <div class="content">
-              <a href="#" class="author">Jenny Hess</a>
+              <span>
+                <a class="author" v-text="item2.user.nickname" @click="reply(item2.id, item2.user.nickname)"></a>
+                <div class="ui basic left pointing label" v-if="item2.adminComment">御主</div>
+                <span v-text="' @ ' + item2.parentComment.user.nickname" class="parent-comment"></span>
+              </span>
               <div class="metadata">
-                <span class="date">刚刚</span>
+                <span class="date" v-text="toFormatDate(item2.createTime)"></span>
               </div>
-              <div class="text">艾略特你永远是多么正确 :)</div>
+              <div class="text" v-text="item2.content"></div>
               <div class="actions">
-                <a href="#" class="reply m_reply">回复</a>
+                <a class="reply m_reply" @click="reply(item2.id, item2.user.nickname)">回复</a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="comment">
-        <a href="#" class="avatar">
-          <img src="~assets/images/59558867.jpg" />
-        </a>
-        <div class="content">
-          <a href="#" class="author">Joe Henderson</a>
-          <div class="metadata">
-            <span class="date">5 天以前</span>
-          </div>
-          <div class="text">老兄，这太棒了。非常感谢。</div>
-          <div class="actions">
-            <a href="#" class="reply m_reply">回复</a>
           </div>
         </div>
       </div>
@@ -71,10 +46,50 @@
 </template>
 
 <script>
+import { formatDate } from "common/utils";
+
 export default {
-    name: 'CommentArea'
+  name: "CommentArea",
+  props: {
+    commentList: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  },
+  methods: {
+    reply(id, nickname) {
+      this.$emit("reply", {
+        id,
+        nickname
+      });
+    },
+    /**
+     * 时间格式化
+     */
+    toFormatDate(timestamp) {
+      return formatDate(new Date(timestamp), "yyyy-MM-dd hh:mm:ss");
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
+.comment-avatar {
+  margin-right: 0.25em !important;
+  display: inline-block !important;
+  width: 2em !important;
+  height: 2em !important;
+  border-radius: 500rem !important;
+}
+.parent-comment {
+  color: #19d3cc;
+  font-weight: 500;
+}
+.left.pointing.label {
+  padding: 0.3em;
+  color: #f3b31e;
+  border-color: #f3b31e;
+}
 </style>

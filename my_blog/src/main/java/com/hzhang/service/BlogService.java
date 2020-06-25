@@ -2,6 +2,7 @@ package com.hzhang.service;
 
 import com.github.pagehelper.PageInfo;
 import com.hzhang.annotation.ClearRedisCache;
+import com.hzhang.pojo.Archives;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Type;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
@@ -9,6 +10,8 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author ：Hzhang
@@ -42,6 +45,14 @@ public interface BlogService {
      */
     @Cacheable(cacheNames = "cache")
     PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize);
+
+
+    /**
+     * 查询归档博客列表
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    List<Archives> findArchivesBlogList();
 
     /**
      * 查询最近更新的前top条推荐的博客

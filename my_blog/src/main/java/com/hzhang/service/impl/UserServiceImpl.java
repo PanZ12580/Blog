@@ -3,8 +3,13 @@ package com.hzhang.service.impl;
 import com.hzhang.dao.UserDao;
 import com.hzhang.pojo.User;
 import com.hzhang.service.UserService;
+import com.hzhang.utils.IpAddressUtils;
+import com.hzhang.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author ：Hzhang
@@ -16,7 +21,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserDao userDao;
+    private UserDao userDao;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Override
     public User findUser(String username, String password) {
@@ -26,6 +34,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findAdmin() {
         return userDao.findAdmin();
+    }
+
+    @Override
+    public User findUserByIp(String ip) {
+        return userDao.findUserByIp(ip);
+    }
+
+    @Override
+    public User findUserByToken(String token) {
+        return (User) redisUtil.get(token);
     }
 
 }

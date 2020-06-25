@@ -11,7 +11,7 @@
         <result property="masthead" column="masthead"></result>
         <result property="flag" column="flag"></result>
         <result property="firstPicture" column="first_picture"></result>
-        <result property="views" column="views"></result>
+<!--        <result property="views" column="views"></result>-->
         <result property="appreciation" column="appreciation"></result>
         <result property="shareStatement" column="share_statement"></result>
         <result property="commentabled" column="commentabled"></result>
@@ -24,8 +24,6 @@
         </association>
         <association property="user" column="user_id" javaType="user"
                      select="com.hzhang.dao.UserDao.findUserById"></association>
-        <collection property="commentList" column="id"
-                    select="com.hzhang.dao.CommentDao.findCommentListByBlogId"></collection>
         <collection property="tagList" column="id"
                     select="com.hzhang.dao.TagDao.findTagListByBlogId"></collection>
     </resultMap>
@@ -39,7 +37,7 @@
         blog.description,
         blog.first_picture,
         blog.flag,
-        blog.views,
+--         blog.views,
         blog.update_time,
         blog.create_time,
         blog.published,
@@ -70,11 +68,23 @@
     <select id="findHomeBlogList" resultMap="blogMap">
         SELECT
         blog.id, blog.title, blog.update_time, blog.create_time,
-        blog.description, blog.first_picture, blog.views,
+        blog.description, blog.first_picture,
         blog.user_id, blog.type_id
         FROM
         blog
         WHERE blog.published = TRUE
+    </select>
+
+    <select id="findArchivesBlogList" resultType="blog">
+        select
+        id,
+        title,
+        flag,
+        create_time
+        from
+        blog
+        order by
+        create_time desc
     </select>
 
     <insert id="saveBlog" parameterType="blog" useGeneratedKeys="true" keyProperty="id">
@@ -92,7 +102,6 @@
             <if test="shareStatement != null">share_statement,</if>
             <if test="title != null">title,</if>
             <if test="updateTime != null">update_time,</if>
-            <if test="views != null">views,</if>
             <if test="type != null">type_id,</if>
             <if test="user != null">user_id,</if>
         </trim>
@@ -109,7 +118,6 @@
             <if test="shareStatement != null">#{shareStatement, jdbcType=BIT},</if>
             <if test="title != null">#{title, jdbcType=VARCHAR},</if>
             <if test="updateTime != null">#{updateTime, jdbcType=BIGINT},</if>
-            <if test="views != null">#{views, jdbcType=INTEGER},</if>
             <if test="type != null">#{type.id, jdbcType=BIGINT},</if>
             <if test="user != null">#{user.id, jdbcType=BIGINT},</if>
         </trim>
@@ -156,7 +164,7 @@
     <select id="findBlogByTypeId" resultMap="blogMap">
         select
         blog.id, blog.title, blog.update_time, blog.create_time,
-        blog.description, blog.first_picture, blog.views,
+        blog.description, blog.first_picture,
         blog.user_id, blog.type_id
         from blog
         <where>
@@ -184,7 +192,7 @@
     <select id="findSearchBlog" resultMap="blogMap">
         SELECT
         blog.id, blog.title, blog.update_time, blog.create_time,
-        blog.description, blog.first_picture, blog.views,
+        blog.description, blog.first_picture,
         blog.user_id, blog.type_id
         FROM
         blog
@@ -200,7 +208,7 @@
     <select id="findBlogByTagId" resultMap="blogMap">
         SELECT
         blog.id, blog.title, blog.update_time, blog.create_time,
-        blog.description, blog.first_picture, blog.views,
+        blog.description, blog.first_picture,
         blog.user_id, blog.type_id
         FROM
         blog

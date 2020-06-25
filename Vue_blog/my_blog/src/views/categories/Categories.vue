@@ -2,7 +2,7 @@
   <div>
     <div id="main" class="m-padding-tb-max m-container-small">
       <div id="main_container" class="ui container">
-        <common-header ref="header" :title="title" :count="totalTypes"></common-header>
+        <common-header ref="header" :title="title" :count="totalTypes" :unit="unit"></common-header>
         <categories-types :selectedId="typeId" :typesList="typeList" @itemClick="itemClick"></categories-types>
         <main-list :attachClass="attachClass">
           <template #default>
@@ -43,6 +43,7 @@ export default {
       attachClass: ["top", "teal"],
       typeList: [],
       typeId: 0,
+      unit: "个",
       mainList: [],
       pageSize: 10,
       hasPreviousPage: false,

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="ui secondary doubling transition top hidden fixed menu m-nav-bg m-shadow-down m-padding-tb-mini"
+      class="ui app-nav-bar secondary doubling transition top hidden fixed menu m-nav-bg m-shadow-down m-padding-tb-mini"
     >
       <h2 class="ui teal four column header item">PanzVor</h2>
       <div class="ui item m-item m-mobile-hide">
@@ -74,7 +74,7 @@ export default {
   },
   watch: {
     $route() {
-      $(".fixed.menu").transition("fade out");
+      $(".app-nav-bar").transition("fade out");
     }
   },
   methods: {

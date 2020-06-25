@@ -1,5 +1,5 @@
 <template>
-  <div class="ui attached segment m-bg" :class="attachClass">
+  <div class="ui attached segment m-bg animate__animated animate__fadeIn" :class="attachClass">
     <slot></slot>
   </div>
 </template>

@@ -23,6 +23,20 @@
         where username = #{username} and password = #{password}
     </select>
 
+    <select id="findUserByIp" resultType="User">
+        select
+        id,
+        avatar,
+        create_time,
+        email,
+        nickname,
+        type,
+        update_time,
+        ip
+        from user
+        where ip = #{ip}
+    </select>
+
     <select id="findUserById" resultType="user">
         select
         id,
@@ -53,4 +67,59 @@
         from user
         where type = 1
     </select>
+
+    <insert id="saveUser" parameterType="user" keyProperty="id" useGeneratedKeys="true">
+        insert into
+        user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="avatar != null">avatar,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="email != null">email,</if>
+            <if test="nickname != null">nickname,</if>
+            <if test="password != null">password,</if>
+            <if test="type != null">type,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="username != null">username,</if>
+            <if test="ip != null">ip,</if>
+            <if test="wechatPay != null">wechat_pay,</if>
+            <if test="alipay != null">alipay,</if>
+            <if test="qq != null">qq,</if>
+            <if test="wechat != null">wechat,</if>
+            <if test="wechatCode != null">wechat_code,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="avatar != null">#{avatar},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="email != null">#{email},</if>
+            <if test="nickname != null">#{nickname},</if>
+            <if test="password != null">#{password},</if>
+            <if test="type != null">#{type},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="username != null">#{username},</if>
+            <if test="ip != null">#{ip},</if>
+            <if test="wechatPay != null">#{wechatPay},</if>
+            <if test="alipay != null">#{alipay},</if>
+            <if test="qq != null">#{qq},</if>
+            <if test="wechat != null">#{wechat},</if>
+            <if test="wechatCode != null">#{wechatCode},</if>
+        </trim>
+        on duplicate key update
+        <trim suffixOverrides=",">
+            <if test="avatar != null">avatar = #{avatar},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="password != null">password = #{password},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="username != null">username  =#{username},</if>
+            <if test="wechatPay != null">wechat_pay = #{wechatPay},</if>
+            <if test="alipay != null">alipay = #{alipay},</if>
+            <if test="qq != null">qq = #{qq},</if>
+            <if test="wechat != null">wechat = #{wechat},</if>
+            <if test="wechatCode != null">wechat_code = #{wechatCode},</if>
+        </trim>
+    </insert>
 </mapper>

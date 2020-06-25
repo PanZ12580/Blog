@@ -18,7 +18,11 @@ mybatis:
   configuration:
     aggressive-lazy-loading: false
     lazy-loading-enabled: true
+    map-underscore-to-camel-case: true
 pagehelper:
   auto-dialect: mysql
   reasonable: true
   support-methods-arguments: true
+
+# 普通用户头像
+comment.avatar: https://pm1.narvii.com/6070/149318209e4efe7f10ac43410f488f67c2687df4_00.jpg

@@ -28,4 +28,18 @@ public interface UserDao {
      * @return
      */
     User findAdmin();
+
+    /**
+     * 保存用户信息
+     * @param user
+     * @return
+     */
+    Long saveUser(User user);
+
+    /**
+     * 通过ip地址获取用户信息
+     * @param ip
+     * @return
+     */
+    User findUserByIp(@Param("ip") String ip);
 }

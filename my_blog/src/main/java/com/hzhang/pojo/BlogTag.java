@@ -1,5 +1,6 @@
 package com.hzhang.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ import java.io.Serializable;
 @Data
 @ToString
 @ApiModel("博客标签实体的中间类")
+@JsonIgnoreProperties(value = {"handler"})
 public class BlogTag implements Serializable {
     @ApiModelProperty("博客Id")
     private Long blogId;

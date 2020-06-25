@@ -72,6 +72,13 @@ const routes = [{
     }
   },
   {
+    path: "/archives",
+    component: () => import('views/archives/Archives'),
+    meta: {
+      title: "归档"
+    }
+  },
+  {
     path: '/profile',
     component: () => import('views/profile/Profile'),
     children: [{

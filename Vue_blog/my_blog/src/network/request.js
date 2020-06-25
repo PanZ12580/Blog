@@ -9,7 +9,7 @@ import {
 
 export function profileRequest(config) {
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8001/profile',
+    baseURL: 'http://192.168.100.5:8001/profile',
     timeout: 5000
   })
 
@@ -63,7 +63,7 @@ export function profileRequest(config) {
 
 export function request(config) {
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8001/',
+    baseURL: 'http://192.168.100.5:8001/',
     timeout: 5000
   })
 

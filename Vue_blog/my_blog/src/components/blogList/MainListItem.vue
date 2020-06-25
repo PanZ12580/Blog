@@ -39,6 +39,17 @@
               v-text="listItem.type.name"
             ></a>
           </div>
+          <div class="row" v-if="listItem.tagList && listItem.tagList.length !== 0">
+            <div class="column">
+              <div
+                class="ui basic m-gray left pointing label m-padding-lr-tiny m-text-thin m-padding-tb-mini"
+                v-for="item in listItem.tagList"
+                :key="item.id + '-' + item.name"
+                v-text="item.name"
+                :class="{teal: selectedId === item.id}"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="five wide column">
@@ -56,7 +67,8 @@ import { formatDate } from "common/utils";
 export default {
   name: "MainListItem",
   props: {
-    listItem: Object
+    listItem: Object,
+    selectedId: Number
   },
   computed: {
     createTime() {

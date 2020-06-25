@@ -19,8 +19,14 @@
         :appreciatable="blog.appreciation"
         @afterMounted="initToolbar"
       ></main-content>
-      <blog-message :user="blog.user" :createTime="blog.createTime" :updateTime="blog.updateTime"></blog-message>
-      <comment ref="comment" v-if="blog.commentabled"></comment>
+      <blog-message v-if="blog.shareStatement" :user="blog.user" :createTime="blog.createTime" :updateTime="blog.updateTime"></blog-message>
+      <comment
+        @reRequestComment="reRequestComment"
+        ref="comment"
+        v-if="blog.commentabled"
+        :blogId="id"
+        :commentList="commentList"
+      ></comment>
     </div>
     <tool-bar ref="toolBar">
       <template #default>
@@ -64,6 +70,7 @@ import {
   NoAliveToolbarControl
 } from "common/mixin";
 import { findBlogDetail } from "network/detailAjax";
+import { findCommentListByBlogId } from "network/commentAjax";
 
 export default {
   name: "Detail",
@@ -76,6 +83,7 @@ export default {
           return {};
         }
       },
+      commentList: [],
       url: "http://192.168.100.5:8081"
     };
   },
@@ -122,11 +130,26 @@ export default {
       });
     },
     /**
-     * 根据Id获取博客详情
+     * 根据Id获取博客详情以及对应的评论列表
      */
     async getBlogDetail() {
-      await findBlogDetail(this.id).then(res => {
-        this.blog = res.data.data;
+      await findBlogDetail(this.id)
+        .then(res => {
+          this.blog = res.data.data;
+          return res.data.data.id;
+        })
+        .then(blogId => {
+          findCommentListByBlogId(blogId).then(res => {
+            this.commentList = res.data.data;
+          });
+        });
+    },
+    /**
+     * 成功插入新的评论后重新请求评论列表
+     */
+    reRequestComment() {
+      findCommentListByBlogId(this.id).then(res => {
+        this.commentList = res.data.data;
       });
     },
     /**

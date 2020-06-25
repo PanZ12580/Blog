@@ -2,7 +2,7 @@
   <div>
     <div id="main" class="m-padding-tb-max m-container-small">
       <div id="main_container" class="ui container">
-        <common-header ref="header" :title="title" :count="totalBlogs"></common-header>
+        <common-header ref="header" :title="title" :count="totalBlogs" :unit="unit"></common-header>
         <main-list :attachClass="attachClass">
           <template #default>
             <main-list-item v-for="(item, index) in mainList" :key="index" :listItem="item"></main-list-item>
@@ -45,7 +45,8 @@ export default {
       hasNextPage: false,
       prePage: 0,
       nextPage: 1,
-      totalBlogs: 0
+      totalBlogs: 0,
+      unit: "篇"
     };
   },
   activated() {

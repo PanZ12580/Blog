@@ -1,5 +1,6 @@
 package com.hzhang;
 
+import com.github.pagehelper.PageInfo;
 import com.hzhang.dao.BlogDao;
 import com.hzhang.dao.BlogTagDao;
 import com.hzhang.dao.TagDao;
@@ -10,13 +11,17 @@ import com.hzhang.pojo.Type;
 import com.hzhang.service.BlogService;
 import com.hzhang.service.TagService;
 import com.hzhang.service.TypeService;
+import com.hzhang.utils.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 class MyBlogApplicationTests {
@@ -24,6 +29,9 @@ class MyBlogApplicationTests {
     RedisTemplate redisTemplate;
     @Autowired
     private TypeService typeService;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Autowired
     private BlogDao blogDao;
@@ -104,8 +112,27 @@ class MyBlogApplicationTests {
 //        System.out.println(tagList);
 //        List<Type> topTypeList = typeService.findTopTypeList(2);
 //        System.out.println(topTypeList);
-        List<Blog> searchBlog = blogDao.findSearchBlog("哈哈");
-        System.out.println(searchBlog.size());
+//        List<Blog> searchBlog = blogDao.findSearchBlog("哈哈");
+//        System.out.println(searchBlog.size());
+//        String s = "大大";
+//        char a = s.charAt(0), b = s.charAt(1);
+//        System.out.println(a + "==============>" +  b);
+//        Long pfadd = redisUtil.pfadd("1", "127.4.2.1");
+//        System.out.println(pfadd);
+//        System.out.println(redisUtil.pfcount("1"));
+//        PageInfo<Blog> homeBlogList = blogService.findHomeBlogList(1, 10);
+//        homeBlogList.getList().forEach(item -> {item.setViews(100L);});
+//        System.out.println(homeBlogList.getList().get(0).getViews());
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+//        List<Blog> blogList = blogDao.findArchivesBlogList();
+//        List<String> collect = blogList.stream().map(b -> sdf.format(b.getCreateTime())).collect(Collectors.toList());
+//        Long t = 121313212L;
+//        System.out.println(blogList.get(0).getCreateTime());
+//        System.out.println(collect);
+//        Map<String, Object> archivesBlogList = blogService.findArchivesBlogMap();
+//        archivesBlogList.forEach((k, v) -> {
+//            System.out.println(k + "====>" + v);
+//        });
 //        System.out.println(blogTagByTagId);
 //        blogTagByTagId.forEach(x -> {
 //            System.out.println();

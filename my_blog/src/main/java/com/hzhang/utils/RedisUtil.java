@@ -569,4 +569,35 @@ public class RedisUtil {
             return 0;
         }
     }
+
+//    =======================================HyperLogLog================================================
+
+    /**
+     * 加入数据
+     * @param key
+     * @param value
+     * @return
+     */
+    public Long pfadd(String key, String value) {
+        try {
+            return redisTemplate.opsForHyperLogLog().add(key, value);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0L;
+        }
+    }
+
+    /**
+     * 统计
+     * @param key
+     * @return
+     */
+    public Long pfcount(String key) {
+        try {
+            return redisTemplate.opsForHyperLogLog().size(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0L;
+        }
+    }
 }

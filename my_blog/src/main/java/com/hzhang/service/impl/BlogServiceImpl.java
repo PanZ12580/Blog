@@ -4,9 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hzhang.dao.BlogDao;
 import com.hzhang.exception.NotFoundException;
+import com.hzhang.pojo.Archives;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Tag;
-import com.hzhang.pojo.Type;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
 import com.hzhang.service.BlogService;
 import com.hzhang.utils.MarkdownUtils;
@@ -14,8 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+import static java.util.stream.Collectors.groupingBy;
 
 /**
  * @author ：Hzhang
@@ -56,7 +58,6 @@ public class BlogServiceImpl implements BlogService {
         blogById.getType();
         blogById.getUser();
         blogById.getTagList();
-        blogById.getCommentList();
         return blogById;
     }
 
@@ -80,6 +81,33 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public List<Archives> findArchivesBlogList() {
+        List<Blog> archivesBlogList = blogDao.findArchivesBlogList();
+        Map<String, List<Blog>> archivesMap = getArchivesMap(archivesBlogList);
+        List<Archives> archivesList = new ArrayList<>();
+        for(Map.Entry<String, List<Blog>> entry: archivesMap.entrySet()) {
+            Archives archives = new Archives();
+            archives.setYear(entry.getKey());
+            archives.setBlogList(entry.getValue());
+            archivesList.add(archives);
+        }
+        Collections.sort(archivesList);
+        return archivesList;
+    }
+
+    /**
+     * 转换归档博客列表格式
+     * @param blogList
+     * @return
+     */
+    private Map<String, List<Blog>> getArchivesMap(List<Blog> blogList) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        Map<String, List<Blog>> archivesMap = blogList.stream()
+                .collect(groupingBy(b -> sdf.format(b.getCreateTime())));
+        return archivesMap;
+    }
+
+    @Override
     public List<Blog> findTopRecommendBlogList(Integer top) {
         return blogDao.findTopRecommendBlogList(top);
     }
@@ -97,18 +125,19 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> findBlogByTagId(Integer currentPage, Integer pageSize, Long tagId) {
-        PageHelper.startPage(currentPage, pageSize);
+        PageHelper.startPage(currentPage, pageSize, "create_time desc");
         List<Blog> blogByTagId = blogDao.findBlogByTagId(tagId);
         blogByTagId.forEach(item -> {
             item.getType();
             item.getUser();
+            item.getTagList();
         });
         return new PageInfo<Blog>(blogByTagId);
     }
 
     @Override
     public PageInfo<Blog> findBlogByTypeId(Integer currentPage, Integer pageSize, Long typeId) {
-        PageHelper.startPage(currentPage, pageSize);
+        PageHelper.startPage(currentPage, pageSize, "create_time desc");
         List<Blog> blogByTypeId = blogDao.findBlogByTypeId(typeId);
         blogByTypeId.forEach(item -> {
             item.getType();
@@ -122,7 +151,6 @@ public class BlogServiceImpl implements BlogService {
     public int saveBlog(Blog blog) {
         blog.setCreateTime(System.currentTimeMillis());
         blog.setUpdateTime(System.currentTimeMillis());
-        blog.setViews(0);
         int record = blogDao.saveBlog(blog);
         blogDao.saveBlogTag(blog);
         return record;

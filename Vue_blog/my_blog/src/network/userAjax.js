@@ -8,3 +8,10 @@ export function findAdmin() {
     url: "/user/findAdmin"
   })
 }
+
+// 获取用户信息
+export function findUserMsg() {
+  return request({
+    url: "/user/findUserMsg"
+  })
+}
