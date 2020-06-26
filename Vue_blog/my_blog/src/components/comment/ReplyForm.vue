@@ -35,6 +35,8 @@
 import { saveComment } from "network/commentAjax";
 import { findUserMsg } from "network/userAjax";
 
+import { saveMessage } from "network/messageAjax";
+
 export default {
   name: "ReplyForm",
   data() {
@@ -153,20 +155,32 @@ export default {
         this.$emit("resetParentComment");
         this.$emit("reRequestComment");
         this.resetData();
-        this.getUserMsg()
+        this.getUserMsg();
       });
     },
     /**
      * 留言区留言或评论提交
      */
     messageSubmit() {
-      console.log("留言提交");
+      const message = {
+        parentMsgId: this.parentCommentId,
+        content: this.content,
+        user: this.user
+      };
+      saveMessage(message).then(res => {
+        this.$emit("scrollToComment");
+        this.$emit("resetParentComment");
+        this.$emit("reRequestComment");
+        this.$emit("openComment", this.parentCommentId);
+        this.resetData();
+        this.getUserMsg();
+      });
     },
     /**
      * 回复取消
      */
     cancelReply() {
-      this.resetData();
+      this.content = "";
       this.$emit("resetParentComment");
     },
     /**

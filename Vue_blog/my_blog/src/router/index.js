@@ -79,6 +79,13 @@ const routes = [{
     }
   },
   {
+    path: "/message",
+    component: () => import('views/message/Message'),
+    meta: {
+      title: "留言"
+    }
+  },
+  {
     path: '/profile',
     component: () => import('views/profile/Profile'),
     children: [{

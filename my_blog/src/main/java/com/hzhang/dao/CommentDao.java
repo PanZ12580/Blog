@@ -24,13 +24,6 @@ public interface CommentDao {
     List<Comment> findCommentListByBlogId(Long id);
 
     /**
-     * 通过评论id查询该评论下的所有子评论
-     * @param id
-     * @return
-     */
-    List<Comment> findChildCommentsById(Long id);
-
-    /**
      * 保存评论信息
      * @param comment
      * @return

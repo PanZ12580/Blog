@@ -2,50 +2,47 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hzhang.dao.CommentDao">
-    <resultMap id="commentMap" type="comment">
+<mapper namespace="com.hzhang.dao.MessageDao">
+    <resultMap id="messageMap" type="message">
         <id property="id" column="id"></id>
-        <result property="adminComment" column="admin_comment"></result>
+        <result property="adminMessage" column="admin_message"></result>
         <result property="content" column="content"></result>
         <result property="createTime" column="create_time"></result>
-        <result property="parentCommentId" column="parent_comment_id"></result>
+        <result property="parentMsgId" column="parent_msg_id"></result>
         <association property="user" column="user_id"
                      select="com.hzhang.dao.UserDao.findUserById"></association>
     </resultMap>
 
-    <select id="findCommentListByBlogId" resultMap="commentMap" parameterType="Long">
+    <select id="findMessageList" resultMap="messageMap">
         select
         id,
-        admin_comment,
+        admin_message,
         content,
         create_time,
-        blog_id,
         user_id,
-        parent_comment_id
-        from comment where blog_id = #{id}
+        parent_msg_id
+        from message
         order by
         create_time desc
     </select>
 
-    <insert id="saveComment" parameterType="comment">
+    <insert id="saveMessage" parameterType="message">
         insert into
-        comment
+        message
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="adminComment != null">admin_comment,</if>
+            <if test="adminMessage != null">admin_message,</if>
             <if test="content != null">content,</if>
             <if test="createTime != null">create_time,</if>
             <if test="user != null">user_id,</if>
-            <if test="blogId != null">blog_id,</if>
-            <if test="parentCommentId != null">parent_comment_id,</if>
+            <if test="parentMsgId != null">parent_msg_id,</if>
         </trim>
         values
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="adminComment != null">#{adminComment},</if>
+            <if test="adminMessage != null">#{adminMessage},</if>
             <if test="content != null">#{content},</if>
             <if test="createTime != null">#{createTime},</if>
             <if test="user != null">#{user.id},</if>
-            <if test="blogId != null">#{blogId},</if>
-            <if test="parentCommentId != null">#{parentCommentId},</if>
+            <if test="parentMsgId != null">#{parentMsgId},</if>
         </trim>
     </insert>
 </mapper>

@@ -10,18 +10,24 @@
           :key="item.id + '-' + index"
           :to="'/detail/' + item.id"
         >
-          <span>
-            <i class="mini teal icon circle"></i>
-            <span class="m-margin-lr-small" v-text="item.title"></span>
-            <div
-              class="ui label left pointing teal basic m-padding-tb-tiny m-text-thin"
-              v-text="fCreateTime(item.createTime)"
-            ></div>
-          </span>
-          <div
-            class="ui label left pointing orange m-padding-tb-tiny basic m-text-thin"
-            v-text="item.flag"
-          ></div>
+          <div class="ui grid stackable">
+            <div class="eleven wide column">
+              <i class="mini teal icon circle"></i>
+              <span class="m-margin-lr-small" v-text="item.title"></span>
+            </div>
+            <div class="three wide column right aligned">
+              <div
+                class="ui label left pointing teal basic m-padding-tb-tiny m-text-thin"
+                v-text="fCreateTime(item.createTime)"
+              ></div>
+            </div>
+            <div class="two wide column right aligned">
+              <div
+                class="ui label left pointing orange m-padding-tb-tiny basic m-text-thin"
+                v-text="item.flag"
+              ></div>
+            </div>
+          </div>
         </router-link>
       </div>
     </div>

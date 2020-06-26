@@ -5,7 +5,6 @@ import com.hzhang.dao.UserDao;
 import com.hzhang.pojo.Comment;
 import com.hzhang.pojo.User;
 import com.hzhang.service.CommentService;
-import com.hzhang.utils.CommentListUtils;
 import com.hzhang.utils.IpAddressUtils;
 import com.hzhang.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -43,7 +44,7 @@ public class CommentServiceImpl implements CommentService {
     public List<Comment> findCommentListByBlogId(Long id) {
         List<Comment> commentList = commentDao.findCommentListByBlogId(id);
         commentList.forEach(x -> x.getUser());
-        List<Comment> newCommentList = CommentListUtils.dealCommentList(commentList);
+        List<Comment> newCommentList = dealCommentList(commentList);
         return newCommentList;
     }
 
@@ -79,5 +80,51 @@ public class CommentServiceImpl implements CommentService {
         }
         userDao.saveUser(comment.getUser());
         return commentDao.saveComment(comment);
+    }
+
+    /**
+     * 找到所有没有父评论的留言
+     *
+     * @param commentList
+     * @return
+     */
+    public List<Comment> dealCommentList(List<Comment> commentList) {
+        List<Comment> newCommentList = new ArrayList<>();
+        for (Comment comment : commentList) {
+            if (comment.getParentCommentId() == null) {
+                newCommentList.add(comment);
+                List<Comment> childList = getChildComment(comment, commentList);
+                comment.setChildComments(childList);
+            }
+        }
+        return newCommentList;
+    }
+
+    /**
+     * 对顶级留言进行处理，广度优先搜索，逐个加入链表，最后按时间降序排序后返回
+     *
+     * @param comment
+     * @param commentList
+     * @return
+     */
+    public List<Comment> getChildComment(Comment comment, List<Comment> commentList) {
+        ArrayDeque<Comment> queue = new ArrayDeque<>();
+        List<Comment> childList = new ArrayList<>();
+        queue.addLast(comment);
+        while (!queue.isEmpty()) {
+            Comment tmpParent = queue.removeFirst();
+            for (Comment c : commentList) {
+                if (c.getParentCommentId() != null && c.getParentCommentId().equals(tmpParent.getId())) {
+                    Comment tmp = new Comment();
+                    tmp.setId(tmpParent.getId());
+                    tmp.setUser(tmpParent.getUser());
+                    c.setParentComment(tmp);
+                    childList.add(c);
+                    queue.addLast(c);
+                }
+            }
+        }
+        Collections.sort(childList, (a, b) -> (int) (b.getCreateTime() - a.getCreateTime()));
+        return childList;
     }
 }
