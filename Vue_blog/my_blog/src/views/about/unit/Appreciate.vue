@@ -1,6 +1,6 @@
 <template>
-  <!--            赞赏-->
-  <div>
+  <div class="extra content">
+    <!--                                    赞赏-->
     <div class="ui segment center aligned basic">
       <div id="pay_btn" class="ui button orange basic circular">赞赏</div>
     </div>
@@ -15,7 +15,7 @@
               class="ui image rounded bordered"
               src="~assets/images/alipay.jpg"
               alt
-              style="width: 120px;"
+              style="width: 100px;"
             />
             <div>支付宝</div>
           </div>
@@ -24,7 +24,7 @@
               class="ui image rounded bordered"
               src="~assets/images/wechat_pay.png"
               alt
-              style="width: 120px;"
+              style="width: 100px;"
             />
             <div>微信</div>
           </div>
@@ -36,16 +36,21 @@
 
 <script>
 export default {
-  name: "Appreciation",
+  name: "Appreciate",
   mounted() {
     $("#pay_btn").popup({
       popup: $(".payQR.popup"),
-      on: "click",
       position: "bottom center"
     });
   }
 };
 </script>
 
-<style>
+<style scoped>
+.extra {
+  padding: 0 !important;
+}
+.segment {
+  margin-bottom: 0 !important;
+}
 </style>

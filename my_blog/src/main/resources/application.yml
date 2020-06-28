@@ -11,6 +11,28 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+#    mail
+  mail:
+    host: smtp.qq.com
+    username: xxx
+    password: xxx
+    #    开启加密验证
+    properties:
+      mail:
+        smtp:
+          enable:
+            ssl: true
+#    thymeleaf
+  thymeleaf:
+    enabled: true
+    mode: HTML
+    encoding: UTF-8
+    content-type: text/html
+    prefix: classpath:/templates/ # 模板存放在资源目录的 templates/ 文件下
+    suffix: .html # 模板后缀
+    check-template-location: true
+    check-template: false
+    cache: false # 调试时关闭缓存
 # Mybatis
 mybatis:
   type-aliases-package: com.hzhang.pojo
@@ -25,4 +47,9 @@ pagehelper:
   support-methods-arguments: true
 
 # 普通用户头像
-comment.avatar: https://pm1.narvii.com/6070/149318209e4efe7f10ac43410f488f67c2687df4_00.jpg
+comment:
+  avatar: https://pm1.narvii.com/6070/149318209e4efe7f10ac43410f488f67c2687df4_00.jpg
+# 邮件发送者
+mail:
+  fromMail:
+    addr: xxx

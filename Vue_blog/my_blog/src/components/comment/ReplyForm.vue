@@ -57,7 +57,8 @@ export default {
   props: {
     blogId: null,
     parentCommentId: null,
-    parentCommentNickname: ""
+    parentCommentNickname: null,
+    parentComment: null
   },
   computed: {
     placeholderMsg() {
@@ -148,7 +149,8 @@ export default {
         blogId: this.blogId,
         parentCommentId: this.parentCommentId,
         content: this.content,
-        user: this.user
+        user: this.user,
+        parentComment: this.parentComment
       };
       saveComment(comment).then(res => {
         this.$emit("scrollToComment");
@@ -165,7 +167,8 @@ export default {
       const message = {
         parentMsgId: this.parentCommentId,
         content: this.content,
-        user: this.user
+        user: this.user,
+        parentMessage: this.parentComment
       };
       saveMessage(message).then(res => {
         this.$emit("scrollToComment");

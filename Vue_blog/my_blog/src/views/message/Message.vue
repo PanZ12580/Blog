@@ -5,6 +5,7 @@
       <reply-form
         :parentCommentId="parentCommentId"
         :parentCommentNickname="parentCommentNickname"
+        :parentComment="parentComment"
         @scrollToComment="scrollToComment"
         @resetParentComment="resetParentComment"
         @reRequestComment="reRequestComment"
@@ -40,7 +41,8 @@ export default {
       scrollToId: null,
       messageList: [],
       parentCommentId: null,
-      parentCommentNickname: ""
+      parentCommentNickname: "",
+      parentComment: null
     };
   },
   components: {
@@ -64,6 +66,7 @@ export default {
       this.scrollToId = comment.scrollTo;
       this.parentCommentId = comment.id;
       this.parentCommentNickname = comment.nickname;
+      this.parentComment = comment.parentComment;
       this.$refs.replyForm.$el.scrollIntoView({
         behavior: "smooth",
         block: "end",

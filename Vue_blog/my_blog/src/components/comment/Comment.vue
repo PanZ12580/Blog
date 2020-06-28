@@ -4,6 +4,7 @@
     <reply-form
       :parentCommentId="parentCommentId"
       :parentCommentNickname="parentCommentNickname"
+      :parentComment="parentComment"
       :blogId="blogId"
       @scrollToComment="scrollToComment"
       @resetParentComment="resetParentComment"
@@ -22,7 +23,8 @@ export default {
   data() {
     return {
       parentCommentId: null,
-      parentCommentNickname: ""
+      parentCommentNickname: "",
+      parentComment: null
     };
   },
   props: {
@@ -39,7 +41,7 @@ export default {
     scrollToComment() {
       this.$refs.commentArea.$el.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
         inline: "nearest"
       });
     },
@@ -52,6 +54,7 @@ export default {
     reply(comment) {
       this.parentCommentId = comment.id;
       this.parentCommentNickname = comment.nickname;
+      this.parentComment = comment.parentComment;
       this.$refs.replyForm.$el.scrollIntoView({
         behavior: "smooth",
         block: "end",

@@ -27,7 +27,7 @@ public class ClearCacheAspect {
     @Autowired
     private RedisUtil redisUtil;
 
-    @Pointcut("execution(* com.hzhang.service.*.*(..))||execution(* com.hzhang.service.profile.*.*(..))")
+    @Pointcut("execution(* com.hzhang.service.*.*(..))")
     public void clearCache() {
     }
 

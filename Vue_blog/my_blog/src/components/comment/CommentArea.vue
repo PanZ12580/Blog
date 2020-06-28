@@ -7,7 +7,7 @@
           <img :src="item.user.avatar" alt class="comment-avatar" />
         </a>
         <div class="content">
-          <a class="author" @click="reply(item.id, item.user.nickname)">
+          <a class="author" @click="reply(item.id, item.user.nickname, item)">
             <span v-text="item.user.nickname"></span>
             <div class="ui basic left pointing label" v-if="item.adminComment">御主</div>
           </a>
@@ -16,17 +16,25 @@
           </div>
           <div class="text" v-text="item.content"></div>
           <div class="actions">
-            <a class="reply m_reply" @click="reply(item.id, item.user.nickname)">回复</a>
+            <a class="reply m_reply" @click="reply(item.id, item.user.nickname, item)">回复</a>
           </div>
         </div>
         <div class="comments" v-if="item.childComments && item.childComments.length !== 0">
-          <div class="comment" v-for="(item2, index) in item.childComments" :key="item2.id + '-' + index">
+          <div
+            class="comment"
+            v-for="(item2, index) in item.childComments"
+            :key="item2.id + '-' + index"
+          >
             <a class="avatar">
               <img :src="item2.user.avatar" class="comment-avatar" alt />
             </a>
             <div class="content">
               <span>
-                <a class="author" v-text="item2.user.nickname" @click="reply(item2.id, item2.user.nickname)"></a>
+                <a
+                  class="author"
+                  v-text="item2.user.nickname"
+                  @click="reply(item2.id, item2.user.nickname, item2)"
+                ></a>
                 <div class="ui basic left pointing label" v-if="item2.adminComment">御主</div>
                 <span v-text="' @ ' + item2.parentComment.user.nickname" class="parent-comment"></span>
               </span>
@@ -35,7 +43,7 @@
               </div>
               <div class="text" v-text="item2.content"></div>
               <div class="actions">
-                <a class="reply m_reply" @click="reply(item2.id, item2.user.nickname)">回复</a>
+                <a class="reply m_reply" @click="reply(item2.id, item2.user.nickname, item2)">回复</a>
               </div>
             </div>
           </div>
@@ -59,10 +67,11 @@ export default {
     }
   },
   methods: {
-    reply(id, nickname) {
+    reply(id, nickname, parentComment) {
       this.$emit("reply", {
         id,
-        nickname
+        nickname,
+        parentComment
       });
     },
     /**

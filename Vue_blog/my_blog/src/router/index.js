@@ -86,6 +86,13 @@ const routes = [{
     }
   },
   {
+    path: "/about",
+    component: () => import('views/about/About'),
+    meta: {
+      title: "关于我"
+    }
+  },
+  {
     path: '/profile',
     component: () => import('views/profile/Profile'),
     children: [{

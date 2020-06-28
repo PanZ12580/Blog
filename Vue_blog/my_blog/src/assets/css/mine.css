@@ -334,8 +334,8 @@ body::before {
   background: none !important;
   border: none !important;
   padding: 0 !important;
-  width: 600px !important;
-  height: 600px !important;
+  width: 700px !important;
+  height: 100% !important;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }

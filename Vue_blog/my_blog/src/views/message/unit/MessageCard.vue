@@ -10,7 +10,7 @@
           <img :src="message.user.avatar" class="comment-avatar" />
         </a>
         <div class="content">
-          <a class="author" @click="reply(message.id, message.user.nickname)">
+          <a class="author" @click="reply(message.id, message.user.nickname, message)">
             <span v-text="message.user.nickname"></span>
             <div class="ui basic left pointing label" v-if="message.adminMessage">御主</div>
           </a>
@@ -20,7 +20,7 @@
           </div>
           <div class="text" v-text="message.content"></div>
           <div class="actions">
-            <a class="reply m_reply" @click="reply(message.id, message.user.nickname)">回复</a>
+            <a class="reply m_reply" @click="reply(message.id, message.user.nickname, message)">回复</a>
             <a @click="toggleCollapsed">
               <i class="expand icon"></i>
               显示或隐藏回复
@@ -45,7 +45,7 @@
                 <a
                   class="author"
                   v-text="item.user.nickname"
-                  @click="reply(item.id, item.user.nickname)"
+                  @click="reply(item.id, item.user.nickname, item)"
                 ></a>
                 <div class="ui basic left pointing label" v-if="item.adminMessage">御主</div>
                 <span v-text="' @ ' + item.parentMessage.user.nickname" class="parent-comment"></span>
@@ -55,7 +55,7 @@
               </div>
               <div class="text" v-text="item.content"></div>
               <div class="actions">
-                <a class="reply m_reply" @click="reply(item.id, item.user.nickname)">回复</a>
+                <a class="reply m_reply" @click="reply(item.id, item.user.nickname, item)">回复</a>
               </div>
             </div>
           </div>
@@ -107,11 +107,12 @@ export default {
     /**
      * 回复
      */
-    reply(id, nickname) {
+    reply(id, nickname, parentComment) {
       this.$emit("reply", {
         scrollTo: this.message.id + this.message.createTime,
         id,
-        nickname
+        nickname,
+        parentComment
       });
     }
   }

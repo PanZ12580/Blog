@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PanzVor博客的回复通知</title>
+</head>
+
+<body>
+<div style="background-color: #d8e7e9;padding-top: 2em;padding-bottom: 2em;">
+    <div class="mail"
+         style="background-color: rgb(250, 248, 244);
+                width: 40em;
+                height: 60em;
+                margin: 0 auto;
+                padding: 1em 5em;
+                overflow-y: auto;
+                font-family: 'lucida Grande'
+                , 'Verdana', 'Microsoft YaHei';
+                font-size: 1em;
+                -webkit-font-smoothing: subpixel-antialiased;
+                line-height: 1.5em;
+                font-weight: 300;
+                color: #6c6c6c;
+                letter-spacing: 0.15em;">
+        <div class="header"
+             style="width: -moz-fit-content;
+                    width: -webkit-fit-content;
+                    width: fit-content;
+                    margin: 0 auto;
+                    margin-bottom: 2em;
+                    margin-top: 1em;
+                    font-size: 2em;
+                    font-weight: 600;
+                    color: black;">博客回复通知
+        </div>
+        <div th:if="${parentComment}">
+            <strong th:text="'尊敬的' + ${parentComment.user.nickname} + ': '"
+                    style="color: black;font-weight: 500;">尊敬的访客: </strong><br>
+            <p class="first-paragraph" style="text-indent: 2em;">
+                <span th:text="'您于' + ${#dates.format(parentCommentCreateTime, 'yyyy年MM月dd日 HH:mm:ss')} + '在'"></span>
+                <span>
+                    <span style="color: #19bcb5; font-size: 1.4em; font-weight: 500;">PanzVor</span>
+                    的个人博客下的评论有了新回复。
+                </span>
+            </p>
+            <hr>
+            <div class="tip"
+                 style="color: black;font-weight: 500;margin: 1em 0;"
+            >评论内容:
+            </div>
+            <div class="commenter" style="margin-bottom: 0.5em;">
+                <span style="color: #19bcb5; font-weight: 600;">@</span>
+                <span th:text="${parentComment.user.nickname}"></span>
+                <span class="date" style="font-size: 0.8em; margin-left: 1em;"
+                      th:text="${#dates.format(parentCommentCreateTime, 'yyyy-MM-dd HH:mm:ss')} + ': '"></span>
+            </div>
+            <div class="content" style="text-indent: 2em;" th:text="${parentComment.content}">内容</div>
+        </div>
+        <div class="tip" style="color: black;font-weight: 500;margin: 1em 0;">回复内容:
+        </div>
+        <div class="commenter" style="margin-bottom: 0.5em;">
+            <span style="color: #19bcb5; font-weight: 600;">@</span>
+            <span th:text="${comment.user.nickname}"></span>
+            <span class="date" style="font-size: 0.8em; margin-left: 1em;"
+                  th:text="${#dates.format(commentCreateTime, 'yyyy-MM-dd HH:mm:ss')} + ': '"></span>
+        </div>
+
+        <div class="content" style="text-indent: 2em;" th:text="${comment.content}">内容</div>
+
+        <div th:if="${isComment}">
+            <div class="addr" style="margin-top: 5em;">点击查看详细: <a
+                    th:href="@{http://192.168.100.5:8081/detail/{id}(id=${comment.blogId})}"
+                    class="link"
+                    th:text="'http://192.168.100.5:8081/detail/' + ${comment.blogId}"></a>
+            </div>
+        </div>
+        <div th:unless="${isComment}">
+            <div class="addr" style="margin-top: 5em;">点击查看详细: <a th:href="@{http://192.168.100.5:8081/message}"
+                                                                  class="link">http://192.168.100.5:8081/message</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

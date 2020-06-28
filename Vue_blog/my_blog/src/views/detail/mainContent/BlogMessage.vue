@@ -21,7 +21,7 @@
       </div>
       <div class="ui four wide column">
         <img
-          src="~assets/images/wechat.jpg"
+          src="~assets/images/wechat.png"
           class="ui image rounded bordered right floated"
           alt
           style="width: 120px;"

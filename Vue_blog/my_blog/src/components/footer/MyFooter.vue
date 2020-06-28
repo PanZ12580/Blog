@@ -7,7 +7,7 @@
           <div class="ui link list">
             <div class="item">
               <img
-                src="~assets/images/wechat.jpg"
+                src="~assets/images/wechat.png"
                 alt
                 class="ui rounded image"
                 style="width: 140px"
