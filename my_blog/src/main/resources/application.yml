@@ -43,7 +43,7 @@ pagehelper:
 
 # 普通用户头像
 comment:
-  avatar: https://pm1.narvii.com/6070/149318209e4efe7f10ac43410f488f67c2687df4_00.jpg
+  avatar: http://cdn.panzvor.com/img/20200701015645.jpg
 # 邮件发送者
 mail:
   fromMail:
