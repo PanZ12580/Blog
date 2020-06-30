@@ -13,7 +13,7 @@ body::before {
   opacity: 0.1;
   position: fixed;
   z-index: -999 !important;
-  background: url("../images/69689603_p0.jpg") no-repeat center/cover;
+  background: url("http://cdn.panzvor.com/69689603_p0.jpg") no-repeat center/cover;
 }
 
 .m-bg {
@@ -497,7 +497,7 @@ body::before {
 }
 
 .masthead {
-  background: url("../images/76556159_p0.jpg") center no-repeat !important;
+  background: url("http://cdn.panzvor.com/76556159_p0.jpg") center no-repeat !important;
   background-size: cover !important;
 }
 

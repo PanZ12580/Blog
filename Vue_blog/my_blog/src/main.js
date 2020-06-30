@@ -19,7 +19,7 @@ Vue.use(toast)
 FastClick.attach(document.body)
 // 图片懒加载
 Vue.use(VueLazyLoad, {
-  loading: require('assets/images/common/placeholder.png')
+  loading: 'http://cdn.panzvor.com/placeholder.png'
 })
 // 音乐插件
 Vue.use(APlayer, {

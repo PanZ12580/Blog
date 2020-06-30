@@ -8,9 +8,6 @@
     <keep-alive :max="5" :exclude="['Detail']">
       <router-view :key="$router.fullPath"></router-view>
     </keep-alive>
-    <!-- <div>
-      <aplayer v-if="isShow" :audio="audio" :lrcType="3" fixed mini ref="aplayer" />
-    </div>-->
     <meting-js fixed="true" server="netease" type="playlist" id="138900787"></meting-js>
     <my-footer></my-footer>
   </div>
@@ -27,8 +24,6 @@ export default {
   name: "App",
   data() {
     return {
-      audio: [],
-      musicList: [],
       ap: null
     };
   },
@@ -55,17 +50,6 @@ export default {
   beforeDestroy() {
     this.ap.destroy();
   },
-  watch: {
-    audio() {
-      if (this.audio.length > 1) {
-        for (let i = 0; i < this.musicList.length; i++) {
-          this.$set(this.audio[i], "url", this.musicList[i]);
-        }
-        let aplayer = this.$refs.aplayer;
-        console.log(aplayer);
-      }
-    }
-  },
   methods: {
     /**
      * 播放事件
@@ -78,35 +62,6 @@ export default {
       this.ap.on("pause", () => {
         this.$store.commit(SET_MUSIC_STATUS, false);
       });
-    },
-    async initSong() {
-      findPlayList()
-        .then(res => {
-          this.musicList = res.data.playlist.trackIds.map(
-            item =>
-              `https://music.163.com/song/media/outer/url?id=${item.id}.mp3`
-          );
-          return res.data.playlist.trackIds;
-        })
-        .then(res => {
-          let ids = res.map(item => item.id);
-          ids = ids.join(",");
-          findSongDetail(ids).then(res => {
-            this.audio = res.data.songs.map(item => {
-              let songId = item.id;
-              let name = item.name;
-              let artist = item.ar[0].name;
-              let cover = item.al.picUrl;
-              return {
-                name,
-                artist,
-                cover,
-                lrc: "https://autumnfish.cn/lyric?id=" + songId
-              };
-            });
-          });
-          this.isShow = true;
-        });
     }
   }
 };
@@ -114,7 +69,6 @@ export default {
 
 <style scoped>
 @import "~assets/css/mine.css";
-@import "~assets/css/animate.min.css";
 .dimmer {
   width: 100%;
   height: 100%;

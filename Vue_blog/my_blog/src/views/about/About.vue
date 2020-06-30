@@ -1,18 +1,19 @@
 <template>
   <div id="main" class="m-padding-tb-max m-margin-top-small">
     <div class="ui container stackable">
+      <uv-statistic></uv-statistic>
       <div class="ui segment basic center right aligned">
         <div class="center aligned stackable container ui side-container">
           <div id="flip_left" class="ui basic button teal circular">
-            <img src="~assets/images/common/double-left.png" alt class="circular-img" />
+            <img src="http://cdn.panzvor.com/double-left.png" alt class="circular-img" />
           </div>
           <div id="flip_right" class="ui teal basic button circular">
-            <img src="~assets/images/common/double-right.png" alt class="circular-img" />
+            <img src="http://cdn.panzvor.com/double-right.png" alt class="circular-img" />
           </div>
           <div class="segment basic center aligned ui shape cube m-cube">
             <div class="ui sides">
               <div class="active side m-shape-side container stackable ui">
-                <img class="ui image" alt src="~assets/images/kieed-miku.gif" />
+                <img class="ui image" alt src="http://cdn.panzvor.com/kieed-miku.gif" />
               </div>
               <side aboutTitle="关于本站" :aboutContent="aboutBlog">
                 <template #extra>
@@ -40,7 +41,8 @@ export default {
   components: {
     side: () => import("./unit/Side"),
     appreciate: () => import("./unit/Appreciate"),
-    contact: () => import("./unit/Contact")
+    contact: () => import("./unit/Contact"),
+    "uv-statistic": () => import("components/uvStatistic/UVStatistic")
   },
   data() {
     return {

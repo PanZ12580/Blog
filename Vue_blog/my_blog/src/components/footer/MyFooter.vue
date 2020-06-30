@@ -7,7 +7,7 @@
           <div class="ui link list">
             <div class="item">
               <img
-                src="~assets/images/wechat.png"
+                src="http://cdn.panzvor.com/wechat.png"
                 alt
                 class="ui rounded image"
                 style="width: 140px"
@@ -53,7 +53,8 @@
       <div class="ui section divider"></div>
       <p
         class="m-text-thin m-text-spaced m-opacity-mini"
-      >湖南大学版权所有©1996,2000,2010,2017年 通讯地址:湖南省长沙市岳麓区麓山南路麓山门 邮编：410082 Email：xiaoban@hnu.edu.cn</p>
+        v-text="message"
+      ></p>
     </div>
   </footer>
 </template>
@@ -65,6 +66,8 @@ export default {
     return {
       introduce:
         "基于Vue + SpringBoot开发的个人博客，UI框架使用SemanticUI，博客将一直维护下去，欢迎大佬们指出bug或改进，欢迎交流！欢迎互链！",
+      message: `| © 2020 - www.panzvor.com
+      | Email：344096911@qq.com`,
       admin: {
         type: Object,
         default() {

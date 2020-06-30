@@ -52,7 +52,7 @@ public class TypeController {
                                   @RequestParam(value = "typeId", defaultValue = "0") Long typeId){
         PageInfo<Blog> blogByTypeId = blogService.findBlogByTypeId(currentPage, pageSize, typeId);
         blogByTypeId.getList().forEach(blog -> {
-            String key = "blogId::" + blog.getId();
+            String key = "views::blogId-" + blog.getId();
             blog.setViews(redisUtil.pfcount(key));
         });
         return Result.builder()

@@ -50,7 +50,7 @@ public class DetailController {
      * @return
      */
     public Long pfAddAndCount(Blog blog, HttpServletRequest request) {
-        String key = "blogId::" + blog.getId();
+        String key = "views::blogId-" + blog.getId();
         String value = IpAddressUtils.getIpAddress(request) + System.currentTimeMillis();
         redisUtil.pfadd(key, value);
         return redisUtil.pfcount(key);

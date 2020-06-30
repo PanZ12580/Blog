@@ -5,7 +5,7 @@
         <img
           class="image ui avatar"
           alt
-          src="~assets/images/59558867.jpg"
+          :src="$store.state.user.avatar"
           style="width: 30px !important; height: 30px!important;"
         />
         <span class="m-teal">PanzVor</span>

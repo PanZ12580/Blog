@@ -4,13 +4,11 @@ import com.github.pagehelper.PageInfo;
 import com.hzhang.dao.BlogDao;
 import com.hzhang.dao.BlogTagDao;
 import com.hzhang.dao.TagDao;
-import com.hzhang.pojo.Blog;
-import com.hzhang.pojo.BlogTag;
-import com.hzhang.pojo.Tag;
-import com.hzhang.pojo.Type;
+import com.hzhang.pojo.*;
 import com.hzhang.service.BlogService;
 import com.hzhang.service.TagService;
 import com.hzhang.service.TypeService;
+import com.hzhang.service.UVStatisticService;
 import com.hzhang.utils.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +45,9 @@ class MyBlogApplicationTests {
 
     @Autowired
     private BlogTagDao blogTagDao;
+
+    @Autowired
+    private UVStatisticService uvStatisticService;
 
     @Test
     void contextLoads() {
@@ -137,5 +138,11 @@ class MyBlogApplicationTests {
 //        blogTagByTagId.forEach(x -> {
 //            System.out.println();
 //        });
+    }
+
+    @Test
+    public void testUV() {
+        UVStatistic statistic = uvStatisticService.getStatistic(7);
+        System.out.println(statistic);
     }
 }

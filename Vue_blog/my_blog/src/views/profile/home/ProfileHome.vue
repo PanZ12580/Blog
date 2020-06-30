@@ -5,7 +5,7 @@
         <h3>Hi,</h3>
         <p>PanzVor, 欢迎登录！</p>
       </div>
-      <img src="~assets/images/59558867.jpg" alt="" class="ui image rounded bordered fluid">
+      <img src="http://cdn.panzvor.com/59558867.jpg" alt="" class="ui image rounded bordered fluid">
     </template>
   </main-content>
 </template>

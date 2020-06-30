@@ -1,6 +1,7 @@
 package com.hzhang.config;
 
 import com.hzhang.interceptor.AuthorizationInterceptor;
+import com.hzhang.interceptor.UVStatisticInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -19,10 +20,17 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authorizationInterceptor())
                 .addPathPatterns("/**");
+        registry.addInterceptor(uvStatisticInterceptor())
+                .addPathPatterns("/**");
     }
 
     @Bean
     public AuthorizationInterceptor authorizationInterceptor() {
         return new AuthorizationInterceptor();
+    }
+
+    @Bean
+    public UVStatisticInterceptor uvStatisticInterceptor() {
+        return new UVStatisticInterceptor();
     }
 }

@@ -13,7 +13,7 @@
           <div class="image">
             <img
               class="ui image rounded bordered"
-              src="~assets/images/alipay.jpg"
+              src="http://cdn.panzvor.com/alipay.jpg"
               alt
               style="width: 100px;"
             />
@@ -22,7 +22,7 @@
           <div class="image">
             <img
               class="ui image rounded bordered"
-              src="~assets/images/wechat_pay.png"
+              src="http://cdn.panzvor.com/wechat_pay.png"
               alt
               style="width: 100px;"
             />

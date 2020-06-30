@@ -73,9 +73,6 @@ public class MarkdownUtils {
             if (node instanceof Link) {
                 attributes.put("target", "_blank");
             }
-//            if (node instanceof TableBlock) {
-//                attributes.put("class", "ui celled table");
-//            }
         }
     }
 

@@ -6,5 +6,5 @@ public interface TokenGenerator {
      * @param strings
      * @return
      */
-    public String generate(String... strings);
+    String generate(String... strings);
 }

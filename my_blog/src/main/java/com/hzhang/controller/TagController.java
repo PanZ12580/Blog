@@ -52,7 +52,7 @@ public class TagController {
                                   @RequestParam(value = "tagId", defaultValue = "0") Long tagId){
         PageInfo<Blog> blogByTagId = blogService.findBlogByTagId(currentPage, pageSize, tagId);
         blogByTagId.getList().forEach(blog -> {
-            String key = "blogId::" + blog.getId();
+            String key = "views::blogId-" + blog.getId();
             blog.setViews(redisUtil.pfcount(key));
         });
         return Result.builder()

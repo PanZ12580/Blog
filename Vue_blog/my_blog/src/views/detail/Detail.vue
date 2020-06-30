@@ -19,7 +19,12 @@
         :appreciatable="blog.appreciation"
         @afterMounted="initToolbar"
       ></main-content>
-      <blog-message v-if="blog.shareStatement" :user="blog.user" :createTime="blog.createTime" :updateTime="blog.updateTime"></blog-message>
+      <blog-message
+        v-if="blog.shareStatement"
+        :user="blog.user"
+        :createTime="blog.createTime"
+        :updateTime="blog.updateTime"
+      ></blog-message>
       <comment
         @reRequestComment="reRequestComment"
         ref="comment"

@@ -2,7 +2,7 @@
   <div class="side m-shape-side stackable container ui">
     <div class="ui container stackable card fluid">
       <div class="image mini">
-        <img src="~assets/images/76556159_p0.jpg" />
+        <img src="http://cdn.panzvor.com/76556159_p0.jpg" />
       </div>
       <div class="content bottom bottom attached">
         <a class="header m-hover-teal" v-text="aboutTitle"></a>

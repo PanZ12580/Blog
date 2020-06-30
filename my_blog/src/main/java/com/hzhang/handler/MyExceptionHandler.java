@@ -26,9 +26,6 @@ public class MyExceptionHandler {
     @ExceptionHandler(Exception.class)
     public Result exceptionHandler(HttpServletRequest request, HttpServletResponse response, Exception e) throws Exception {
         logger.error("Request URL: {}, Response Status_Code: {}, Exception: {}", request.getRequestURL(), response.getStatus(), e);
-//        if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
-//            throw e;
-//        }
         if(e instanceof NoHandlerFoundException || e instanceof NotFoundException){
             return Result.builder()
                     .flag(false)

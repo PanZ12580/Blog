@@ -47,7 +47,7 @@ public class HomeController {
                                @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize){
         PageInfo<Blog> homeBlogList = blogService.findHomeBlogList(currentPage, pageSize);
         homeBlogList.getList().forEach(blog -> {
-            String key = "blogId::" + blog.getId();
+            String key = "views::blogId-" + blog.getId();
             blog.setViews(redisUtil.pfcount(key));
         });
         return Result.builder()
