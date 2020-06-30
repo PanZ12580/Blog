@@ -36,9 +36,11 @@ export default {
       return this.$store.state.loading;
     }
   },
-  mounted() {
+  created() {
     this.$store.dispatch("getAdmin");
     this.$store.dispatch("getLastBlogList");
+  },
+  mounted() {
     let _this = this;
     Object.defineProperty(document.querySelector("meting-js"), "aplayer", {
       set: function(aplayer) {

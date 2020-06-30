@@ -20,7 +20,7 @@
           <div class="ui link list">
             <router-link
               class="item m-text-lined"
-              v-for="item in lastBlogList"
+              v-for="item in $store.state.lastBlogList"
               :key="item.id"
               v-text="item.title"
               :to="'/detail/' + item.id"
@@ -33,15 +33,15 @@
           <h4 class="ui header m-text-thin m-text-spaced">联系我</h4>
           <div class="ui link list">
             <a
-              :href="'mailto:' + admin.email"
+              :href="'mailto:' + $store.state.admin.email"
               class="item m-text-lined"
-              v-text="'Email: ' + admin.email"
+              v-text="'Email: ' + $store.state.admin.email"
             ></a>
             <a
-              :href="'http://wpa.qq.com/msgrd?v=3&amp;uin=' + admin.qq + '&amp;site=qq&amp;menu=yes'"
+              :href="'http://wpa.qq.com/msgrd?v=3&amp;uin=' + $store.state.admin.qq + '&amp;site=qq&amp;menu=yes'"
               target="_blank"
               class="item m-text-lined"
-              v-text="'QQ: ' + admin.qq"
+              v-text="'QQ: ' + $store.state.admin.qq"
             ></a>
           </div>
         </div>
@@ -68,24 +68,8 @@ export default {
         "基于Vue + SpringBoot开发的个人博客，UI框架使用SemanticUI，博客将一直维护下去，欢迎大佬们指出bug或改进，欢迎交流！欢迎互链！",
       message: `| © 2020 - www.panzvor.com
       | Email：344096911@qq.com`,
-      admin: {
-        type: Object,
-        default() {
-          return {};
-        }
-      },
-      lastBlogList: {
-        type: Array,
-        default() {
-          return [];
-        }
-      }
     };
   },
-  mounted() {
-    this.admin = this.$store.state.admin;
-    this.lastBlogList = this.$store.state.lastBlogList;
-  }
 };
 </script>
 

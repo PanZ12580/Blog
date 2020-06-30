@@ -23,7 +23,7 @@ const routes = [{
     path: '/home',
     component: () => import('views/home/Home'),
     meta: {
-      title: "首页"
+      title: "PanzVor | 首页"
     }
   },
   {
@@ -31,14 +31,14 @@ const routes = [{
     path: '/detail/:blogId',
     component: () => import('views/detail/Detail'),
     meta: {
-      title: "博客详细"
+      title: "PanzVor | 博客详细"
     }
   },
   {
     path: '/categories',
     component: () => import('views/categories/Categories'),
     meta: {
-      title: "分类"
+      title: "PanzVor | 分类"
     }
   },
   {
@@ -46,14 +46,14 @@ const routes = [{
     path: '/categories/:typeId',
     component: () => import('views/categories/Categories'),
     meta: {
-      title: "分类"
+      title: "PanzVor | 分类"
     }
   },
   {
     path: '/tags',
     component: () => import('views/tags/Tags'),
     meta: {
-      title: "标签"
+      title: "PanzVor | 标签"
     }
   },
   {
@@ -61,42 +61,42 @@ const routes = [{
     path: '/tags/:tagId',
     component: () => import('views/tags/Tags'),
     meta: {
-      title: "标签"
+      title: "PanzVor | 标签"
     }
   },
   {
     path: "/search",
     component: () => import('views/search/Search'),
     meta: {
-      title: "搜索结果"
+      title: "PanzVor | 搜索结果"
     }
   },
   {
     path: "/archives",
     component: () => import('views/archives/Archives'),
     meta: {
-      title: "归档"
+      title: "PanzVor | 归档"
     }
   },
   {
     path: "/message",
     component: () => import('views/message/Message'),
     meta: {
-      title: "留言"
+      title: "PanzVor | 留言"
     }
   },
   {
     path: "/about",
     component: () => import('views/about/About'),
     meta: {
-      title: "关于我"
+      title: "PanzVor | 关于我"
     }
   },
   {
     path: "/links",
     component: () => import('views/links/Links'),
     meta: {
-      title: "友情链接"
+      title: "PanzVor | 友情链接"
     }
   },
   {
@@ -108,7 +108,7 @@ const routes = [{
         component: () => import('views/profile/home/ProfileHome'),
         meta: {
           requireAuth: true,
-          title: "个人中心"
+          title: "PanzVor | 个人中心"
         }
       },
       // ----------------------登录------------------------------
@@ -116,7 +116,7 @@ const routes = [{
         path: 'login',
         component: () => import('views/profile/login/Login'),
         meta: {
-          title: "个人中心登录",
+          title: "PanzVor | 个人中心登录",
           requireAuth: false
         }
       },
@@ -126,7 +126,7 @@ const routes = [{
         component: () => import('views/profile/publish/BlogPublish'),
         meta: {
           requireAuth: true,
-          title: "博客发布"
+          title: "PanzVor | 博客发布"
         }
       },
       {
@@ -134,7 +134,7 @@ const routes = [{
         component: () => import('views/profile/publish/BlogPublish'),
         meta: {
           requireAuth: true,
-          title: "博客编辑"
+          title: "PanzVor | 博客编辑"
         }
       },
       {
@@ -142,7 +142,7 @@ const routes = [{
         component: () => import('views/profile/blogManage/BlogManage'),
         meta: {
           requireAuth: true,
-          title: "博客管理列表"
+          title: "PanzVor | 博客管理列表"
         }
       },
       // ----------------------分类管理------------------------------
@@ -151,7 +151,7 @@ const routes = [{
         component: () => import('views/profile/blogManage/TypesManage'),
         meta: {
           requireAuth: true,
-          title: "博客分类管理"
+          title: "PanzVor | 博客分类管理"
         }
       },
       {
@@ -159,7 +159,7 @@ const routes = [{
         component: () => import('views/profile/publish/TypePublish'),
         meta: {
           requireAuth: true,
-          title: "分类名称添加"
+          title: "PanzVor | 分类名称添加"
         }
       },
       {
@@ -167,7 +167,7 @@ const routes = [{
         component: () => import('views/profile/publish/TypePublish'),
         meta: {
           requireAuth: true,
-          title: "分类名称修改"
+          title: "PanzVor | 分类名称修改"
         }
       },
       // ----------------------标签管理------------------------------
@@ -176,7 +176,7 @@ const routes = [{
         component: () => import('views/profile/blogManage/TagsManage'),
         meta: {
           requireAuth: true,
-          title: "博客标签管理"
+          title: "PanzVor | 博客标签管理"
         }
       },
       {
@@ -184,7 +184,7 @@ const routes = [{
         component: () => import('views/profile/publish/TagPublish'),
         meta: {
           requireAuth: true,
-          title: "标签名称添加"
+          title: "PanzVor | 标签名称添加"
         }
       },
       {
@@ -192,7 +192,7 @@ const routes = [{
         component: () => import('views/profile/publish/TagPublish'),
         meta: {
           requireAuth: true,
-          title: "标签名称修改"
+          title: "PanzVor | 标签名称修改"
         }
       }
     ]
@@ -201,21 +201,21 @@ const routes = [{
     path: '/401',
     component: () => import('views/error/401'),
     meta: {
-      title: '401'
+      title: 'PanzVor | 401'
     }
   },
   {
     path: '/500',
     component: () => import('views/error/500'),
     meta: {
-      title: '500'
+      title: 'PanzVor | 500'
     }
   },
   {
     path: '*',
     component: () => import('views/error/404'),
     meta: {
-      title: '404'
+      title: 'PanzVor | 404'
     }
   }
 ]
