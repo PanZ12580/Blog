@@ -1,6 +1,5 @@
 package com.hzhang;
 
-import com.github.pagehelper.PageInfo;
 import com.hzhang.dao.BlogDao;
 import com.hzhang.dao.BlogTagDao;
 import com.hzhang.dao.TagDao;
@@ -15,11 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @SpringBootTest
 class MyBlogApplicationTests {

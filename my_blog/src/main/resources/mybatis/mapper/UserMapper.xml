@@ -14,11 +14,8 @@
         update_time,
         username,
         ip,
-        wechat_pay,
-        alipay,
         qq,
-        wechat,
-        wechat_code
+        wechat
         from user
         where username = #{username} and password = #{password}
     </select>
@@ -44,11 +41,8 @@
         email,
         nickname,
         type,
-        wechat_pay,
-        alipay,
         qq,
-        wechat,
-        wechat_code
+        wechat
         from user where id = #{id}
     </select>
 
@@ -59,11 +53,8 @@
         email,
         nickname,
         type,
-        wechat_pay,
-        alipay,
         qq,
-        wechat,
-        wechat_code
+        wechat
         from user
         where type = 1
     </select>
@@ -82,11 +73,8 @@
             <if test="updateTime != null">update_time,</if>
             <if test="username != null">username,</if>
             <if test="ip != null">ip,</if>
-            <if test="wechatPay != null">wechat_pay,</if>
-            <if test="alipay != null">alipay,</if>
             <if test="qq != null">qq,</if>
             <if test="wechat != null">wechat,</if>
-            <if test="wechatCode != null">wechat_code,</if>
         </trim>
         values
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -100,11 +88,8 @@
             <if test="updateTime != null">#{updateTime},</if>
             <if test="username != null">#{username},</if>
             <if test="ip != null">#{ip},</if>
-            <if test="wechatPay != null">#{wechatPay},</if>
-            <if test="alipay != null">#{alipay},</if>
             <if test="qq != null">#{qq},</if>
             <if test="wechat != null">#{wechat},</if>
-            <if test="wechatCode != null">#{wechatCode},</if>
         </trim>
         on duplicate key update
         <trim suffixOverrides=",">

@@ -89,7 +89,7 @@ export default {
         }
       },
       commentList: [],
-      url: "http://192.168.100.5:8081"
+      url: "http://www.panzvor.com"
     };
   },
   components: {

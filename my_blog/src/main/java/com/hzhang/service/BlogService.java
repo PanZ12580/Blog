@@ -6,6 +6,8 @@ import com.hzhang.pojo.Archives;
 import com.hzhang.pojo.Blog;
 import com.hzhang.pojo.Type;
 import com.hzhang.pojo.queryvo.BlogManageQueryVo;
+import com.hzhang.service.impl.TagServiceImpl;
+import com.hzhang.service.impl.TypeServiceImpl;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.cache.annotation.Cacheable;
 
@@ -45,6 +47,13 @@ public interface BlogService {
      */
     @Cacheable(cacheNames = "cache")
     PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize);
+
+    /**
+     * 查询置顶博客列表
+     * @return
+     */
+    @Cacheable(cacheNames = "cache")
+    List<Blog> findTopBlogList();
 
 
     /**
@@ -108,7 +117,7 @@ public interface BlogService {
      * @param blog
      * @return
      */
-    @ClearRedisCache
+    @ClearRedisCache(cascade = {TagServiceImpl.class, TypeServiceImpl.class})
     int saveBlog(Blog blog);
 
     /**
@@ -123,6 +132,6 @@ public interface BlogService {
      * 根据id删除博客
      * @param id
      */
-    @ClearRedisCache
+    @ClearRedisCache(cascade = {TagServiceImpl.class, TypeServiceImpl.class})
     void deleteBlog(Long id);
 }

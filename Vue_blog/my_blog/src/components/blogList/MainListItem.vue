@@ -1,5 +1,8 @@
 <template>
   <div class="ui padded vertical segment m-padding-tb-big m-padding-lr-medium m-mobile-clear">
+    <div class="ui orange ribbon label" v-show="listItem.top">
+      <i class="clipboard check icon"></i> 置顶
+    </div>
     <div class="ui middle aligned mobile reversed stackable grid">
       <div class="eleven wide column">
         <router-link
@@ -109,5 +112,8 @@ export default {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+.ribbon {
+  bottom: 1.5em;
 }
 </style>

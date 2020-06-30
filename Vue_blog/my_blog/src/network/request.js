@@ -9,8 +9,9 @@ import {
 
 export function profileRequest(config) {
   const instance = axios.create({
-    baseURL: 'http://192.168.100.5:8001/profile',
-    timeout: 5000
+    baseURL: 'http://xxx/profile',
+    // baseURL: 'http://192.168.100.5:8001/profile',
+    timeout: 10000
   })
 
   let timer = null
@@ -63,8 +64,9 @@ export function profileRequest(config) {
 
 export function request(config) {
   const instance = axios.create({
-    baseURL: 'http://192.168.100.5:8001/',
-    timeout: 5000
+    baseURL: 'http://xxx/',
+    // baseURL: 'http://192.168.100.5:8001/',
+    timeout: 10000
   })
 
   let timer = null
@@ -108,36 +110,6 @@ export function request(config) {
   }, err => {
     clearTimeout(timer)
     store.commit(SET_LOADING, false)
-    router.replace('/500')
-    return err
-  })
-
-  return instance(config)
-}
-
-// -----------------------------------------音乐获取接口-------------------------------------------------
-
-export function musicRequest(config) {
-  const instance = axios.create({
-    baseURL: 'https://autumnfish.cn',
-    timeout: 5000
-  })
-
-  // 请求拦截器
-  instance.interceptors.request.use(config => {
-    return config;
-  }, err => {
-    console.log(err)
-    router.replace('/500')
-    return err;
-  })
-
-
-  // 响应拦截器
-  instance.interceptors.response.use(res => {
-    return res
-  }, err => {
-    console.log(err)
     router.replace('/500')
     return err
   })

@@ -4,7 +4,6 @@
       <div class="ui middle aligned center aligned grid">
         <div class="column">
           <h2 class="ui teal image header">
-            <img src="~assets/logo.png" class="image" />
             <div class="content">个人中心登录</div>
           </h2>
           <div class="ui large form">

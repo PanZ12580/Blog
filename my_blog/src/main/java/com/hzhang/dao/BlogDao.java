@@ -47,6 +47,12 @@ public interface BlogDao {
     List<Blog> findHomeBlogList();
 
     /**
+     * 查询置顶博客列表
+     * @return
+     */
+    List<Blog> findTopBlogList();
+
+    /**
      * 查询归档页博客列表
      * @return
      */

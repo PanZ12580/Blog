@@ -28,4 +28,8 @@ public class MD5TokenGenerator implements TokenGenerator {
         String token = DigestUtils.md5DigestAsHex(tokenMeta.getBytes());
         return token;
     }
+
+    public static void main(String[] args) {
+        System.out.println(DigestUtils.md5DigestAsHex("".getBytes()));
+    }
 }

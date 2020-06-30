@@ -25,4 +25,15 @@ module.exports = {
       }]
     }
   },
+  devServer: {
+    proxy: {
+      '/': {
+        target: 'http://xxx:8080', //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          '^/api': 'http://xxx:8080' //路径重写
+        } 
+      }
+    }
+  }
 }

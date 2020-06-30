@@ -7,12 +7,17 @@ logging:
     name: log/blog-prod.log
 # 端口号
 server:
-  port: 80
+  port: 8080
 
 spring:
+  #    redis
+  redis:
+    host: xxx
+    port: 6379
+    password: xxx
   #    数据库
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://xxx:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: xxx

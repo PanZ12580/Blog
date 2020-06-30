@@ -5,7 +5,6 @@ import store from './store'
 
 import FastClick from 'fastclick'
 import VueLazyLoad from 'vue-lazyload'
-import APlayer from '@moefe/vue-aplayer';
 
 import toast from "components/toast"
 
@@ -21,11 +20,6 @@ FastClick.attach(document.body)
 Vue.use(VueLazyLoad, {
   loading: 'http://cdn.panzvor.com/placeholder.png'
 })
-// 音乐插件
-Vue.use(APlayer, {
-  defaultCover: 'https://github.com/u3u.png',
-  productionTip: true,
-});
 
 new Vue({
   router,

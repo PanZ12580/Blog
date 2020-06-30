@@ -15,7 +15,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 import static java.util.stream.Collectors.groupingBy;
 
@@ -70,9 +73,14 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    @Transactional(rollbackFor = {RuntimeException.class, Error.class})
     public PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize) {
         PageHelper.startPage(currentPage, pageSize, "create_time desc");
         List<Blog> blogList = blogDao.findHomeBlogList();
+        List<Blog> topBlogList = findTopBlogList();
+        for (int i = 0; i < topBlogList.size(); i++) {
+            blogList.set(i, topBlogList.get(i));
+        }
         blogList.forEach(item -> {
             item.getType();
             item.getUser();
@@ -81,11 +89,17 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public List<Blog> findTopBlogList() {
+        List<Blog> topBlogList = blogDao.findTopBlogList();
+        return topBlogList.size() > 10 ? topBlogList.subList(0, 9) : topBlogList;
+    }
+
+    @Override
     public List<Archives> findArchivesBlogList() {
         List<Blog> archivesBlogList = blogDao.findArchivesBlogList();
         Map<String, List<Blog>> archivesMap = getArchivesMap(archivesBlogList);
         List<Archives> archivesList = new ArrayList<>();
-        for(Map.Entry<String, List<Blog>> entry: archivesMap.entrySet()) {
+        for (Map.Entry<String, List<Blog>> entry : archivesMap.entrySet()) {
             Archives archives = new Archives();
             archives.setYear(entry.getKey());
             archives.setBlogList(entry.getValue());
@@ -97,6 +111,7 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      * 转换归档博客列表格式
+     *
      * @param blogList
      * @return
      */

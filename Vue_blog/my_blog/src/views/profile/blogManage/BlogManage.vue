@@ -29,7 +29,7 @@ export default {
   name: "BlogManage",
   data() {
     return {
-      tableHeader: ["", "标题", "类型", "推荐", "状态", "更新时间", "操作"],
+      tableHeader: ["", "标题", "类型", "推荐", "置顶", "状态", "更新时间", "操作"],
       blogList: [],
       blogManageQueryVo: {
         currentPage: 1,
@@ -63,6 +63,7 @@ export default {
           let title = item.title;
           let type = item.type ? item.type.name : "无";
           let recommend = item.recommend ? "是" : "否";
+          let top = item.top ? "是" : "否";
           let published = item.published? "发布" : "草稿"
           let updateTime = formatDate(
             new Date(item.updateTime),
@@ -73,6 +74,7 @@ export default {
             title,
             type,
             recommend,
+            top,
             published,
             updateTime
           };

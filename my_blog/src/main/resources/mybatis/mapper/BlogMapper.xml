@@ -11,7 +11,7 @@
         <result property="masthead" column="masthead"></result>
         <result property="flag" column="flag"></result>
         <result property="firstPicture" column="first_picture"></result>
-<!--        <result property="views" column="views"></result>-->
+        <result property="top" column="top"></result>
         <result property="appreciation" column="appreciation"></result>
         <result property="shareStatement" column="share_statement"></result>
         <result property="commentabled" column="commentabled"></result>
@@ -37,7 +37,7 @@
         blog.description,
         blog.first_picture,
         blog.flag,
---         blog.views,
+        blog.top,
         blog.update_time,
         blog.create_time,
         blog.published,
@@ -53,7 +53,7 @@
 
     <select id="findBlogList" resultMap="blogMap" parameterType="blogManageQueryVo">
         select
-        blog.id, blog.title, blog.recommend, blog.published, blog.update_time, blog.type_id
+        blog.id, blog.title, blog.recommend, blog.published, blog.top, blog.update_time, blog.type_id
         from blog
         <where>
             <if test="title != null">
@@ -73,6 +73,17 @@
         FROM
         blog
         WHERE blog.published = TRUE
+    </select>
+
+    <select id="findTopBlogList" resultMap="blogMap">
+        SELECT
+        blog.id, blog.title, blog.update_time, blog.create_time,
+        blog.description, blog.first_picture, blog.top,
+        blog.user_id, blog.type_id
+        FROM
+        blog
+        WHERE blog.published = TRUE and blog.top = TRUE
+        order by create_time desc
     </select>
 
     <select id="findArchivesBlogList" resultType="blog">
@@ -100,6 +111,7 @@
             <if test="published != null">published,</if>
             <if test="recommend != null">recommend,</if>
             <if test="shareStatement != null">share_statement,</if>
+            <if test="top != null">top,</if>
             <if test="title != null">title,</if>
             <if test="updateTime != null">update_time,</if>
             <if test="type != null">type_id,</if>
@@ -116,6 +128,7 @@
             <if test="published != null">#{published, jdbcType=BIT},</if>
             <if test="recommend != null">#{recommend, jdbcType=BIT},</if>
             <if test="shareStatement != null">#{shareStatement, jdbcType=BIT},</if>
+            <if test="top != null">#{top, jdbcType=BIT},</if>
             <if test="title != null">#{title, jdbcType=VARCHAR},</if>
             <if test="updateTime != null">#{updateTime, jdbcType=BIGINT},</if>
             <if test="type != null">#{type.id, jdbcType=BIGINT},</if>
@@ -135,6 +148,7 @@
             <if test="published!=null">published=#{published},</if>
             <if test="recommend!=null">recommend=#{recommend},</if>
             <if test="shareStatement!=null">share_statement=#{shareStatement},</if>
+            <if test="top!=null">top=#{top},</if>
             <if test="title!=null">title=#{title},</if>
             <if test="updateTime!=null">update_time=#{updateTime},</if>
             <if test="type!=null">type_id=#{type.id},</if>

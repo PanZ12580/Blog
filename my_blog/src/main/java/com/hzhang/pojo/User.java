@@ -45,16 +45,10 @@ public class User implements Serializable {
     private Long updateTime;
     @ApiModelProperty("用户的ip地址")
     private String ip;
-    @ApiModelProperty("用户微信支付二维码")
-    private String wechatPay;
-    @ApiModelProperty("用户的支付宝支付二维码")
-    private String alipay;
     @ApiModelProperty("用户QQ")
     private String qq;
     @ApiModelProperty("用户微信")
     private String wechat;
-    @ApiModelProperty("用户微信二维码地址")
-    private String wechatCode;
 
     @ApiModelProperty("用户所发布的博客")
     private List<Blog> blogList;

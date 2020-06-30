@@ -51,6 +51,8 @@ public class Blog implements Serializable {
     private boolean published;
     @ApiModelProperty("是否推荐该博客")
     private boolean recommend;
+    @ApiModelProperty("是否置顶")
+    private boolean top;
     @ApiModelProperty("博客创建的时间")
     private Long createTime;
     @ApiModelProperty("博客更新的时间")

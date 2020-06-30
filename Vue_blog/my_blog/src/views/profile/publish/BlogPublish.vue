@@ -145,6 +145,18 @@
               <label for="comment">评论</label>
             </div>
           </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input
+                type="checkbox"
+                id="top"
+                v-model="blog.top"
+                name="top"
+                class="hidden"
+              />
+              <label for="top">置顶</label>
+            </div>
+          </div>
         </div>
         <!-- 操作按钮 -->
         <div class="container ui right aligned">
@@ -204,7 +216,8 @@ export default {
         appreciation: true,
         shareStatement: true,
         commentabled: true,
-        recommend: true
+        recommend: true,
+        top: false
       },
       typeList: {
         type: Array,

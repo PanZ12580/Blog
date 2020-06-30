@@ -71,14 +71,14 @@
 
         <div th:if="${isComment}">
             <div class="addr" style="margin-top: 5em;">点击查看详细: <a
-                    th:href="@{http://192.168.100.5:8081/detail/{id}(id=${comment.blogId})}"
+                    th:href="@{http://www.panzvor.com/detail/{id}(id=${comment.blogId})}"
                     class="link"
-                    th:text="'http://192.168.100.5:8081/detail/' + ${comment.blogId}"></a>
+                    th:text="'http://www.panzvor.com/detail/' + ${comment.blogId}"></a>
             </div>
         </div>
         <div th:unless="${isComment}">
-            <div class="addr" style="margin-top: 5em;">点击查看详细: <a th:href="@{http://192.168.100.5:8081/message}"
-                                                                  class="link">http://192.168.100.5:8081/message</a>
+            <div class="addr" style="margin-top: 5em;">点击查看详细: <a th:href="@{http://www.panzvor.com/message}"
+                                                                  class="link">http://www.panzvor.com/message</a>
             </div>
         </div>
     </div>

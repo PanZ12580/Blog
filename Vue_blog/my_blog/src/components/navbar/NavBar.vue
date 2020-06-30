@@ -58,7 +58,8 @@ export default {
         { to: "/tags", title: "标签", icon: "tags" },
         { to: "/archives", title: "归档", icon: "clone" },
         { to: "/message", title: "留言", icon: "envelope" },
-        { to: "/about", title: "关于我", icon: "info" }
+        { to: "/about", title: "关于我", icon: "info" },
+        { to: "/links", title: "友情链接", icon: "handshake" }
       ]
     };
   },

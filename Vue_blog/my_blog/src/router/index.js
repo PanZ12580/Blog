@@ -93,6 +93,13 @@ const routes = [{
     }
   },
   {
+    path: "/links",
+    component: () => import('views/links/Links'),
+    meta: {
+      title: "友情链接"
+    }
+  },
+  {
     path: '/profile',
     component: () => import('views/profile/Profile'),
     children: [{
