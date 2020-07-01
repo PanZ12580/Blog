@@ -59,7 +59,7 @@ export default {
         { to: "/archives", title: "归档", icon: "clone" },
         { to: "/message", title: "留言", icon: "envelope" },
         { to: "/about", title: "关于我", icon: "info" },
-        { to: "/links", title: "友情链接", icon: "handshake" }
+        { to: "/links", title: "友情链接", icon: "linkify" }
       ]
     };
   },

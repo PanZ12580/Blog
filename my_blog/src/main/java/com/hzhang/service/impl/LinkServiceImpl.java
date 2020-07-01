@@ -59,7 +59,7 @@ public class LinkServiceImpl implements LinkService {
     }
 
     public Boolean validate(Link link) {
-        return !StringUtils.isEmpty(link.getLink()) &&
+        return !StringUtils.isEmpty(link.getUrl()) &&
                 !StringUtils.isEmpty(link.getName()) &&
                 !StringUtils.isEmpty(link.getPicture());
     }

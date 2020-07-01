@@ -194,6 +194,15 @@ const routes = [{
           requireAuth: true,
           title: "PanzVor | 标签名称修改"
         }
+      },
+      // ----------------------友链管理------------------------------
+      {
+        path: 'linksManage',
+        component: () => import('views/profile/blogManage/LinksManage'),
+        meta: {
+          requireAuth: true,
+          title: "PanzVor | 友链管理"
+        }
       }
     ]
   },

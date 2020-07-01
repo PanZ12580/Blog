@@ -5,7 +5,7 @@
       :key="item.id"
       class="ui m-hover-orange m-gray basic left pointing label m-margin-tb-tiny large"
       @click="itemClick(item.id)"
-      :class="{teal: selectedId === item.id}"
+      :class="{red: selectedId === item.id}"
     >
       <span v-text="item.name"></span>
       <div class="detail" v-text="item.blogCount"></div>
@@ -36,5 +36,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

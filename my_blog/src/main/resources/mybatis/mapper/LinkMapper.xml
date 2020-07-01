@@ -6,7 +6,7 @@
     <select id="findLinkList" resultType="link">
         select
         id,
-        link,
+        url,
         picture,
         name,
         allow,
@@ -18,7 +18,7 @@
     <select id="findAllowedLinkList" resultType="link">
         select
         id,
-        link,
+        url,
         picture,
         name,
         allow,
@@ -32,7 +32,7 @@
         insert into
         links
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="link != null">link,</if>
+            <if test="url != null">url,</if>
             <if test="picture != null">picture,</if>
             <if test="name != null">name,</if>
             <if test="allow != null">allow,</if>
@@ -40,7 +40,7 @@
         </trim>
         values
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="link != null">#{link},</if>
+            <if test="url != null">#{url},</if>
             <if test="picture != null">#{picture},</if>
             <if test="name != null">#{name},</if>
             <if test="allow != null">#{allow},</if>
@@ -51,7 +51,7 @@
     <update id="updateLink" parameterType="link">
         update links
         <trim prefix="set" suffixOverrides=",">
-            <if test="link != null">link=#{link},</if>
+            <if test="url != null">url=#{url},</if>
             <if test="picture != null">picture=#{picture},</if>
             <if test="name != null">name=#{name},</if>
             <if test="allow != null">allow=#{allow},</if>

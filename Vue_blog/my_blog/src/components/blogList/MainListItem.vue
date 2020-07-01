@@ -1,6 +1,6 @@
 <template>
   <div class="ui padded vertical segment m-padding-tb-big m-padding-lr-medium m-mobile-clear">
-    <div class="ui orange ribbon label" v-show="listItem.top">
+    <div class="ui red ribbon label" v-show="listItem.top">
       <i class="clipboard check icon"></i> 置顶
     </div>
     <div class="ui middle aligned mobile reversed stackable grid">

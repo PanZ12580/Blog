@@ -57,7 +57,7 @@ export default {
       <strong>前端UI框架：</strong>Semantic UI 2.4<br>
       <strong>后端开发框架：</strong>SpringBoot 2.3.0<br>
       <strong>后端持久层框架：</strong>MyBatis 3.5.4<br>
-      <strong>数据库：</strong>MySQL 8.0.19、Redis 3.2.1<br>
+      <strong>数据库：</strong>MySQL 5.7.3、Redis 3.2.1<br>
       一开始想做的时候没想着用Vue的，后来做着做着还是决定用Vue重构一下，于是花了两周多的时间上B站看了4000多分钟的教程视频，
       边看边敲，收获很多。做完这个网站之后，接下来就要去重温基础了，然后进入SpringCloud的学习，
       其实还想给网站加一些功能的，代码结构有些地方也想优化下，后续有时间再来吧，争取将站点一直维护下去。

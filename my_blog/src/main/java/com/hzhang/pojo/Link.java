@@ -24,7 +24,7 @@ public class Link implements Serializable {
     @ApiModelProperty("id")
     private Long id;
     @ApiModelProperty("链接地址")
-    private String link;
+    private String url;
     @ApiModelProperty("图片地址")
     private String picture;
     @ApiModelProperty("站点名称")

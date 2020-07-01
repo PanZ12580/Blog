@@ -29,16 +29,26 @@ public class UVStatisticInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String ipAddress = IpAddressUtils.getIpAddress(request);
+        String referer = request.getHeader("Referer");
+        String requestURI = request.getRequestURL().toString();
         String date = getDate();
+        String declareDate = getDeclareDate();
         String key = PREFIX + date;
         redisUtil.pfadd(key, ipAddress);
-        logger.info("{}：访客ip：{}", date, ipAddress);
+        logger.info("{}：访客ip：{}，Referer：{}, Request: {}", declareDate, ipAddress, referer, requestURI);
         return true;
     }
 
     private String getDate() {
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String formatDate = sdf.format(date);
+        return formatDate;
+    }
+
+    private String getDeclareDate() {
+        Date date = new Date(System.currentTimeMillis());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String formatDate = sdf.format(date);
         return formatDate;
     }

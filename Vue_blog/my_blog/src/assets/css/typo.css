@@ -126,6 +126,7 @@
 /* 让链接在 hover 状态下显示下划线 */
 .typo a {
   color: #1abc9c;
+  word-wrap:break-word;
 }
 
 .typo a:hover {

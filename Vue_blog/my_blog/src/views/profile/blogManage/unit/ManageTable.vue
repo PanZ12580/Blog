@@ -17,7 +17,7 @@
     </tbody>
     <tfoot>
       <tr>
-        <th colspan="7">
+        <th colspan="8">
           <div class="ui mini pagination menu" v-show="!isFirstPage || !isLastPage">
             <a class="item m-teal" v-show="!isFirstPage" @click="lastPage">上一页</a>
             <a class="item m-teal" v-show="!isLastPage" @click="nextPage">下一页</a>

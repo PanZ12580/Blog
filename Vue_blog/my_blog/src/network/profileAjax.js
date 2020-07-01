@@ -204,3 +204,34 @@ export function deleteBlog(id) {
     }
   })
 }
+
+// ------------------------------------友链管理-----------------------------------------------
+// 查询所有的友情链接
+export function findLinkList() {
+  return profileRequest({
+    url: "/findLinkList"
+  })
+}
+
+// 更新友情链接（设置允许状态）
+export function updateLink(link) {
+  return profileRequest({
+    url: "/updateLink",
+    method: 'PUT',
+    contentType: 'application/json',
+    data: {
+      ...link
+    }
+  })
+}
+
+// 删除友情链接
+export function deleteLink(id) {
+  return profileRequest({
+    url: "/deleteLink",
+    method: 'DELETE',
+    params: {
+      id
+    }
+  })
+}

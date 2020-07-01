@@ -41,11 +41,11 @@ export default {
 
 <style scoped>
 .active.button {
-  background-color: #19d3cc !important;
+  background-color: #db2828 !important;
   color: white !important;
   font-weight: 800 !important;
 }
 .active.label {
-  border: 1.5px solid #19d3cc !important;
+  border: 1.5px solid #db2828 !important;
 }
 </style>

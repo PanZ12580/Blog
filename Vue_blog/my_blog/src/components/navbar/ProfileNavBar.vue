@@ -6,7 +6,7 @@
     <div class="ui item m-item m-mobile-hide">
       <nav-bar-item v-for="(item, index) in titles" :key="index" :to="item.to">
         <template #default>
-          <i class="home icon teal"></i>
+          <i class="icon teal" :class="item.icon"></i>
           {{item.title}}
         </template>
       </nav-bar-item>
@@ -18,7 +18,7 @@
       <div class="menu vertical">
         <nav-bar-item v-for="(item, index) in titles" :key="index" :to="item.to">
           <template #default>
-            <i class="home icon teal"></i>
+            <i class="icon teal" :class="item.icon"></i>
             {{item.title}}
           </template>
         </nav-bar-item>
@@ -55,9 +55,10 @@ export default {
   data() {
     return {
       titles: [
-        { to: "/profile/blogManage", title: "博客" },
-        { to: "/profile/typesManage", title: "分类" },
-        { to: "/profile/tagsManage", title: "标签" }
+        { to: "/profile/blogManage", title: "博客", icon: "home"},
+        { to: "/profile/typesManage", title: "分类", icon: "idea"},
+        { to: "/profile/tagsManage", title: "标签", icon: "tags"},
+        { to: "/profile/linksManage", title: "友链", icon: "linkify"}
       ]
     };
   },

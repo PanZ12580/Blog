@@ -43,7 +43,7 @@ pagehelper:
 
 # 普通用户头像
 comment:
-  avatar: http://cdn.panzvor.com/img/20200701015645.jpg
+  avatar: http://cdn.panzvor.com/img/20200701021927.jpg
 # 邮件发送者
 mail:
   fromMail:

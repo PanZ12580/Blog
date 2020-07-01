@@ -16,7 +16,6 @@
 <script>
 import NavBar from "components/navbar/NavBar";
 
-import { findLyric, findPlayList, findSongDetail } from "network/musicAjax";
 import eventHandler from "common/event";
 import { SET_MUSIC_STATUS } from "store/mutation_types";
 
