@@ -27,7 +27,7 @@ spring:
     suffix: .html # 模板后缀
     check-template-location: true
     check-template: false
-    cache: false # 调试时关闭缓存
+    cache: true
 # Mybatis
 mybatis:
   type-aliases-package: com.hzhang.pojo
