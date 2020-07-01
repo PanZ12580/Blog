@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 站点：<http://www.panzvor.com>
->>>>>>> f4cc1cb810a88b6c671faf322677f52f710a4fb2
 ## 1、技术框架
 
 - 前端开发框架：Vue.js 2.5
@@ -12,12 +9,7 @@
 
 ## 2、架构
 
-<<<<<<< HEAD
 ![博客架构图](http://cdn.panzvor.com/img/20200701014530.png)
-=======
-![博客架构图](http://cdn.panzvor.com/img/20200701014530.png)
->>>>>>> f4cc1cb810a88b6c671faf322677f52f710a4fb2
-
 ## 3、目录结构
 
 ### 3.1、Vue
