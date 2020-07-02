@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
@@ -77,15 +78,40 @@ public class BlogServiceImpl implements BlogService {
     public PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize) {
         PageHelper.startPage(currentPage, pageSize, "create_time desc");
         List<Blog> blogList = blogDao.findHomeBlogList();
-        List<Blog> topBlogList = findTopBlogList();
-        for (int i = 0; i < topBlogList.size(); i++) {
-            blogList.set(i, topBlogList.get(i));
+        PageInfo<Blog> blogPageInfo = new PageInfo<>(blogList);
+//        第一页才去处理置顶博客
+        if (currentPage <= 1) {
+            blogList.forEach(item -> {
+                item.getType();
+                item.getUser();
+            });
+            List<Blog> topBlogList = findTopBlogList();
+            List<Blog> noTopList = blogList.stream()
+                    .filter(item -> !item.isTop())
+                    .collect(Collectors.toList());
+            topBlogList.forEach(item -> {
+                item.getType();
+                item.getUser();
+            });
+            List<Blog> newBlogList = new ArrayList<>();
+            newBlogList.addAll(topBlogList);
+            newBlogList.addAll(noTopList);
+            if (newBlogList.size() > pageSize) {
+                newBlogList.subList(pageSize, newBlogList.size()).clear();
+            }
+            blogPageInfo.setList(newBlogList);
+            return blogPageInfo;
         }
-        blogList.forEach(item -> {
-            item.getType();
-            item.getUser();
-        });
-        return new PageInfo<Blog>(blogList);
+//        大于第一页的默认全都非置顶
+        else {
+            blogList.forEach(item -> {
+                item.getType();
+                item.getUser();
+                item.setTop(false);
+            });
+            blogPageInfo.setList(blogList);
+            return blogPageInfo;
+        }
     }
 
     @Override
@@ -167,7 +193,9 @@ public class BlogServiceImpl implements BlogService {
         blog.setCreateTime(System.currentTimeMillis());
         blog.setUpdateTime(System.currentTimeMillis());
         int record = blogDao.saveBlog(blog);
-        blogDao.saveBlogTag(blog);
+        if (blog.getTagList().size() > 0) {
+            blogDao.saveBlogTag(blog);
+        }
         return record;
     }
 

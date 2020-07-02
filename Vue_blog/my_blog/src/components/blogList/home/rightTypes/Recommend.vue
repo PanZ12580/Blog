@@ -15,6 +15,7 @@
           v-for="(item,index) in recommendList"
           :key="index"
           v-text="item.title"
+          :title="item.title"
         ></router-link>
       </div>
     </div>
@@ -35,5 +36,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.m-text-thin {
+  width: 100% !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
 </style>

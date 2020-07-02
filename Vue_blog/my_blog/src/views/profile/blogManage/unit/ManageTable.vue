@@ -8,7 +8,13 @@
     <tbody>
       <tr class="center aligned" v-for="(item, index) in tableList" :key="index">
         <td>{{offset + index + 1}}</td>
-        <td v-for="(value, index) in Object.values(item).slice(1)" :key="index">{{value}}</td>
+        <td
+          v-for="(value, index) in Object.values(item).slice(1)"
+          :key="index"
+          class="one-line"
+          :title="value"
+          v-text="value"
+        ></td>
         <td>
           <div @click="edit(item.id)" class="ui teal basic button m_opt_btn">编辑</div>
           <div @click="remove(item.id)" class="ui orange basic button m_opt_btn">删除</div>
@@ -134,5 +140,10 @@ export default {
 </script>
 
 <style scoped>
-
+.one-line {
+  max-width: 15em !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
 </style>

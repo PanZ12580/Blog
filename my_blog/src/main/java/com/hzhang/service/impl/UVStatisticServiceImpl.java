@@ -3,6 +3,8 @@ package com.hzhang.service.impl;
 import com.hzhang.pojo.UVStatistic;
 import com.hzhang.service.UVStatisticService;
 import com.hzhang.utils.RedisUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,8 @@ public class UVStatisticServiceImpl implements UVStatisticService {
 
     private Calendar calendar = Calendar.getInstance();
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Override
     public UVStatistic getStatistic(Integer recent) {
         LinkedHashMap<String, Long> statisticMap = new LinkedHashMap<>(recent);
@@ -45,6 +49,7 @@ public class UVStatisticServiceImpl implements UVStatisticService {
             }
         }
         UVStatistic uvStatistic = new UVStatistic();
+        logger.info("访问量统计时间段： {}", statisticMap);
         uvStatistic.setStatisticMap(statisticMap);
         uvStatistic.setTotal(getTotal());
         return uvStatistic;

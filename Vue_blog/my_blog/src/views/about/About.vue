@@ -35,6 +35,7 @@
 
 <script>
 import { scrollEventListener } from "common/mixin";
+import UvStatistic from "components/uvStatistic/UVStatistic";
 
 export default {
   name: "About",
@@ -42,7 +43,7 @@ export default {
     side: () => import("./unit/Side"),
     appreciate: () => import("./unit/Appreciate"),
     contact: () => import("./unit/Contact"),
-    "uv-statistic": () => import("components/uvStatistic/UVStatistic")
+    UvStatistic
   },
   data() {
     return {

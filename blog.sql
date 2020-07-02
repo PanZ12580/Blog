@@ -32,7 +32,7 @@ CREATE TABLE `blog` (
   `published` bit(1) NOT NULL,
   `recommend` bit(1) NOT NULL,
   `share_statement` bit(1) NOT NULL,
-  `top` bit(1) NOT NULL,
+  `is_top` bit(1) NOT NULL,
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `update_time` bigint NOT NULL,
   `type_id` bigint DEFAULT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `blog` (
   FULLTEXT KEY `content` (`content`,`description`,`title`),
   CONSTRAINT `blog_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK292449gwg5yf7ocdlmswv9w4j` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Table structure for table `blog_tag` */
 

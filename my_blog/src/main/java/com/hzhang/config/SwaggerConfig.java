@@ -52,7 +52,7 @@ public class SwaggerConfig {
     }
 
     public ApiInfo apiInfo() {
-        Contact DEFAULT_CONTACT = new Contact("PanzVor", "http://localhost:8081/", "344096911@qq.com");
+        Contact DEFAULT_CONTACT = new Contact("PanzVor", "http://www.panzvor.com/", "344096911@qq.com");
         return new ApiInfoBuilder()
                 .title("api swagger document")
                 .description("个人博客项目swagger api 文档")

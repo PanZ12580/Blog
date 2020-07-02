@@ -125,7 +125,7 @@ public interface BlogService {
      * @param blog
      * @return
      */
-    @ClearRedisCache
+    @ClearRedisCache(cascade = {TagServiceImpl.class, TypeServiceImpl.class})
     int updateBlog(Blog blog);
 
     /**

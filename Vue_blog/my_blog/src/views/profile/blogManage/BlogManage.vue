@@ -79,6 +79,7 @@ export default {
             updateTime
           };
         });
+        console.log(res.data.data)
         this.isFirstPage = res.data.data.isFirstPage;
         this.isLastPage = res.data.data.isLastPage;
         this.prePage = res.data.data.prePage;
@@ -90,7 +91,7 @@ export default {
      * 翻页
      */
     toLastPage() {
-      this.blogManageQueryVo.currentPage = this.prevPage;
+      this.blogManageQueryVo.currentPage = this.prePage;
       this.getBlogList(this.blogManageQueryVo);
     },
     toNextPage() {

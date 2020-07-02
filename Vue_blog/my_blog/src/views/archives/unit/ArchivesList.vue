@@ -12,8 +12,12 @@
         >
           <div class="ui grid stackable">
             <div class="eleven wide column">
-              <i class="mini teal icon circle"></i>
-              <span class="m-margin-lr-small" v-text="item.title"></span>
+              <i class="mini teal icon circle over-title-icon"></i>
+              <span
+                class="m-margin-lr-small over-title"
+                v-text="item.title + '大噶多个地啊发射点发射点发153132132方嘎达'"
+                :title="item.title"
+              ></span>
             </div>
             <div class="three wide column right aligned">
               <div
@@ -58,5 +62,21 @@ export default {
 <style scoped>
 .ui.header {
   margin-top: 0.3em;
+}
+.over-title {
+  max-width: 75% !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  display: inline-block !important;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 1.5em !important;
+}
+.over-title-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 </style>

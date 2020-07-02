@@ -12,7 +12,7 @@
           :to="'/detail/' + listItem.id"
           tag="a"
         ></router-link>
-        <p class="ui m-text" v-text="listItem.description"></p>
+        <p class="ui m-text over-text" v-text="listItem.description" :title="listItem.description"></p>
         <div class="ui stackable grid">
           <div class="eleven wide column top aligned">
             <div class="ui mini horizontal link list">
@@ -115,5 +115,12 @@ export default {
 }
 .ribbon {
   bottom: 1.5em;
+}
+.over-text {
+  max-height: 8em !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 </style>

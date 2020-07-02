@@ -64,7 +64,7 @@ export function profileRequest(config) {
 
 export function request(config) {
   const instance = axios.create({
-    baseURL: 'http://xxx/',
+    baseURL: 'http://xxx:8080/',
     // baseURL: 'http://192.168.100.5:8001/',
     timeout: 10000
   })

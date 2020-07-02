@@ -23,7 +23,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @JsonIgnoreProperties(value = {"handler"})
 @ApiModel("博客实体类")
 public class Blog implements Serializable {
@@ -73,4 +72,30 @@ public class Blog implements Serializable {
 
     @ApiModelProperty("博客对应的标签的id")
     private List<Long> tagIds;
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", description='" + description + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", flag='" + flag + '\'' +
+                ", views=" + views +
+                ", appreciation=" + appreciation +
+                ", shareStatement=" + shareStatement +
+                ", commentabled=" + commentabled +
+                ", published=" + published +
+                ", recommend=" + recommend +
+                ", top=" + top +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tagList=" + tagList +
+                ", user=" + user +
+                ", commentList=" + commentList +
+                ", tagIds=" + tagIds +
+                '}';
+    }
 }

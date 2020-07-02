@@ -19,13 +19,14 @@
           <h4 class="ui header m-text-thin m-text-spaced">最新博客</h4>
           <div class="ui link list">
             <router-link
-              class="item m-text-lined"
+              class="item m-text-lined m-lasted"
               v-for="item in $store.state.lastBlogList"
               :key="item.id"
               v-text="item.title"
               :to="'/detail/' + item.id"
               target="_blank"
               tag="a"
+              :title="item.title"
             ></router-link>
           </div>
         </div>
@@ -51,10 +52,7 @@
         </div>
       </div>
       <div class="ui section divider"></div>
-      <p
-        class="m-text-thin m-text-spaced m-opacity-mini"
-        v-text="message"
-      ></p>
+      <p class="m-text-thin m-text-spaced m-opacity-mini" v-text="message"></p>
     </div>
   </footer>
 </template>
@@ -66,12 +64,19 @@ export default {
     return {
       introduce:
         "基于Vue + SpringBoot开发的个人博客，UI框架使用SemanticUI，博客将一直维护下去，欢迎大佬们指出bug或改进，欢迎交流！欢迎互链！",
-      message: `| © 2020 - www.panzvor.com
-      | Email：344096911@qq.com`,
+      message: `粤ICP备20056077号 | © 2020-2021 panzvor.com
+      | Email：344096911@qq.com`
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
+.m-lasted {
+  width: 100% !important;
+  line-height: 2em !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
 </style>

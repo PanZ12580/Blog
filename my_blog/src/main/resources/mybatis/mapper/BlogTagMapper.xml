@@ -27,8 +27,11 @@
     </select>
 
     <select id="findCountByTagId" resultType="Integer">
-        select count(*)
-        from blog_tag
-        where tag_id = #{tagId}
+        SELECT COUNT(*)
+        FROM blog
+        INNER JOIN
+        blog_tag
+        ON blog.id = blog_tag.blog_id
+        WHERE blog_tag.tag_id = #{tagId} AND blog.published = TRUE
     </select>
 </mapper>

@@ -147,13 +147,7 @@
           </div>
           <div class="field">
             <div class="ui checkbox">
-              <input
-                type="checkbox"
-                id="top"
-                v-model="blog.top"
-                name="top"
-                class="hidden"
-              />
+              <input type="checkbox" id="top" v-model="blog.top" name="top" class="hidden" />
               <label for="top">置顶</label>
             </div>
           </div>
@@ -254,17 +248,18 @@ export default {
       }
     }
   },
-  mounted() {
+  async mounted() {
     // 控件事件
     this.$nextTick(() => {
       $(".ui.dropdown").dropdown({
         on: "click"
       });
     });
+
     if (this.$route.params.id != null && this.$route.params.id != undefined) {
       this.blogId = this.$route.params.id;
       this.isUpdate = true;
-      this.getBlog();
+      await this.getBlog();
     }
     this.getTypes();
     this.getTags();
@@ -280,8 +275,8 @@ export default {
     /**
      * 根据id获取博客
      */
-    getBlog() {
-      findBlogById(this.blogId).then(res => {
+    async getBlog() {
+      await findBlogById(this.blogId).then(res => {
         this.blog = res.data.data;
       });
     },
@@ -336,28 +331,27 @@ export default {
         this.errorList.push("标题：请输入标题");
         this.errorShow = true;
         this.error.title = true;
+        return false;
       }
       if (!this.blog.content) {
         this.errorList.push("内容：请输入内容");
         this.errorShow = true;
         this.error.content = true;
+        return false;
       }
-      if (Object.keys(this.blog.type).length === 0) {
+      if (!this.blog.type || Object.keys(this.blog.type).length === 0) {
         this.errorList.push("分类：请输入分类");
         this.errorShow = true;
         this.error.type = true;
+        return false;
       }
       if (!this.blog.description) {
         this.errorList.push("描述：请输入博客描述");
         this.errorShow = true;
         this.error.description = true;
+        return false;
       }
-      return (
-        this.blog.title &&
-        this.blog.content &&
-        this.blog.type &&
-        this.blog.description
-      );
+      return true;
     },
     /**
      * 表单提交前更新博客的标签列表与用户id
@@ -375,6 +369,7 @@ export default {
     publish(opt) {
       let validate = this.validate();
       if (validate) {
+        console.log(validate)
         this.isLoading = true;
         this.updateTagAndUser();
         switch (opt) {
@@ -423,17 +418,18 @@ export default {
   margin: auto;
   z-index: 9;
   min-height: 600px;
+  max-height: 100vh;
 }
 .ui.form textarea:not([rows]) {
   height: inherit;
   max-height: inherit;
 }
-.v-note-wrapper .v-note-panel > div {
+/* .v-note-wrapper .v-note-panel > div {
   max-height: 700px;
 }
 .v-note-wrapper .v-note-panel {
   overflow: auto;
-}
+} */
 .error {
   background-color: #fff1f1 !important;
   border: 1px solid #ffa4a4 !important;

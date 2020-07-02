@@ -152,7 +152,7 @@ body::before {
 /*----------------文本-----------*/
 .m-text {
   letter-spacing: 1px !important;
-  line-height: 1.8 !important;
+  line-height: 2em !important;
   font-weight: 300 !important;
 }
 
