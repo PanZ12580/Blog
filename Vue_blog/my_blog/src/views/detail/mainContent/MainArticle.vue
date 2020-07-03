@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import Prism from "assets/lib/prism/prism";
 import("assets/lib/prism/prism.css");
 
 export default {
@@ -16,11 +15,16 @@ export default {
     content: null
   },
   mounted() {
+    this.appendScript();
     this.$emit("afterMounted");
   },
-  updated() {
-    Prism.highlightAll();
-    this.$emit("afterMounted");
+  methods: {
+    appendScript() {
+      let body = document.getElementsByTagName("body");
+      let script = document.createElement("script");
+      script.src = "http://qiniu.panzvor.com/prism.js";
+      body[0].appendChild(script);
+    }
   }
 };
 </script>

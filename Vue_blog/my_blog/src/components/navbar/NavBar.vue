@@ -22,7 +22,7 @@
       <div class="ui dropdown icon item right m-mobile-show">
         <i class="sidebar teal icon m-icon-center"></i>
         <div class="menu">
-          <div class="ui icon search input">
+          <div class="ui icon input" v-prevent>
             <i class="search teal icon link"></i>
             <input type="text" placeholder="Search..." v-model="search" @keyup.enter="toSearch" />
           </div>
