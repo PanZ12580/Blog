@@ -25,15 +25,15 @@ module.exports = {
       }]
     }
   },
-  devServer: {
-    proxy: {
-      '/': {
-        target: 'http://xxx', //源地址
-        changeOrigin: true, //改变源
-        pathRewrite: {
-          '^/api': 'http://xxx' //路径重写
-        } 
-      }
-    }
-  }
+  // devServer: {
+  //   proxy: {
+  //     '/': {
+  //       target: 'http://xxx', //源地址
+  //       changeOrigin: true, //改变源
+  //       pathRewrite: {
+  //         '^/api': 'http://xxx' //路径重写
+  //       } 
+  //     }
+  //   }
+  // }
 }

@@ -4,7 +4,7 @@
       <div class="ui two column grid m-bg">
         <div class="column">
           <i class="tags icon teal"></i>
-          <span>标签云</span>
+          <span>标签</span>
         </div>
         <div class="column right aligned">
           <router-link to="/tags" class="m-teal" target="_self">

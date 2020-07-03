@@ -64,7 +64,7 @@ export default {
     return {
       introduce:
         "基于Vue + SpringBoot开发的个人博客，UI框架使用SemanticUI，博客将一直维护下去，欢迎大佬们指出bug或改进，欢迎交流！欢迎互链！",
-      message: `粤ICP备20056077号 | © 2020-2021 panzvor.com
+      message: `粤ICP备20056077号-1 | © 2020-2021 panzvor.com
       | Email：344096911@qq.com`
     };
   }

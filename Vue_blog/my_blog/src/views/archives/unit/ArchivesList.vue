@@ -15,7 +15,7 @@
               <i class="mini teal icon circle over-title-icon"></i>
               <span
                 class="m-margin-lr-small over-title"
-                v-text="item.title + '大噶多个地啊发射点发射点发153132132方嘎达'"
+                v-text="item.title"
                 :title="item.title"
               ></span>
             </div>

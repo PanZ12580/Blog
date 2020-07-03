@@ -169,6 +169,7 @@
 /* 代码片断 */
 .typo pre,.typo  code,.typo  pre tt {
   font-family: Courier, 'Courier New', monospace;
+  word-wrap: break-word;
 }
 
 .typo pre {
@@ -288,6 +289,7 @@
 .typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
   margin-bottom: 0.8em;
   margin-left: 2em;
+  word-wrap: break-word;
 }
 
 .typo li ul, .typo-ul ul, .typo-ol ul {
