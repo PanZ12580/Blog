@@ -56,8 +56,8 @@
                 <span class="date" style="font-size: 0.8em; margin-left: 1em;"
                       th:text="${#dates.format(parentCommentCreateTime, 'yyyy-MM-dd HH:mm:ss')} + ': '"></span>
             </div>
-            <div class="content" style="text-indent: 2em;" th:text="${parentComment.content}">内容</div>
-        </div>
+            <pre class="content" style="text-indent: 2em;white-space: pre-wrap;
+  word-wrap: break-word;" th:text="${parentComment.content}">内容<pre/>
         <div class="tip" style="color: black;font-weight: 500;margin: 1em 0;">回复内容:
         </div>
         <div class="commenter" style="margin-bottom: 0.5em;">
@@ -67,7 +67,8 @@
                   th:text="${#dates.format(commentCreateTime, 'yyyy-MM-dd HH:mm:ss')} + ': '"></span>
         </div>
 
-        <div class="content" style="text-indent: 2em;" th:text="${comment.content}">内容</div>
+        <pre class="content" style="text-indent: 2em;white-space: pre-wrap;
+  word-wrap: break-word;" th:text="${comment.content}">内容</pre>
 
         <div th:if="${isComment}">
             <div class="addr" style="margin-top: 5em;">点击查看详细: <a

@@ -33,6 +33,7 @@ public class UVStatisticServiceImpl implements UVStatisticService {
 
     @Override
     public UVStatistic getStatistic(Integer recent) {
+        calendar.setTime(new Date());
         LinkedHashMap<String, Long> statisticMap = new LinkedHashMap<>(recent);
         for (int i = recent - 1; i >= 0; i--) {
             String date = null;
