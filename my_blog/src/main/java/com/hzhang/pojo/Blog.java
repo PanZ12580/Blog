@@ -1,14 +1,11 @@
 package com.hzhang.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.List;
@@ -57,12 +54,9 @@ public class Blog implements Serializable {
     @ApiModelProperty("博客更新的时间")
     private Long updateTime;
 
-    @JacksonXmlProperty(localName = "type")
-    @JacksonXmlElementWrapper(useWrapping = false)
     @ApiModelProperty("博客所处分类")
     private Type type;
-    @JacksonXmlProperty(localName = "tagList")
-    @JacksonXmlElementWrapper(useWrapping = false)
+
     @ApiModelProperty("博客对应的标签列表")
     private List<Tag> tagList;
     @ApiModelProperty("发表该博客的用户")

@@ -1,8 +1,6 @@
 package com.hzhang.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -32,8 +30,6 @@ public class Type implements Serializable {
     @ApiModelProperty("分类名称")
     private String name;
 
-    @JacksonXmlProperty(localName = "blogList")
-    @JacksonXmlElementWrapper(useWrapping = false)
     @ApiModelProperty("该分类下的博客列表")
     private List<Blog> blogList;
 

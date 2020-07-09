@@ -36,10 +36,11 @@ public class ArchivesController {
         Map<String, Object> realMap = new HashMap<>(2);
         realMap.put("list", archivesList);
         realMap.put("total", count);
-        return Result.builder()
+        Result result = Result.builder()
                 .statusCode(HttpStatus.OK.value())
                 .flag(true)
                 .data(realMap)
                 .build();
+        return result;
     }
 }
