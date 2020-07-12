@@ -7,6 +7,8 @@ import com.hzhang.pojo.User;
 import com.hzhang.service.CommentService;
 import com.hzhang.utils.IpAddressUtils;
 import com.hzhang.utils.RedisUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -14,10 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author ：Hzhang
@@ -39,6 +38,8 @@ public class CommentServiceImpl implements CommentService {
 
     @Value("${comment.avatar}")
     private String avatar;
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public List<Comment> findCommentListByBlogId(Long id) {
@@ -62,6 +63,7 @@ public class CommentServiceImpl implements CommentService {
 //                token校验通过则为管理员评论
                 comment.getUser().setId(user.getId());
                 comment.setAdminComment(true);
+                userDao.saveUser(comment.getUser());
                 return commentDao.saveComment(comment);
             }
         }

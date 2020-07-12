@@ -62,6 +62,7 @@ public class MessageServiceImpl implements MessageService {
 //                token校验通过则为管理员评论
                 message.getUser().setId(user.getId());
                 message.setAdminMessage(true);
+                userDao.saveUser(message.getUser());
                 return messageDao.saveMessage(message);
             }
         }

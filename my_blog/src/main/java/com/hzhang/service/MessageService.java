@@ -32,6 +32,6 @@ public interface MessageService {
      * @param request
      * @return
      */
-    @ClearRedisCache
+    @ClearRedisCache(cascade = UserServiceImpl.class)
     int saveMessage(Message message, HttpServletRequest request);
 }
