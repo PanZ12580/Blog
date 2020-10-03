@@ -1,12 +1,9 @@
 package com.hzhang.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,11 +17,12 @@ import java.util.List;
  */
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @ToString
-@ApiModel("留言实体类")
 @JsonIgnoreProperties(value = {"handler"})
-public class Message implements Serializable {
+@ApiModel("留言实体类")
+public class Message implements Serializable, CommonMsg {
     @ApiModelProperty("留言id")
     private Long id;
     @ApiModelProperty("留言创建时间")
@@ -39,8 +37,11 @@ public class Message implements Serializable {
     @ApiModelProperty("留言用户")
     private User user;
     @ApiModelProperty("该留言的父留言")
+    @ToString.Exclude
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = Message.class)
     private Message parentMessage;
     @ApiModelProperty("该留言的子留言列表")
+//    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<Message> childMessages;
 
     @ApiModelProperty("该留言下子留言的数目")

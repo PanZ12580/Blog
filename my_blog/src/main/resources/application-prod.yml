@@ -12,12 +12,12 @@ server:
 spring:
   #    redis
   redis:
-    host: xxx
+    host: 47.107.60.69
     port: 6379
     password: xxx
   #    数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://xxx/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://47.107.60.69:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     username: root
     password: xxx

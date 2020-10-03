@@ -1,14 +1,12 @@
 package com.hzhang.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,14 +16,16 @@ import java.util.List;
  * @modified By：
  * @version: $
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@ApiModel("评论实体类")
 @JsonIgnoreProperties(value = {"handler"})
-public class Comment implements Serializable {
+@ApiModel("评论实体类")
+public class Comment implements Serializable, CommonMsg {
     @ApiModelProperty("评论id")
+    @JsonIdentityReference(alwaysAsId = true)
     private Long id;
     @ApiModelProperty("评论内容")
     private String content;
@@ -41,8 +41,11 @@ public class Comment implements Serializable {
     @ApiModelProperty("是哪一条博客下的评论")
     private Blog blog;
     @ApiModelProperty("子评论列表")
+//    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<Comment> childComments;
     @ApiModelProperty("父评论")
+    @ToString.Exclude
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = Comment.class)
     private Comment parentComment;
     @ApiModelProperty("评论的用户")
     private User user;

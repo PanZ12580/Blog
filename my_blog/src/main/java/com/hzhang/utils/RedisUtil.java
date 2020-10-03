@@ -484,7 +484,7 @@ public class RedisUtil {
      * @param time  时间(秒)
      * @return true 成功 false 不成功
      */
-    public boolean listSet(String key, Object value, long time) {
+    public boolean rpush(String key, Object value, long time) {
         try {
             redisTemplate.opsForList().rightPush(key, value);
             if ( time > 0){
@@ -504,7 +504,7 @@ public class RedisUtil {
      * @param value 值
      * @return true 成功 false 不成功
      */
-    public boolean listSet(String key, List<Object> value) {
+    public boolean rpushAll(String key, List<Object> value) {
         try {
             redisTemplate.opsForList().rightPushAll(key, value);
             return true;
@@ -567,6 +567,20 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
+        }
+    }
+
+    /**
+     * 左端出队
+     * @param key
+     * @return
+     */
+    public Object lpop(String key) {
+        try {
+            return redisTemplate.opsForList().leftPop(key);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 

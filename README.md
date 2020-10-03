@@ -6,6 +6,7 @@
 - 后端开发框架：SpringBoot 2.3.0
 - 后端持久层框架：MyBatis 3.5.4
 - 数据库：MySQL 5.7.3、Redis 3.2.1
+- 消息中间件：RabbitMQ
 
 ## 2、架构
 
@@ -47,10 +48,6 @@ npm run build
 接口请求地址在`network/request.js`中自定义：
 
 ![image-20200701205803455](http://cdn.panzvor.com/img/20200701205804.png)
-
-部署时`vue.config.js`中代理的设置也要根据自己服务器的实际情况配置：
-
-![image-20200701205927207](http://cdn.panzvor.com/img/20200701205929.png)
 
 ### 4.2、SpringBoot项目
 

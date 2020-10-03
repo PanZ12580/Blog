@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
+import javax.mail.MessagingException;
 import java.util.Date;
 
 /**
@@ -23,8 +24,8 @@ import java.util.Date;
  * @modified By：
  * @version: $
  */
-@Aspect
-@Component
+/*@Aspect
+@Component*/
 public class SendMailAspect {
     @Value("${mail.fromMail.addr}")
     private String defaultTo;
@@ -74,8 +75,11 @@ public class SendMailAspect {
             Date commentCreateTime = new Date(((Message) arg).getCreateTime());
             context.setVariable("commentCreateTime", commentCreateTime);
         }
-        context.setVariable("create", 1555654688L);
         String emailContent = templateEngine.process("emailTemplate", context);
-        mailService.sendMail(to, "主题: 博客回复通知", emailContent);
+        try {
+            mailService.sendMail(to, "主题: 博客回复通知", emailContent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

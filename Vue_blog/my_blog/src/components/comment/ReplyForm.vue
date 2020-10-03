@@ -149,8 +149,7 @@ export default {
         blogId: this.blogId,
         parentCommentId: this.parentCommentId,
         content: this.content,
-        user: this.user,
-        parentComment: this.parentComment
+        user: this.user
       };
       saveComment(comment).then(res => {
         this.$emit("scrollToComment");
@@ -168,7 +167,6 @@ export default {
         parentMsgId: this.parentCommentId,
         content: this.content,
         user: this.user,
-        parentMessage: this.parentComment
       };
       saveMessage(message).then(res => {
         this.$emit("scrollToComment");

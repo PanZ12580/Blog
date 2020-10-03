@@ -97,7 +97,7 @@ public class HomeController {
                                      @RequestParam(value = "search", defaultValue = "") String search) {
         PageInfo<Blog> searchBlog = blogService.findSearchBlog(currentPage, pageSize, search);
         searchBlog.getList().forEach(blog -> {
-            String key = "blogId::" + blog.getId();
+            String key = "views::blogId-" + blog.getId();
             blog.setViews(redisUtil.pfcount(key));
         });
         return Result.builder()

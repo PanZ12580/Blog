@@ -75,4 +75,7 @@ export default {
   margin: auto;
   opacity: 0.5;
 }
+.four.link.cards {
+  width: 100%;
+}
 </style>

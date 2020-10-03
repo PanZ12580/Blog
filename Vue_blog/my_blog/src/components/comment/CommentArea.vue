@@ -14,7 +14,7 @@
           <div class="metadata">
             <span class="date" v-text="toFormatDate(item.createTime)"></span>
           </div>
-          <div class="text" v-text="item.content"></div>
+          <pre class="text" v-text="item.content"></pre>
           <div class="actions">
             <a class="reply m_reply" @click="reply(item.id, item.user.nickname, item)">回复</a>
           </div>
@@ -36,12 +36,12 @@
                   @click="reply(item2.id, item2.user.nickname, item2)"
                 ></a>
                 <div class="ui basic left pointing label" v-if="item2.adminComment">御主</div>
-                <span v-text="' @ ' + item2.parentComment.user.nickname" class="parent-comment"></span>
+                <span v-text="' @ ' + item.user.nickname" class="parent-comment"></span>
               </span>
               <div class="metadata">
                 <span class="date" v-text="toFormatDate(item2.createTime)"></span>
               </div>
-              <div class="text" v-text="item2.content"></div>
+              <pre class="text" v-text="item2.content"></pre>
               <div class="actions">
                 <a class="reply m_reply" @click="reply(item2.id, item2.user.nickname, item2)">回复</a>
               </div>
@@ -100,5 +100,9 @@ export default {
   padding: 0.3em;
   color: #f3b31e;
   border-color: #f3b31e;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 </style>

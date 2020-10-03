@@ -18,7 +18,7 @@
             <span class="date" v-text="toFormatDate(message.createTime)"></span>
             <span class="date" v-text="message.childMessagesCount + '条回复'"></span>
           </div>
-          <div class="text" v-text="message.content"></div>
+          <pre class="text" v-text="message.content"></pre>
           <div class="actions">
             <a class="reply m_reply" @click="reply(message.id, message.user.nickname, message)">回复</a>
             <a @click="toggleCollapsed">
@@ -48,12 +48,12 @@
                   @click="reply(item.id, item.user.nickname, item)"
                 ></a>
                 <div class="ui basic left pointing label" v-if="item.adminMessage">御主</div>
-                <span v-text="' @ ' + item.parentMessage.user.nickname" class="parent-comment"></span>
+                <span v-text="' @ ' + message.user.nickname" class="parent-comment"></span>
               </span>
               <div class="metadata">
                 <span class="date" v-text="toFormatDate(item.createTime)"></span>
               </div>
-              <div class="text" v-text="item.content"></div>
+              <pre class="text" v-text="item.content"></pre>
               <div class="actions">
                 <a class="reply m_reply" @click="reply(item.id, item.user.nickname, item)">回复</a>
               </div>
@@ -143,5 +143,9 @@ export default {
   padding: 0.3em;
   color: #f3b31e;
   border-color: #f3b31e;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 </style>

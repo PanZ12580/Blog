@@ -117,10 +117,7 @@ public class CommentServiceImpl implements CommentService {
             Comment tmpParent = queue.removeFirst();
             for (Comment c : commentList) {
                 if (c.getParentCommentId() != null && c.getParentCommentId().equals(tmpParent.getId())) {
-                    Comment tmp = new Comment();
-                    tmp.setId(tmpParent.getId());
-                    tmp.setUser(tmpParent.getUser());
-                    c.setParentComment(tmp);
+                    c.setParentComment(tmpParent);
                     childList.add(c);
                     queue.addLast(c);
                 }

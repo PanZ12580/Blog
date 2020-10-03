@@ -71,7 +71,6 @@ export default {
   },
   mounted() {
     eventHandle.addEvent(window, "resize", this.resizeEchart);
-    this.getStatistic();
   },
   beforeDestroy() {
     eventHandle.removeEvent(window, "resize", this.resizeEchart);
