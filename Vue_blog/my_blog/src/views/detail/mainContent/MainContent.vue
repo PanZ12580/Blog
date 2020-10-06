@@ -9,6 +9,7 @@
 
 <script>
 import BlogTitle from "./BlogTitle";
+import MainArticle from "./MainArticle"
 
 export default {
   props: {
@@ -16,7 +17,7 @@ export default {
   },
   name: "MainContent",
   components: {
-    "main-article": () => import("./MainArticle"),
+    MainArticle,
     tag: () => import("./Tag"),
     appreciation: () => import("./Appreciation"),
     BlogTitle

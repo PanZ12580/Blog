@@ -72,7 +72,7 @@
         blog.user_id, blog.type_id, blog.is_top
         FROM
         blog
-        WHERE blog.published = TRUE
+        WHERE blog.published = TRUE and blog.is_top = FALSE
     </select>
 
     <select id="findTopBlogList" resultMap="blogMap">

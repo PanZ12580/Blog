@@ -75,7 +75,10 @@ export default {
   },
   watch: {
     $route() {
-      $(".app-nav-bar").transition("fade out");
+      $(".app-nav-bar").transition({
+        animation: 'fade out',
+        duration: '0s'
+      });
     }
   },
   methods: {

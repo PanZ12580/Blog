@@ -14,8 +14,10 @@ export default {
   props: {
     content: null
   },
-  created() {
-    this.appendScript();
+  watch: {
+    content() {
+      this.appendScript();
+    }
   },
   mounted() {
     this.$emit("afterMounted");

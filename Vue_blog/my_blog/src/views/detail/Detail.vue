@@ -36,7 +36,12 @@
     <tool-bar ref="toolBar">
       <template #default>
         <div id="toc_btn" class="ui button teal m-bg-teal">目录</div>
-        <a @click="toMessage" class="ui teal button m-bg-teal" v-if="blog.commentabled">留言</a>
+        <a
+          @click="toMessage"
+          class="ui teal button m-bg-teal"
+          v-if="blog.commentabled"
+          >留言</a
+        >
         <div class="ui icon button wechat_qr teal m-bg-teal">
           <i class="ui icon large qrcode"></i>
         </div>
@@ -45,20 +50,20 @@
     <!--    目录-->
     <div
       class="ui js-toc flowing toc_container popup transition m-padding-lr-tiny hidden"
-      style="width: 250px !important;max-width: 500px !important;"
+      style="width: 250px !important; max-width: 500px !important"
     ></div>
     <!--    网站二维码-->
     <div
       id="qrcode"
       class="ui wechat flowing popup top left transition hidden"
-      style="width: 120px;"
+      style="width: 120px"
     >
       <img
-        :src="'http://qr.liantu.com/api.php?text='+url"
+        :src="'http://qr.liantu.com/api.php?text=' + url"
         class="ui rounded image"
-        style="width: 120px !important;"
+        style="width: 120px !important"
       />
-      <div style="text-align:center;font-size:12px">
+      <div style="text-align: center; font-size: 12px">
         <span>扫一扫</span>
         <p>使用手机阅读</p>
       </div>
@@ -68,11 +73,12 @@
 
 <script>
 import ContentHeader from "./mainContent/ContentHeader";
+import MainContent from "./mainContent/MainContent";
 
 import tocbot from "assets/js/tocbot.min";
 import {
   NoAliveScrollEventListener,
-  NoAliveToolbarControl
+  NoAliveToolbarControl,
 } from "common/mixin";
 import { findBlogDetail } from "network/detailAjax";
 import { findCommentListByBlogId } from "network/commentAjax";
@@ -86,24 +92,24 @@ export default {
         type: Object,
         default() {
           return {};
-        }
+        },
       },
       commentList: [],
-      url: "http://www.panzvor.com"
+      url: "http://www.panzvor.com",
     };
   },
   components: {
     ContentHeader,
     "content-img": () => import("./mainContent/ContentImg"),
-    "main-content": () => import("./mainContent/MainContent"),
+    MainContent,
     "blog-message": () => import("./mainContent/BlogMessage"),
-    comment: () => import("components/comment/Comment")
+    comment: () => import("components/comment/Comment"),
   },
   async mounted() {
     document.querySelector("#app-scroll").scrollIntoView({
       behavior: "smooth",
       block: "start",
-      inline: "nearest"
+      inline: "nearest",
     });
     if (this.$route.params.blogId) {
       this.id = this.$route.params.blogId;
@@ -114,7 +120,7 @@ export default {
     $(".wechat_qr").popup({
       popup: $(".wechat.popup"),
       position: "left center",
-      hoverable: true
+      hoverable: true,
     });
   },
   methods: {
@@ -125,13 +131,13 @@ export default {
       tocbot.init({
         tocSelector: ".js-toc",
         contentSelector: ".js-toc-content",
-        headingSelector: "h1, h2, h3"
+        headingSelector: "h1, h2, h3",
       });
       //    目录
       $("#toc_btn").popup({
         popup: $(".toc_container"),
         on: "click",
-        position: "left center"
+        position: "left center",
       });
     },
     /**
@@ -139,12 +145,12 @@ export default {
      */
     async getBlogDetail() {
       await findBlogDetail(this.id)
-        .then(res => {
+        .then((res) => {
           this.blog = res.data.data;
           return res.data.data.id;
         })
-        .then(blogId => {
-          findCommentListByBlogId(blogId).then(res => {
+        .then((blogId) => {
+          findCommentListByBlogId(blogId).then((res) => {
             this.commentList = res.data.data;
           });
         });
@@ -153,7 +159,7 @@ export default {
      * 成功插入新的评论后重新请求评论列表
      */
     reRequestComment() {
-      findCommentListByBlogId(this.id).then(res => {
+      findCommentListByBlogId(this.id).then((res) => {
         this.commentList = res.data.data;
       });
     },
@@ -164,11 +170,11 @@ export default {
       this.$refs.comment.$el.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "nearest"
+        inline: "nearest",
       });
-    }
+    },
   },
-  mixins: [NoAliveScrollEventListener, NoAliveToolbarControl]
+  mixins: [NoAliveScrollEventListener, NoAliveToolbarControl],
 };
 </script>
 

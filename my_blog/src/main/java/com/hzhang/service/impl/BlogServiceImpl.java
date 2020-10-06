@@ -15,10 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -76,48 +73,32 @@ public class BlogServiceImpl implements BlogService {
     @Override
     @Transactional(rollbackFor = {RuntimeException.class, Error.class})
     public PageInfo<Blog> findHomeBlogList(Integer currentPage, Integer pageSize) {
-        PageHelper.startPage(currentPage, pageSize, "create_time desc");
-        List<Blog> blogList = blogDao.findHomeBlogList();
+//        查询置顶博客，并统计置顶博客有多少篇
+        List<Blog> topBlogList = findTopBlogList();
+        int topSize = topBlogList.size();
+        pageSize -= topSize;
+
+//        取出非置顶博客
+        List<Blog> blogList = new ArrayList<>();
+        if (pageSize > 0) {
+            PageHelper.startPage(currentPage, pageSize, "create_time desc");
+            blogList = blogDao.findHomeBlogList();
+        }
+//        水平拼接置顶与非置顶博客
+        blogList.addAll(0, topBlogList);
+        blogList.forEach(b -> {
+            b.getUser();
+        });
+
         PageInfo<Blog> blogPageInfo = new PageInfo<>(blogList);
-//        第一页才去处理置顶博客
-        if (currentPage <= 1) {
-            blogList.forEach(item -> {
-                item.getType();
-                item.getUser();
-            });
-            List<Blog> topBlogList = findTopBlogList();
-            List<Blog> noTopList = blogList.stream()
-                    .filter(item -> !item.isTop())
-                    .collect(Collectors.toList());
-            topBlogList.forEach(item -> {
-                item.getType();
-                item.getUser();
-            });
-            List<Blog> newBlogList = new ArrayList<>();
-            newBlogList.addAll(topBlogList);
-            newBlogList.addAll(noTopList);
-            if (newBlogList.size() > pageSize) {
-                newBlogList.subList(pageSize, newBlogList.size()).clear();
-            }
-            blogPageInfo.setList(newBlogList);
-            return blogPageInfo;
-        }
-//        大于第一页的默认全都非置顶
-        else {
-            blogList.forEach(item -> {
-                item.getType();
-                item.getUser();
-                item.setTop(false);
-            });
-            blogPageInfo.setList(blogList);
-            return blogPageInfo;
-        }
+        blogPageInfo.setTotal(blogPageInfo.getTotal() + topBlogList.size());
+        return blogPageInfo;
     }
 
     @Override
     public List<Blog> findTopBlogList() {
         List<Blog> topBlogList = blogDao.findTopBlogList();
-        return topBlogList.size() > 10 ? topBlogList.subList(0, 9) : topBlogList;
+        return topBlogList;
     }
 
     @Override

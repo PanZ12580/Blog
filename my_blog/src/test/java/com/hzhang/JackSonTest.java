@@ -62,9 +62,9 @@ public class JackSonTest {
         System.out.println(str1);
         System.out.println(str2);
         System.out.println(str3);
-
+/*
         Comment readValue = objectMapper.readValue(str1, Comment.class);
-        System.out.println(readValue);
+        System.out.println(readValue);*/
     }
 
     @Test
