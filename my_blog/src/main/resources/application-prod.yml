@@ -12,12 +12,24 @@ server:
 spring:
   #    redis
   redis:
-    host: 47.107.60.69
+    host: redis
     port: 6379
-    password: xxx
+    password: ***
+#    rabbitmq
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 10
   #    数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.107.60.69:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://mysql:3306/blog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     username: root
-    password: xxx
+    password: ***

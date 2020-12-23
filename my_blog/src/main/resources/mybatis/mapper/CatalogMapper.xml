@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzhang.dao.CatalogDao">
+    <resultMap id="catalogMap" type="catalog">
+        <id column="id" property="id" jdbcType="BIGINT" javaType="Long"></id>
+        <result column="to" property="to" jdbcType="VARCHAR" javaType="String"></result>
+        <result column="title" property="title" jdbcType="VARCHAR" javaType="String"></result>
+        <result column="icon" property="icon" jdbcType="VARCHAR" javaType="String"></result>
+        <result column="scope" property="scope" jdbcType="TINYINT" javaType="Byte"></result>
+    </resultMap>
+    <select id="findCatalogListByScope" parameterType="Byte" resultMap="catalogMap">
+        select `to`, title, icon
+        from catalog
+        where scope = #{scope}
+    </select>
+</mapper>

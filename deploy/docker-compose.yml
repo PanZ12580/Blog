@@ -1,0 +1,51 @@
+version: '3.8'
+
+services: 
+  vue_project:
+    image: nginx
+    ports: 
+      - "80:80"
+    volumes: 
+      - ./dist:/usr/local/www/dist
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: always
+  springboot_project:
+    build:
+      context: .
+      dockerfile: Dockerfile_springboot
+    ports: 
+      - "8080:8080"
+    depends_on: 
+      - redis
+      - rabbitmq
+      - mysql
+    restart: always
+  redis:
+    image: redis:5-alpine
+    volumes: 
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - redis:/data
+    ports: 
+      - "6379:6379"
+    restart: always
+    command: redis-server /usr/local/etc/redis/redis.conf
+  rabbitmq:
+    image: rabbitmq:3.8-alpine
+    restart: always
+    ports: 
+      - "15672:15672"
+  mysql:
+    image: mysql:5.7.32
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hongzihang81192  # 自己的密码
+    # command: sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < $(pwd)/blog.sql # 导入数据库
+    volumes: 
+      - type: bind
+        source: /var/lib/mysql
+        target: /var/lib/mysql
+    ports: 
+      - "3306:3306"
+volumes: 
+  redis:

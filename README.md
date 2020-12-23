@@ -64,3 +64,19 @@ npm run build
 端口号开发环境默认时8001，生产环境是8080，也可以根据自己的需要进行配置，在开发环境中成功部署之后，浏览器打开<http://localhost:8001/swagger-ui.html>即可看到接口文档。
 
 ![image-20200701210619725](http://cdn.panzvor.com/img/20200701210621.png)
+
+## 5、Docker部署
+
+进入`deploy`文件夹：
+
+![image-20201223193228820](http://cdn.panzvor.com/20201223193228.png)
+
+> 项目修改为自己的配置后重新打包，放入该目录中，另一方面，根据自己需要修改conf配置文件（比如redis密码）以及`docker-compose.yml`中的数据库密码
+
+运行命令
+
+```shell
+docker-compose up --build
+```
+
+完成项目部署

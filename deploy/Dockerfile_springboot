@@ -1,0 +1,7 @@
+FROM openjdk:11
+
+ADD *.jar /usr/local/blog/app.jar
+
+EXPOSE 8080
+
+CMD ["nohup", "java", "-jar", "/usr/local/blog/app.jar", ">blog.log"]

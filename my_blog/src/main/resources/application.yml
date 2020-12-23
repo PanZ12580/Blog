@@ -1,11 +1,11 @@
 spring:
   profiles:
-    active: dev
+    active: prod
 #    mail
   mail:
     host: smtp.qq.com
     username: 344096911@qq.com
-    password: xxx
+    password: ***
     #    开启加密验证
     properties:
       mail:
@@ -28,17 +28,6 @@ spring:
     check-template-location: true
     check-template: false
     cache: true
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    publisher-confirm-type: correlated
-    publisher-returns: true
-    listener:
-      simple:
-        acknowledge-mode: manual
-        prefetch: 10
 # Mybatis
 mybatis:
   type-aliases-package: com.hzhang.pojo

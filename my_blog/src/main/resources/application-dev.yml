@@ -12,6 +12,17 @@ spring:
   devtools:
     restart:
       exclude:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 10
 # 日志
 logging:
   level:
